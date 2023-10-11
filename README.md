@@ -2,11 +2,11 @@
 
 ## Project information
 
--   Project name: [Project name]
--   Project description: [Project description]
+-   Project name: Online Therapist
+-   Project description: This project will allow users to schedule an appointment with a therapist and take therapy sessions online through chat, video, and voice calls. Users can search for information on the website, and also there will be tests or therapist activities for users.
 -   Technology used: Nextjs, TailwindCSS, i18next, Husky, Prettier, Eslint, Commitlinter (Conventional Commits)
--   Team members: Member1, Member2, etc,
--   Bootcamp: GIZ YE 2022
+-   Team members: Walid Lamraoui, Lilia Bendjeddou, MOHAMED MATASSI, Sid Ali Habchi, Meriem MANSOURI, Dalila BENHAMED MEGUENNI.
+-   Bootcamp: DZ NEA FEW 2023
 
 ## Installation
 
