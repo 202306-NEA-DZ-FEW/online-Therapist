@@ -11,11 +11,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        SkyBlue: "#EAF8F9",
-        Turquoise: "#2DD3E3",
+        SkyBlue: "#ABDCFF",
+        DarkTeal: "#156669",
+        Teal: "#159DA2",
+        LightTeal: "#ACE2E4",
+        LightOrange: "#FFDAAE",
+        LightBeige: "#F8F6F2",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        young: ["Young Serif", "serif"],
+        atkinson: ["Atkinson Hyperlegible", "sans-serif"],
         opensans: ["Open Sans", "sans-serif"],
       },
     },
