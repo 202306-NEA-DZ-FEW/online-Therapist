@@ -9,7 +9,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
 ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        SkyBlue: "#EAF8F9",
+        Turquoise: "#2DD3E3",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        opensans: ["Open Sans", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }
