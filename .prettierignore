@@ -36,6 +36,3 @@ yarn-error.log*
 
 # changelog
 CHANGELOG.md
-
-tailwind.config.js
-postcss.config.js
