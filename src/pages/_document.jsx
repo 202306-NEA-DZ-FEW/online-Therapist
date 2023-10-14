@@ -17,6 +17,19 @@ class MyDocument extends Document {
                         type='font/woff2'
                         crossOrigin='anonymous'
                     />
+                    <link
+                        rel='preconnect'
+                        href='https://fonts.googleapis.com'
+                    />
+                    <link
+                        rel='preconnect'
+                        href='https://fonts.gstatic.com'
+                        crossorigin
+                    />
+                    <link
+                        href='https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Young+Serif&display=swap'
+                        rel='stylesheet'
+                    />
                 </Head>
                 <body>
                     <Main />
