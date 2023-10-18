@@ -76,6 +76,8 @@
         }
     },
     "jest": {
-        "setupFiles": ["test-setup.js"]
+        "setupFiles": [
+            "test-setup.js"
+        ]
     }
 }
