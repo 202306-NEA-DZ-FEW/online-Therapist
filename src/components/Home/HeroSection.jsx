@@ -10,7 +10,6 @@ import Button from "../elements/Buttons/Button";
 
 function HeroSection() {
     const settings = {
-        dots: false,
         fade: true,
         infinite: true,
         arrows: false,
