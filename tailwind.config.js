@@ -15,8 +15,15 @@ module.exports = {
         DarkTeal: "#156669",
         Teal: "#159DA2",
         LightTeal: "#ACE2E4",
+        GreenLight: "#cfe8d5",
+        Green: "#acdbc4",
+        PurpelLight: "#efc9c5",
+        Purpel: "#eeb4b7",
         LightOrange: "#FFDAAE",
         LightBeige: "#F8F6F2",
+        Gray: "#797877",
+        Crovet: "#ffe8b3",
+
       },
       fontFamily: {
         young: ["Young Serif", "serif"],
@@ -27,4 +34,3 @@ module.exports = {
   },
   plugins: [],
 }
-
