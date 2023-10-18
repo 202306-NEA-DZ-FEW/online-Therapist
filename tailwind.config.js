@@ -17,6 +17,7 @@ module.exports = {
         LightTeal: "#ACE2E4",
         LightOrange: "#FFDAAE",
         LightBeige: "#F8F6F2",
+      
       },
       fontFamily: {
         young: ["Young Serif", "serif"],
