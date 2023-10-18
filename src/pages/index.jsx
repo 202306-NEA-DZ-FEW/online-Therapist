@@ -5,7 +5,7 @@ import * as React from "react";
 
 import HeroSection from "@/components/Home/HeroSection";
 import AppointmentSection from "@/components/Home/AppointmentSection"
-
+import CommunicationSection from "@/components/Home/CommunicationSection";
 
 import Layout from "@/layout/Layout";
 
@@ -25,6 +25,7 @@ export default function HomePage() {
             </div>
             <HeroSection />
             <AppointmentSection />
+            <CommunicationSection />
         </Layout>
     );
 }
