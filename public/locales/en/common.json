@@ -1,13 +1,13 @@
 {
     "test": "Hello",
     "navbar": {
-        "login":"Log In",
-        "home":"Home",
-        "blogs":"Blogs",
-        "about":"About",
-        "contact":"Contact",
-        "team":"Team",
-        "aboutUs":"About Us",
-        "careers":"Careers"
-      }
+        "login": "Log In",
+        "home": "Home",
+        "blogs": "Blogs",
+        "about": "About",
+        "contact": "Contact",
+        "team": "Team",
+        "aboutUs": "About Us",
+        "careers": "Careers"
+    }
 }
