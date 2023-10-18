@@ -4,6 +4,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 
 import HeroSection from "@/components/Home/HeroSection";
+import AppointmentSection from "@/components/Home/AppointmentSection"
+
 
 import Layout from "@/layout/Layout";
 
@@ -22,6 +24,7 @@ export default function HomePage() {
                 </Link>
             </div>
             <HeroSection />
+            <AppointmentSection />
         </Layout>
     );
 }
