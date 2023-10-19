@@ -1,6 +1,6 @@
-import HeroSection from "@/components/Home/HeroSection";
 import AppointmentSection from "@/components/Home/AppointmentSection";
 import CommunicationSection from "@/components/Home/CommunicationSection";
+import HeroSection from "@/components/Home/HeroSection";
 import RecentBlogsSection from "@/components/Home/RecentBlogsSection";
 import TicketsSection from "@/components/Home/TicketsSection";
 

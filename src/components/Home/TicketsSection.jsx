@@ -1,6 +1,9 @@
 import React from "react";
-import TicketCard from "@/components/Home/TicketCard";
+
+import TicketCard from "@/components/Cards/TicketCard";
+
 import AreYouCouncelor from "./AreYouCouncelor";
+
 const TicketsSection = () => {
     return (
         <div className='container mx-auto p-10'>

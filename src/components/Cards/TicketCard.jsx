@@ -2,11 +2,7 @@ import Link from "next/link";
 
 const TicketCard = ({ price, numberOfTickets }) => {
     return (
-        <div
-            className={
-                "bg-white/95 flex flex-col items-center justify-center text-center py-16 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full"
-            }
-        >
+        <div className='bg-white/95 flex flex-col items-center justify-center text-center py-16 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full'>
             <div className='flex items-center justify-center space-x-2'>
                 <span className='uppercase text-4xl'>
                     {numberOfTickets}$ {"ticket"}

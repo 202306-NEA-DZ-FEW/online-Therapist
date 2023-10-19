@@ -1,7 +1,9 @@
 import Slider from "react-slick";
-import Card from "../Blog/SuggestedBlogsCard/Card";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import Card from "../Blog/SuggestedBlogsCard/Card";
 
 const RecentBlogsSection = () => {
     const blogs = [

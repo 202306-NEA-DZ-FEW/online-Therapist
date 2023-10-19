@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
 import * as React from "react";
-import Layout from "@/layout/Layout";
+
 import HomePageWrapper from "@/components/Home/HomePageWrapper";
+
+import Layout from "@/layout/Layout";
 
 export default function HomePage() {
     const { t } = useTranslation("common");
@@ -20,10 +21,8 @@ export default function HomePage() {
                     العربية
                 </Link>
             </div>
-
             <HomePageWrapper />
         </Layout>
-        
     );
 }
 
