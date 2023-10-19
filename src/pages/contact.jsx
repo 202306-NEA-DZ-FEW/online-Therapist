@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import contact from "public/contact.jpg";
+// import contact from "public/contact.jpg";
 import Button from "@/components/Button";
 
 function Contact() {
@@ -142,11 +142,11 @@ function Contact() {
                     </form>
                 </div>
                 <div className='hidden lg:block'>
-                    <Image
+                    {/* <Image
                         className='rounded-xl h-1/2 object-cover'
                         src={contact}
                         alt=''
-                    />
+                    /> */}
                     <div className='bg-LightTeal p-5 mx-auto mt-10 lg:w-3/4 rounded-2xl'>
                         <p>
                             Looking for more information or want to join Inner
