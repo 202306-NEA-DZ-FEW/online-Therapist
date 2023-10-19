@@ -1,7 +1,7 @@
 import renderer from "react-test-renderer";
-import Footer from "..";
+import DropDown from "../DropDown";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Footer />).toJSON();
+    const tree = renderer.create(<DropDown />).toJSON();
     expect(tree).toMatchSnapshot();
 });

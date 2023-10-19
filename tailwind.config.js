@@ -24,6 +24,7 @@ module.exports = {
         Gray: "#797877",
         Crovet: "#ffe8b3",
 
+      
       },
       fontFamily: {
         young: ["Young Serif", "serif"],
