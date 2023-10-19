@@ -28,8 +28,11 @@
         "next-i18next": "^11.2.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-icons": "^4.11.0",
         "react-router-dom": "^6.3.0",
-        "react-test-renderer": "^18.2.0"
+        "react-slick": "^0.29.0",
+        "react-test-renderer": "^18.2.0",
+        "slick-carousel": "^1.8.1"
     },
     "devDependencies": {
         "@commitlint/cli": "^16.3.0",
@@ -71,5 +74,10 @@
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
         }
+    },
+    "jest": {
+        "setupFiles": [
+            "test-setup.js"
+        ]
     }
 }
