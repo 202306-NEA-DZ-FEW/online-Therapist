@@ -1,13 +1,8 @@
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import * as React from "react";
-
-import HeroSection from "@/components/Home/HeroSection";
-import AppointmentSection from "@/components/Home/AppointmentSection"
-import CommunicationSection from "@/components/Home/CommunicationSection";
-
 import Layout from "@/layout/Layout";
+import HomePageWrapper from "@/components/Home/HomePageWrapper";
 
 export default function HomePage() {
     const { t } = useTranslation("common");
@@ -23,9 +18,8 @@ export default function HomePage() {
                     العربية
                 </Link>
             </div>
-            <HeroSection />
-            <AppointmentSection />
-            <CommunicationSection />
+
+            <HomePageWrapper />
         </Layout>
     );
 }
