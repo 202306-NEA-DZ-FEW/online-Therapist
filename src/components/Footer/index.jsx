@@ -5,10 +5,10 @@ export default function Footer() {
             <div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
                 <div className='md:flex md:justify-between'>
                     <div className='mb-6 md:mb-0 '>
-                        <h2 className='text-white text-2xl text-center mr-4'>
+                        <h2 className='text-white text-2xl xl:text-center mr-4 md:text-left '>
                             Subscribe
                         </h2>
-                        <p className='text-dark mt-3 mb-5 text-center'>
+                        <p className='text-dark mt-3 mb-5 xl:text-center md:text-left '>
                             We&apos;ll never spam you or share your email.
                         </p>
 
@@ -21,7 +21,7 @@ export default function Footer() {
                                     type='email'
                                     id='email'
                                     placeholder='Enter your email'
-                                    class='bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg  block w-full p-2.5 '
+                                    className='bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg  block w-full p-2.5 '
                                     required
                                 />
                                 <button
