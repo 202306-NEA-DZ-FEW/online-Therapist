@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-// import contact from "public/contact.jpg";
 import Button from "@/components/Button";
 
 function Contact() {
@@ -136,17 +135,19 @@ function Contact() {
                             />
                         </div>
 
-                        <Link href='/contactThankYou' className='mx-auto'>
+                        <Link href='/contactThankYou' className='mx-auto mb-5'>
                             <Button buttonText='SUBMIT!' buttonSize='lg' />
                         </Link>
                     </form>
                 </div>
                 <div className='hidden lg:block'>
-                    {/* <Image
-                        className='rounded-xl h-1/2 object-cover'
-                        src={contact}
+                    <Image
+                        className='rounded-xl h-2/3 w-5/6 mx-auto object-cover'
+                        width={5000}
+                        height={3000}
+                        src='/Contact.jpg'
                         alt=''
-                    /> */}
+                    />
                     <div className='bg-LightTeal p-5 mx-auto mt-10 lg:w-3/4 rounded-2xl'>
                         <p>
                             Looking for more information or want to join Inner
