@@ -1,0 +1,2116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="slick-slider bg-GreenLight slick-initialized"
+    dir="ltr"
+  >
+    <div
+      className="slick-list"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={null}
+      onMouseMove={null}
+      onMouseUp={[Function]}
+      onTouchCancel={null}
+      onTouchEnd={[Function]}
+      onTouchMove={null}
+      onTouchStart={[Function]}
+      style={Object {}}
+    >
+      <div
+        className="slick-track"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active slick-current"
+          data-index={0}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 1,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <img
+                alt="Therapist Sessions"
+                className="object-cover w-full max-h-[80vh]"
+                data-nimg="1"
+                decoding="async"
+                height={400}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={400}
+              />
+              <div
+                className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              >
+                <div
+                  className=""
+                >
+                  <h2
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  >
+                    Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  </h2>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  >
+                    Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-4 mx-auto"
+                >
+                  <div
+                    className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                  >
+                    Button
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={1}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <img
+                alt="Therapist Sessions"
+                className="object-cover w-full max-h-[80vh]"
+                data-nimg="1"
+                decoding="async"
+                height={400}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=828&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=828&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={400}
+              />
+              <div
+                className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              >
+                <div
+                  className=""
+                >
+                  <h2
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  >
+                    Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  </h2>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  >
+                    Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-4 mx-auto"
+                >
+                  <div
+                    className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                  >
+                    Button
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={2}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <img
+                alt="Therapist Sessions"
+                className="object-cover w-full max-h-[80vh]"
+                data-nimg="1"
+                decoding="async"
+                height={400}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=828&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=828&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={400}
+              />
+              <div
+                className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              >
+                <div
+                  className=""
+                >
+                  <h2
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  >
+                    Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  </h2>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  >
+                    Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-4 mx-auto"
+                >
+                  <div
+                    className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                  >
+                    Button
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={3}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <img
+                alt="Therapist Sessions"
+                className="object-cover w-full max-h-[80vh]"
+                data-nimg="1"
+                decoding="async"
+                height={400}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=828&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=828&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={400}
+              />
+              <div
+                className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              >
+                <div
+                  className=""
+                >
+                  <h2
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  >
+                    Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  </h2>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  >
+                    Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-4 mx-auto"
+                >
+                  <div
+                    className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                  >
+                    Button
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={4}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <img
+                alt="Therapist Sessions"
+                className="object-cover w-full max-h-[80vh]"
+                data-nimg="1"
+                decoding="async"
+                height={400}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={400}
+              />
+              <div
+                className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              >
+                <div
+                  className=""
+                >
+                  <h2
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  >
+                    Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  </h2>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  >
+                    Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-4 mx-auto"
+                >
+                  <div
+                    className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                  >
+                    Button
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={5}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <img
+                alt="Therapist Sessions"
+                className="object-cover w-full max-h-[80vh]"
+                data-nimg="1"
+                decoding="async"
+                height={400}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=828&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=828&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={400}
+              />
+              <div
+                className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              >
+                <div
+                  className=""
+                >
+                  <h2
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  >
+                    Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  </h2>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  >
+                    Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-4 mx-auto"
+                >
+                  <div
+                    className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                  >
+                    Button
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={6}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <img
+                alt="Therapist Sessions"
+                className="object-cover w-full max-h-[80vh]"
+                data-nimg="1"
+                decoding="async"
+                height={400}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=828&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=828&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={400}
+              />
+              <div
+                className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              >
+                <div
+                  className=""
+                >
+                  <h2
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  >
+                    Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  </h2>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  >
+                    Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-4 mx-auto"
+                >
+                  <div
+                    className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                  >
+                    Button
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="p-10 md:pl-10 bg-GreenLight md:pr-10 lg:pl-20 lg:pr-20"
+  >
+    <h2
+      className="text-center sm:text-xl md:text-2xl lg:text-4xl uppercase text-DarkTeal font-atkinson m-0 pl-6 pr-6"
+    >
+      the world's largest network of professional, licensed, accredited, and experienced therapists
+    </h2>
+    <div
+      className="md:p-8 lg:p-0 max-w-2xl lg:max-w-none"
+    >
+      <div
+        className="flex flex-wrap text-base font-semibold leading-7 text-white lg:space-x-10 md:space-x-5 space-x-5/2 items-center justify-evenly"
+      >
+        <div
+          className="m-10 p-8"
+        >
+          <div
+            className="group flip-card relative"
+          >
+            <div
+              className="flip-card-inner flex flex-col items-center"
+            >
+              <div
+                className="flip-card-front absolute w-32 h-32"
+              >
+                <img
+                  alt="Maria JR"
+                  className="w-full h-full object-cover rounded-full border text-center transform transition-transform duration-300"
+                  src="https://www.talkspace.com/blog/wp-content/uploads/2020/03/psychologist-psychiatrist-vs-therapist-1-800x500.jpg"
+                />
+              </div>
+              <div
+                className="flip-card-back absolute w-32 h-32 bg-white text-center flex flex-col justify-center rounded-full border text-center transform transition-transform duration-300 opacity-0 hover:opacity-100"
+              >
+                <span
+                  className="text-lg font-semibold text-black"
+                >
+                  Maria JR
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="m-10 p-8"
+        >
+          <div
+            className="group flip-card relative"
+          >
+            <div
+              className="flip-card-inner flex flex-col items-center"
+            >
+              <div
+                className="flip-card-front absolute w-32 h-32"
+              >
+                <img
+                  alt="Marris Adikwu"
+                  className="w-full h-full object-cover rounded-full border text-center transform transition-transform duration-300"
+                  src="https://www.talkspace.com/blog/wp-content/uploads/2020/06/Marris_Headshot-150x150.jpg"
+                />
+              </div>
+              <div
+                className="flip-card-back absolute w-32 h-32 bg-white text-center flex flex-col justify-center rounded-full border text-center transform transition-transform duration-300 opacity-0 hover:opacity-100"
+              >
+                <span
+                  className="text-lg font-semibold text-black"
+                >
+                  Marris Adikwu
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="m-10 p-8"
+        >
+          <div
+            className="group flip-card relative"
+          >
+            <div
+              className="flip-card-inner flex flex-col items-center"
+            >
+              <div
+                className="flip-card-front absolute w-32 h-32"
+              >
+                <img
+                  alt="Bisma Anwar"
+                  className="w-full h-full object-cover rounded-full border text-center transform transition-transform duration-300"
+                  src="https://www.talkspace.com/blog/wp-content/uploads/2020/09/Bisma_Circle-min-1-150x150.png"
+                />
+              </div>
+              <div
+                className="flip-card-back absolute w-32 h-32 bg-white text-center flex flex-col justify-center rounded-full border text-center transform transition-transform duration-300 opacity-0 hover:opacity-100"
+              >
+                <span
+                  className="text-lg font-semibold text-black"
+                >
+                  Bisma Anwar
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="m-10 p-8"
+        >
+          <div
+            className="group flip-card relative"
+          >
+            <div
+              className="flip-card-inner flex flex-col items-center"
+            >
+              <div
+                className="flip-card-front absolute w-32 h-32"
+              >
+                <img
+                  alt="Joseph Rauch"
+                  className="w-full h-full object-cover rounded-full border text-center transform transition-transform duration-300"
+                  src="https://www.talkspace.com/blog/wp-content/uploads/2020/01/Joseph-Rauch.png"
+                />
+              </div>
+              <div
+                className="flip-card-back absolute w-32 h-32 bg-white text-center flex flex-col justify-center rounded-full border text-center transform transition-transform duration-300 opacity-0 hover:opacity-100"
+              >
+                <span
+                  className="text-lg font-semibold text-black"
+                >
+                  Joseph Rauch
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="m-10 p-8"
+        >
+          <div
+            className="group flip-card relative"
+          >
+            <div
+              className="flip-card-inner flex flex-col items-center"
+            >
+              <div
+                className="flip-card-front absolute w-32 h-32"
+              >
+                <img
+                  alt="Jor-El Caraballo"
+                  className="w-full h-full object-cover rounded-full border text-center transform transition-transform duration-300"
+                  src="https://www.talkspace.com/blog/wp-content/uploads/2020/06/Jor-El-Caraballo-150x150.jpg"
+                />
+              </div>
+              <div
+                className="flip-card-back absolute w-32 h-32 bg-white text-center flex flex-col justify-center rounded-full border text-center transform transition-transform duration-300 opacity-0 hover:opacity-100"
+              >
+                <span
+                  className="text-lg font-semibold text-black"
+                >
+                  Jor-El Caraballo
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="text-black lg:text-sm md:text-xs sm:text-xs text-left mx-auto mt-20 p-4 md:p-8 lg:p-10 max-w-2xl lg:max-w-none"
+    >
+      <p>
+        Life can be tough sometimes. We all go through challenges that can make us feel overwhelmed, stressed, and anxious. When things are getting difficult, it's important to reach out for help. Therapy can be a great way to work through your challenges and improve your overall well-being. But traditional therapy can be inconvenient and expensive. That's where we come in. We offer a unique opportunity to access the world's largest network of licensed, accredited, and experienced therapists, all from the comfort of your own home. With us, you can get the same professionalism and quality care as you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.
+      </p>
+    </div>
+    <div
+      className="flex justify-center m-4 md:m-6 lg:m-10 p-4"
+    >
+      <div
+        className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+      >
+        Button
+      </div>
+    </div>
+  </div>,
+  <div
+    className="p-10 bg-LightBeige"
+  >
+    <h2
+      className="lg:text-4xl md:text-2xl sm:text-xl text-DarkTeal uppercase text-center font-atkinson"
+    >
+      we can communicate through
+    </h2>
+    <div
+      className="flex justify-center mx-auto mt-10"
+    >
+      <div
+        className="flex-1 sm:overflow-y-auto sm:pl-16"
+      >
+        <div
+          className="flex flex-wrap justify-center bg m-4 md:flex-row md:gap-8 sm:gap-4"
+        >
+          <div
+            className="flex flex-col justify-evenly bg-white w-64 h-64 p-1 m-1 border border-separate rounded-xl shadow-xl text-center"
+          >
+            <div
+              className="flex flex-col h-1/2 bg-Green rounded-md items-center justify-center"
+            >
+              <div
+                className=" text-4xl flex justify-center text-indigo-600 mb-2"
+              >
+                <svg
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 18v-6a9 9 0 0 1 18 0v6"
+                  />
+                  <path
+                    d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"
+                  />
+                </svg>
+              </div>
+              <h3
+                className=" text-xl font-semibold mb-2"
+              >
+                Voice Call
+              </h3>
+            </div>
+            <div
+              className="flex flex-col h-1/2 bg-white items-center justify-center"
+            >
+              <p
+                className=" text-gray-600"
+              >
+                Ready to talk to a therapist? Give them a call and let it all out!
+              </p>
+            </div>
+          </div>
+          <div
+            className="flex flex-col justify-evenly bg-white w-64 h-64 p-1 m-1 border border-separate rounded-xl shadow-xl text-center"
+          >
+            <div
+              className="flex flex-col h-1/2 bg-SkyBlue rounded-md items-center justify-center"
+            >
+              <div
+                className=" text-4xl flex justify-center text-indigo-600 mb-2"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 576 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z"
+                  />
+                </svg>
+              </div>
+              <h3
+                className=" text-xl font-semibold mb-2"
+              >
+                Video Call
+              </h3>
+            </div>
+            <div
+              className="flex flex-col h-1/2 bg-white items-center justify-center"
+            >
+              <p
+                className=" text-gray-600"
+              >
+                Your therapist recommends video calls, but it's your choice.
+              </p>
+            </div>
+          </div>
+          <div
+            className="flex flex-col justify-evenly bg-white w-64 h-64 p-1 m-1 border border-separate rounded-xl shadow-xl text-center"
+          >
+            <div
+              className="flex flex-col h-1/2 bg-Crovet rounded-md items-center justify-center"
+            >
+              <div
+                className=" text-4xl flex justify-center text-indigo-600 mb-2"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"
+                  />
+                </svg>
+              </div>
+              <h3
+                className=" text-xl font-semibold mb-2"
+              >
+                Chat
+              </h3>
+            </div>
+            <div
+              className="flex flex-col h-1/2 bg-white items-center justify-center"
+            >
+              <p
+                className=" text-gray-600"
+              >
+                Need to talk? Let your therapist listen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="container max-w-[90%] mx-auto p-5"
+  >
+    <h2
+      className="font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black/80 mb-5  md:mb-10"
+    >
+      Recent Blogs
+    </h2>
+    <div
+      className="slick-slider p-1 m-1 md:p-5 md:m-5 slick-initialized"
+      dir="ltr"
+    >
+      <button
+        className="slick-arrow slick-prev"
+        data-role="none"
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        type="button"
+      >
+         
+        Previous
+      </button>
+      <div
+        className="slick-list"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={null}
+        onMouseMove={null}
+        onMouseUp={[Function]}
+        onTouchCancel={null}
+        onTouchEnd={[Function]}
+        onTouchMove={null}
+        onTouchStart={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={-3}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={-2}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={-1}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-current"
+            data-index={0}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active"
+            data-index={1}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active"
+            data-index={2}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={3}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={4}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={5}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={6}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={7}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={8}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide slick-cloned"
+            data-index={9}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+              >
+                <div
+                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                >
+                  <div>
+                    <div
+                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                    >
+                      <div
+                        className="font-semibold text-xl md:text-2xl"
+                      >
+                        Mental Health and technology
+                      </div>
+                      <div
+                        className=" text-sm  text-white "
+                      >
+                        <p
+                          className=" line-clamp-1"
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                        </p>
+                        <a
+                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                          href=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                           
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  alt="Mental Health and technology"
+                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                  data-nimg="1"
+                  decoding="async"
+                  height={200}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="blog-img-placeholder.svg"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={300}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        className="slick-arrow slick-next"
+        data-role="none"
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        type="button"
+      >
+         
+        Next
+      </button>
+      <ul
+        className="slick-dots"
+        onMouseEnter={null}
+        onMouseLeave={null}
+        onMouseOver={null}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        <li
+          className="slick-active"
+        >
+          <button
+            onClick={[Function]}
+          >
+            1
+          </button>
+        </li>
+        <li
+          className=""
+        >
+          <button
+            onClick={[Function]}
+          >
+            2
+          </button>
+        </li>
+        <li
+          className=""
+        >
+          <button
+            onClick={[Function]}
+          >
+            3
+          </button>
+        </li>
+        <li
+          className=""
+        >
+          <button
+            onClick={[Function]}
+          >
+            4
+          </button>
+        </li>
+        <li
+          className=""
+        >
+          <button
+            onClick={[Function]}
+          >
+            5
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>,
+  <div
+    className="container mx-auto p-10"
+  >
+    <h2
+      className="font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+    >
+      purchase tickets
+    </h2>
+    <p
+      className="uppercase text-lg md:text-xl text-black/70 mt-2"
+    >
+      purchase tickets that can be used to book appointments!
+    </p>
+    <div
+      className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 my-10 "
+    >
+      <div
+        className="bg-white/95 flex flex-col items-center justify-center text-center py-16 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full"
+      >
+        <div
+          className="flex items-center justify-center space-x-2"
+        >
+          <span
+            className="uppercase text-4xl"
+          >
+            5
+            $ 
+            ticket
+          </span>
+        </div>
+        <span
+          className="text-base rtl:text-3xl text-black/50"
+        >
+          10
+          $
+        </span>
+        <div
+          className="w-fit"
+        >
+          <a
+            href="/payment"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            <button
+              className="uppercase cursor-pointer py-2 px-3 text-lg rounded text-black/80 font-light bg-[#2DD3E3]"
+            >
+              purchase
+            </button>
+          </a>
+        </div>
+      </div>
+      <div
+        className="bg-white/95 flex flex-col items-center justify-center text-center py-16 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full"
+      >
+        <div
+          className="flex items-center justify-center space-x-2"
+        >
+          <span
+            className="uppercase text-4xl"
+          >
+            25
+            $ 
+            ticket
+          </span>
+        </div>
+        <span
+          className="text-base rtl:text-3xl text-black/50"
+        >
+          40
+          $
+        </span>
+        <div
+          className="w-fit"
+        >
+          <a
+            href="/payment"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            <button
+              className="uppercase cursor-pointer py-2 px-3 text-lg rounded text-black/80 font-light bg-[#2DD3E3]"
+            >
+              purchase
+            </button>
+          </a>
+        </div>
+      </div>
+      <div
+        className="bg-white/95 flex flex-col items-center justify-center text-center py-16 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full"
+      >
+        <div
+          className="flex items-center justify-center space-x-2"
+        >
+          <span
+            className="uppercase text-4xl"
+          >
+            50
+            $ 
+            ticket
+          </span>
+        </div>
+        <span
+          className="text-base rtl:text-3xl text-black/50"
+        >
+          70
+          $
+        </span>
+        <div
+          className="w-fit"
+        >
+          <a
+            href="/payment"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            <button
+              className="uppercase cursor-pointer py-2 px-3 text-lg rounded text-black/80 font-light bg-[#2DD3E3]"
+            >
+              purchase
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="font-atkinson mt-20"
+    >
+      <h2
+        className="font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+      >
+        Join our team
+      </h2>
+      <p
+        className="uppercase text-lg md:text-xl text-black/70 my-2"
+      >
+        Are you a counselor?
+      </p>
+      <div
+        className="bg-white/95 flex flex-col items-center justify-center text-center py-10 px-5 rounded-md space-y-6 shadow-2xl min-h-[20rem]"
+      >
+        <span
+          className="sm:text-xl text-base text-black/80"
+        >
+          Interested in becoming a part of our revolutionary mental health platform? We offer you the freedom to set your own schedule and decide how much you want to work. Meanwhile, we take care of all the heavy lifting, from handling client referrals to managing all billing details. Join us and focus on what you do best – providing quality mental health services, while we ensure a seamless experience for both you and your clients.
+        </span>
+        <div>
+          <a
+            href="/requirements"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            <button
+              className="uppercase cursor-pointer py-2 px-3 text-lg rounded text-black/80 font-light bg-[#2DD3E3]"
+            >
+              Learn more
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
