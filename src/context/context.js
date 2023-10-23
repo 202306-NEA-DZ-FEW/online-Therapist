@@ -53,12 +53,14 @@ export function AppWrapper({ children }) {
                 const credential =
                     FacebookAuthProvider.credentialFromResult(result);
                 const accessToken = credential.accessToken;
-                 // fetch facebook graph api to get user actual profile picture
-      fetch(`https://graph.facebook.com/${result.user.providerData[0].uid}/picture?type=large&access_token=${accessToken}`)
-      .then((response)=>response.blob())
-      .then((blob)=>{
-        setProfilePicture(URL.createObjectURL(blob));
-      })
+                // fetch facebook graph api to get user actual profile picture
+                fetch(
+                    `https://graph.facebook.com/${result.user.providerData[0].uid}/picture?type=large&access_token=${accessToken}`
+                )
+                    .then((response) => response.blob())
+                    .then((blob) => {
+                        setProfilePicture(URL.createObjectURL(blob));
+                    });
 
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...
@@ -101,7 +103,7 @@ export function AppWrapper({ children }) {
                 setIsSignUpSuccessful,
                 isSignUpSuccessful,
                 facebookSignup,
-                profilePicture
+                profilePicture,
             }}
         >
             {children}

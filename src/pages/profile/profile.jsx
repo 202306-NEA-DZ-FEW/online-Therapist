@@ -10,7 +10,7 @@ export default function Profile() {
             <h1 className='text-center font-atkinson font-bold text-3xl md:pt-12'>
                 profile
             </h1>
-            <h3 className='text-center'>                
+            <h3 className='text-center'>
                 {user ? (
                     <>
                         <p>Name: {user.displayName}</p>

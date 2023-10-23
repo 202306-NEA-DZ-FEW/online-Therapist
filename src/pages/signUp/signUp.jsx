@@ -88,8 +88,7 @@ export default function SignUp() {
 
     const handleFacebookSignup = async () => {
         try {
-           await facebookSignup();
-            
+            await facebookSignup();
         } catch (error) {
             console.log(error);
         }
