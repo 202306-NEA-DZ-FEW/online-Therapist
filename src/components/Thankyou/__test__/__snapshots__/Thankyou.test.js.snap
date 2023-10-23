@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="flex flex-col items-center justify-center font-atkinson space-y-6 lg:flex lg:flex-col lg:justify-start lg:items-start lg:m-16 h-screen"
+>
+  <h1
+    className="text-4xl font-bold"
+  >
+    THANK YOU!
+  </h1>
+  <p
+    className="text-xl mx-6 text-center lg:text-start lg:mx-0"
+  >
+    Your Sign Up request has been received, you will soon receive a confirmation email. 
+    <br />
+    Please follow the steps in the email to complete and activate your account.
+  </p>
+  <a
+    href="/"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-48 h-14 bg-white hover:cursor-pointer"
+    >
+      <span
+        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
+      </span>
+      <span
+        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+      >
+        BACK TO HOME
+      </span>
+      <span
+        class="relative invisible"
+      >
+        $
+        BACK TO HOME
+      </span>
+    </div>
+  </a>
+</div>
+`;

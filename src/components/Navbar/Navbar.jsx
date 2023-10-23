@@ -2,10 +2,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
+import { useAppcontext } from "@/context/context";
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const { t } = useTranslation("common");
+    const { user, logOut } = useAppcontext();
+
+    const handleSignOut = async () => {
+        try {
+            await logOut();
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <div>
@@ -173,11 +183,28 @@ export default function Navbar() {
                                         {t("navbar.contact")}
                                     </Link>
                                 </li>
-                                <li className='text-center'>
-                                    <button className='text-white font-atkinson text-lg bg-Teal rounded-full h-12 w-96 md:w-24 md:rounded-md md:h-10 hover:bg-DarkTeal'>
-                                        {t("navbar.login")}
-                                    </button>
-                                </li>
+                                {!user ? (
+                                    <li className='text-center'>
+                                        <Link href='/login/login'>
+                                            <button className='text-white font-atkinson text-lg bg-Teal rounded-full h-12 w-96 md:w-24 md:rounded-md md:h-10 hover:bg-DarkTeal'>
+                                                {t("navbar.login")}
+                                            </button>
+                                        </Link>
+                                    </li>
+                                ) : (
+                                    <div className='flex items-center space-x-4'>
+                                        <Link href='/profile/profile'>
+                                            <p>Profile</p>
+                                        </Link>
+                                        <button
+                                            onClick={handleSignOut}
+                                            className='text-white font-atkinson text-lg bg-Teal rounded-full h-12 w-96 md:w-24 md:rounded-md md:h-10 hover:bg-DarkTeal'
+                                        >
+                                            Log Out
+                                        </button>
+                                    </div>
+                                )}
+
                                 <li className='text-DarkTeal font-atkinson ml-2 text-lg md:hover:text-Teal'>
                                     <div className='group inline-block relative'>
                                         <button className='block invisible md:visible flex items-center justify-center mt-2 text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-20 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
