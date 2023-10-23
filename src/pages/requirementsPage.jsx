@@ -85,7 +85,7 @@ function RequirementsPage() {
                 </div>
 
                 <div className='p-10'>
-                    <Link href='/SignUp'>
+                    <Link href='/therapists/signup'>
                         <Button
                             buttonText={t("requirement.getStarted")}
                             buttonSize='lg'
