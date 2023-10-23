@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="relative "
+>
+  <a
+    className="mr-4 hover:underline md:mr-6 cursor-pointer p-8 mb-3 "
+    onClick={[Function]}
+  >
+    About
+  </a>
+  <div
+    className="hidden absolute"
+  >
+    <div
+      className="ml-6 "
+    >
+      <a
+        class="mr-4 hover:underline md:mr-6 "
+        href="#"
+      >
+        About us
+      </a>
+    </div>
+    <div
+      className="ml-6 text-dark"
+    >
+      <a
+        class="mr-4 hover:underline md:mr-6 "
+        href="#"
+      >
+        Our team
+      </a>
+    </div>
+  </div>
+</div>
+`;

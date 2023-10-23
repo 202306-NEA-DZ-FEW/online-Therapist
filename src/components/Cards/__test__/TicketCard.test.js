@@ -1,7 +1,8 @@
 import renderer from "react-test-renderer";
-import Footer from "..";
+
+import TicketCard from "@/components/Cards/TicketCard";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Footer />).toJSON();
+    const tree = renderer.create(<TicketCard />).toJSON();
     expect(tree).toMatchSnapshot();
 });
