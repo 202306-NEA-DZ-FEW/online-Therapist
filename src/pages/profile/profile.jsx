@@ -2,15 +2,15 @@ import { useAppcontext } from "@/context/context";
 import Layout from "@/layout/Layout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export default function profile() {
-    // const { user } = useAppcontext();
+export default function Profile() {
+    const { user } = useAppcontext();
 
     return (
         <Layout>
             <h1 className='text-center font-atkinson font-bold text-3xl md:pt-12'>
                 profile
             </h1>
-            {/* <h3 className='text-center'>
+            <h3 className='text-center'>
                 {user ? (
                     <>
                         <p>Name: {user.displayName}</p>
@@ -18,8 +18,8 @@ export default function profile() {
                     </>
                 ) : (
                     "Please sign in"
-                )}{" "}
-            </h3> */}
+                )}
+            </h3>
         </Layout>
     );
 }

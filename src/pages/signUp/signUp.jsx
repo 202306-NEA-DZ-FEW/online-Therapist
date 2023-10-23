@@ -21,7 +21,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 export default function SignUp() {
-  const { t } = useTranslation("common");
+    const { t } = useTranslation("common");
     const {
         googleSignup,
         isSignUpSuccessful,
@@ -58,7 +58,7 @@ export default function SignUp() {
                 // ...
             });
             updateProfile(userCredential.user, {
-                displayName: formData.firstname,
+                displayName: formData.firstname + " " + formData.lastname,
             });
 
             // Save user information in Firestore
@@ -88,8 +88,8 @@ export default function SignUp() {
 
     const handleFacebookSignup = async () => {
         try {
-            const userCredential = await facebookSignup();
-            console.log("facebook signed up:", userCredential);
+           await facebookSignup();
+            
         } catch (error) {
             console.log(error);
         }
@@ -143,7 +143,7 @@ export default function SignUp() {
                         </div>
                         <div className='w-96 space-y-6 m-auto md:w-1/2 lg:w-2/5 lg:space-y-6'>
                             <h1 className='text-center font-atkinson font-bold text-3xl md:pt-12'>
-                            {t("signup.signupNow")}
+                                {t("signup.signupNow")}
                             </h1>
                             <div className='p-8 shadow-lg lg:p-4 rounded'>
                                 <form
@@ -154,7 +154,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='text'
-                                            placeholder= {t("signup.firstname")}
+                                            placeholder={t("signup.firstname")}
                                             name='firstname'
                                             errorMessage={
                                                 errors.firstname?.message
@@ -168,7 +168,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='text'
-                                            placeholder= {t("signup.lastname")}
+                                            placeholder={t("signup.lastname")}
                                             name='lastname'
                                             errorMessage={
                                                 errors.lastname?.message
@@ -195,7 +195,9 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='email'
-                                            placeholder={t("signup.emailconfirm")}
+                                            placeholder={t(
+                                                "signup.emailconfirm"
+                                            )}
                                             name='confirmemail'
                                             errorMessage={
                                                 errors.confirmemail?.message
@@ -226,7 +228,9 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='password'
-                                            placeholder={t("signup.passwordconfirm")}
+                                            placeholder={t(
+                                                "signup.passwordconfirm"
+                                            )}
                                             name='confirmpassword'
                                             errorMessage={
                                                 errors.confirmpassword?.message
@@ -255,13 +259,13 @@ export default function SignUp() {
                                         <Link href='/login/login'>
                                             <Button
                                                 transition={false}
-                                                buttonText= {t("signup.login")}
+                                                buttonText={t("signup.login")}
                                             />
                                         </Link>
                                         <button type='submit'>
                                             <Button
                                                 transition={false}
-                                                buttonText= {t("signup.signup")}
+                                                buttonText={t("signup.signup")}
                                                 color='darkteal'
                                             />
                                         </button>

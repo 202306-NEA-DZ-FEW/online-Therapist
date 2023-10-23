@@ -16,29 +16,56 @@ export function AppWrapper({ children }) {
 
     const googleSignup = () => {
         const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider);
+        signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            console.log("google user", user);
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+          }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+          });
+        
     };
 
     const facebookSignup = () => {
         const provider = new FacebookAuthProvider();
         signInWithPopup(auth, provider)
-            .then((result) => {
-                // The signed-in user info.
-                setUser(result.user);
+        .then((result) => {
+            // The signed-in user info.
+            const user = result.user;
+            console.log("facebook user", user);
+            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+            const credential = FacebookAuthProvider.credentialFromResult(result);
+            const accessToken = credential.accessToken;
+      
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+        })
+        .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage);
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential =
+                FacebookAuthProvider.credentialFromError(error);
 
-                // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-                const credential =
-                    FacebookAuthProvider.credentialFromResult(result);
-                const accessToken = credential.accessToken;
-
-                // IdP data available using getAdditionalUserInfo(result)
-                // ...
-            })
-            .catch((error) => {
-                console.log(error);
-
-                // ...
-            });
+            // ...
+        });
     };
 
     const logOut = () => {

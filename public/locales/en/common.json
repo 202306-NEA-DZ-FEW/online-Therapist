@@ -25,9 +25,9 @@
         "or": "Or"
     },
     "signupthank": {
-        "thankyou":"THANK YOU!",
-        "text1":"Your Sign Up request has been received, you will soon receive a confirmation email.",
-        "text2":"Please follow the steps in the email to complete and activateyour account.",
-        "button":"BACK TO HOME"
+        "thankyou": "THANK YOU!",
+        "text1": "Your Sign Up request has been received, you will soon receive a confirmation email.",
+        "text2": "Please follow the steps in the email to complete and activateyour account.",
+        "button": "BACK TO HOME"
     }
 }
