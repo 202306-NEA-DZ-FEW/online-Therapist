@@ -1,70 +1,122 @@
 import DropDown from "./DropDown";
+import { useEffect } from "react";
+import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 export default function Footer() {
+    const { t } = useTranslation("common");
+    const router = useRouter();
+    const language = router.locale;
+
     return (
         <footer className='bg-DarkTeal'>
             <div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
                 <div className='md:flex md:justify-between'>
-                    <div className='mb-6 md:mb-0 '>
-                        <h2 className='text-white text-2xl xl:text-center mr-4 md:text-left '>
-                            Subscribe
+                    <div
+                        className={`mb-6 md:mb-0 ${
+                            language === "ar" ? "text-right" : ""
+                        }`}
+                    >
+                        <h2
+                            className={`text-white text-2xl xl:text-center ${
+                                language === "ar" ? "ml-4" : "md:text-left"
+                            }`}
+                        >
+                            {t("footer.subscribe")}
                         </h2>
-                        <p className='text-dark mt-3 mb-5 xl:text-center md:text-left '>
-                            We&apos;ll never spam you or share your email.
+                        <p
+                            className={`text-dark mt-3 mb-5 xl:text-center ${
+                                language === "ar" ? "mr-1" : "md:text-left"
+                            }`}
+                        >
+                            {t("footer.spam")}
                         </p>
 
-                        <div className='flex items-center flex-shrink-0 w-full mx-auto sm:w-auto'>
+                        <div
+                            className={`flex items-center flex-shrink-0 w-full mx-auto sm:w-auto ${
+                                language === "ar" ? "ml-4" : "md:mr-4"
+                            }`}
+                        >
                             <form
                                 action='#'
-                                className='flex flex-col items-center w-full md:flex-row'
+                                className={`flex flex-col items-center w-full md:flex-row ${
+                                    language === "ar" ? "text-right" : ""
+                                }`}
                             >
                                 <input
                                     type='email'
                                     id='email'
-                                    placeholder='Enter your email'
-                                    className='bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg  block w-full p-2.5 '
+                                    placeholder={t("footer.email")}
+                                    className='bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg block w-full p-2.5'
                                     required
                                 />
                                 <button
                                     type='submit'
-                                    className='text-white bg-Teal hover:bg-white hover:text-Teal focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 center '
+                                    className={`text-white bg-Teal hover:bg-white hover:text-Teal focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 ${
+                                        language === "ar"
+                                            ? "center pr-7 pl-7 mr-3"
+                                            : ""
+                                    }`}
                                 >
-                                    SUBSCRIBE
+                                    {t("footer.subscribe")}
                                 </button>
                             </form>
                         </div>
                     </div>
                     <div>
-                        <ul className='flex flex-wrap items-center justify-center mt-3 text-sm font-medium text-white sm:mt-0 mb-10'>
+                        <ul
+                            className={`flex flex-wrap items-center justify-center mt-3 text-sm font-medium text-white sm:mt-0 mb-10 ${
+                                language === "ar" ? "text-right" : ""
+                            }`}
+                        >
                             <li>
-                                <a
+                                <Link
+                                    className={`mr-4 hover:underline ${
+                                        language === "ar" ? "ml-4" : "md:mr-6"
+                                    }`}
                                     href='#'
-                                    className='mr-4 hover:underline md:mr-6'
                                 >
-                                    Home
-                                </a>
+                                    {t("footer.home")}
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href='#'
-                                    className='mr-4 hover:underline md:mr-6 pl-8'
+                                <Link
+                                    href='/blogs'
+                                    className={`mr-4 hover:underline ${
+                                        language === "ar"
+                                            ? "ml-2"
+                                            : "md:mr-6 pl-8"
+                                    }`}
                                 >
-                                    Blogs
-                                </a>
+                                    {t("footer.blogs")}
+                                </Link>
                             </li>
                             <li>
                                 <DropDown />
                             </li>
                             <li>
-                                <a href='#' className='hover:underline'>
-                                    Contact
-                                </a>
+                                <Link
+                                    href='/contact'
+                                    className={`hover:underline ${
+                                        language === "ar" ? "ml-3" : ""
+                                    }`}
+                                >
+                                    {t("footer.contact")}
+                                </Link>
                             </li>
                         </ul>
 
-                        <div className='flex mt-10 space-x-5 justify-center items-center sm:mt-0 pt-5'>
-                            <a
+                        <div
+                            className={`flex mt-10 space-x-5 justify-center items-center sm:mt-0 pt-5 ${
+                                language === "ar" ? "flex-row-reverse" : ""
+                            }`}
+                        >
+                            <Link
                                 href='https://www.facebook.com/recodedofficial'
-                                className='text-dark hover:text-white text-center'
+                                className={`text-dark hover:text-white text-center ${
+                                    language === "ar" ? "ml-4" : ""
+                                }`}
                             >
                                 <svg
                                     className='w-4 h-4'
@@ -80,11 +132,12 @@ export default function Footer() {
                                     ></path>
                                 </svg>
                                 <span className='sr-only'>Facebook page</span>
-                            </a>
-
-                            <a
+                            </Link>
+                            <Link
                                 href='https://twitter.com/recodedofficial'
-                                className='text-dark hover:text-white text-center'
+                                className={`text-dark hover:text-white text-center ${
+                                    language === "ar" ? "ml-2" : ""
+                                }`}
                             >
                                 <svg
                                     className='w-4 h-4'
@@ -100,11 +153,13 @@ export default function Footer() {
                                     ></path>
                                 </svg>
                                 <span className='sr-only'>Twitter page</span>
-                            </a>
+                            </Link>
 
-                            <a
+                            <Link
                                 href='https://github.com/202306-NEA-DZ-FEW/online-Therapist'
-                                className='text-dark hover:text-white text-center'
+                                className={`text-dark hover:text-white text-center ${
+                                    language === "ar" ? "ml-2" : ""
+                                }`}
                             >
                                 <svg
                                     className='w-4 h-4'
@@ -120,18 +175,26 @@ export default function Footer() {
                                     ></path>
                                 </svg>
                                 <span className='sr-only'>GitHub account</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <hr className='my-6 border-gray-200 sm:mx-auto lg:my-8' />
-                <div className='flex items-center justify-center'>
-                    <span className='text-sm text-dark text-center sm:text-left hover:text-white'>
+                <div
+                    className={`flex items-center justify-center ${
+                        language === "ar" ? "flex-row-reverse" : ""
+                    }`}
+                >
+                    <span
+                        className={`text-sm text-dark text-center sm:text-left hover:text-white ${
+                            language === "ar" ? "ml-4" : ""
+                        }`}
+                    >
                         © 2023{" "}
-                        <a href='#' className='hover:underline'>
-                            InnerSpace™
-                        </a>
-                        . All Rights Reserved.
+                        <Link href='#' className='hover:underline'>
+                            {t("footer.innerSpace")}
+                        </Link>
+                        {t("footer.copyright")}
                     </span>
                 </div>
             </div>
