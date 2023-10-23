@@ -1,5 +1,5 @@
 import Button from "@/components/Button";
-import OpenPos from "@/components/openPos";
+import OpenPos from "@/components/OpenPos";
 import Layout from "@/layout/Layout";
 import { useRef } from "react";
 import React from "react";
