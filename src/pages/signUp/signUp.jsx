@@ -18,8 +18,10 @@ import Layout from "@/layout/Layout";
 import Link from "next/link";
 import SignupThanks from "@/components/Thankyou/SignupThanks";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 export default function SignUp() {
+  const { t } = useTranslation("common");
     const {
         googleSignup,
         isSignUpSuccessful,
@@ -129,7 +131,7 @@ export default function SignUp() {
                     <>
                         <div className='md:m-auto lg:m-auto'>
                             <h1 className='text-center font-atkinson font-bold text-4xl pt-4 md:pb-6 lg:text-6xl lg:pb-6'>
-                                Healing starts here
+                                {t("signup.heading")}
                             </h1>
                             <Image
                                 src='/signuppp.svg'
@@ -141,7 +143,7 @@ export default function SignUp() {
                         </div>
                         <div className='w-96 space-y-6 m-auto md:w-1/2 lg:w-2/5 lg:space-y-6'>
                             <h1 className='text-center font-atkinson font-bold text-3xl md:pt-12'>
-                                SIGNUP NOW
+                            {t("signup.signupNow")}
                             </h1>
                             <div className='p-8 shadow-lg lg:p-4 rounded'>
                                 <form
@@ -152,7 +154,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='text'
-                                            placeholder='First Name'
+                                            placeholder= {t("signup.firstname")}
                                             name='firstname'
                                             errorMessage={
                                                 errors.firstname?.message
@@ -166,7 +168,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='text'
-                                            placeholder='Last Name'
+                                            placeholder= {t("signup.lastname")}
                                             name='lastname'
                                             errorMessage={
                                                 errors.lastname?.message
@@ -183,7 +185,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='email'
-                                            placeholder='Your Email'
+                                            placeholder={t("signup.email")}
                                             name='email'
                                             errorMessage={errors.email?.message}
                                             register={{ ...register("email") }}
@@ -193,7 +195,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='email'
-                                            placeholder='Confirm email'
+                                            placeholder={t("signup.emailconfirm")}
                                             name='confirmemail'
                                             errorMessage={
                                                 errors.confirmemail?.message
@@ -210,7 +212,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='password'
-                                            placeholder='Password'
+                                            placeholder={t("signup.password")}
                                             name='password'
                                             errorMessage={
                                                 errors.password?.message
@@ -224,7 +226,7 @@ export default function SignUp() {
                                         <Input
                                             width='full'
                                             type='password'
-                                            placeholder='Confirm Password'
+                                            placeholder={t("signup.passwordconfirm")}
                                             name='confirmpassword'
                                             errorMessage={
                                                 errors.confirmpassword?.message
@@ -239,7 +241,7 @@ export default function SignUp() {
 
                                     <div className='flex justify-end items-center mx-3 lg:space-y-2 lg:mx-4'>
                                         <p className='text-md font-medium text-gray-900 pr-12 lg:pr-24'>
-                                            Birth Date
+                                            {t("signup.birthdate")}
                                         </p>
                                         <Input
                                             width='1/2'
@@ -253,13 +255,13 @@ export default function SignUp() {
                                         <Link href='/login/login'>
                                             <Button
                                                 transition={false}
-                                                buttonText='Login'
+                                                buttonText= {t("signup.login")}
                                             />
                                         </Link>
                                         <button type='submit'>
                                             <Button
                                                 transition={false}
-                                                buttonText='Signup'
+                                                buttonText= {t("signup.signup")}
                                                 color='darkteal'
                                             />
                                         </button>
@@ -268,13 +270,13 @@ export default function SignUp() {
                             </div>
                             <div className='flex items-center justify-center space-x-4 '>
                                 <hr className='w-24 lg:w-48 border-Teal' />
-                                <p className='text-lg'>Or</p>
+                                <p className='text-lg'> {t("signup.or")}</p>
                                 <hr className='w-24 lg:w-48 border-1 border-Teal' />
                             </div>
                             <div className='flex justify-center items-center space-x-12'>
                                 <span
                                     onClick={handleGoogleSignup}
-                                    className='cursor-pointer '
+                                    className='cursor-poisignupnter '
                                 >
                                     <Image
                                         src='/google.svg'

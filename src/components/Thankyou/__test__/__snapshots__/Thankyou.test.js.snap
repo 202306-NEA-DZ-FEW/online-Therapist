@@ -7,14 +7,15 @@ exports[`renders correctly 1`] = `
   <h1
     className="text-4xl font-bold"
   >
-    THANK YOU!
+    signupthank.thankyou
   </h1>
   <p
     className="text-xl mx-6 text-center lg:text-start lg:mx-0"
   >
-    Your Sign Up request has been received, you will soon receive a confirmation email. 
+    signupthank.text1
+     
     <br />
-    Please follow the steps in the email to complete and activate your account.
+    signupthank.text2
   </p>
   <a
     href="/"
@@ -46,13 +47,13 @@ exports[`renders correctly 1`] = `
       <span
         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
       >
-        BACK TO HOME
+        signupthank.button
       </span>
       <span
         class="relative invisible"
       >
         $
-        BACK TO HOME
+        signupthank.button
       </span>
     </div>
   </a>
