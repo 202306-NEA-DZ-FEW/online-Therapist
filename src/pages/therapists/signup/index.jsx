@@ -1,6 +1,9 @@
 import { useState } from "react";
+import Image from "next/image";
+
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -8,7 +11,10 @@ import * as yup from "yup";
 import Layout from "@/layout/Layout";
 import Button from "@/components/Button";
 import Input from "@/components/Input";
-import Image from "next/image";
+
+import { auth, db } from "@/util/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { collection, addDoc } from "firebase/firestore";
 
 const TherapistSignUp = () => {
     const { t } = useTranslation("common");
@@ -16,8 +22,9 @@ const TherapistSignUp = () => {
         username: "",
         email: "",
         city: "",
+        licenseNumber: "",
         password: "",
-        confirmpassword: "",
+        confirPassword: "",
     });
 
     const onChange = (e) => {
@@ -26,22 +33,16 @@ const TherapistSignUp = () => {
     };
 
     const validationSchema = yup.object().shape({
-        firstname: yup.string().required("First Name is required"),
-        lastname: yup.string().required("Last name is required"),
-        email: yup
-            .string()
-            .required("Email is required")
-            .email("Email is invalid"),
-        confirmemail: yup
-            .string()
-            .required("Email is required")
-            .email("Email is invalid")
-            .oneOf([yup.ref("email")], "Email don't match"),
+        username: yup.string().required("First Name is required"),
+        email: yup.string().required("Email is required"),
+        licenseNumber: yup.string().required("License Number is required"),
+        city: yup.string().required("City is required"),
+
         password: yup
             .string()
             .required("password is required")
             .min(8, "Password must be at least 8 characters"),
-        confirmpassword: yup
+        confirPassword: yup
             .string()
             .required("password is required")
             .oneOf([yup.ref("password")], "Password don't match"),
@@ -49,10 +50,34 @@ const TherapistSignUp = () => {
 
     const formOptions = { resolver: yupResolver(validationSchema) };
 
-    const onSubmit = () => {};
-
-    // react-hook-form
+    const onSubmit = async (data) => {
+        try {
+            const userCredential = await createUserWithEmailAndPassword(
+                auth,
+                data.email,
+                data.password
+            );
+            if (userCredential) {
+                console.log("Success UID: ", userCredential.user.uid);
+            }
+            const therapistCollection = collection(
+                db,
+                process.env.NEXT_PUBLIC_THERAPIST_COLLECTION
+            );
+            await addDoc(therapistCollection, {
+                uid: userCredential.user.uid,
+                username: formData.username,
+                email: formData.email,
+                licenseNumber: formData.licenseNumber,
+                city: formData.city,
+                approved: false,
+            });
+        } catch (error) {
+            console.error("Error signing up:", error);
+        }
+    };
     const { register, handleSubmit, formState } = useForm(formOptions);
+
     const { errors } = formState;
     return (
         <Layout>
@@ -65,7 +90,6 @@ const TherapistSignUp = () => {
                         <h2 className='font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black/80 mx-5 mb-10'>
                             create an account
                         </h2>
-                        {/* <Input width="full" type="text" placeholder="First Name" name="first-name" text="this is help text" label="Name" hint="Optional"/> */}
                         <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row lg:space-x-2 lg:m-2'>
                             <Input
                                 width='full'
@@ -78,8 +102,7 @@ const TherapistSignUp = () => {
                                 onChange={onChange}
                             />
                         </div>
-
-                        <div className='flex flex-col space-y-1 mx-3 lg:m-4'>
+                        <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row lg:space-x-2 lg:m-2'>
                             <Input
                                 width='full'
                                 type='email'
@@ -90,6 +113,8 @@ const TherapistSignUp = () => {
                                 value={formData.email}
                                 onChange={onChange}
                             />
+                        </div>
+                        <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row lg:space-x-2 lg:m-2'>
                             <Input
                                 width='full'
                                 type='text'
@@ -98,6 +123,18 @@ const TherapistSignUp = () => {
                                 errorMessage={errors.city?.message}
                                 register={{ ...register("city") }}
                                 value={formData.city}
+                                onChange={onChange}
+                            />
+                        </div>
+                        <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row lg:space-x-2 lg:m-2'>
+                            <Input
+                                width='full'
+                                type='text'
+                                placeholder='License Number'
+                                name='licenseNumber'
+                                errorMessage={errors.licenseNumber?.message}
+                                register={{ ...register("licenseNumber") }}
+                                value={formData.licenseNumber}
                                 onChange={onChange}
                             />
                         </div>
@@ -117,10 +154,10 @@ const TherapistSignUp = () => {
                                 width='full'
                                 type='password'
                                 placeholder='Confirm Password'
-                                name='confirmpassword'
-                                errorMessage={errors.confirmpassword?.message}
-                                register={{ ...register("confirmpassword") }}
-                                value={formData.confirmpassword}
+                                name='confirPassword'
+                                errorMessage={errors.confirPassword?.message}
+                                register={{ ...register("confirPassword") }}
+                                value={formData.confirPassword}
                                 onChange={onChange}
                             />
                         </div>
