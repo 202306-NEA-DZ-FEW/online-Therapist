@@ -72,8 +72,8 @@ export default function Navbar() {
                                         </svg>
                                     </button>
 
-                                    <ul className='absolute hidden w-full text-center md:text-start rounded-b-lg p-2 mt-0 bg-white shadow-lg text-DarkTeal group-hover:block md:w-24'>
-                                        <div className='space-y-2 '>
+                                    <ul className='absolute hidden w-full text-center md:text-start rounded-b-lg p-2 mt-0 bg-white shadow-lg text-DarkTeal group-hover:block md:w-24 '>
+                                        <div className='space-y-2 z-50 '>
                                             <Link
                                                 href='#'
                                                 locale='en'
