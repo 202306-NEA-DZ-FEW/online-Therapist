@@ -10,6 +10,26 @@
         "aboutUs": "About Us",
         "careers": "Careers"
     },
+    "signup": {
+        "heading": "Healing starts here",
+        "signupNow": "SIGNUP NOW",
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "email": "Your Email",
+        "emailconfirm": "Confirm email",
+        "password": "Password",
+        "passwordconfirm": "Confirm Password",
+        "birthdate": "Birth Date",
+        "login": "Login",
+        "signup": "Signup",
+        "or": "Or"
+    },
+    "signupthank": {
+        "thankyou": "THANK YOU!",
+        "text1": "Your Sign Up request has been received, you will soon receive a confirmation email.",
+        "text2": "Please follow the steps in the email to complete and activateyour account.",
+        "button": "BACK TO HOME"
+    },
 
     "footer": {
         "subscribe": "Subscribe",
