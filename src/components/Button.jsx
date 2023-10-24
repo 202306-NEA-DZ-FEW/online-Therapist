@@ -37,9 +37,7 @@ function Button({
                 onClick={clickFunction}
                 className={`relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl ${size} bg-white hover:cursor-pointer`}
             >
-                <span
-                    className={`absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease`}
-                >
+                <span className='absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease'>
                     {buttonHoverText ? (
                         buttonHoverText
                     ) : (
@@ -59,12 +57,10 @@ function Button({
                         </svg>
                     )}
                 </span>
-                <span
-                    className={`absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease`}
-                >
+                <span className='absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease'>
                     {buttonText}
                 </span>
-                <span class='relative invisible'>${buttonText}</span>
+                <span className='relative invisible'>${buttonText}</span>
             </div>
         ) : (
             <div
@@ -107,7 +103,7 @@ function Button({
                 >
                     {buttonText}
                 </span>
-                <span class='relative invisible'>${buttonText}</span>
+                <span className='relative invisible'>${buttonText}</span>
             </div>
         ) : (
             <div
@@ -122,12 +118,10 @@ function Button({
             <div
                 className={`relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium border-2 border-Teal rounded-lg shadow-md group text-xl ${size} bg-white hover:cursor-not-allowed`}
             >
-                <span
-                    className={`absolute flex items-center justify-center w-full h-full text-Teal`}
-                >
+                <span className='absolute flex items-center justify-center w-full h-full text-Teal'>
                     {buttonText}
                 </span>
-                <span class='relative invisible'>${buttonText}</span>
+                <span className='relative invisible'>${buttonText}</span>
             </div>
         );
     } else if (color.toLocaleLowerCase() === "lightorange" && disabled) {
@@ -135,12 +129,10 @@ function Button({
             <div
                 className={`relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium border-2 border-SkyBlue rounded-lg shadow-md group text-xl ${size} bg-LightOrange hover:cursor-not-allowed`}
             >
-                <span
-                    className={`absolute flex items-center justify-center w-full h-full text-SkyBlue`}
-                >
+                <span className='absolute flex items-center justify-center w-full h-full text-SkyBlue'>
                     {buttonText}
                 </span>
-                <span class='relative invisible'>${buttonText}</span>
+                <span className='relative invisible'>${buttonText}</span>
             </div>
         );
     }
