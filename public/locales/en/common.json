@@ -9,5 +9,30 @@
         "team": "Team",
         "aboutUs": "About Us",
         "careers": "Careers"
+    },
+    "contact": {
+        "title": "SEND US YOUR REQUEST!",
+        "callToAction": "Do you have a question, concern, idea, feedback, problem?If you need assistance, please fill out the form below, and we'd be happy to help!",
+        "type": "Type of contact",
+        "radioOne": "I have a question about the service.",
+        "radioTwo": "I'm a registered client and I need support.",
+        "radioThree": "I'm a counselor interested in joining.",
+        "radioFour": "I'm a registered counselor and I need support.",
+        "radioFive": "I have a business-related inquiry.",
+        "radioSix": "I'm interested in Inner Space for my organization.",
+        "radioSeven": "I have a billing related question.",
+        "name": "Full Name:",
+        "namePlaceholder": "Enter your full name here.",
+        "email": "Email:",
+        "emailPlaceholder": "Enter your Email address here.",
+        "details": "Details",
+        "detailsPlaceholder": "Please provide more detail.",
+        "submit": "SUBMIT!",
+        "info": "Looking for more information or want to join Inner Space as a counselor? Submit your information and an Inner Space representative will follow up with you as soon as possible."
+    },
+    "contactThankYou": {
+        "title": "THANK YOU!",
+        "description": "Your request has been sent, a Inner Space representative will get in contact with you through the email you provided as soon as possible.",
+        "button": "Take me home!"
     }
 }
