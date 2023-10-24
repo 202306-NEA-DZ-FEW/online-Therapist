@@ -1,9 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
-
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -14,9 +12,11 @@ import Input from "@/components/Input";
 
 import { auth, db } from "@/util/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { collection, addDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
+import { useRouter } from "next/navigation";
 
 const TherapistSignUp = () => {
+    const router = useRouter();
     const { t } = useTranslation("common");
     const [formData, setFormData] = useState({
         username: "",
@@ -60,20 +60,25 @@ const TherapistSignUp = () => {
             if (userCredential) {
                 console.log("Success UID: ", userCredential.user.uid);
             }
-            const therapistCollection = collection(
-                db,
-                process.env.NEXT_PUBLIC_THERAPIST_COLLECTION
+            await setDoc(
+                doc(
+                    db,
+                    process.env.NEXT_PUBLIC_THERAPIST_COLLECTION,
+                    userCredential.user.uid
+                ),
+                {
+                    uid: userCredential.user.uid,
+                    username: formData.username,
+                    email: formData.email,
+                    licenseNumber: formData.licenseNumber,
+                    city: formData.city,
+                    approved: false,
+                }
             );
-            await addDoc(therapistCollection, {
-                uid: userCredential.user.uid,
-                username: formData.username,
-                email: formData.email,
-                licenseNumber: formData.licenseNumber,
-                city: formData.city,
-                approved: false,
-            });
         } catch (error) {
             console.error("Error signing up:", error);
+        } finally {
+            router.push("/therapists");
         }
     };
     const { register, handleSubmit, formState } = useForm(formOptions);
