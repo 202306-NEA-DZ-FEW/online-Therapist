@@ -2,17 +2,30 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
+import { useAppcontext } from "@/context/context";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const { t } = useTranslation("common");
+    const { user, logOut } = useAppcontext();
+
+    const handleSignOut = async () => {
+        try {
+            await logOut();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    const router = useRouter();
+    const language = router.locale;
 
     return (
         <div>
-            <nav className='bg-white md:h-20 md:pt-4 md:h-20 p-0 md:px-12 border-b'>
+            <nav className='bg-white md:h-20 md:pt-4  p-0 md:px-12 border-b'>
                 <div className='justify-between px-4 mx-auto md:items-center md:flex md:px-8'>
                     <div>
-                        <div className='flex items-center justify-between py-3 py-0 md:py-0 '>
+                        <div className='flex items-center justify-between py-3  md:py-0 '>
                             {/* LOGO */}
                             <Link href='/'>
                                 <Image
@@ -24,7 +37,7 @@ export default function Navbar() {
                             </Link>
                             <div className='md:hidden flex items-center'>
                                 <div className='group inline-block relative'>
-                                    <button className='block flex items-center justify-center text-DarkTeal font-atkinson text-lg text-center py-2  w-20 mx-auto  hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
+                                    <button className=' flex items-center justify-center text-DarkTeal font-atkinson text-lg text-center py-2  w-20 mx-auto  hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                         <svg
                                             fill='none'
                                             height='24'
@@ -62,7 +75,7 @@ export default function Navbar() {
                                     <ul className='absolute hidden w-full text-center md:text-start rounded-b-lg p-2 mt-0 bg-white shadow-lg text-DarkTeal group-hover:block md:w-24'>
                                         <div className='space-y-2 '>
                                             <Link
-                                                href='/'
+                                                href='#'
                                                 locale='en'
                                                 className='hover:text-Teal'
                                             >
@@ -71,7 +84,7 @@ export default function Navbar() {
                                                 </li>
                                             </Link>
                                             <Link
-                                                href='/'
+                                                href='#'
                                                 locale='ar'
                                                 className='hover:text-Teal'
                                             >
@@ -113,7 +126,11 @@ export default function Navbar() {
                             }`}
                         >
                             <ul className='h-screen md:h-auto space-y-2 md:space-y-0 md:space-x-10 items-center justify-center md:flex md:justify-between md:items-center'>
-                                <li className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
+                                <li
+                                    className={`block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal  ${
+                                        language === "ar" ? "pl-9" : ""
+                                    }`}
+                                >
                                     <Link
                                         href='/'
                                         onClick={() => setNavbar(!navbar)}
@@ -173,14 +190,31 @@ export default function Navbar() {
                                         {t("navbar.contact")}
                                     </Link>
                                 </li>
-                                <li className='text-center'>
-                                    <button className='text-white font-atkinson text-lg bg-Teal rounded-full h-12 w-96 md:w-24 md:rounded-md md:h-10 hover:bg-DarkTeal'>
-                                        {t("navbar.login")}
-                                    </button>
-                                </li>
+                                {!user ? (
+                                    <li className='text-center'>
+                                        <Link href='/login/login'>
+                                            <button className='text-white font-atkinson text-lg bg-Teal rounded-full h-12 w-96 md:w-24 md:rounded-md md:h-10 hover:bg-DarkTeal'>
+                                                {t("navbar.login")}
+                                            </button>
+                                        </Link>
+                                    </li>
+                                ) : (
+                                    <div className='flex items-center space-x-4'>
+                                        <Link href='/profile/profile'>
+                                            <p>Profile</p>
+                                        </Link>
+                                        <button
+                                            onClick={handleSignOut}
+                                            className='text-white font-atkinson text-lg bg-Teal rounded-full h-12 w-96 md:w-24 md:rounded-md md:h-10 hover:bg-DarkTeal'
+                                        >
+                                            Log Out
+                                        </button>
+                                    </div>
+                                )}
+
                                 <li className='text-DarkTeal font-atkinson ml-2 text-lg md:hover:text-Teal'>
                                     <div className='group inline-block relative'>
-                                        <button className='block invisible md:visible flex items-center justify-center mt-2 text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-20 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
+                                        <button className=' invisible md:visible flex items-center justify-center mt-2 text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-20 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                             <svg
                                                 fill='none'
                                                 height='24'
@@ -218,7 +252,7 @@ export default function Navbar() {
                                         <ul className='absolute hidden w-full text-center md:text-start rounded-b-lg p-2 mt-0 bg-white shadow-lg text-DarkTeal group-hover:block md:w-24'>
                                             <div className='space-y-2 '>
                                                 <Link
-                                                    href='/'
+                                                    href='#'
                                                     locale='en'
                                                     className='hover:text-Teal'
                                                 >
@@ -227,7 +261,7 @@ export default function Navbar() {
                                                     </li>
                                                 </Link>
                                                 <Link
-                                                    href='/'
+                                                    href='#'
                                                     locale='ar'
                                                     className='hover:text-Teal'
                                                 >

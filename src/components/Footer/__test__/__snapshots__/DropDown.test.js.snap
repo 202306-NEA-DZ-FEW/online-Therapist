@@ -5,10 +5,10 @@ exports[`renders correctly 1`] = `
   className="relative "
 >
   <a
-    className="mr-4 hover:underline md:mr-6 cursor-pointer p-8 mb-3 "
+    className="mr-4 hover:underline md:mr-6 cursor-pointer p-8 mb-3  "
     onClick={[Function]}
   >
-    About
+    footer.about
   </a>
   <div
     className="hidden absolute"
@@ -17,20 +17,26 @@ exports[`renders correctly 1`] = `
       className="ml-6 "
     >
       <a
-        class="mr-4 hover:underline md:mr-6 "
+        className="mr-4 hover:underline md:mr-6 "
         href="#"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
       >
-        About us
+        footer.aboutUs
       </a>
     </div>
     <div
       className="ml-6 text-dark"
     >
       <a
-        class="mr-4 hover:underline md:mr-6 "
+        className="mr-4 hover:underline md:mr-6 "
         href="#"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
       >
-        Our team
+        footer.team
       </a>
     </div>
   </div>

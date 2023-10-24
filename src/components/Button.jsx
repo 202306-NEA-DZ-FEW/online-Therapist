@@ -10,7 +10,7 @@ function Button({
     disabled = false,
 }) {
     // transition: takes true or false, if true the button has a sliding transition, else the button is simple.
-    // color: can be "teal" or "lightorange".
+    // color: can be "teal" or "darkteal".
     // buttonSize: can be "sm", "md" or "lg".
     // buttonText: takes a string and it's the text in the button.
     // buttonHoverText: takes a string and replaces the the text onHover when the transition is true (if left empty its an arrow).
@@ -70,13 +70,15 @@ function Button({
                 {buttonText}
             </div>
         );
-    } else if (color.toLocaleLowerCase() === "lightorange" && !disabled) {
+    } else if (color.toLocaleLowerCase() === "darkteal" && !disabled) {
         return transition ? (
             <div
                 onClick={clickFunction}
                 className={`relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-SkyBlue rounded-lg shadow-md group text-xl ${size} bg-LightOrange hover:cursor-pointer`}
             >
-                <span className='absolute inset-0 flex items-center justify-center w-full h-full text-LightOrange duration-300 -translate-x-full bg-SkyBlue group-hover:translate-x-0 ease'>
+                <span
+                    className={`absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-DarkTeal group-hover:translate-x-0 ease`}
+                >
                     {buttonHoverText ? (
                         buttonHoverText
                     ) : (
@@ -96,7 +98,9 @@ function Button({
                         </svg>
                     )}
                 </span>
-                <span className='absolute flex items-center justify-center w-full h-full text-SkyBlue transition-all duration-300 transform group-hover:translate-x-full ease'>
+                <span
+                    className={`absolute flex items-center justify-center w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease`}
+                >
                     {buttonText}
                 </span>
                 <span className='relative invisible'>${buttonText}</span>
@@ -104,7 +108,7 @@ function Button({
         ) : (
             <div
                 onClick={clickFunction}
-                className={`bg-LightOrange border-2 border-SkyBlue flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-SkyBlue whitespace-no-wrap rounded-lg shadow-md hover:bg-SkyBlue hover:text-LightOrange focus:outline-none hover:cursor-pointer ${size}`}
+                className={`bg-Teal border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-black whitespace-no-wrap rounded-lg shadow-md hover:bg-DarkTeal hover:text-white focus:outline-none hover:cursor-pointer ${size}`}
             >
                 {buttonText}
             </div>
