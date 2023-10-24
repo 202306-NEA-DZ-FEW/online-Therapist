@@ -1,0 +1,561 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="slick-slider bg-GreenLight slick-initialized"
+  dir="ltr"
+>
+  <div
+    className="slick-list"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={null}
+    onMouseMove={null}
+    onMouseUp={[Function]}
+    onTouchCancel={null}
+    onTouchEnd={[Function]}
+    onTouchMove={null}
+    onTouchStart={[Function]}
+    style={Object {}}
+  >
+    <div
+      className="slick-track"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        aria-hidden={false}
+        className="slick-slide slick-active slick-current"
+        data-index={0}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 1,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "width": "100%",
+              }
+            }
+            tabIndex={-1}
+          >
+            <img
+              alt="Therapist Sessions"
+              className="object-cover w-full max-h-[80vh]"
+              data-nimg="1"
+              decoding="async"
+              height={400}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75"
+              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={400}
+            />
+            <div
+              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className=""
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                </h2>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-4 mx-auto"
+              >
+                <div
+                  className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                >
+                  Button
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={1}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "width": "100%",
+              }
+            }
+            tabIndex={-1}
+          >
+            <img
+              alt="Therapist Sessions"
+              className="object-cover w-full max-h-[80vh]"
+              data-nimg="1"
+              decoding="async"
+              height={400}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=828&q=75"
+              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=828&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={400}
+            />
+            <div
+              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className=""
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                </h2>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-4 mx-auto"
+              >
+                <div
+                  className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                >
+                  Button
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={2}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "width": "100%",
+              }
+            }
+            tabIndex={-1}
+          >
+            <img
+              alt="Therapist Sessions"
+              className="object-cover w-full max-h-[80vh]"
+              data-nimg="1"
+              decoding="async"
+              height={400}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=828&q=75"
+              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=828&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={400}
+            />
+            <div
+              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className=""
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                </h2>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-4 mx-auto"
+              >
+                <div
+                  className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                >
+                  Button
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={3}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "width": "100%",
+              }
+            }
+            tabIndex={-1}
+          >
+            <img
+              alt="Therapist Sessions"
+              className="object-cover w-full max-h-[80vh]"
+              data-nimg="1"
+              decoding="async"
+              height={400}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=828&q=75"
+              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=828&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={400}
+            />
+            <div
+              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className=""
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                </h2>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-4 mx-auto"
+              >
+                <div
+                  className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                >
+                  Button
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={4}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "width": "100%",
+              }
+            }
+            tabIndex={-1}
+          >
+            <img
+              alt="Therapist Sessions"
+              className="object-cover w-full max-h-[80vh]"
+              data-nimg="1"
+              decoding="async"
+              height={400}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75"
+              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={400}
+            />
+            <div
+              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className=""
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                </h2>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-4 mx-auto"
+              >
+                <div
+                  className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                >
+                  Button
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={5}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "width": "100%",
+              }
+            }
+            tabIndex={-1}
+          >
+            <img
+              alt="Therapist Sessions"
+              className="object-cover w-full max-h-[80vh]"
+              data-nimg="1"
+              decoding="async"
+              height={400}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=828&q=75"
+              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=828&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={400}
+            />
+            <div
+              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className=""
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                </h2>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-4 mx-auto"
+              >
+                <div
+                  className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                >
+                  Button
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={6}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "width": "100%",
+              }
+            }
+            tabIndex={-1}
+          >
+            <img
+              alt="Therapist Sessions"
+              className="object-cover w-full max-h-[80vh]"
+              data-nimg="1"
+              decoding="async"
+              height={400}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=828&q=75"
+              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=828&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={400}
+            />
+            <div
+              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className=""
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                </h2>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-4 mx-auto"
+              >
+                <div
+                  className="w-fit py-2 px-4 font-semibold text-white hover:text-LightOrange uppercase  bg-Teal hover:bg-DarkTeal focus:ring-4 focus:outline-none focus:ring-DarkTeal/25 rounded-full text-xs p-2 text-center"
+                >
+                  Button
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
