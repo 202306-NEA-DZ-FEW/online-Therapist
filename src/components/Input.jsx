@@ -23,7 +23,7 @@ export default function Input({
             </div>
             <div className='flex flex-col'>
                 <div className='flex flex-col w-full'>
-                <input
+                    <input
                         {...register}
                         type={type}
                         placeholder={placeholder}
@@ -34,9 +34,9 @@ export default function Input({
                         className={`border border-gray-300 h-12 w-${width} pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer`}
                     />
                     <p className='text-sm text-red-500 mt-1 animate-pulse '>
-                    {errorMessage}
-                </p>
-            </div>
+                        {errorMessage}
+                    </p>
+                </div>
             </div>
         </>
     );
