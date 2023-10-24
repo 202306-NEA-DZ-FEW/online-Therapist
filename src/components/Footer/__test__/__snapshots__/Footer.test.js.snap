@@ -14,56 +14,62 @@ exports[`renders correctly 1`] = `
         className="mb-6 md:mb-0 "
       >
         <h2
-          className="text-white text-2xl xl:text-center mr-4 md:text-left "
+          className="text-white text-2xl xl:text-center md:text-left"
         >
-          Subscribe
+          footer.subscribe
         </h2>
         <p
-          className="text-dark mt-3 mb-5 xl:text-center md:text-left "
+          className="text-dark mt-3 mb-5 xl:text-center md:text-left"
         >
-          We'll never spam you or share your email.
+          footer.spam
         </p>
         <div
-          className="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto"
+          className="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto md:mr-4"
         >
           <form
             action="#"
-            className="flex flex-col items-center w-full md:flex-row"
+            className="flex flex-col items-center w-full md:flex-row "
           >
             <input
-              className="bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg  block w-full p-2.5 "
+              className="bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg block w-full p-2.5"
               id="email"
-              placeholder="Enter your email"
+              placeholder="footer.email"
               required={true}
               type="email"
             />
             <button
-              className="text-white bg-Teal hover:bg-white hover:text-Teal focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 center "
+              className="text-white bg-Teal hover:bg-white hover:text-Teal focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 "
               type="submit"
             >
-              SUBSCRIBE
+              footer.subscribe
             </button>
           </form>
         </div>
       </div>
       <div>
         <ul
-          className="flex flex-wrap items-center justify-center mt-3 text-sm font-medium text-white sm:mt-0 mb-10"
+          className="flex flex-wrap items-center justify-center mt-3 text-sm font-medium text-white sm:mt-0 mb-10 "
         >
           <li>
             <a
               className="mr-4 hover:underline md:mr-6"
               href="#"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
-              Home
+              footer.home
             </a>
           </li>
           <li>
             <a
               className="mr-4 hover:underline md:mr-6 pl-8"
-              href="#"
+              href="/blogs"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
-              Blogs
+              footer.blogs
             </a>
           </li>
           <li>
@@ -71,10 +77,10 @@ exports[`renders correctly 1`] = `
               className="relative "
             >
               <a
-                className="mr-4 hover:underline md:mr-6 cursor-pointer p-8 mb-3 "
+                className="mr-4 hover:underline md:mr-6 cursor-pointer p-8 mb-3  "
                 onClick={[Function]}
               >
-                About
+                footer.about
               </a>
               <div
                 className="hidden absolute"
@@ -83,20 +89,26 @@ exports[`renders correctly 1`] = `
                   className="ml-6 "
                 >
                   <a
-                    class="mr-4 hover:underline md:mr-6 "
+                    className="mr-4 hover:underline md:mr-6 "
                     href="#"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
                   >
-                    About us
+                    footer.aboutUs
                   </a>
                 </div>
                 <div
                   className="ml-6 text-dark"
                 >
                   <a
-                    class="mr-4 hover:underline md:mr-6 "
+                    className="mr-4 hover:underline md:mr-6 "
                     href="#"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
                   >
-                    Our team
+                    footer.team
                   </a>
                 </div>
               </div>
@@ -104,19 +116,25 @@ exports[`renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="hover:underline"
-              href="#"
+              className="hover:underline "
+              href="/contact"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
-              Contact
+              footer.contact
             </a>
           </li>
         </ul>
         <div
-          className="flex mt-10 space-x-5 justify-center items-center sm:mt-0 pt-5"
+          className="flex mt-10 space-x-5 justify-center items-center sm:mt-0 pt-5 "
         >
           <a
-            className="text-dark hover:text-white text-center"
+            className="text-dark hover:text-white text-center "
             href="https://www.facebook.com/recodedofficial"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
           >
             <svg
               aria-hidden="true"
@@ -138,8 +156,11 @@ exports[`renders correctly 1`] = `
             </span>
           </a>
           <a
-            className="text-dark hover:text-white text-center"
+            className="text-dark hover:text-white text-center "
             href="https://twitter.com/recodedofficial"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
           >
             <svg
               aria-hidden="true"
@@ -161,8 +182,11 @@ exports[`renders correctly 1`] = `
             </span>
           </a>
           <a
-            className="text-dark hover:text-white text-center"
+            className="text-dark hover:text-white text-center "
             href="https://github.com/202306-NEA-DZ-FEW/online-Therapist"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
           >
             <svg
               aria-hidden="true"
@@ -190,20 +214,23 @@ exports[`renders correctly 1`] = `
       className="my-6 border-gray-200 sm:mx-auto lg:my-8"
     />
     <div
-      className="flex items-center justify-center"
+      className="flex items-center justify-center "
     >
       <span
-        className="text-sm text-dark text-center sm:text-left hover:text-white"
+        className="text-sm text-dark text-center sm:text-left hover:text-white "
       >
         © 2023
          
         <a
           className="hover:underline"
           href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
-          InnerSpace™
+          footer.innerSpace
         </a>
-        . All Rights Reserved.
+        footer.copyright
       </span>
     </div>
   </div>
