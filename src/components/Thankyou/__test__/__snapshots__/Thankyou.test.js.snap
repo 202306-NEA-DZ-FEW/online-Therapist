@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         signupthank.button
       </span>
       <span
-        class="relative invisible"
+        className="relative invisible"
       >
         $
         signupthank.button
