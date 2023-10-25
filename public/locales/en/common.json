@@ -9,5 +9,13 @@
         "team": "Team",
         "aboutUs": "About Us",
         "careers": "Careers"
+    },
+    "login": {
+        "header": "login",
+        "email": "Your Email",
+        "password": "Your Password",
+        "logIn": "log in",
+        "signUp": "sign up",
+        "paragraph": "or"
     }
 }
