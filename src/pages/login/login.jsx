@@ -182,7 +182,7 @@ const Login = () => {
                                 <Link
                                     rel='preload'
                                     as='font'
-                                    href='/signup/signup'
+                                    href='/signUp/signUp'
                                 >
                                     <Button
                                         buttonText={t("login.signUp")}
