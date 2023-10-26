@@ -24,6 +24,7 @@ const Login = () => {
     const { t } = useTranslation("common");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const { user, AuthWithGoogle, AuthWithFacebook } = UserAuth();
 
     const handleSignIn = async () => {
         // e.preventDefault();
@@ -98,8 +99,6 @@ const Login = () => {
     //         // ...
     //     }
     // };
-
-    const { AuthWithGoogle, AuthWithFacebook } = UserAuth();
 
     const handleGoogleLogin = async () => {
         try {
@@ -183,7 +182,7 @@ const Login = () => {
                                 <Link
                                     rel='preload'
                                     as='font'
-                                    href='/signup/signUp'
+                                    href='/signup/signup'
                                 >
                                     <Button
                                         buttonText={t("login.signUp")}

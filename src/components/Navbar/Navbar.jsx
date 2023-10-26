@@ -3,15 +3,16 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import { userAuth } from "@/context/AuthContext";
+import { UserAuth } from "@/context/AuthContext";
 
 export default function Navbar() {
     const router = useRouter();
     const [navbar, setNavbar] = useState(false);
     const { t } = useTranslation("common");
     const language = router.locale;
-    const { user, logOut } = userAuth();
 
+    const { user, logOut } = UserAuth();
+    console.log("Mohamed", user);
     useEffect(() => {
         document.body.dir = language == "ar" ? "rtl" : "ltr";
     }, [language]);

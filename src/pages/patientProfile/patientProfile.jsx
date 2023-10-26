@@ -1,11 +1,11 @@
-import { userAuth } from "@/context/AuthContext";
+import { UserAuth } from "@/context/AuthContext";
 import Layout from "@/layout/Layout";
 // import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const patientProfile = () => {
     // const { t } = useTranslation("common");
-    const { user } = userAuth();
+    const { user } = UserAuth();
 
     return (
         <Layout>

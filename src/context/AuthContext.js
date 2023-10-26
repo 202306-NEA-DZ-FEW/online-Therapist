@@ -15,6 +15,7 @@ export function AppWrapper({ children }) {
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
     const [profilePicture, setProfilePicture] = useState(null);
+    const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
 
     const AuthWithGoogle = () => {
         // Implement Google login using Firebase here
@@ -34,14 +35,14 @@ export function AppWrapper({ children }) {
                 // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log("can't log in", errorMessage, " ", errorCode);
+                // console.log("can't log in", errorMessage, " ", errorCode);
                 // The email of the user's account used.
                 const email = error.customData.email;
-                console.log("wrong email", email);
+                // console.log("wrong email", email);
                 // The AuthCredential type that was used.
                 const credential =
                     GoogleAuthProvider.credentialFromError(error);
-                console.log("error", credential);
+                // console.log("error", credential);
                 // ...
             });
     };
@@ -71,7 +72,7 @@ export function AppWrapper({ children }) {
                 // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                // console.log(errorCode, errorMessage);
+                console.log(errorCode, errorMessage);
                 // The email of the user's account used.
                 const email = error.customData.email;
                 // console.log("wrong email", email);
@@ -106,6 +107,7 @@ export function AppWrapper({ children }) {
 
         return () => unsubscribe();
     }, []);
+
     // useEffect(() => {
     //     const unsubscribe = auth.onAuthStateChanged((user) => {
     //         if (user) {
@@ -127,6 +129,7 @@ export function AppWrapper({ children }) {
                 signOut,
                 AuthWithGoogle,
                 AuthWithFacebook,
+                profilePicture,
             }}
         >
             {children}
