@@ -1,5 +1,3 @@
-import Button from "@/components/Button";
-import Input from "@/components/Input";
 import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -13,21 +11,23 @@ import {
 import { auth } from "@/util/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/util/firebase";
-import { useAppcontext } from "@/context/context";
 import Layout from "@/layout/Layout";
 import Link from "next/link";
 import SignupThanks from "@/components/Thankyou/SignupThanks";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import Input from "@/components/elements/Input";
+import Button from "@/components/elements/Buttons/Button";
+import { UserAuth } from "@/context/AuthContext";
 
 export default function SignUp() {
     const { t } = useTranslation("common");
     const {
-        googleSignup,
+        AuthWithGoogle,
+        AuthWithFacebook,
         isSignUpSuccessful,
         setIsSignUpSuccessful,
-        facebookSignup,
-    } = useAppcontext();
+    } = UserAuth();
 
     const [formData, setFormData] = useState({
         firstname: "",
@@ -80,7 +80,7 @@ export default function SignUp() {
 
     const handleGoogleSignup = async () => {
         try {
-            await googleSignup();
+            await AuthWithGoogle();
         } catch (error) {
             console.log(error);
         }
@@ -88,7 +88,7 @@ export default function SignUp() {
 
     const handleFacebookSignup = async () => {
         try {
-            await facebookSignup();
+            await AuthWithFacebook();
         } catch (error) {
             console.log(error);
         }
