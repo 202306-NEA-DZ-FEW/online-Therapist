@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Button from "@/components/elements/Buttons/Button";
+import Button from "@/components/elements/Button";
 
 function RequirementsPage() {
     const { t } = useTranslation("common");

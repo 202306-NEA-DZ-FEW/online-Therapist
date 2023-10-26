@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Layout from "@/layout/Layout";
-import Button from "@/components/elements/Buttons/Button";
+import Button from "@/components/elements/Button";
 
 function Contact() {
     const [selectedOption, setSelectedOption] = useState(null);

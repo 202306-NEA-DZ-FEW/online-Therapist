@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import Button from "@/components/elements/Buttons/Button";
+import Button from "@/components/elements/Button";
 
 function ContactThankYou() {
     const { t } = useTranslation("common");
