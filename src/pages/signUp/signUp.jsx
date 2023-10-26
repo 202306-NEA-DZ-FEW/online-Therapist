@@ -17,8 +17,8 @@ import SignupThanks from "@/components/Thankyou/SignupThanks";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Input from "@/components/elements/Input";
-import Button from "@/components/elements/Buttons/Button";
 import { UserAuth } from "@/context/AuthContext";
+import Button from "@/components/elements/Button";
 
 export default function SignUp() {
     const { t } = useTranslation("common");

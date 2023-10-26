@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import Button from "../elements/Buttons/Button";
+import Button from "../elements/Button";
 
 export default function SignupThanks() {
     const { t } = useTranslation("common");
