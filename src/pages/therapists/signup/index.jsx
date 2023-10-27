@@ -1,23 +1,22 @@
-import { useState } from "react";
-import Image from "next/image";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import {yupResolver} from "@hookform/resolvers/yup"
+import {createUserWithEmailAndPassword} from "firebase/auth"
+import {doc, setDoc} from "firebase/firestore"
+import Image from "next/image"
+import {useRouter} from "next/navigation"
+import {withTranslation} from "next-i18next"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import {useState} from "react"
+import {useForm} from "react-hook-form"
+import * as yup from "yup"
 
-import Layout from "@/layout/Layout";
-import Button from "@/components/Button";
-import Input from "@/components/Input";
+import Button from "@/components/Button"
+import Input from "@/components/Input"
 
-import { auth, db } from "@/util/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
-import { useRouter } from "next/navigation";
+import Layout from "@/layout/Layout"
+import {auth, db} from "@/util/firebase"
 
-const TherapistSignUp = () => {
-    const router = useRouter();
-    const { t } = useTranslation("common");
+const TherapistSignUp = ({t}) => {
+    const router = useRouter()
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -25,30 +24,30 @@ const TherapistSignUp = () => {
         licenseNumber: "",
         password: "",
         confirPassword: "",
-    });
+    })
 
     const onChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+        const {name, value} = e.target
+        setFormData({...formData, [name]: value})
+    }
 
     const validationSchema = yup.object().shape({
-        username: yup.string().required("First Name is required"),
-        email: yup.string().required("Email is required"),
-        licenseNumber: yup.string().required("License Number is required"),
-        city: yup.string().required("City is required"),
+        username: yup.string().required(t("therapists:formErrors.username")),
+        email: yup.string().required(t("therapists:formErrors.email")),
+        licenseNumber: yup.string().required(t("therapists:formErrors.license")),
+        city: yup.string().required(t("therapists:formErrors.city")),
 
         password: yup
             .string()
-            .required("password is required")
-            .min(8, "Password must be at least 8 characters"),
+            .required(t("therapists:formErrors.password"))
+            .min(8, t("therapists:formErrors.passwordMin")),
         confirPassword: yup
             .string()
-            .required("password is required")
-            .oneOf([yup.ref("password")], "Password don't match"),
-    });
+            .required(t("therapists:formErrors.password"))
+            .oneOf([yup.ref("password")], t("therapists:formErrors.passwordMatch")),
+    })
 
-    const formOptions = { resolver: yupResolver(validationSchema) };
+    const formOptions = {resolver: yupResolver(validationSchema)}
 
     const onSubmit = async (data) => {
         try {
@@ -56,9 +55,9 @@ const TherapistSignUp = () => {
                 auth,
                 data.email,
                 data.password
-            );
+            )
             if (userCredential) {
-                console.log("Success UID: ", userCredential.user.uid);
+                console.log("Success UID: ", userCredential.user.uid)
             }
             await setDoc(
                 doc(
@@ -74,16 +73,16 @@ const TherapistSignUp = () => {
                     city: formData.city,
                     approved: false,
                 }
-            );
+            )
         } catch (error) {
-            console.error("Error signing up:", error);
+            console.error("Error signing up:", error)
         } finally {
-            router.push("/therapists");
+            router.push("/therapists")
         }
-    };
-    const { register, handleSubmit, formState } = useForm(formOptions);
+    }
+    const {register, handleSubmit, formState} = useForm(formOptions)
 
-    const { errors } = formState;
+    const {errors} = formState
     return (
         <Layout>
             <div className='container mx-auto my-10 flex flex-col md:flex-row '>
@@ -93,16 +92,18 @@ const TherapistSignUp = () => {
                         onSubmit={handleSubmit(onSubmit)}
                     >
                         <h2 className='font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black/80 mx-5 mb-10'>
-                            create an account
+                            {/* create an account */}
+
+                            {t('therapists:heading')}
                         </h2>
-                        <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row lg:space-x-2 lg:m-2'>
+                        <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row lg:space-x-2 lg:m-2 '>
                             <Input
                                 width='full'
                                 type='text'
-                                placeholder='User Name'
+                                placeholder={t("therapists:placeholder.username")}
                                 name='username'
                                 errorMessage={errors.username?.message}
-                                register={{ ...register("username") }}
+                                register={{...register("username")}}
                                 value={formData.username}
                                 onChange={onChange}
                             />
@@ -111,10 +112,10 @@ const TherapistSignUp = () => {
                             <Input
                                 width='full'
                                 type='email'
-                                placeholder='Your Email'
+                                placeholder={t("therapists:placeholder.email")}
                                 name='email'
                                 errorMessage={errors.email?.message}
-                                register={{ ...register("email") }}
+                                register={{...register("email")}}
                                 value={formData.email}
                                 onChange={onChange}
                             />
@@ -123,10 +124,10 @@ const TherapistSignUp = () => {
                             <Input
                                 width='full'
                                 type='text'
-                                placeholder='City'
+                                placeholder={t("therapists:placeholder.city")}
                                 name='city'
                                 errorMessage={errors.city?.message}
-                                register={{ ...register("city") }}
+                                register={{...register("city")}}
                                 value={formData.city}
                                 onChange={onChange}
                             />
@@ -135,10 +136,10 @@ const TherapistSignUp = () => {
                             <Input
                                 width='full'
                                 type='text'
-                                placeholder='License Number'
+                                placeholder={t("therapists:placeholder.license")}
                                 name='licenseNumber'
                                 errorMessage={errors.licenseNumber?.message}
-                                register={{ ...register("licenseNumber") }}
+                                register={{...register("licenseNumber")}}
                                 value={formData.licenseNumber}
                                 onChange={onChange}
                             />
@@ -148,20 +149,20 @@ const TherapistSignUp = () => {
                             <Input
                                 width='full'
                                 type='password'
-                                placeholder='Password'
+                                placeholder={t("therapists:placeholder.password")}
                                 name='password'
                                 errorMessage={errors.password?.message}
-                                register={{ ...register("password") }}
+                                register={{...register("password")}}
                                 value={formData.password}
                                 onChange={onChange}
                             />
                             <Input
                                 width='full'
                                 type='password'
-                                placeholder='Confirm Password'
+                                placeholder={t("therapists:placeholder.passwordConfirm")}
                                 name='confirPassword'
                                 errorMessage={errors.confirPassword?.message}
-                                register={{ ...register("confirPassword") }}
+                                register={{...register("confirPassword")}}
                                 value={formData.confirPassword}
                                 onChange={onChange}
                             />
@@ -171,8 +172,8 @@ const TherapistSignUp = () => {
                             <button type='submit'>
                                 <Button
                                     transition={false}
-                                    buttonText='Sign Up'
-                                    buttonSize={"lg"}
+                                    buttonText={t("therapists:buttonText")}
+                                    buttonSize="lg"
                                 />
                             </button>
                         </div>
@@ -189,16 +190,16 @@ const TherapistSignUp = () => {
                 </div>
             </div>
         </Layout>
-    );
-};
+    )
+}
 
-export default TherapistSignUp;
+export default withTranslation("therapists")(TherapistSignUp)
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps ({locale}) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common"])),
+            ...(await serverSideTranslations(locale, ["therapists", "common"])),
             // Will be passed to the page component as props
         },
-    };
+    }
 }

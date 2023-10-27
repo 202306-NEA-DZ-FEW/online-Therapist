@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-export default function Input({
+export default function Input ({
     placeholder,
     type,
     label,
@@ -21,7 +21,7 @@ export default function Input({
                     {label}
                 </label>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col w-full'>
                 <div className='flex flex-col w-full'>
                     <input
                         {...register}
@@ -39,5 +39,5 @@ export default function Input({
                 </div>
             </div>
         </>
-    );
+    )
 }
