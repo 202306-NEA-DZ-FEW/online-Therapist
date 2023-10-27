@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-export default function Input ({
+export default function Input({
     placeholder,
     type,
     label,
@@ -39,5 +39,5 @@ export default function Input ({
                 </div>
             </div>
         </>
-    )
+    );
 }
