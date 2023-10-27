@@ -10,6 +10,14 @@
         "aboutUs": "About Us",
         "careers": "Careers"
     },
+    "login": {
+        "header": "login",
+        "email": "Your Email",
+        "password": "Your Password",
+        "logIn": "log in",
+        "signUp": "sign up",
+        "paragraph": "or"
+    },
     "contact": {
         "title": "SEND US YOUR REQUEST!",
         "callToAction": "Do you have a question, concern, idea, feedback, problem?If you need assistance, please fill out the form below, and we'd be happy to help!",

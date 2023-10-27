@@ -1,10 +1,10 @@
-import Button from "@/components/Button";
 import OpenPos from "@/components/OpenPos";
 import Layout from "@/layout/Layout";
 import { useRef } from "react";
 import React from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import Button from "@/components/elements/Button";
 
 function Careers() {
     const openPositions = useRef(null);

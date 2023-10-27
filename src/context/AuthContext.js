@@ -1,23 +1,25 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import { auth } from "@/util/firebase";
 import {
     signInWithPopup,
     signOut,
-    GoogleAuthProvider,
     onAuthStateChanged,
+    GoogleAuthProvider,
     FacebookAuthProvider,
 } from "firebase/auth";
-import { auth } from "@/util/firebase";
 
-const AppContext = createContext();
+const AuthContext = createContext();
 
 export function AppWrapper({ children }) {
+    const [user, setUser] = useState(null);
+    const googleProvider = new GoogleAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
     const [profilePicture, setProfilePicture] = useState(null);
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
-    const [user, setUser] = useState(null);
 
-    const googleSignup = () => {
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider)
+    const AuthWithGoogle = () => {
+        // Implement Google login using Firebase here
+        signInWithPopup(auth, googleProvider)
             .then((result) => {
                 // This gives you a Google Access Token. You can use it to access the Google API.
                 const credential =
@@ -33,18 +35,21 @@ export function AppWrapper({ children }) {
                 // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                // console.log("can't log in", errorMessage, " ", errorCode);
                 // The email of the user's account used.
                 const email = error.customData.email;
+                // console.log("wrong email", email);
                 // The AuthCredential type that was used.
                 const credential =
                     GoogleAuthProvider.credentialFromError(error);
+                // console.log("error", credential);
                 // ...
             });
     };
 
-    const facebookSignup = () => {
-        const provider = new FacebookAuthProvider();
-        signInWithPopup(auth, provider)
+    const AuthWithFacebook = () => {
+        // Implement Facebook login using Firebase here
+        signInWithPopup(auth, facebookProvider)
             .then((result) => {
                 // The signed-in user info.
                 const user = result.user;
@@ -53,7 +58,8 @@ export function AppWrapper({ children }) {
                 const credential =
                     FacebookAuthProvider.credentialFromResult(result);
                 const accessToken = credential.accessToken;
-                // fetch facebook graph api to get user actual profile picture
+                // IdP data available using getAdditionalUserInfo(result)
+                // ...
                 fetch(
                     `https://graph.facebook.com/${result.user.providerData[0].uid}/picture?type=large&access_token=${accessToken}`
                 )
@@ -61,9 +67,6 @@ export function AppWrapper({ children }) {
                     .then((blob) => {
                         setProfilePicture(URL.createObjectURL(blob));
                     });
-
-                // IdP data available using getAdditionalUserInfo(result)
-                // ...
             })
             .catch((error) => {
                 // Handle Errors here.
@@ -72,9 +75,11 @@ export function AppWrapper({ children }) {
                 console.log(errorCode, errorMessage);
                 // The email of the user's account used.
                 const email = error.customData.email;
+                // console.log("wrong email", email);
                 // The AuthCredential type that was used.
                 const credential =
                     FacebookAuthProvider.credentialFromError(error);
+                // console.log("error", credential);
 
                 // ...
             });
@@ -84,32 +89,53 @@ export function AppWrapper({ children }) {
         signOut(auth);
     };
 
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    //         setUser(currentUser);
+    //     })
+    //     return () => unsubscribe()
+    // }, [user])
+
     useEffect(() => {
-        const logged = onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-            } else setUser(null);
+            } else {
+                setUser(null);
+            }
         });
-        return () => logged();
+
+        return () => unsubscribe();
     }, []);
 
+    // useEffect(() => {
+    //     const unsubscribe = auth.onAuthStateChanged((user) => {
+    //         if (user) {
+    //             setUser(user);
+    //         } else {
+    //             setUser(null);
+    //         }
+    //     });
+
+    //     return () => unsubscribe();
+    // }, []);
+
     return (
-        <AppContext.Provider
+        <AuthContext.Provider
             value={{
                 user,
                 setUser,
-                googleSignup,
                 logOut,
-                setIsSignUpSuccessful,
-                isSignUpSuccessful,
-                facebookSignup,
+                signOut,
+                AuthWithGoogle,
+                AuthWithFacebook,
                 profilePicture,
             }}
         >
             {children}
-        </AppContext.Provider>
+        </AuthContext.Provider>
     );
 }
-export function useAppcontext() {
-    return useContext(AppContext);
+export function UserAuth() {
+    return useContext(AuthContext);
 }
