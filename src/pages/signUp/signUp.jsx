@@ -123,7 +123,7 @@ export default function SignUp() {
 
     return (
         <Layout>
-            <div className='md:flex lg:flex'>
+            <div className='md:flex lg:flex lg:pb-20 pb-10'>
                 {isSignUpSuccessful ? ( // Conditionally render the thank you page
                     <SignupThanks />
                 ) : (
@@ -274,12 +274,12 @@ export default function SignUp() {
                             <div className='flex items-center justify-center space-x-4 '>
                                 <hr className='w-24 lg:w-48 border-Teal' />
                                 <p className='text-lg'> {t("signup.or")}</p>
-                                <hr className='w-24 lg:w-48 border-1 border-Teal' />
+                                <hr className='w-24 lg:w-48 border-Teal' />
                             </div>
                             <div className='flex justify-center items-center space-x-12'>
                                 <span
                                     onClick={handleGoogleSignup}
-                                    className='cursor-poisignupnter '
+                                    className='cursor-pointer '
                                 >
                                     <Image
                                         src='/google.svg'

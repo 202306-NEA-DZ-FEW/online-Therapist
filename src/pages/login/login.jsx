@@ -131,14 +131,14 @@ const Login = () => {
 
     return (
         <Layout>
-            <div className='flex justify-center items-center space-x-20 rtl:space-x-reverse p-10 lg:pb-28 pb-14 '>
+            <div className='flex justify-center items-center space-x-20 rtl:space-x-reverse p-10 lg:pb-28 pb-10 '>
                 <div className=''>
                     <h1 className='md:text-4xl text-3xl font-atkinson w-fit lg:mb-16 mb-10 uppercase'>
                         {t("login.header")}
                     </h1>
                     <div className='flex flex-col gap-10 lg:w-96 w-80 h-96 border shadow-xl rounded-lg lg:mb-6 mb-4 justify-center items-center'>
                         <form
-                            onClick={handleSubmit(handleSignIn)}
+                            onSubmit={handleSubmit(handleSignIn)}
                             // onSubmit={handleSubmit(LogIn)}
                             className='lg:space-y-4 space-y-14 lg:w-80 w-72 lg:h-96 h-80 lg:pt-11 pt:16  flex flex-col justify-center mx-auto hx-auto'
                         >
@@ -171,19 +171,13 @@ const Login = () => {
                                 />
                             </div>
                             <div className='flex justify-space-between lg:space-x-16 rtl:space-x-reverse space-x-8 pb-10'>
-                                {/* <Link href='/patientProfile'> */}
                                 <button type='submit'>
                                     <Button
                                         buttonText={t("login.logIn")}
                                         buttonSize='md'
                                     />
                                 </button>
-                                {/* </Link>*/}
-                                <Link
-                                    rel='preload'
-                                    as='font'
-                                    href='/signUp/signUp'
-                                >
+                                <Link href='/signUp/signUp'>
                                     <Button
                                         buttonText={t("login.signUp")}
                                         buttonSize='md'
@@ -195,14 +189,14 @@ const Login = () => {
                     </div>
 
                     <div className=' flex items-center justify-center uppercase rtl:space-x-reverse space-x-4'>
-                        <hr className='lg:w-28 w-20 shadow-lg bg-gray-500 border-top' />
-                        <p className='text-md font-medium text-gray-500'>
+                        <hr className='lg:w-28 w-20 shadow-lg border-Teal border-top' />
+                        <p className='text-md font-medium text-gray-700'>
                             {t("login.paragraph")}
                         </p>
-                        <hr className='lg:w-28 w-20 shadow-lg bg-gray-500 border-top' />
+                        <hr className='lg:w-28 w-20 shadow-lg border-Teal border-top' />
                     </div>
                     <div className='flex justify-center items-center rtl:space-x-reverse space-x-4 pt-2'>
-                        <span onClick={handleFacebookLogin}>
+                        <button onClick={handleFacebookLogin}>
                             <Image
                                 src='/Images/Facebook.svg'
                                 width={32}
@@ -210,7 +204,7 @@ const Login = () => {
                                 alt='Facebook'
                                 className=''
                             />
-                        </span>
+                        </button>
                         <button onClick={handleGoogleLogin}>
                             <Image
                                 src='/Images/Google.svg'
