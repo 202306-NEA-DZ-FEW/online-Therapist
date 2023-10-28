@@ -1,8 +1,24 @@
 import Image from "next/image";
+import { useState } from "react";
 
-export default function PaymentCard({ number, name, expDate }) {
+export default function PaymentCard({ number, name, expDate, onClick }) {
+    const [selected, setSelected] = useState(false); // Create a selected state
+
+    const handleCardClick = () => {
+        setSelected(!selected);
+        if (onClick) {
+            onClick(); // Call the onClick callback if provided
+        }
+    };
+
+    const borderClasses = selected
+        ? "border-8 border-Teal"
+        : "border border-gray-300";
     return (
-        <div className='w-[260px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[380px] lg:h-[230px] bg-gradient-to-tr rounded-2xl flex content-center items-center justify-center from-[#9C2CF3] to-[#3A49F9]'>
+        <div
+            onClick={handleCardClick}
+            className={`${borderClasses} w-[260px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[380px] lg:h-[230px] bg-gradient-to-tr rounded-2xl flex content-center items-center justify-center from-[#9C2CF3] to-[#3A49F9]`}
+        >
             <div className='p-8 w-full h-full'>
                 <div className='relative w-full h-full'>
                     <Image

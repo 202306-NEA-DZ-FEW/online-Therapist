@@ -5,8 +5,23 @@ import "slick-carousel/slick/slick-theme.css";
 import Layout from "@/layout/Layout";
 import PaymentCard from "@/components/Cards/PaymentCard";
 import Button from "@/components/Button";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function BuyTickect() {
+    const router = useRouter();
+    const [selectedCard, setSelectedCard] = useState(null);
+
+    const handleCardClick = (card) => {
+        setSelectedCard(card);
+    };
+
+    const handleConfirm = () => {
+        if (selectedCard) {
+            router.push("/");
+        } else alert("Please select a card");
+    };
+
     const cards = [
         {
             name: "John Doe",
@@ -84,6 +99,8 @@ export default function BuyTickect() {
                             name={card.name}
                             number={card.number}
                             expDate={card.expDate}
+                            selected={selectedCard === card}
+                            onClick={() => handleCardClick(card)}
                         />
                     ))}
                 </Slider>
@@ -94,11 +111,11 @@ export default function BuyTickect() {
                         tickets for 10$
                     </p>
                     <Button
-                        transition={false}
-                        color='darkteal'
+                        transition={true}
+                        color='teal'
                         buttonSize='lg'
                         buttonText='CONFIRM'
-                        className=''
+                        clickFunction={handleConfirm}
                     />
                 </div>
             </div>
