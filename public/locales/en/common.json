@@ -1,5 +1,9 @@
 {
     "test": "Hello",
+    "titre11":"We make therapy work better for everyone",
+    "about1":"By providing our clients with easy-to-access, high-quality care and our clinicians with a supportive working environment.our teams can fulfill their purpose and do their best work, where clients are treated with warmth and respect, and where communities benefit from access to high-quality care to heal and thrive in life.",
+    "titre21":"Our vision",
+    "about2":"We're creating a truly unified and personalized consumer experience; developing technologies to connect to patients and extend the reach of care providers; delivering the highest standard of clinical quality at every touchpoint; and enhancing health decisions and outcomes with smart data and actionable insights.",
     "navbar": {
         "login": "Log In",
         "home": "Home",
