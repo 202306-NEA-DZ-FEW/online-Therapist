@@ -5,12 +5,22 @@ import "slick-carousel/slick/slick-theme.css";
 import Layout from "@/layout/Layout";
 import PaymentCard from "@/components/Cards/PaymentCard";
 import Button from "@/components/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Thankyou from "@/components/Thankyou/Thankyou";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 export default function BuyTickect() {
     const [displayThanks, setDisplayThanks] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
+    const { t } = useTranslation("common");
+    const router = useRouter();
+    const language = router.locale;
+
+    useEffect(() => {
+        document.body.dir = language == "ar" ? "rtl" : "ltr";
+    }, [language]);
 
     const handleCardClick = (card) => {
         setSelectedCard(card);
@@ -20,7 +30,7 @@ export default function BuyTickect() {
         if (selectedCard) {
             // If a card is selected, render the thank you page
             setDisplayThanks(true);
-        } else alert("Please select a card");
+        } else alert(t("buyticket.alertText"));
     };
 
     const cards = [
@@ -86,15 +96,16 @@ export default function BuyTickect() {
     return (
         <Layout>
             {displayThanks ? (
-                <Thankyou text1='You purchase has been submitted, you should receive an email with the receipt soon.' />
+                <Thankyou text1={t("buyticket.thankstext")} />
             ) : (
                 // Render the card selection section
                 <div className='h-screen m-16 space-y-16'>
-                    <div className='ml-10 space-y-4'>
-                        <h1 className='font-atkinson text-4xl '>SELECT CARD</h1>
+                    <div className='ml-10 lg:rtl:mr-24 space-y-4'>
+                        <h1 className='font-atkinson text-4xl '>
+                            {t("buyticket.title")}
+                        </h1>
                         <p className='font-atkinson text-xl'>
-                            Please select the card you want to buy the tickets
-                            with
+                            {t("buyticket.paragraph1")}
                         </p>
                     </div>
 
@@ -113,14 +124,13 @@ export default function BuyTickect() {
 
                     <div className='flex flex-col space-y-12 justify-center items-center'>
                         <p className='font-atkinson text-3xl'>
-                            Click confirm to use the selected card to purchase 5
-                            tickets for 10$
+                            {t("buyticket.paragraph2")}
                         </p>
                         <Button
                             transition={true}
                             color='teal'
-                            buttonSize='lg'
-                            buttonText='CONFIRM'
+                            buttonSize='xl'
+                            buttonText={t("buyticket.button")}
                             clickFunction={handleConfirm}
                         />
                     </div>
@@ -128,4 +138,13 @@ export default function BuyTickect() {
             )}
         </Layout>
     );
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+            // Will be passed to the page component as props
+        },
+    };
 }
