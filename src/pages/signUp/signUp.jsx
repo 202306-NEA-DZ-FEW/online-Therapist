@@ -16,7 +16,7 @@ import { db } from "@/util/firebase";
 import { useAppcontext } from "@/context/context";
 import Layout from "@/layout/Layout";
 import Link from "next/link";
-import SignupThanks from "@/components/Thankyou/SignupThanks";
+import Thankyou from "@/components/Thankyou/Thankyou";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
@@ -125,7 +125,10 @@ export default function SignUp() {
         <Layout>
             <div className='md:flex lg:flex'>
                 {isSignUpSuccessful ? ( // Conditionally render the thank you page
-                    <SignupThanks />
+                    <Thankyou
+                        text1={t("signupthank.text1")}
+                        text2={t("signupthank.text2")}
+                    />
                 ) : (
                     <>
                         <div className='md:m-auto lg:m-auto'>

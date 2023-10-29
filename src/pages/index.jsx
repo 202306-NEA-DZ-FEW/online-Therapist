@@ -6,7 +6,6 @@ import * as React from "react";
 import HomePageWrapper from "@/components/Home/HomePageWrapper";
 
 import Layout from "@/layout/Layout";
-import SignupThanks from "@/components/Thankyou/SignupThanks";
 
 export default function HomePage() {
     const { t } = useTranslation("common");
