@@ -1,13 +1,19 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function PaymentCard({ number, name, expDate, onClick }) {
-    const [selected, setSelected] = useState(false); // Create a selected state
+export default function PaymentCard({
+    number,
+    name,
+    expDate,
+    CardType,
+    onClick,
+}) {
+    const [selected, setSelected] = useState(false);
 
     const handleCardClick = () => {
         setSelected(!selected);
         if (onClick) {
-            onClick(); // Call the onClick callback if provided
+            onClick();
         }
     };
 
@@ -23,8 +29,8 @@ export default function PaymentCard({ number, name, expDate, onClick }) {
                 <div className='relative w-full h-full'>
                     <Image
                         className='absolute w-[45px] md:w-[45px] lg:w-[60px]'
-                        alt='mastercard'
-                        src='/mastercard.svg'
+                        alt=''
+                        src={`/${CardType}.svg`}
                         width={60}
                         height={24}
                     />

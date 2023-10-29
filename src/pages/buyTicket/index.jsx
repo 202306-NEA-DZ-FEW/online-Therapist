@@ -38,21 +38,25 @@ export default function BuyTickect() {
             name: "John Doe",
             expDate: "10/24",
             number: "**** **** **** 4242",
+            CardType: "mastercard",
         },
         {
             name: "John Doe",
             expDate: "10/24",
             number: "**** **** **** 4242",
+            CardType: "visa",
         },
         {
             name: "John Doe",
             expDate: "10/24",
             number: "**** **** **** 4242",
+            CardType: "mastercard",
         },
         {
             name: "John Doe",
             expDate: "10/24",
             number: "**** **** **** 4242",
+            CardType: "visa",
         },
     ];
     const settings = {
@@ -117,6 +121,7 @@ export default function BuyTickect() {
                                 name={card.name}
                                 number={card.number}
                                 expDate={card.expDate}
+                                CardType={card.CardType}
                                 selected={selectedCard === card}
                                 onClick={() => handleCardClick(card)}
                             />
