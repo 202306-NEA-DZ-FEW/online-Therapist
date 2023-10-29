@@ -6,10 +6,10 @@ import Layout from "@/layout/Layout";
 import PaymentCard from "@/components/Cards/PaymentCard";
 import Button from "@/components/Button";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import Thankyou from "@/components/Thankyou/Thankyou";
 
 export default function BuyTickect() {
-    const router = useRouter();
+    const [displayThanks, setDisplayThanks] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
 
     const handleCardClick = (card) => {
@@ -18,7 +18,8 @@ export default function BuyTickect() {
 
     const handleConfirm = () => {
         if (selectedCard) {
-            router.push("/");
+            // If a card is selected, render the thank you page
+            setDisplayThanks(true);
         } else alert("Please select a card");
     };
 
@@ -84,41 +85,47 @@ export default function BuyTickect() {
     };
     return (
         <Layout>
-            <div className='h-screen m-16 space-y-16'>
-                <div className='ml-10 space-y-4'>
-                    <h1 className='font-atkinson text-4xl '>SELECT CARD</h1>
-                    <p className='font-atkinson text-xl'>
-                        Please select the card you want to buy the tickets with
-                    </p>
-                </div>
+            {displayThanks ? (
+                <Thankyou text1='You purchase has been submitted, you should receive an email with the receipt soon.' />
+            ) : (
+                // Render the card selection section
+                <div className='h-screen m-16 space-y-16'>
+                    <div className='ml-10 space-y-4'>
+                        <h1 className='font-atkinson text-4xl '>SELECT CARD</h1>
+                        <p className='font-atkinson text-xl'>
+                            Please select the card you want to buy the tickets
+                            with
+                        </p>
+                    </div>
 
-                <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
-                    {cards.map((card, index) => (
-                        <PaymentCard
-                            key={index}
-                            name={card.name}
-                            number={card.number}
-                            expDate={card.expDate}
-                            selected={selectedCard === card}
-                            onClick={() => handleCardClick(card)}
+                    <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
+                        {cards.map((card, index) => (
+                            <PaymentCard
+                                key={index}
+                                name={card.name}
+                                number={card.number}
+                                expDate={card.expDate}
+                                selected={selectedCard === card}
+                                onClick={() => handleCardClick(card)}
+                            />
+                        ))}
+                    </Slider>
+
+                    <div className='flex flex-col space-y-12 justify-center items-center'>
+                        <p className='font-atkinson text-3xl'>
+                            Click confirm to use the selected card to purchase 5
+                            tickets for 10$
+                        </p>
+                        <Button
+                            transition={true}
+                            color='teal'
+                            buttonSize='lg'
+                            buttonText='CONFIRM'
+                            clickFunction={handleConfirm}
                         />
-                    ))}
-                </Slider>
-
-                <div className='flex flex-col space-y-12 justify-center items-center'>
-                    <p className='font-atkinson text-3xl'>
-                        Click confirm to use the selected card to purchase 5
-                        tickets for 10$
-                    </p>
-                    <Button
-                        transition={true}
-                        color='teal'
-                        buttonSize='lg'
-                        buttonText='CONFIRM'
-                        clickFunction={handleConfirm}
-                    />
+                    </div>
                 </div>
-            </div>
+            )}
         </Layout>
     );
 }
