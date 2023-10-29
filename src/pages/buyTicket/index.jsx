@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Layout from "@/layout/Layout";
 import PaymentCard from "@/components/Cards/PaymentCard";
-import Button from "@/components/Button";
+import Button from "@/components/elements/Button";
 import { useEffect, useState } from "react";
 import Thankyou from "@/components/Thankyou/Thankyou";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
