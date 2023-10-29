@@ -3,10 +3,10 @@ import Layout from "@/layout/Layout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect } from "react";
-import Button from "@/components/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Button from "@/components/elements/Button";
 
 function RequirementsPage() {
     const { t } = useTranslation("common");

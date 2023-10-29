@@ -1,15 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
-import Layout from "@/layout/Layout";
+
 import Button from "@/components/elements/Button";
+import Layout from "@/layout/Layout";
 
 function Contact() {
     const [selectedOption, setSelectedOption] = useState(null);
-
-    const { t } = useTranslation("common");
 
     const handleRadioChange = (event) => {
         setSelectedOption(event.target.value);
@@ -19,18 +16,20 @@ function Contact() {
         <Layout>
             <main className='mx-8 mt-5 lg:mx-20 lg:mt-10 font-atkinson'>
                 <div className='mb-10'>
-                    <h1 className='text-4xl lg:text-5xl font-medium pb-4 bg-LightBeige lg:bg-inherit text-center p-3 lg:text-left lg:p-0 rounded-lg rtl:lg:text-right'>
-                        {t("contact.title")}
+                    <h1 className='text-4xl lg:text-5xl font-medium pb-4 bg-LightBeige lg:bg-inherit text-center p-3 lg:text-left lg:p-0 rounded-lg'>
+                        SEND US YOUR REQUEST!
                     </h1>
-                    <p className='text-xl lg:text-2xl text-center lg:text-left rtl:lg:text-right text-gray-500'>
-                        {t("contact.callToAction")}
+                    <p className='text-xl lg:text-2xl text-center lg:text-left text-gray-500'>
+                        Do you have a question, concern, idea, feedback, or
+                        problem? If you need assistance, please fill out the
+                        form below, and we&apos;d be happy to help!
                     </p>
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
                     <div>
                         <form className='flex flex-col gap-3'>
                             <h4 className='text-xl lg:text-2xl font-medium'>
-                                {t("contact.type")}
+                                Type of contact
                             </h4>
                             <label className='lg:text-lg'>
                                 <input
@@ -38,9 +37,9 @@ function Contact() {
                                     value='question'
                                     checked={selectedOption === "question"}
                                     onChange={handleRadioChange}
-                                    className='mx-2 accent-DarkTeal'
+                                    className='mr-2 accent-DarkTeal'
                                 />
-                                {t("contact.radioOne")}
+                                I have a question about the service.
                             </label>
                             <label className='lg:text-lg'>
                                 <input
@@ -48,9 +47,9 @@ function Contact() {
                                     value='clientSupport'
                                     checked={selectedOption === "clientSupport"}
                                     onChange={handleRadioChange}
-                                    className='mx-2 accent-DarkTeal'
+                                    className='mr-2 accent-DarkTeal'
                                 />
-                                {t("contact.radioTwo")}
+                                I&apos;m a registered client and I need support.
                             </label>
                             <label className='lg:text-lg'>
                                 <input
@@ -60,9 +59,9 @@ function Contact() {
                                         selectedOption === "counselorInterested"
                                     }
                                     onChange={handleRadioChange}
-                                    className='mx-2 accent-DarkTeal'
+                                    className='mr-2 accent-DarkTeal'
                                 />
-                                {t("contact.radioThree")}
+                                I&apos;m a counselor interested in joining.
                             </label>
                             <label className='lg:text-lg'>
                                 <input
@@ -72,9 +71,10 @@ function Contact() {
                                         selectedOption === "counselorSupport"
                                     }
                                     onChange={handleRadioChange}
-                                    className='mx-2 accent-DarkTeal'
+                                    className='mr-2 accent-DarkTeal'
                                 />
-                                {t("contact.radioFour")}
+                                I&apos;m a registered counselor and I need
+                                support.
                             </label>
                             <label className='lg:text-lg'>
                                 <input
@@ -84,9 +84,9 @@ function Contact() {
                                         selectedOption === "businessInquiry"
                                     }
                                     onChange={handleRadioChange}
-                                    className='mx-2 accent-DarkTeal'
+                                    className='mr-2 accent-DarkTeal'
                                 />
-                                {t("contact.radioFive")}
+                                I have a business-related inquiry.
                             </label>
                             <label className='lg:text-lg'>
                                 <input
@@ -97,9 +97,10 @@ function Contact() {
                                         "organizationInterest"
                                     }
                                     onChange={handleRadioChange}
-                                    className='mx-2 accent-DarkTeal'
+                                    className='mr-2 accent-DarkTeal'
                                 />
-                                {t("contact.radioSix")}
+                                I&apos;m interested in Healing Online for my
+                                organization.
                             </label>
                             <label className='lg:text-lg'>
                                 <input
@@ -109,46 +110,41 @@ function Contact() {
                                         selectedOption === "billingQuestion"
                                     }
                                     onChange={handleRadioChange}
-                                    className='mx-2 accent-DarkTeal'
+                                    className='mr-2 accent-DarkTeal'
                                 />
-                                {t("contact.radioSeven")}
+                                I have a billing related question.
                             </label>
 
                             <div className='grid lg:grid-cols-2 pt-8 gap-5'>
                                 <div>
                                     <label className='font-medium'>
-                                        {t("contact.name")}
+                                        Full Name:
                                     </label>
                                     <input
                                         className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                                         type='text'
-                                        placeholder={t(
-                                            "contact.namePlaceholder"
-                                        )}
+                                        placeholder='Enter your full name here.'
                                     />
                                 </div>
                                 <div>
                                     <label className='font-medium'>
-                                        {t("contact.email")}
+                                        Email:
                                     </label>
                                     <input
                                         className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                                         type='email'
-                                        placeholder={t(
-                                            "contact.emailPlaceholder"
-                                        )}
+                                        placeholder='Enter your Email address here.'
                                     />
                                 </div>
                             </div>
                             <div className='lg:pt-3'>
                                 <label className='font-medium grid-span-2'>
-                                    {t("contact.details")}
+                                    {" "}
+                                    Details:{" "}
                                 </label>
                                 <textarea
                                     className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none h-24'
-                                    placeholder={t(
-                                        "contact.detailsPlaceholder"
-                                    )}
+                                    placeholder='Enter your details here.'
                                 />
                             </div>
 
@@ -156,21 +152,26 @@ function Contact() {
                                 href='/contactThankYou'
                                 className='mx-auto mb-5'
                             >
-                                <Button
-                                    buttonText={t("contact.submit")}
-                                    buttonSize='lg'
-                                />
+                                <Button buttonText='SUBMIT!' buttonSize='lg' />
                             </Link>
                         </form>
                     </div>
                     <div className='hidden lg:block'>
                         <Image
-                            className='rounded-xl h-4/6 xl:h-5/6 w-fit mx-auto object-cover'
-                            width={2000}
-                            height={2000}
-                            src='/ContactUs.png'
+                            className='rounded-xl h-2/3 w-5/6 mx-auto object-cover'
+                            width={5000}
+                            height={3000}
+                            src='/Contact.jpg'
                             alt=''
                         />
+                        <div className='bg-LightTeal p-5 mx-auto mt-10 lg:w-3/4 rounded-2xl'>
+                            <p>
+                                Looking for more information or want to join
+                                Inner Space as a counselor? Submit your
+                                information and an Inner Space representative
+                                will follow up with you as soon as possible.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -179,12 +180,3 @@ function Contact() {
 }
 
 export default Contact;
-
-export async function getStaticProps({ locale }) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["common"])),
-            // Will be passed to the page component as props
-        },
-    };
-}

@@ -1,6 +1,5 @@
 import { teamMembers } from "@/util/library";
-
-import Button from "../elements/Buttons/Button";
+import Button from "../elements/Button";
 
 function AppointmentSection() {
     return (

@@ -1,14 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
-import { useAppcontext } from "@/context/context";
 import { useRouter } from "next/router";
+import { UserAuth } from "@/context/AuthContext";
 
 export default function Navbar() {
+    const router = useRouter();
     const [navbar, setNavbar] = useState(false);
     const { t } = useTranslation("common");
-    const { user, logOut } = useAppcontext();
+    const language = router.locale;
+
+    const { user, logOut } = UserAuth();
+    console.log("Mohamed", user);
+    useEffect(() => {
+        document.body.dir = language == "ar" ? "rtl" : "ltr";
+    }, [language]);
 
     const handleSignOut = async () => {
         try {
@@ -17,8 +24,6 @@ export default function Navbar() {
             console.log(error);
         }
     };
-    const router = useRouter();
-    const language = router.locale;
 
     return (
         <div>
@@ -211,7 +216,6 @@ export default function Navbar() {
                                         </button>
                                     </div>
                                 )}
-
                                 <li className='text-DarkTeal font-atkinson ml-2 text-lg md:hover:text-Teal'>
                                     <div className='group inline-block relative'>
                                         <button className=' invisible md:visible flex items-center justify-center mt-2 text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-20 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>

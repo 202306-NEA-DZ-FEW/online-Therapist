@@ -5,8 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { images } from "@/util/library";
-
-import Button from "../elements/Buttons/Button";
+import Button from "../elements/Button";
 
 function HeroSection() {
     const settings = {
