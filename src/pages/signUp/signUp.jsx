@@ -1,5 +1,3 @@
-import Button from "@/components/Button";
-import Input from "@/components/Input";
 import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -13,21 +11,23 @@ import {
 import { auth } from "@/util/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/util/firebase";
-import { useAppcontext } from "@/context/context";
 import Layout from "@/layout/Layout";
 import Link from "next/link";
 import SignupThanks from "@/components/Thankyou/SignupThanks";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import Input from "@/components/elements/Input";
+import { UserAuth } from "@/context/AuthContext";
+import Button from "@/components/elements/Button";
 
 export default function SignUp() {
     const { t } = useTranslation("common");
     const {
-        googleSignup,
+        AuthWithGoogle,
+        AuthWithFacebook,
         isSignUpSuccessful,
         setIsSignUpSuccessful,
-        facebookSignup,
-    } = useAppcontext();
+    } = UserAuth();
 
     const [formData, setFormData] = useState({
         firstname: "",
@@ -80,7 +80,7 @@ export default function SignUp() {
 
     const handleGoogleSignup = async () => {
         try {
-            await googleSignup();
+            await AuthWithGoogle();
         } catch (error) {
             console.log(error);
         }
@@ -88,7 +88,7 @@ export default function SignUp() {
 
     const handleFacebookSignup = async () => {
         try {
-            await facebookSignup();
+            await AuthWithFacebook();
         } catch (error) {
             console.log(error);
         }
@@ -123,7 +123,7 @@ export default function SignUp() {
 
     return (
         <Layout>
-            <div className='md:flex lg:flex'>
+            <div className='md:flex lg:flex lg:pb-20 pb-10'>
                 {isSignUpSuccessful ? ( // Conditionally render the thank you page
                     <SignupThanks />
                 ) : (
@@ -274,12 +274,12 @@ export default function SignUp() {
                             <div className='flex items-center justify-center space-x-4 '>
                                 <hr className='w-24 lg:w-48 border-Teal' />
                                 <p className='text-lg'> {t("signup.or")}</p>
-                                <hr className='w-24 lg:w-48 border-1 border-Teal' />
+                                <hr className='w-24 lg:w-48 border-Teal' />
                             </div>
                             <div className='flex justify-center items-center space-x-12'>
                                 <span
                                     onClick={handleGoogleSignup}
-                                    className='cursor-poisignupnter '
+                                    className='cursor-pointer '
                                 >
                                     <Image
                                         src='/google.svg'

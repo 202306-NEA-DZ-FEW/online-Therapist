@@ -1,5 +1,9 @@
 {
     "test": "Hello",
+    "titre11":"We make therapy work better for everyone",
+    "about1":"By providing our clients with easy-to-access, high-quality care and our clinicians with a supportive working environment.our teams can fulfill their purpose and do their best work, where clients are treated with warmth and respect, and where communities benefit from access to high-quality care to heal and thrive in life.",
+    "titre21":"Our vision",
+    "about2":"We're creating a truly unified and personalized consumer experience; developing technologies to connect to patients and extend the reach of care providers; delivering the highest standard of clinical quality at every touchpoint; and enhancing health decisions and outcomes with smart data and actionable insights.",
     "navbar": {
         "login": "Log In",
         "home": "Home",
@@ -10,6 +14,52 @@
         "aboutUs": "About Us",
         "careers": "Careers"
     },
+    "login": {
+        "header": "login",
+        "email": "Your Email",
+        "password": "Your Password",
+        "logIn": "log in",
+        "signUp": "sign up",
+        "paragraph": "or"
+    },
+    "contact": {
+        "title": "SEND US YOUR REQUEST!",
+        "callToAction": "Do you have a question, concern, idea, feedback, problem?If you need assistance, please fill out the form below, and we'd be happy to help!",
+        "type": "Type of contact",
+        "radioOne": "I have a question about the service.",
+        "radioTwo": "I'm a registered client and I need support.",
+        "radioThree": "I'm a counselor interested in joining.",
+        "radioFour": "I'm a registered counselor and I need support.",
+        "radioFive": "I have a business-related inquiry.",
+        "radioSix": "I'm interested in Inner Space for my organization.",
+        "radioSeven": "I have a billing related question.",
+        "name": "Full Name:",
+        "namePlaceholder": "Enter your full name here.",
+        "email": "Email:",
+        "emailPlaceholder": "Enter your Email address here.",
+        "details": "Details",
+        "detailsPlaceholder": "Please provide more detail.",
+        "submit": "SUBMIT!",
+        "info": "Looking for more information or want to join Inner Space as a counselor? Submit your information and an Inner Space representative will follow up with you as soon as possible."
+    },
+    "contactThankYou": {
+        "title": "THANK YOU!",
+        "description": "Your request has been sent, a Inner Space representative will get in contact with you through the email you provided as soon as possible.",
+        "button": "Take me home!"
+    },
+
+    "careers": {
+        "mainTitle": "CAREERS AT INNER SPACE",
+        "motto": "Be a part of making people feel better.",
+        "description": "Our SEO software cuts through mountains of date to surface critical insights. We build and maintain systems that process massive amount of data (we're talking 35 trillion records per day and multiple petabytes of storage.) We model transparent and empathetic marketing for the world. We educate our community, making every effort to help them improve their skill. And we do it all by fastening a culture that encourages accountability, empathy, and transparency.",
+        "callToAction": "Ready to make an impact?",
+        "buttonText": "SEE OPEN LIST",
+        "subTitle": "OUR HIRING PHILOSOPHY",
+        "subDescription": "To build the very best SEO tools, we need a workforce that reflects the diversity of our communities and customers. We want Inner Space to be a place where everyone feels welcome and engaged, bar none. It's our mission and promise to interview a diverse and representative slate of candidates before making an offer for our open roles.",
+        "positions": "CURRENT OPEN POSITIONS",
+        "sendEmail": "Please send us an email with the application title as the subject with an attached CV in PDF format!"
+    },
+
     "signup": {
         "heading": "Healing starts here",
         "signupNow": "SIGNUP NOW",

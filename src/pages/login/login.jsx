@@ -1,37 +1,48 @@
-import Button from "@/components/Button";
-import Input from "@/components/Input";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { auth } from "@/util/firebase";
-import { useAppcontext } from "@/context/context";
-import Layout from "@/layout/Layout";
-import { useRouter } from "next/router";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
+import Image from "next/image";
 import Link from "next/link";
 
-export default function SignUp() {
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+// import { BsFacebook, BsGoogle } from "react-icons/bs";
+import * as yup from "yup";
+
+import Button from "@/components/elements/Button";
+import Input from "@/components/elements/Input";
+
+import { UserAuth } from "@/context/AuthContext";
+import Layout from "@/layout/Layout";
+import { auth } from "@/util/firebase";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+const Login = () => {
     const router = useRouter();
-    const { googleSignup, user, facebookSignup } = useAppcontext();
+    const { t } = useTranslation("common");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const { user, AuthWithGoogle, AuthWithFacebook } = UserAuth();
 
-    const [formData, setFormData] = useState({
-        email: "",
-        password: "",
-    });
+    const handleSignIn = async () => {
+        // e.preventDefault();
 
-    const onChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const onSubmit = () => {
-        signInWithEmailAndPassword(auth, formData.email, formData.password)
+        // try {
+        //     await signInWithEmailAndPassword(auth, email, password);
+        //     // Redirect to the profile page after successful login
+        //     router.push("/patientProfile/patientProfile");
+        // } catch (error) {
+        //     console.error("Email login error", error);
+        // }
+        signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log("User logged in:", userCredential);
-                router.push("/");
+                // Signed in
+                router.push("/patientProfile/patientProfile");
+                const user = userCredential.user;
+                console.log("User logged in:", user);
+                // ...
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -40,18 +51,66 @@ export default function SignUp() {
             });
     };
 
-    const handleGoogleSignup = async () => {
+    // const handleGoogleLogin = async () => {
+    //     try {
+    //         const result = await signInWithPopup(auth, googleProvider);
+    //         // This gives you a Google Access Token. You can use it to access the Google API.
+    //         const credential = GoogleAuthProvider.credentialFromResult(result);
+    //         const token = credential.accessToken;
+    //         // The signed-in user info.
+    //         const user = result.user;
+    //         // IdP data available using getAdditionalUserInfo(result)
+
+    //         // Redirect to the profile page after successful Google login
+    //     } catch (error) {
+    //         // Handle Errors here.
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         // The email of the user's account used.
+    //         //   const email = error.customData.email;
+    //         // The AuthCredential type that was used.
+    //         const credential = GoogleAuthProvider.credentialFromError(error);
+    //         // ...
+    //     }
+    // };
+
+    // const handleFacebookLogin = async () => {
+    //     try {
+    //         const result = await signInWithPopup(auth, facebookProvider);
+    //         // The signed-in user info.
+    //         const user = result.user;
+
+    //         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+    //         const credential =
+    //             FacebookAuthProvider.credentialFromResult(result);
+    //         const accessToken = credential.accessToken;
+
+    //         // IdP data available using getAdditionalUserInfo(result)
+
+    //         // Redirect to the profile page after successful Facebook login
+    //     } catch (error) {
+    //         // Handle Errors here.
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         // The email of the user's account used.
+    //         const email = error.customData.email;
+    //         // The AuthCredential type that was used.
+    //         const credential = FacebookAuthProvider.credentialFromError(error);
+    //         // ...
+    //     }
+    // };
+
+    const handleGoogleLogin = async () => {
         try {
-            await googleSignup();
+            await AuthWithGoogle();
         } catch (error) {
             console.log(error);
         }
     };
 
-    const handleFacebookSignup = async () => {
+    const handleFacebookLogin = async () => {
         try {
-            const userCredential = await facebookSignup();
-            console.log("facebook signed up:", userCredential);
+            await AuthWithFacebook();
         } catch (error) {
             console.log(error);
         }
@@ -62,10 +121,7 @@ export default function SignUp() {
             .string()
             .required("Email is required")
             .email("Email is invalid"),
-        password: yup
-            .string()
-            .required("password is required")
-            .min(8, "Password must be at least 8 characters"),
+        password: yup.string().required("password is required"),
     });
 
     const formOptions = { resolver: yupResolver(validationSchema) };
@@ -75,110 +131,107 @@ export default function SignUp() {
 
     return (
         <Layout>
-            <div className='md:flex lg:flex lg:px-32'>
-                <div className='w-96 space-y-6 m-auto md:w-1/2 lg:w-1/3 lg:space-y-8 '>
-                    <h1 className='text-center font-atkinson font-bold text-3xl mt-4  md:pt-12'>
-                        WELCOME BACK!
-                        {!user ? (
-                            <p>Please sign in</p>
-                        ) : (
-                            <p className='text-center'>logged</p>
-                        )}
+            <div className='flex justify-center items-center space-x-20 rtl:space-x-reverse p-10 lg:pb-28 pb-10 '>
+                <div className=''>
+                    <h1 className='md:text-4xl text-3xl font-atkinson w-fit lg:mb-16 mb-10 uppercase'>
+                        {t("login.header")}
                     </h1>
-                    <div className='p-8 shadow-lg lg:p-4 rounded'>
+                    <div className='flex flex-col gap-10 lg:w-96 w-80 h-96 border shadow-xl rounded-lg lg:mb-6 mb-4 justify-center items-center'>
                         <form
-                            className='space-y-4 lg:space-y-6'
-                            onSubmit={handleSubmit(onSubmit)}
+                            onSubmit={handleSubmit(handleSignIn)}
+                            // onSubmit={handleSubmit(LogIn)}
+                            className='lg:space-y-4 space-y-14 lg:w-80 w-72 lg:h-96 h-80 lg:pt-11 pt:16  flex flex-col justify-center mx-auto hx-auto'
                         >
-                            <div className='flex flex-col space-y-1 mx-3 lg:m-4'>
+                            <div className='flex-1'>
                                 <Input
                                     width='full'
                                     type='email'
-                                    placeholder='Your Email'
+                                    id='email'
+                                    placeholder={t("login.email")}
                                     name='email'
                                     errorMessage={errors.email?.message}
                                     register={{ ...register("email") }}
-                                    value={formData.email}
-                                    onChange={onChange}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
-
-                            <div className='flex flex-col space-y-1 mx-3 lg:m-4'>
+                            <div className='flex-1'>
                                 <Input
                                     width='full'
                                     type='password'
-                                    placeholder='Password'
                                     name='password'
+                                    id='password'
+                                    placeholder={t("login.password")}
                                     errorMessage={errors.password?.message}
                                     register={{ ...register("password") }}
-                                    value={formData.password}
-                                    onChange={onChange}
+                                    value={password}
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
                                 />
                             </div>
-
-                            <div className='flex items-center justify-center space-x-4 py-4 lg:space-x-9'>
-                                <Link href='/signUp/signUp'>
-                                    <Button
-                                        transition={false}
-                                        buttonText='Signup'
-                                    />
-                                </Link>
+                            <div className='flex justify-space-between lg:space-x-16 rtl:space-x-reverse space-x-8 pb-10'>
                                 <button type='submit'>
                                     <Button
-                                        transition={false}
-                                        buttonText='Login'
-                                        color='darkteal'
+                                        buttonText={t("login.logIn")}
+                                        buttonSize='md'
                                     />
                                 </button>
+                                <Link href='/signUp/signUp'>
+                                    <Button
+                                        buttonText={t("login.signUp")}
+                                        buttonSize='md'
+                                    />
+                                </Link>
                             </div>
+                            {/* {error && <p className='error'>{error}</p>} */}
                         </form>
                     </div>
-                    <div className='flex items-center justify-center space-x-4 '>
-                        <hr className='w-24 lg:w-48 border-Teal' />
-                        <p className='text-lg'>Or</p>
-                        <hr className='w-24 lg:w-48 border-1 border-Teal' />
-                    </div>
-                    <div className='flex justify-center items-center space-x-12'>
-                        <span
-                            onClick={handleGoogleSignup}
-                            className='cursor-pointer '
-                        >
-                            <Image
-                                src='/google.svg'
-                                width={30}
-                                height={30}
-                                alt='google'
-                                className=' '
-                            />
-                        </span>
 
-                        <span
-                            onClick={handleFacebookSignup}
-                            className='cursor-pointer'
-                        >
+                    <div className=' flex items-center justify-center uppercase rtl:space-x-reverse space-x-4'>
+                        <hr className='lg:w-28 w-20 shadow-lg border-Teal border-top' />
+                        <p className='text-md font-medium text-gray-700'>
+                            {t("login.paragraph")}
+                        </p>
+                        <hr className='lg:w-28 w-20 shadow-lg border-Teal border-top' />
+                    </div>
+                    <div className='flex justify-center items-center rtl:space-x-reverse space-x-4 pt-2'>
+                        <button onClick={handleFacebookLogin}>
                             <Image
-                                src='/facebook.svg'
-                                width={30}
-                                height={30}
-                                alt='facebook'
-                                className=' '
+                                src='/Images/Facebook.svg'
+                                width={32}
+                                height={32}
+                                alt='Facebook'
+                                className=''
                             />
-                        </span>
+                        </button>
+                        <button onClick={handleGoogleLogin}>
+                            <Image
+                                src='/Images/Google.svg'
+                                width={32}
+                                height={32}
+                                alt='Google'
+                                className=''
+                            />
+                        </button>
                     </div>
                 </div>
-                <div className='hidden md:block md:m-auto lg:block lg:m-auto'>
+                <div className='my-auto pt-9 hidden sm:block'>
                     <Image
-                        src='/signupp.svg'
-                        width={600}
-                        height={600}
-                        alt='online therapy'
-                        className='m-auto w-96 pb-6 md:w-96 '
+                        src='/Images/LoginImage.png'
+                        alt='Login image'
+                        className='login-image mx-auto'
+                        width={674}
+                        height={404}
+                        priority={true}
                     />
                 </div>
             </div>
         </Layout>
     );
-}
+};
+
+export default Login;
 
 export async function getStaticProps({ locale }) {
     return {
