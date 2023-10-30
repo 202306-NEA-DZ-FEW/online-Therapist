@@ -13,7 +13,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/util/firebase";
 import Layout from "@/layout/Layout";
 import Link from "next/link";
-import SignupThanks from "@/components/Thankyou/SignupThanks";
+import Thankyou from "@/components/Thankyou/Thankyou";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Input from "@/components/elements/Input";
@@ -125,7 +125,10 @@ export default function SignUp() {
         <Layout>
             <div className='md:flex lg:flex lg:pb-20 pb-10'>
                 {isSignUpSuccessful ? ( // Conditionally render the thank you page
-                    <SignupThanks />
+                    <Thankyou
+                        text1={t("signupthank.text1")}
+                        text2={t("signupthank.text2")}
+                    />
                 ) : (
                     <>
                         <div className='md:m-auto lg:m-auto'>

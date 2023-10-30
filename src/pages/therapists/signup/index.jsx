@@ -10,10 +10,10 @@ import * as yup from "yup";
 
 import Button from "@/components/elements/Button";
 import Input from "@/components/Input";
-import SignupThanks from "@/components/Thankyou/SignupThanks";
 
 import Layout from "@/layout/Layout";
 import { auth, db } from "@/util/firebase";
+import Thankyou from "@/components/Thankyou/Thankyou";
 
 const TherapistSignUp = ({ t }) => {
     const [signupSuccess, setSignupSuccess] = useState(false);
@@ -91,7 +91,10 @@ const TherapistSignUp = ({ t }) => {
     return (
         <Layout>
             {signupSuccess ? (
-                <SignupThanks />
+                <Thankyou
+                    text1='Thank you for your interest in working with Healing, we have recieved your application.'
+                    text2='You will receive an email guiding you for the next steps soon after your information is reviewed.'
+                />
             ) : (
                 <div className='container mx-auto my-10 flex flex-col md:flex-row '>
                     <div className='p-8 shadow-lg lg:p-4 rounded w-full'>
