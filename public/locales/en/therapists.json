@@ -1,0 +1,21 @@
+{
+    "heading": "create an account",
+    "buttonText": "Sign Up",
+    "placeholder": {
+        "username": "User name",
+        "email": "You email",
+        "city": "City",
+        "license": "License Number",
+        "password": "Password",
+        "passwordConfirm": "Confirm Your password"
+    },
+    "formErrors": {
+        "username": "User name is required",
+        "email": "Email is required",
+        "license": "License is required",
+        "city": "City is required",
+        "password": "Password is required",
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordMatch": "Password don't match"
+    }
+}
