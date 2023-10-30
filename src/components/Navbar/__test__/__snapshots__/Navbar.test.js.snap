@@ -79,10 +79,10 @@ exports[`renders correctly 1`] = `
                 </svg>
               </button>
               <ul
-                className="absolute hidden w-full text-center md:text-start rounded-b-lg p-2 mt-0 bg-white shadow-lg text-DarkTeal group-hover:block md:w-24"
+                className="absolute hidden w-full text-center md:text-start rounded-b-lg p-2 mt-0 bg-white shadow-lg text-DarkTeal group-hover:block md:w-24 "
               >
                 <div
-                  className="space-y-2 "
+                  className="space-y-2 z-50 "
                 >
                   <a
                     className="hover:text-Teal"
