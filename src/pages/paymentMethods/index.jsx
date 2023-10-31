@@ -20,8 +20,6 @@ export default function PaymentMethods() {
         document.body.dir = language == "ar" ? "rtl" : "ltr";
     }, [language]);
 
-   
-
     const cards = [
         {
             name: "John Doe",
@@ -89,40 +87,38 @@ export default function PaymentMethods() {
     };
     return (
         <Layout>
-                <div className='h-screen m-16 space-y-16'>
-                    <div className='ml-10 lg:rtl:mr-24 space-y-4'>
-                        <h1 className='font-atkinson text-4xl uppercase'>
-                        Your saved cards
-                        </h1>
-                        <p className='font-atkinson text-xl'>
-                        We only support cards as a payment method at the moment!
-                        </p>
-                    </div>
+            <div className='h-screen m-16 space-y-16'>
+                <div className='ml-10 lg:rtl:mr-24 space-y-4'>
+                    <h1 className='font-atkinson text-4xl uppercase'>
+                        {t("paymentMethods.title")}
+                    </h1>
+                    <p className='font-atkinson text-xl'>
+                    {t("paymentMethods.paragraph")}
+                    </p>
+                </div>
 
-                    <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
-                        {cards.map((card, index) => (
-                            <PaymentCard
-                                key={index}
-                                name={card.name}
-                                number={card.number}
-                                expDate={card.expDate}
-                                CardType={card.CardType}
-                            />
-                        ))}
-                    </Slider>
-                    <div className="text-center">
-                      <Link href="/">
-                      
+                <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
+                    {cards.map((card, index) => (
+                        <PaymentCard
+                            key={index}
+                            name={card.name}
+                            number={card.number}
+                            expDate={card.expDate}
+                            CardType={card.CardType}
+                        />
+                    ))}
+                </Slider>
+                <div className='text-center'>
+                    <Link href='/'>
                         <Button
                             transition={true}
                             color='teal'
                             buttonSize='xl'
-                            buttonText="ADD NEW CARD"
+                            buttonText= {t("paymentMethods.addButton")}
                         />
-                      </Link>
-                    </div>
-                    
+                    </Link>
                 </div>
+            </div>
         </Layout>
     );
 }
