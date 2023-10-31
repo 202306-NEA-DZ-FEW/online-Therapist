@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Layout from "@/layout/Layout";
 import PaymentCard from "@/components/Cards/PaymentCard";
 import Button from "@/components/elements/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -20,7 +20,7 @@ export default function PaymentMethods() {
         document.body.dir = language == "ar" ? "rtl" : "ltr";
     }, [language]);
 
-    const cards = [
+    const [cards, setCards] = useState([
         {
             name: "John Doe",
             expDate: "10/24",
@@ -45,9 +45,23 @@ export default function PaymentMethods() {
             number: "**** **** **** 4242",
             CardType: "visa",
         },
-    ];
+        {
+            name: "John Doe",
+            expDate: "10/24",
+            number: "**** **** **** 4242",
+            CardType: "visa",
+        },
+    ]);
+
+    // Function to delete a card
+    const handleDeleteCard = (index) => {
+        const updatedCards = [...cards];
+        updatedCards.splice(index, 1);
+        setCards(updatedCards);
+    };
+
     const settings = {
-        dots: false,
+        dots: true,
         arrows: true,
         infinite: true,
         slidesToShow: 3,
@@ -93,19 +107,30 @@ export default function PaymentMethods() {
                         {t("paymentMethods.title")}
                     </h1>
                     <p className='font-atkinson text-xl'>
-                    {t("paymentMethods.paragraph")}
+                        {t("paymentMethods.paragraph")}
                     </p>
                 </div>
 
                 <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
                     {cards.map((card, index) => (
-                        <PaymentCard
-                            key={index}
-                            name={card.name}
-                            number={card.number}
-                            expDate={card.expDate}
-                            CardType={card.CardType}
-                        />
+                        <div  key={index} className="relative w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[380px] lg:h-[230px] rounded-2xl flex content-center items-center justify-center">                                
+                
+
+                            <PaymentCard
+                                name={card.name}
+                                number={card.number}
+                                expDate={card.expDate}
+                                CardType={card.CardType}
+                            />
+                            <button
+                className="absolute top-[190px] left-[280px] rounded p-1 text-white bg-Teal"
+                onClick={
+                ()=>handleDeleteCard(index)
+                }
+            >
+                Delete Card
+            </button>
+                        </div>
                     ))}
                 </Slider>
                 <div className='text-center'>
@@ -114,7 +139,7 @@ export default function PaymentMethods() {
                             transition={true}
                             color='teal'
                             buttonSize='xl'
-                            buttonText= {t("paymentMethods.addButton")}
+                            buttonText={t("paymentMethods.addButton")}
                         />
                     </Link>
                 </div>
