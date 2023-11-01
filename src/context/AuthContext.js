@@ -131,7 +131,7 @@ export function AppWrapper({ children }) {
                 AuthWithFacebook,
                 profilePicture,
                 isSignUpSuccessful,
-                setIsSignUpSuccessful
+                setIsSignUpSuccessful,
             }}
         >
             {children}
