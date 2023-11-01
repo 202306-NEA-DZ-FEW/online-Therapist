@@ -113,9 +113,10 @@ export default function PaymentMethods() {
 
                 <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
                     {cards.map((card, index) => (
-                        <div  key={index} className="relative w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[380px] lg:h-[230px] rounded-2xl flex content-center items-center justify-center">                                
-                
-
+                        <div
+                            key={index}
+                            className='relative w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[380px] lg:h-[230px] rounded-2xl flex content-center items-center justify-center'
+                        >
                             <PaymentCard
                                 name={card.name}
                                 number={card.number}
@@ -123,13 +124,11 @@ export default function PaymentMethods() {
                                 CardType={card.CardType}
                             />
                             <button
-                className="absolute top-[190px] left-[280px] rounded p-1 text-white bg-Teal"
-                onClick={
-                ()=>handleDeleteCard(index)
-                }
-            >
-                Delete Card
-            </button>
+                                className='absolute top-[190px] left-[280px] rounded p-1 text-white bg-Teal'
+                                onClick={() => handleDeleteCard(index)}
+                            >
+                                Delete Card
+                            </button>
                         </div>
                     ))}
                 </Slider>
