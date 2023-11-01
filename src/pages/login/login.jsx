@@ -177,7 +177,7 @@ const Login = () => {
                                         buttonSize='md'
                                     />
                                 </button>
-                                <Link href='/signUp/signUp'>
+                                <Link href='/signUp'>
                                     <Button
                                         buttonText={t("login.signUp")}
                                         buttonSize='md'

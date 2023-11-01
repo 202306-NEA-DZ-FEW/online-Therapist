@@ -9,7 +9,7 @@ import {
     updateProfile,
 } from "firebase/auth";
 import { auth } from "@/util/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, setDoc, doc } from "firebase/firestore";
 import { db } from "@/util/firebase";
 import Layout from "@/layout/Layout";
 import Link from "next/link";
@@ -63,7 +63,7 @@ export default function SignUp() {
 
             // Save user information in Firestore
             const userCollection = collection(db, "users");
-            await addDoc(userCollection, {
+            await setDoc(doc(userCollection, user.uid), {
                 firstname: formData.firstname,
                 lastname: formData.lastname,
                 email: formData.email,
