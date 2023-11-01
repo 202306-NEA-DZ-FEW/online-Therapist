@@ -130,6 +130,8 @@ export function AppWrapper({ children }) {
                 AuthWithGoogle,
                 AuthWithFacebook,
                 profilePicture,
+                isSignUpSuccessful,
+                setIsSignUpSuccessful
             }}
         >
             {children}
