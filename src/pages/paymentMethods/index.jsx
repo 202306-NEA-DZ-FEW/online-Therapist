@@ -110,8 +110,11 @@ export default function PaymentMethods() {
                         {t("paymentMethods.paragraph")}
                     </p>
                 </div>
-                
-                <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5 lg:m-16 lg:p-5'>
+
+                <Slider
+                    {...settings}
+                    className='p-1 m-1 md:p-5 md:m-5 lg:m-16 lg:p-5'
+                >
                     {cards.map((card, index) => (
                         <div
                             key={index}
@@ -132,7 +135,7 @@ export default function PaymentMethods() {
                         </div>
                     ))}
                 </Slider>
-                
+
                 <div className='text-center'>
                     <Link href='/'>
                         <Button
