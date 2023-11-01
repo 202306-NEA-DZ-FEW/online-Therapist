@@ -124,10 +124,10 @@ export default function PaymentMethods() {
                                 CardType={card.CardType}
                             />
                             <button
-                                className='absolute top-[190px] left-[280px] rounded p-1 text-white bg-Teal'
+                                className='absolute top-[155px] left-[165px] md:top-[155px] md:left-[175px]  lg:top-[190px] lg:left-[270px] hover:bg-white hover:text-black hover:border-1 font-atkinson hover:border-Teal rounded p-1 px-2 text-white bg-Teal'
                                 onClick={() => handleDeleteCard(index)}
                             >
-                                Delete Card
+                                {t("paymentMethods.deleteButton")}
                             </button>
                         </div>
                     ))}

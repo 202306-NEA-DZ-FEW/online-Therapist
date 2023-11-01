@@ -29,7 +29,9 @@ export default function PaymentCard({
     return (
         <div
             onClick={handleCardClick}
-            className={`${borderClasses} w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[380px] lg:h-[230px] bg-gradient-to-tr ${cardColors[CardType] || cardColors.visa} rounded-2xl flex content-center items-center justify-center`}
+            className={`${borderClasses} w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[380px] lg:h-[230px] bg-gradient-to-tr ${
+                cardColors[CardType] || cardColors.visa
+            } rounded-2xl flex content-center items-center justify-center`}
         >
             <div className='p-8 w-full h-full'>
                 <div className='relative w-full h-full'>
