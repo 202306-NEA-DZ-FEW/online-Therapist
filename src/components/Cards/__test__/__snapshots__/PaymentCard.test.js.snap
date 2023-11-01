@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="border border-gray-300 w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[340px] lg:h-[220px] bg-gradient-to-tr from-[#007FC1] to-[#6AAFDC] rounded-2xl flex content-center items-center justify-center"
+  className="border border-gray-300 w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[370px] lg:h-[220px] bg-gradient-to-tr from-[#007FC1] to-[#6AAFDC] rounded-2xl flex content-center items-center justify-center"
   onClick={[Function]}
 >
   <div

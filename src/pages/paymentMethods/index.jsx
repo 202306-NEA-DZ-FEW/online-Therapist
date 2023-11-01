@@ -110,12 +110,12 @@ export default function PaymentMethods() {
                         {t("paymentMethods.paragraph")}
                     </p>
                 </div>
-
-                <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
+                
+                <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5 lg:m-16 lg:p-5'>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className='relative w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[340px] lg:h-[220px] rounded-2xl flex content-center items-center justify-center'
+                            className='relative pl-6 md:pl-10 lg:pl-5 w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[370px] lg:h-[220px] rounded-2xl flex content-center items-center justify-center'
                         >
                             <PaymentCard
                                 name={card.name}
@@ -124,7 +124,7 @@ export default function PaymentMethods() {
                                 CardType={card.CardType}
                             />
                             <button
-                                className='absolute top-[155px] left-[165px] md:top-[155px] md:left-[175px]  lg:top-[185px] lg:left-[235px] hover:bg-white hover:text-black hover:border-1 font-atkinson hover:border-Teal rounded p-1 px-2 text-white bg-Teal'
+                                className='absolute top-[155px] left-[180px] md:top-[155px] md:left-[210px]  lg:top-[185px] lg:left-[280px] hover:bg-white hover:text-black hover:border-1 font-atkinson hover:border-Teal rounded p-1 px-2 text-white bg-Teal'
                                 onClick={() => handleDeleteCard(index)}
                             >
                                 {t("paymentMethods.deleteButton")}
@@ -132,6 +132,7 @@ export default function PaymentMethods() {
                         </div>
                     ))}
                 </Slider>
+                
                 <div className='text-center'>
                     <Link href='/'>
                         <Button
