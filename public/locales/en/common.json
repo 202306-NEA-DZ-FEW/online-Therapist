@@ -119,5 +119,11 @@
         "button": "CONFIRM PURCHASE",
         "alertText": "Please select a card",
         "thankstext": "You purchase has been submitted, you should receive an email with the receipt soon."
+    },
+    "paymentMethods": {
+        "title": "YOUR SAVED CARDS",
+        "paragraph": "We only support cards as a payment method at the moment!",
+        "deleteButton": "Delete Card",
+        "addButton": "ADD NEW CARD"
     }
 }
