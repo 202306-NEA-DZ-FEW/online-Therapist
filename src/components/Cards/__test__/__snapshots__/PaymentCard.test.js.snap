@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="border border-gray-300 w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[370px] lg:h-[220px] bg-gradient-to-tr from-[#007FC1] to-[#6AAFDC] rounded-2xl flex content-center items-center justify-center"
+  onClick={[Function]}
+>
+  <div
+    className="p-8 w-full h-full"
+  >
+    <div
+      className="relative w-full h-full"
+    >
+      <img
+        alt=""
+        className="absolute w-[45px] md:w-[45px] lg:w-[60px]"
+        data-nimg="1"
+        decoding="async"
+        height={24}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/undefined.svg"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={60}
+      />
+      <img
+        alt="chip"
+        className="absolute right-0 bottom-0 top-0 my-auto w-[40px] md:w-[40px] lg:w-[50px]"
+        data-nimg="1"
+        decoding="async"
+        height={30}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/chip.svg"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={50}
+      />
+      <div
+        className="flex flex-col w-full h-full justify-end gap-4"
+      >
+        <p
+          className="text-lg text-white md:text-lg lg:text-2xl"
+        >
+           
+        </p>
+        <div
+          className="flex gap-12 md:gap-12 lg:gap-28"
+        >
+          <p
+            className="text-md text-white md:text-md lg:text-lg uppercase"
+          >
+             
+          </p>
+          <p
+            className="text-md text-white md:text-md lg:text-lg uppercase"
+          >
+             
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

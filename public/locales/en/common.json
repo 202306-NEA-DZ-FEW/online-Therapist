@@ -1,5 +1,9 @@
 {
     "test": "Hello",
+    "titre11": "We make therapy work better for everyone",
+    "about1": "By providing our clients with easy-to-access, high-quality care and our clinicians with a supportive working environment.our teams can fulfill their purpose and do their best work, where clients are treated with warmth and respect, and where communities benefit from access to high-quality care to heal and thrive in life.",
+    "titre21": "Our vision",
+    "about2": "We're creating a truly unified and personalized consumer experience; developing technologies to connect to patients and extend the reach of care providers; delivering the highest standard of clinical quality at every touchpoint; and enhancing health decisions and outcomes with smart data and actionable insights.",
     "navbar": {
         "login": "Log In",
         "home": "Home",
@@ -107,5 +111,19 @@
         "li4": "Reliable Internet connection",
         "li5": "Currently residing in the US",
         "getStarted": "Get Started"
-    }   
+    },
+    "buyticket": {
+        "title": "SELECT CARD",
+        "paragraph1": "Please select the card you want to buy the tickets with",
+        "paragraph2": "Click confirm to use the selected card to purchase 5 tickets for 10$",
+        "button": "CONFIRM PURCHASE",
+        "alertText": "Please select a card",
+        "thankstext": "You purchase has been submitted, you should receive an email with the receipt soon."
+    },
+    "paymentMethods": {
+        "title": "YOUR SAVED CARDS",
+        "paragraph": "We only support cards as a payment method at the moment!",
+        "deleteButton": "Delete Card",
+        "addButton": "ADD NEW CARD"
+    }
 }
