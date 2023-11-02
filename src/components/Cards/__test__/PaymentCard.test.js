@@ -1,7 +1,8 @@
 import renderer from "react-test-renderer";
-import SignupThanks from "../Thankyou";
+
+import PaymentCard from "../PaymentCard";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<SignupThanks />).toJSON();
+    const tree = renderer.create(<PaymentCard />).toJSON();
     expect(tree).toMatchSnapshot();
 });
