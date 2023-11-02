@@ -38,7 +38,9 @@ exports[`renders correctly 1`] = `
       </span>
       <span
         className="mr-4 text-slate-900"
-      />
+      >
+        simple maritalStatus
+      </span>
     </div>
     <div
       className="my-3 border border-dashed border-Teal p-1 rounded-lg"
@@ -50,7 +52,9 @@ exports[`renders correctly 1`] = `
       </span>
       <span
         className="mr-4 text-slate-900"
-      />
+      >
+        simple firstSession
+      </span>
     </div>
     <div
       className="my-3 border border-dashed border-Teal p-1 rounded-lg"
@@ -62,7 +66,9 @@ exports[`renders correctly 1`] = `
       </span>
       <span
         className="mr-4 text-slate-900"
-      />
+      >
+        simple counselorQualities
+      </span>
     </div>
     <div
       className="my-3 border border-dashed border-Teal p-1 rounded-lg"

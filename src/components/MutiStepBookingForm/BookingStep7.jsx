@@ -22,19 +22,19 @@ const BookingStep7 = ({
             <div className='lg:text-md text-sm'>
                 <DataConfirm
                     label={t("step7.label1")}
-                    // value={formData.counselingType}
+                    value={formData.counselingType}
                 />
                 <DataConfirm
                     label={t("step7.label2")}
-                    // value={formData.maritalStatus}
+                    value={formData.maritalStatus}
                 />
                 <DataConfirm
                     label={t("step7.label3")}
-                    // value={formData.firstSession}
+                    value={formData.firstSession}
                 />
                 <DataConfirm
                     label={t("step7.label4")}
-                    // value={formData.counselorQualities}
+                    value={formData.counselorQualities}
                 />
                 <DataConfirm
                     label={t("step7.label5")}
