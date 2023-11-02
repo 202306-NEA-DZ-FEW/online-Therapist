@@ -6,8 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { images } from "@/util/library";
 import Button from "../elements/Button";
+import Link from "next/link";
+// import { UserAuth } from "@/context/AuthContext";
 
 function HeroSection() {
+    // const { user } = UserAuth();
+    // Define the paths based on the user's authentication status
+    // const bookingPath = user ? "/bookAnAppointment" : "/login/login";
+
     const settings = {
         fade: true,
         infinite: true,
@@ -19,6 +25,7 @@ function HeroSection() {
         slidesToScroll: 1,
         initialSlide: 0,
     };
+
     return (
         <Slider {...settings} className='bg-GreenLight'>
             {images.map((image) => (
@@ -43,7 +50,12 @@ function HeroSection() {
                             </p>
                         </div>
                         <div className='px-auto pt-4 mx-auto'>
-                            <Button />
+                            <Link href='/bookAnAppointment'>
+                                <Button
+                                    buttonText='Book An Appointment'
+                                    buttonSize='fit'
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>

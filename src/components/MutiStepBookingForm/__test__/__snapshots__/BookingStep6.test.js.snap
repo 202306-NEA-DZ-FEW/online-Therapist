@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h3
+    className="mb-2 lg:text-2xl text-lg font-young text-DarkTeal "
+  >
+    step6.header
+  </h3>
+  <p
+    className="lg:text-lg font-atkinson text-gray-900"
+  >
+    step6.paragraph1
+    <br />
+    step6.paragraph2
+  </p>
+  <label
+    class="block mb-2 lg:pt-10 pt-6"
+    htmlFor="specification"
+  >
+    <textarea
+      class="block p-2.5 w-full lg:text-lg rtl:text-reverse font-atkinson text-gray-900 bg-gray-50 rounded-lg border hover:border-Teal border-gray-300 focus:ring-4 focus:ring-Teal"
+      id="specification"
+      name="specification"
+      onChange={[Function]}
+      placeholder="step6.placeholder"
+      rows="10"
+      type="text"
+      value="Sample specification"
+    />
+  </label>
+  <div
+    className="my-2 flex justify-between items-center lg:pt-6 pt-3"
+  >
+    <button
+      onClick={[MockFunction]}
+    >
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-32 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step2.prev
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step2.prev
+        </span>
+      </div>
+    </button>
+    <button
+      onClick={[MockFunction]}
+    >
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-20 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step2.next
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step2.next
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

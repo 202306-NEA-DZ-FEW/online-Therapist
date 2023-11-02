@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+   
+  <h3
+    className="mb-4 lg:text-2xl text-lg font-young text-DarkTeal"
+  >
+    step3.header
+  </h3>
+  <ul
+    className="lg:w-96 lg:text-lg font-atkinson rtl:pr-4 text-gray-900 bg-white"
+  >
+    <li
+      className="w-full"
+    >
+      <div
+        className="flex items-center pl-3"
+      >
+        <input
+          className="lg:w-4 lg:h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+          id="maleCounselor"
+          name="counselorQualities"
+          onChange={[Function]}
+          type="checkbox"
+          value="step4.valueText1"
+        />
+        <label
+          className="w-full py-1 ml-2 rtl:pr-2"
+          htmlFor="maleCounselor"
+        >
+          step4.valueText1
+        </label>
+      </div>
+    </li>
+    <li
+      className="w-full"
+    >
+      <div
+        className="flex items-center pl-3"
+      >
+        <input
+          className="lg:w-4 lg:h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+          id="maleCounselor"
+          name="counselorQualities"
+          onChange={[Function]}
+          type="checkbox"
+          value="step4.valueText2"
+        />
+        <label
+          className="w-full py-1 ml-2 rtl:pr-2"
+          htmlFor="maleCounselor"
+        >
+          step4.valueText2
+        </label>
+      </div>
+    </li>
+    <li
+      className="w-full"
+    >
+      <div
+        className="flex items-center pl-3"
+      >
+        <input
+          className="lg:w-4 lg:h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+          id="maleCounselor"
+          name="counselorQualities"
+          onChange={[Function]}
+          type="checkbox"
+          value="step4.valueText3"
+        />
+        <label
+          className="w-full py-1 ml-2 rtl:pr-2"
+          htmlFor="maleCounselor"
+        >
+          step4.valueText3
+        </label>
+      </div>
+    </li>
+    <li
+      className="w-full"
+    >
+      <div
+        className="flex items-center pl-3"
+      >
+        <input
+          className="lg:w-4 lg:h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+          id="maleCounselor"
+          name="counselorQualities"
+          onChange={[Function]}
+          type="checkbox"
+          value="step4.valueText4"
+        />
+        <label
+          className="w-full py-1 ml-2 rtl:pr-2"
+          htmlFor="maleCounselor"
+        >
+          step4.valueText4
+        </label>
+      </div>
+    </li>
+    <li
+      className="w-full"
+    >
+      <div
+        className="flex items-center pl-3"
+      >
+        <input
+          className="lg:w-4 lg:h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+          id="maleCounselor"
+          name="counselorQualities"
+          onChange={[Function]}
+          type="checkbox"
+          value="step4.valueText5"
+        />
+        <label
+          className="w-full py-1 ml-2 rtl:pr-2"
+          htmlFor="maleCounselor"
+        >
+          step4.valueText5
+        </label>
+      </div>
+    </li>
+  </ul>
+  <div
+    className="my-2 flex justify-between items-center lg:pt-5 pt-2"
+  >
+    <button>
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-32 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step2.prev
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step2.prev
+        </span>
+      </div>
+    </button>
+    <button>
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-20 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step2.next
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step2.next
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

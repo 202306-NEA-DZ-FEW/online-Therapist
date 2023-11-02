@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+   
+  <h3
+    className="mb-5 lg:text-2xl text-lg font-young text-DarkTeal"
+  >
+    step3.header
+  </h3>
+  <ul
+    className="flex flex-col gap-3 rtl:lg:w-72"
+  >
+    <li>
+      <div>
+        <label
+          className="cursor-pointer"
+        >
+          <input
+            className="peer sr-only"
+            name="firstSession"
+            onChange={[Function]}
+            type="radio"
+            value="step3.valueText1"
+          />
+          <div
+            className="lg:w-72 max-w-xl rounded-md bg-SkyBlue p-5  hover:bg-LightTeal hover:text-black hover:ring-Teal peer-checked:bg-Teal peer-checked:text-white text-Gray ring-2 ring-transparent transition-all hover:shadow peer-checked:ring-blue-400 peer-checked:ring-offset-2"
+          >
+            <div
+              className=" gap-1"
+            >
+              <div
+                className="flex items-center justify-between"
+              >
+                <p
+                  className="lg:text-xl font-atkinson uppercase"
+                >
+                  step3.valueText1
+                </p>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div>
+        <label
+          className="cursor-pointer"
+        >
+          <input
+            className="peer sr-only"
+            name="firstSession"
+            onChange={[Function]}
+            type="radio"
+            value="step3.valueText2"
+          />
+          <div
+            className="lg:w-72 max-w-xl rounded-md bg-SkyBlue p-5  hover:bg-LightTeal hover:text-black hover:ring-Teal peer-checked:bg-Teal peer-checked:text-white text-Gray ring-2 ring-transparent transition-all hover:shadow peer-checked:ring-blue-400 peer-checked:ring-offset-2"
+          >
+            <div
+              className=" gap-1"
+            >
+              <div
+                className="flex items-center justify-between"
+              >
+                <p
+                  className="lg:text-xl font-atkinson uppercase"
+                >
+                  step3.valueText2
+                </p>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </li>
+  </ul>
+  <div
+    className="my-2 flex justify-between items-center lg:pt-6 pt-3"
+  >
+    <button>
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-32 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step2.prev
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step2.prev
+        </span>
+      </div>
+    </button>
+    <button>
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-20 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step2.next
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step2.next
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;
