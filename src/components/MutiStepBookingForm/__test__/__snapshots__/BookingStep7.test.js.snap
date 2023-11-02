@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h3
+    className="mb-2 lg:text-2xl text-lg font-young text-DarkTeal "
+  >
+    step7.header
+  </h3>
+  <p
+    className="lg:text-lg font-atkinson text-gray-900"
+  >
+    step7.paragraph1
+    <br />
+  </p>
+  <div
+    className="lg:text-md text-sm"
+  >
+    <div
+      className="my-3 border border-dashed border-Teal p-1 rounded-lg"
+    >
+      <span
+        className="mr-4 text-slate-500"
+      >
+        step7.label1
+      </span>
+      <span
+        className="mr-4 text-slate-900"
+      />
+    </div>
+    <div
+      className="my-3 border border-dashed border-Teal p-1 rounded-lg"
+    >
+      <span
+        className="mr-4 text-slate-500"
+      >
+        step7.label2
+      </span>
+      <span
+        className="mr-4 text-slate-900"
+      >
+        simple maritalStatus
+      </span>
+    </div>
+    <div
+      className="my-3 border border-dashed border-Teal p-1 rounded-lg"
+    >
+      <span
+        className="mr-4 text-slate-500"
+      >
+        step7.label3
+      </span>
+      <span
+        className="mr-4 text-slate-900"
+      >
+        simple firstSession
+      </span>
+    </div>
+    <div
+      className="my-3 border border-dashed border-Teal p-1 rounded-lg"
+    >
+      <span
+        className="mr-4 text-slate-500"
+      >
+        step7.label4
+      </span>
+      <span
+        className="mr-4 text-slate-900"
+      >
+        simple counselorQualities
+      </span>
+    </div>
+    <div
+      className="my-3 border border-dashed border-Teal p-1 rounded-lg"
+    >
+      <span
+        className="mr-4 text-slate-500"
+      >
+        step7.label5
+      </span>
+      <span
+        className="mr-4 text-slate-900"
+      >
+        Sample issues
+      </span>
+    </div>
+    <div
+      className="my-3 border border-dashed border-Teal p-1 rounded-lg"
+    >
+      <span
+        className="mr-4 text-slate-500"
+      >
+        step7.label6
+      </span>
+      <span
+        className="mr-4 text-slate-900"
+      >
+        Sample specification
+      </span>
+    </div>
+  </div>
+  <p
+    className="lg:text-lg font-atkinson text-gray-900"
+  >
+    step7.paragraph2
+  </p>
+  <div
+    className="my-2 flex items-center"
+  >
+    <input
+      className="lg:w-4 lg:h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+      id="agreeToTerms"
+      name="agreeToTerms"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="w-full py-1 lg:py-2 ml-2 rtl:pr-2 lg:text-lg font-atkinson text-gray-900"
+      htmlFor="agreeToTerms"
+    >
+      step7.label7
+    </label>
+  </div>
+  <div
+    className="my-2 flex justify-between items-center lg:pt-5 pt-2"
+  >
+    <button
+      onClick={[MockFunction]}
+    >
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-32 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step2.prev
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step2.prev
+        </span>
+      </div>
+    </button>
+    <button
+      onClick={[MockFunction]}
+    >
+      <div
+        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl w-32 h-14 bg-white hover:cursor-pointer"
+      >
+        <span
+          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+        <span
+          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+        >
+          step7.submit
+        </span>
+        <span
+          className="relative invisible"
+        >
+          $
+          step7.submit
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

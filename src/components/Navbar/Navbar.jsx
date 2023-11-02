@@ -10,9 +10,8 @@ export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const { t } = useTranslation("common");
     const language = router.locale;
-
     const { user, logOut } = UserAuth();
-    console.log("Mohamed", user);
+
     useEffect(() => {
         document.body.dir = language == "ar" ? "rtl" : "ltr";
     }, [language]);

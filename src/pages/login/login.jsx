@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-// import { BsFacebook, BsGoogle } from "react-icons/bs";
 import * as yup from "yup";
 
 import Button from "@/components/elements/Button";

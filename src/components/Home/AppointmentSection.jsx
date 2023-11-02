@@ -1,7 +1,13 @@
 import { teamMembers } from "@/util/library";
 import Button from "../elements/Button";
+import Link from "next/link";
+import { UserAuth } from "@/context/AuthContext";
 
 function AppointmentSection() {
+    const { user } = UserAuth();
+    // Define the paths based on the user's authentication status
+    const bookingPath = user ? "/bookAnAppointment" : "/login/login";
+
     return (
         <div className='p-10 md:pl-10 bg-GreenLight md:pr-10 lg:pl-20 lg:pr-20'>
             <h2 className='text-center sm:text-xl md:text-2xl lg:text-4xl uppercase text-DarkTeal font-atkinson m-0 pl-6 pr-6'>
@@ -52,7 +58,9 @@ function AppointmentSection() {
             </div>
 
             <div className='flex justify-center m-4 md:m-6 lg:m-10 p-4'>
-                <Button />
+                <Link href={bookingPath}>
+                    <Button buttonText='Book An Appointment' buttonSize='fit' />
+                </Link>
             </div>
         </div>
     );
