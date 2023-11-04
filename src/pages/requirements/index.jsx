@@ -59,7 +59,7 @@ function RequirementsPage() {
                     </div>
                     <div className='w-full sm:w-1/3 p-5 sm:p-10 text-center sm:text-left'>
                         <Image
-                            src='/images/therapist1.png'
+                            src='/Images/therapist1.png'
                             alt='therapist illustration'
                             width={600}
                             height={300}
@@ -85,7 +85,7 @@ function RequirementsPage() {
                 </div>
 
                 <div className='p-10'>
-                    <Link href='/therapists/signup'>
+                    <Link href='/therapists/sign-up'>
                         <Button
                             buttonText={t("requirement.getStarted")}
                             buttonSize='lg'

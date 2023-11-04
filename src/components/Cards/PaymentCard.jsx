@@ -38,14 +38,14 @@ export default function PaymentCard({
                     <Image
                         className='absolute w-[45px] md:w-[45px] lg:w-[60px]'
                         alt=''
-                        src={`/${CardType}.svg`}
+                        src={`/Images/${CardType}.svg`}
                         width={60}
                         height={24}
                     />
                     <Image
                         className='absolute right-0 bottom-0 top-0 my-auto w-[40px] md:w-[40px] lg:w-[50px]'
                         alt='chip'
-                        src='/chip.svg'
+                        src='/Images/chip.svg'
                         width={50}
                         height={30}
                     />

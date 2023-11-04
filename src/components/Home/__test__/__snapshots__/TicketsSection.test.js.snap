@@ -41,7 +41,7 @@ exports[`renders correctly 1`] = `
         className="w-fit"
       >
         <a
-          href="/payment"
+          href="/buyTicket"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
@@ -78,7 +78,7 @@ exports[`renders correctly 1`] = `
         className="w-fit"
       >
         <a
-          href="/payment"
+          href="/buyTicket"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
@@ -115,7 +115,7 @@ exports[`renders correctly 1`] = `
         className="w-fit"
       >
         <a
-          href="/payment"
+          href="/buyTicket"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}

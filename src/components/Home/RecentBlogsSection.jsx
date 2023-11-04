@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Card from "../Blog/SuggestedBlogsCard/Card";
+import Card from "../Cards/BlogCard";
 
 const RecentBlogsSection = () => {
     const blogs = [
@@ -11,31 +11,31 @@ const RecentBlogsSection = () => {
             title: "Mental Health and technology",
             body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem",
             url: "",
-            blogImg: "blog-img-placeholder.svg",
+            blogImg: "/Images/blog-img-placeholder.svg",
         },
         {
             title: "Mental Health and technology",
             body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem",
             url: "",
-            blogImg: "blog-img-placeholder.svg",
+            blogImg: "/Images/blog-img-placeholder.svg",
         },
         {
             title: "Mental Health and technology",
             body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem",
             url: "",
-            blogImg: "blog-img-placeholder.svg",
+            blogImg: "/Images/blog-img-placeholder.svg",
         },
         {
             title: "Mental Health and technology",
             body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem",
             url: "",
-            blogImg: "blog-img-placeholder.svg",
+            blogImg: "/Images/blog-img-placeholder.svg",
         },
         {
             title: "Mental Health and technology",
             body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem",
             url: "",
-            blogImg: "blog-img-placeholder.svg",
+            blogImg: "/Images/blog-img-placeholder.svg",
         },
     ];
 
