@@ -9,11 +9,15 @@ Array [
       className="block text-md font-medium leading-6 text-gray-900"
     />
   </div>,
-  <input
-    className="border border-gray-300 h-12 w-undefined pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer"
-  />,
-  <p
-    className="text-sm text-red-500"
-  />,
+  <div
+    className="flex flex-col w-full"
+  >
+    <input
+      className="border border-gray-300 h-12 w-undefined pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer"
+    />
+    <p
+      className="text-sm text-red-500 mt-1 animate-pulse "
+    />
+  </div>,
 ]
 `;

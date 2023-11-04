@@ -12,7 +12,7 @@ const TicketCard = ({ price, numberOfTickets }) => {
                 {price}$
             </span>
             <div className='w-fit'>
-                <Link href={"/payment"}>
+                <Link href={"/buyTicket"}>
                     <button className='uppercase cursor-pointer py-2 px-3 text-lg rounded text-black/80 font-light bg-[#2DD3E3]'>
                         purchase
                     </button>

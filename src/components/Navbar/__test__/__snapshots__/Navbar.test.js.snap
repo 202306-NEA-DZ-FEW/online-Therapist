@@ -26,8 +26,8 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="/_next/image?url=%2Flogo.png&w=256&q=75"
-              srcSet="/_next/image?url=%2Flogo.png&w=128&q=75 1x, /_next/image?url=%2Flogo.png&w=256&q=75 2x"
+              src="/_next/image?url=%2FImages%2Flogo.png&w=256&q=75"
+              srcSet="/_next/image?url=%2FImages%2Flogo.png&w=128&q=75 1x, /_next/image?url=%2FImages%2Flogo.png&w=256&q=75 2x"
               style={
                 Object {
                   "color": "transparent",
@@ -126,7 +126,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="/hamburger-menu.svg"
+                src="/Images/hamburger-menu.svg"
                 style={
                   Object {
                     "color": "transparent",
@@ -161,7 +161,7 @@ exports[`renders correctly 1`] = `
               className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
             >
               <a
-                href="/"
+                href="/blogs"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
@@ -170,7 +170,7 @@ exports[`renders correctly 1`] = `
               </a>
             </li>
             <li
-              className="text-DarkTeal font-atkinson ml-2 text-lg md:hover:text-Teal"
+              className="text-DarkTeal font-atkinson ml-2 text-lg md:hover:text-Teal z-50"
             >
               <div
                 className="group inline-block relative"
@@ -191,7 +191,7 @@ exports[`renders correctly 1`] = `
                     >
                       <a
                         className="hover:text-Teal"
-                        href="/"
+                        href="/about-us"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onTouchStart={[Function]}
@@ -217,7 +217,7 @@ exports[`renders correctly 1`] = `
                     >
                       <a
                         className="hover:text-Teal"
-                        href="/"
+                        href="/careers"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onTouchStart={[Function]}
@@ -233,7 +233,7 @@ exports[`renders correctly 1`] = `
               className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
             >
               <a
-                href="/"
+                href="/contact"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
@@ -245,7 +245,7 @@ exports[`renders correctly 1`] = `
               className="flex items-center space-x-4"
             >
               <a
-                href="/profile/profile"
+                href="/userProfile"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}

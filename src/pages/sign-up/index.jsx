@@ -136,7 +136,7 @@ export default function SignUp() {
                                 {t("signup.heading")}
                             </h1>
                             <Image
-                                src='/signuppp.svg'
+                                src='/Images/signup.svg'
                                 width={600}
                                 height={600}
                                 alt='online therapy'
@@ -258,7 +258,7 @@ export default function SignUp() {
                                         />
                                     </div>
                                     <div className='flex items-center justify-center space-x-4 py-4 lg:space-x-9'>
-                                        <Link href='/login/login'>
+                                        <Link href='/login'>
                                             <Button
                                                 transition={false}
                                                 buttonText={t("signup.login")}
@@ -285,7 +285,7 @@ export default function SignUp() {
                                     className='cursor-pointer '
                                 >
                                     <Image
-                                        src='/google.svg'
+                                        src='/Images/google.svg'
                                         width={30}
                                         height={30}
                                         alt='google'
@@ -298,7 +298,7 @@ export default function SignUp() {
                                     className='cursor-pointer'
                                 >
                                     <Image
-                                        src='/facebook.svg'
+                                        src='/Images/facebook.svg'
                                         width={30}
                                         height={30}
                                         alt='facebook'
