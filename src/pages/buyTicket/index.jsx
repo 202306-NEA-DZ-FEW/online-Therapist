@@ -133,12 +133,19 @@ export default function BuyTickect() {
                             {t("buyticket.paragraph2")}
                         </p>
                         <Button
-                            transition={true}
+                            transition={false}
                             color='teal'
                             buttonSize='xl'
                             buttonText={t("buyticket.button")}
                             clickFunction={handleConfirm}
                         />
+                         <form action="/api/payment/checkout" method="POST">
+      
+        <button className="text-bold py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md bg-white border-2 border-Teal font-semibold text-Teal hover:text-white hover:bg-Teal focus:outline-none focus:ring-2 ring-offset-white focus:ring-Teal focus:ring-offset-2 transition-all text-lg" type="submit" role="link">
+          Checkout
+        </button>
+       
+    </form>
                     </div>
                 </div>
             )}
