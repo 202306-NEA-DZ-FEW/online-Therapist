@@ -10,6 +10,14 @@ import Thankyou from "@/components/Thankyou/Thankyou";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import axios from "axios";
+import { loadStripe } from '@stripe/stripe-js';
+
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+);
 
 export default function BuyTickect() {
     const [displayThanks, setDisplayThanks] = useState(false);
@@ -17,6 +25,7 @@ export default function BuyTickect() {
     const { t } = useTranslation("common");
     const router = useRouter();
     const language = router.locale;
+    
 
     useEffect(() => {
         document.body.dir = language == "ar" ? "rtl" : "ltr";
@@ -33,6 +42,27 @@ export default function BuyTickect() {
         } else alert(t("buyticket.alertText"));
     };
 
+  
+    const redirectToCheckout = async () => {
+        try {
+            // Create Stripe checkout
+            const response = await axios.post('/api/checkout_sessions/');
+    
+            // Check if the response is valid and has a session URL
+            if (response && response.data && response.data.session && response.data.session.url) {
+                // Redirect to the Stripe Checkout page
+                window.location.href = response.data.session.url;
+            } else {
+                console.error('Invalid response from the server:', response);
+                // Handle the error or inform the user
+            }
+        } catch (error) {
+            console.error('Error creating Stripe session:', error);
+            // Handle the error or inform the user
+        }
+    };
+    
+    
     const cards = [
         {
             name: "John Doe",
@@ -139,13 +169,22 @@ export default function BuyTickect() {
                             buttonText={t("buyticket.button")}
                             clickFunction={handleConfirm}
                         />
-                         <form action="/api/payment/checkout" method="POST">
-      
-        <button className="text-bold py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md bg-white border-2 border-Teal font-semibold text-Teal hover:text-white hover:bg-Teal focus:outline-none focus:ring-2 ring-offset-white focus:ring-Teal focus:ring-offset-2 transition-all text-lg" type="submit" role="link">
-          Checkout
-        </button>
-       
-    </form>
+                        <Button
+                            transition={false}
+                            color='teal'
+                            buttonSize='xl'
+                            buttonText="Redirect To Checkout"
+                            clickFunction={redirectToCheckout}
+                        />
+                        <form action='/api/checkout_sessions/' method='POST'>
+                            <button
+                                className='text-bold py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md bg-white border-2 border-Teal font-semibold text-Teal hover:text-white hover:bg-Teal focus:outline-none focus:ring-2 ring-offset-white focus:ring-Teal focus:ring-offset-2 transition-all text-lg'
+                                type='submit'
+                                role='link'
+                            >
+                                Checkout
+                            </button>
+                        </form>
                     </div>
                 </div>
             )}
