@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import Button from "@/components/elements/Button";
-import Input from "@/components/Input";
+import Input from "@/components/elements/Input";
 
 import Layout from "@/layout/Layout";
 import { auth, db } from "@/util/firebase";
@@ -206,7 +206,7 @@ const TherapistSignUp = ({ t }) => {
                     </div>
                     <div className='md:m-auto lg:m-auto hidden lg:flex'>
                         <Image
-                            src='/therapist.svg'
+                            src='/Images/therapist.svg'
                             width={600}
                             height={600}
                             alt='online therapy'

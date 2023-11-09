@@ -33,7 +33,7 @@ export default function Navbar() {
                             {/* LOGO */}
                             <Link href='/'>
                                 <Image
-                                    src='/logo.png'
+                                    src='/Images/logo.png'
                                     width={100}
                                     height={100}
                                     alt='logo'
@@ -105,14 +105,14 @@ export default function Navbar() {
                                 >
                                     {navbar ? (
                                         <Image
-                                            src='/close.svg'
+                                            src='/Images/close.svg'
                                             width={30}
                                             height={30}
                                             alt='logo'
                                         />
                                     ) : (
                                         <Image
-                                            src='/hamburger-menu.svg'
+                                            src='/Images/hamburger-menu.svg'
                                             width={30}
                                             height={30}
                                             alt='logo'
@@ -144,13 +144,13 @@ export default function Navbar() {
                                 </li>
                                 <li className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                     <Link
-                                        href='/'
+                                        href='/blogs'
                                         onClick={() => setNavbar(!navbar)}
                                     >
                                         {t("navbar.blogs")}
                                     </Link>
                                 </li>
-                                <li className='text-DarkTeal font-atkinson ml-2 text-lg md:hover:text-Teal'>
+                                <li className='text-DarkTeal font-atkinson ml-2 text-lg md:hover:text-Teal z-50'>
                                     <div className='group inline-block relative'>
                                         <button className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                             {t("navbar.about")}
@@ -160,7 +160,7 @@ export default function Navbar() {
                                             <div className='space-y-2 '>
                                                 <li className='w-full hover:bg-gray-50'>
                                                     <Link
-                                                        href='/'
+                                                        href='/about-us'
                                                         className='hover:text-Teal'
                                                     >
                                                         {t("navbar.aboutUs")}
@@ -176,7 +176,7 @@ export default function Navbar() {
                                                 </li>
                                                 <li className='w-full hover:bg-gray-50'>
                                                     <Link
-                                                        href='/'
+                                                        href='/careers'
                                                         className='hover:text-Teal'
                                                     >
                                                         {t("navbar.careers")}
@@ -188,7 +188,7 @@ export default function Navbar() {
                                 </li>
                                 <li className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                     <Link
-                                        href='/'
+                                        href='/contact'
                                         onClick={() => setNavbar(!navbar)}
                                     >
                                         {t("navbar.contact")}
@@ -196,7 +196,7 @@ export default function Navbar() {
                                 </li>
                                 {!user ? (
                                     <li className='text-center'>
-                                        <Link href='/login/login'>
+                                        <Link href='/login'>
                                             <button className='text-white font-atkinson text-lg bg-Teal rounded-full h-12 w-96 md:w-24 md:rounded-md md:h-10 hover:bg-DarkTeal'>
                                                 {t("navbar.login")}
                                             </button>
@@ -204,7 +204,7 @@ export default function Navbar() {
                                     </li>
                                 ) : (
                                     <div className='flex items-center space-x-4'>
-                                        <Link href='/profile/profile'>
+                                        <Link href='/userProfile'>
                                             <p>Profile</p>
                                         </Link>
                                         <button
