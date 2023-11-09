@@ -10,20 +10,22 @@ exports[`renders correctly 1`] = `
     <span
       className="uppercase text-4xl"
     >
-      $ 
+      Example Ticket
+       
       ticket
     </span>
   </div>
   <span
     className="text-base rtl:text-3xl text-black/50"
   >
+    10
     $
   </span>
   <div
     className="w-fit"
   >
     <a
-      href="/payment"
+      href="/buyTicket/undefined"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onTouchStart={[Function]}

@@ -10,26 +10,40 @@ import Thankyou from "@/components/Thankyou/Thankyou";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import axios from "axios";
-import { loadStripe } from '@stripe/stripe-js';
-
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-);
 
 export default function BuyTickect() {
+   
+   
+    const router = useRouter();
+    const { priceId } = router.query;
     const [displayThanks, setDisplayThanks] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
     const { t } = useTranslation("common");
-    const router = useRouter();
     const language = router.locale;
-    
-
     useEffect(() => {
         document.body.dir = language == "ar" ? "rtl" : "ltr";
     }, [language]);
+    
+    const [ticketDetails, setTicketDetails] = useState(null);
+  
+    useEffect(() => {
+      if (priceId) {
+        // Fetch ticket details from the API route
+        fetch(`/api/getsingleproduct/${priceId}`)
+          .then((response) => response.json())
+          .then((data) => setTicketDetails(data))
+          .catch((error) => console.error('Error fetching tickets details:', error));
+      }
+    }, [priceId]);
+  
+    if (!ticketDetails) {
+   // render a loading indicator while the data is being fetched
+      return <div className=" flex h-screen">
+      <div className="animate-spin m-auto inline-block w-16 h-16 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500" role="status" aria-label="loading">
+      <span className=" sr-only">Loading...</span>
+    </div>
+      </div> 
+    }
 
     const handleCardClick = (card) => {
         setSelectedCard(card);
@@ -42,27 +56,29 @@ export default function BuyTickect() {
         } else alert(t("buyticket.alertText"));
     };
 
-  
-    const redirectToCheckout = async () => {
+    const handleCheckout = async (e) => {
+        e.preventDefault();
         try {
-            // Create Stripe checkout
-            const response = await axios.post('/api/checkout_sessions/');
-    
-            // Check if the response is valid and has a session URL
-            if (response && response.data && response.data.session && response.data.session.url) {
-                // Redirect to the Stripe Checkout page
-                window.location.href = response.data.session.url;
-            } else {
-                console.error('Invalid response from the server:', response);
-                // Handle the error or inform the user
-            }
-        } catch (error) {
-            console.error('Error creating Stripe session:', error);
-            // Handle the error or inform the user
+          const response  = await fetch('/api/checkout_sessions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ priceId })
+        })
+        if (response.ok) {
+            const data = await response.json();
+
+            // Redirect to the Stripe Checkout URL 
+            window.location.href = data.session.url;
+        } else {
+            console.error('Invalid response from the server:', response);
         }
-    };
-    
-    
+        } catch (error) {
+          console.error('Error creating Stripe session:', error);
+        }
+      };
+
     const cards = [
         {
             name: "John Doe",
@@ -134,7 +150,7 @@ export default function BuyTickect() {
                 <Thankyou text1={t("buyticket.thankstext")} />
             ) : (
                 // Render the card selection section
-                <div className='h-screen m-16 space-y-16'>
+                <div className='h-vh m-16 space-y-16'>
                     <div className='ml-10 lg:rtl:mr-24 space-y-4'>
                         <h1 className='font-atkinson text-4xl '>
                             {t("buyticket.title")}
@@ -157,10 +173,9 @@ export default function BuyTickect() {
                             />
                         ))}
                     </Slider>
-
                     <div className='flex flex-col space-y-12 justify-center items-center'>
                         <p className='font-atkinson text-3xl'>
-                            {t("buyticket.paragraph2")}
+                            {t("buyticket.paragraph2")} <span>{ticketDetails.nickname}</span> {t("buyticket.tikets")} <span> {(ticketDetails.unit_amount/100)} {t("buyticket.dollar")}</span>
                         </p>
                         <Button
                             transition={false}
@@ -169,22 +184,16 @@ export default function BuyTickect() {
                             buttonText={t("buyticket.button")}
                             clickFunction={handleConfirm}
                         />
+                        <p className='font-atkinson text-3xl'>
+                            Or click checkout to use Stripe payment
+                        </p>
                         <Button
                             transition={false}
                             color='teal'
                             buttonSize='xl'
-                            buttonText="Redirect To Checkout"
-                            clickFunction={redirectToCheckout}
+                            buttonText='CHECKOUT'
+                            clickFunction={handleCheckout}
                         />
-                        <form action='/api/checkout_sessions/' method='POST'>
-                            <button
-                                className='text-bold py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md bg-white border-2 border-Teal font-semibold text-Teal hover:text-white hover:bg-Teal focus:outline-none focus:ring-2 ring-offset-white focus:ring-Teal focus:ring-offset-2 transition-all text-lg'
-                                type='submit'
-                                role='link'
-                            >
-                                Checkout
-                            </button>
-                        </form>
                     </div>
                 </div>
             )}
@@ -192,11 +201,11 @@ export default function BuyTickect() {
     );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common"])),
-            // Will be passed to the page component as props
+            // Will be passed to the page component as props  
         },
     };
 }
