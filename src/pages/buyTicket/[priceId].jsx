@@ -12,8 +12,6 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
 export default function BuyTickect() {
-   
-   
     const router = useRouter();
     const { priceId } = router.query;
     const [displayThanks, setDisplayThanks] = useState(false);
@@ -23,26 +21,34 @@ export default function BuyTickect() {
     useEffect(() => {
         document.body.dir = language == "ar" ? "rtl" : "ltr";
     }, [language]);
-    
+
     const [ticketDetails, setTicketDetails] = useState(null);
-  
+
     useEffect(() => {
-      if (priceId) {
-        // Fetch ticket details from the API route
-        fetch(`/api/getsingleproduct/${priceId}`)
-          .then((response) => response.json())
-          .then((data) => setTicketDetails(data))
-          .catch((error) => console.error('Error fetching tickets details:', error));
-      }
+        if (priceId) {
+            // Fetch ticket details from the API route
+            fetch(`/api/getsingleproduct/${priceId}`)
+                .then((response) => response.json())
+                .then((data) => setTicketDetails(data))
+                .catch((error) =>
+                    console.error("Error fetching tickets details:", error)
+                );
+        }
     }, [priceId]);
-  
+
     if (!ticketDetails) {
-   // render a loading indicator while the data is being fetched
-      return <div className=" flex h-screen">
-      <div className="animate-spin m-auto inline-block w-16 h-16 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500" role="status" aria-label="loading">
-      <span className=" sr-only">Loading...</span>
-    </div>
-      </div> 
+        // render a loading indicator while the data is being fetched
+        return (
+            <div className=' flex h-screen'>
+                <div
+                    className='animate-spin m-auto inline-block w-16 h-16 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500'
+                    role='status'
+                    aria-label='loading'
+                >
+                    <span className=' sr-only'>Loading...</span>
+                </div>
+            </div>
+        );
     }
 
     const handleCardClick = (card) => {
@@ -59,25 +65,25 @@ export default function BuyTickect() {
     const handleCheckout = async (e) => {
         e.preventDefault();
         try {
-          const response  = await fetch('/api/checkout_sessions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ priceId })
-        })
-        if (response.ok) {
-            const data = await response.json();
+            const response = await fetch("/api/checkout_sessions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ priceId }),
+            });
+            if (response.ok) {
+                const data = await response.json();
 
-            // Redirect to the Stripe Checkout URL 
-            window.location.href = data.session.url;
-        } else {
-            console.error('Invalid response from the server:', response);
-        }
+                // Redirect to the Stripe Checkout URL
+                window.location.href = data.session.url;
+            } else {
+                console.error("Invalid response from the server:", response);
+            }
         } catch (error) {
-          console.error('Error creating Stripe session:', error);
+            console.error("Error creating Stripe session:", error);
         }
-      };
+    };
 
     const cards = [
         {
@@ -175,7 +181,14 @@ export default function BuyTickect() {
                     </Slider>
                     <div className='flex flex-col space-y-12 justify-center items-center'>
                         <p className='font-atkinson text-3xl'>
-                            {t("buyticket.paragraph2")} <span>{ticketDetails.nickname}</span> {t("buyticket.tikets")} <span> {(ticketDetails.unit_amount/100)} {t("buyticket.dollar")}</span>
+                            {t("buyticket.paragraph2")}{" "}
+                            <span>{ticketDetails.nickname}</span>{" "}
+                            {t("buyticket.tikets")}{" "}
+                            <span>
+                                {" "}
+                                {ticketDetails.unit_amount / 100}{" "}
+                                {t("buyticket.dollar")}
+                            </span>
                         </p>
                         <Button
                             transition={false}
@@ -205,7 +218,7 @@ export async function getServerSideProps({ locale }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common"])),
-            // Will be passed to the page component as props  
+            // Will be passed to the page component as props
         },
     };
 }
