@@ -1,7 +1,7 @@
-import clsx from "clsx"
-import React from "react"
+import clsx from "clsx";
+import React from "react";
 
-export default function Input ({
+export default function Input({
     placeholder,
     type,
     label,
@@ -43,5 +43,5 @@ export default function Input ({
                 </p>
             </div>
         </div>
-    )
+    );
 }
