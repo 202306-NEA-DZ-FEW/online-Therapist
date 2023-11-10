@@ -1,23 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<div
+  className="flex flex-col md:flex-row w-full"
+>
   <div
-    className="flex justify-between items-center"
+    className="flex justify-between items-start"
   >
     <label
-      className="block text-md font-medium leading-6 text-gray-900"
+      className="md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900"
     />
-  </div>,
+  </div>
   <div
     className="flex flex-col w-full"
   >
     <input
-      className="border border-gray-300 h-12 w-undefined pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer"
+      className="border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer undefined"
+      disabled={false}
     />
     <p
       className="text-sm text-red-500 mt-1 animate-pulse "
     />
-  </div>,
-]
+  </div>
+</div>
 `;
