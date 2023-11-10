@@ -38,7 +38,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
-                router.push("/patientProfile/patientProfile");
+                router.push("/userProfile");
                 const user = userCredential.user;
                 console.log("User logged in:", user);
                 // ...
@@ -176,7 +176,7 @@ const Login = () => {
                                         buttonSize='md'
                                     />
                                 </button>
-                                <Link href='/signUp'>
+                                <Link href='/sign-up'>
                                     <Button
                                         buttonText={t("login.signUp")}
                                         buttonSize='md'
@@ -194,10 +194,10 @@ const Login = () => {
                         </p>
                         <hr className='lg:w-28 w-20 shadow-lg border-Teal border-top' />
                     </div>
-                    <div className='flex justify-center items-center rtl:space-x-reverse space-x-4 pt-2'>
+                    <div className='flex justify-center items-center rtl:space-x-reverse space-x-6 pt-2'>
                         <button onClick={handleFacebookLogin}>
                             <Image
-                                src='/Images/Facebook.svg'
+                                src='/Images/facebook.svg'
                                 width={32}
                                 height={32}
                                 alt='Facebook'
@@ -206,7 +206,7 @@ const Login = () => {
                         </button>
                         <button onClick={handleGoogleLogin}>
                             <Image
-                                src='/Images/Google.svg'
+                                src='/Images/google.svg'
                                 width={32}
                                 height={32}
                                 alt='Google'
@@ -217,7 +217,7 @@ const Login = () => {
                 </div>
                 <div className='my-auto pt-9 hidden sm:block'>
                     <Image
-                        src='/Images/LoginImage.png'
+                        src='/Images/login.svg'
                         alt='Login image'
                         className='login-image mx-auto'
                         width={674}

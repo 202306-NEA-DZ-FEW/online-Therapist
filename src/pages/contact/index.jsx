@@ -168,7 +168,7 @@ function Contact() {
                             className='rounded-xl h-4/6 xl:h-5/6 w-fit mx-auto object-cover'
                             width={2000}
                             height={2000}
-                            src='/ContactUs.png'
+                            src='/Images/ContactUs.png'
                             alt=''
                         />
                     </div>

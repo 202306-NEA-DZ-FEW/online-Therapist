@@ -9,11 +9,11 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import Button from "@/components/elements/Button";
-import Input from "@/components/Input";
-import Thankyou from "@/components/Thankyou/Thankyou";
+import Input from "@/components/elements/Input";
 
 import Layout from "@/layout/Layout";
 import { auth, db } from "@/util/firebase";
+import Thankyou from "@/components/Thankyou/Thankyou";
 
 const TherapistSignUp = ({ t }) => {
     const [signupSuccess, setSignupSuccess] = useState(false);
@@ -166,7 +166,6 @@ const TherapistSignUp = ({ t }) => {
 
                             <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row  lg:space-x-2 lg:m-2'>
                                 <Input
-                                    styles='mt-1'
                                     width='full'
                                     type='password'
                                     placeholder={t(
@@ -207,7 +206,7 @@ const TherapistSignUp = ({ t }) => {
                     </div>
                     <div className='md:m-auto lg:m-auto hidden lg:flex'>
                         <Image
-                            src='/therapist.svg'
+                            src='/Images/therapist.svg'
                             width={600}
                             height={600}
                             alt='online therapy'
