@@ -1,7 +1,7 @@
-import clsx from "clsx"
-import React from "react"
+import clsx from "clsx";
+import React from "react";
 
-export default function Input ({
+export default function Input({
     placeholder,
     type,
     label,
@@ -11,10 +11,10 @@ export default function Input ({
     styles,
     onChange,
     register,
-    isDisabled = false
+    isDisabled = false,
 }) {
     return (
-        <div className="flex flex-col md:flex-row w-full">
+        <div className='flex flex-col md:flex-row w-full'>
             <div className='flex justify-between items-start'>
                 <label
                     htmlFor={name}
@@ -33,7 +33,9 @@ export default function Input ({
                     name={name}
                     onChange={onChange}
                     value={value}
-                    className={clsx(`border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer ${styles}`)}
+                    className={clsx(
+                        `border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer ${styles}`
+                    )}
                     disabled={isDisabled}
                 />
                 <p className='text-sm text-red-500 mt-1 animate-pulse '>
@@ -41,5 +43,5 @@ export default function Input ({
                 </p>
             </div>
         </div>
-    )
+    );
 }

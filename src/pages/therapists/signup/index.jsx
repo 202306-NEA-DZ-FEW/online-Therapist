@@ -1,22 +1,22 @@
-import {yupResolver} from "@hookform/resolvers/yup"
-import {createUserWithEmailAndPassword} from "firebase/auth"
-import {doc, setDoc} from "firebase/firestore"
-import Image from "next/image"
-import {withTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import {useState} from "react"
-import {useForm} from "react-hook-form"
-import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import Image from "next/image";
+import { withTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
 
-import Button from "@/components/elements/Button"
-import Input from "@/components/Input"
-import Thankyou from "@/components/Thankyou/Thankyou"
+import Button from "@/components/elements/Button";
+import Input from "@/components/Input";
+import Thankyou from "@/components/Thankyou/Thankyou";
 
-import Layout from "@/layout/Layout"
-import {auth, db} from "@/util/firebase"
+import Layout from "@/layout/Layout";
+import { auth, db } from "@/util/firebase";
 
-const TherapistSignUp = ({t}) => {
-    const [signupSuccess, setSignupSuccess] = useState(false)
+const TherapistSignUp = ({ t }) => {
+    const [signupSuccess, setSignupSuccess] = useState(false);
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -24,12 +24,12 @@ const TherapistSignUp = ({t}) => {
         licenseNumber: "",
         password: "",
         confirPassword: "",
-    })
+    });
 
     const onChange = (e) => {
-        const {name, value} = e.target
-        setFormData({...formData, [name]: value})
-    }
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
     const validationSchema = yup.object().shape({
         username: yup.string().required(t("therapists:formErrors.username")),
@@ -50,9 +50,9 @@ const TherapistSignUp = ({t}) => {
                 [yup.ref("password")],
                 t("therapists:formErrors.passwordMatch")
             ),
-    })
+    });
 
-    const formOptions = {resolver: yupResolver(validationSchema)}
+    const formOptions = { resolver: yupResolver(validationSchema) };
 
     const onSubmit = async (data) => {
         try {
@@ -60,9 +60,9 @@ const TherapistSignUp = ({t}) => {
                 auth,
                 data.email,
                 data.password
-            )
+            );
             if (userCredential) {
-                console.log("Success UID: ", userCredential.user.uid)
+                console.log("Success UID: ", userCredential.user.uid);
             }
             await setDoc(
                 doc(
@@ -78,16 +78,16 @@ const TherapistSignUp = ({t}) => {
                     city: formData.city,
                     approved: false,
                 }
-            )
+            );
         } catch (error) {
-            console.error("Error signing up:", error)
+            console.error("Error signing up:", error);
         } finally {
-            setSignupSuccess(true)
+            setSignupSuccess(true);
         }
-    }
-    const {register, handleSubmit, formState} = useForm(formOptions)
+    };
+    const { register, handleSubmit, formState } = useForm(formOptions);
 
-    const {errors} = formState
+    const { errors } = formState;
     return (
         <Layout>
             {signupSuccess ? (
@@ -116,7 +116,7 @@ const TherapistSignUp = ({t}) => {
                                     )}
                                     name='username'
                                     errorMessage={errors.username?.message}
-                                    register={{...register("username")}}
+                                    register={{ ...register("username") }}
                                     value={formData.username}
                                     onChange={onChange}
                                 />
@@ -130,7 +130,7 @@ const TherapistSignUp = ({t}) => {
                                     )}
                                     name='email'
                                     errorMessage={errors.email?.message}
-                                    register={{...register("email")}}
+                                    register={{ ...register("email") }}
                                     value={formData.email}
                                     onChange={onChange}
                                 />
@@ -144,7 +144,7 @@ const TherapistSignUp = ({t}) => {
                                     )}
                                     name='city'
                                     errorMessage={errors.city?.message}
-                                    register={{...register("city")}}
+                                    register={{ ...register("city") }}
                                     value={formData.city}
                                     onChange={onChange}
                                 />
@@ -158,7 +158,7 @@ const TherapistSignUp = ({t}) => {
                                     )}
                                     name='licenseNumber'
                                     errorMessage={errors.licenseNumber?.message}
-                                    register={{...register("licenseNumber")}}
+                                    register={{ ...register("licenseNumber") }}
                                     value={formData.licenseNumber}
                                     onChange={onChange}
                                 />
@@ -166,7 +166,7 @@ const TherapistSignUp = ({t}) => {
 
                             <div className='flex flex-col space-y-1 mx-3 lg:flex lg:flex-row  lg:space-x-2 lg:m-2'>
                                 <Input
-                                    styles="mt-1"
+                                    styles='mt-1'
                                     width='full'
                                     type='password'
                                     placeholder={t(
@@ -174,13 +174,12 @@ const TherapistSignUp = ({t}) => {
                                     )}
                                     name='password'
                                     errorMessage={errors.password?.message}
-                                    register={{...register("password")}}
+                                    register={{ ...register("password") }}
                                     value={formData.password}
                                     onChange={onChange}
                                 />
                                 <Input
                                     width='full'
-
                                     type='password'
                                     placeholder={t(
                                         "therapists:placeholder.passwordConfirm"
@@ -189,7 +188,7 @@ const TherapistSignUp = ({t}) => {
                                     errorMessage={
                                         errors.confirPassword?.message
                                     }
-                                    register={{...register("confirPassword")}}
+                                    register={{ ...register("confirPassword") }}
                                     value={formData.confirPassword}
                                     onChange={onChange}
                                 />
@@ -218,16 +217,16 @@ const TherapistSignUp = ({t}) => {
                 </div>
             )}
         </Layout>
-    )
-}
+    );
+};
 
-export default withTranslation("therapists")(TherapistSignUp)
+export default withTranslation("therapists")(TherapistSignUp);
 
-export async function getStaticProps ({locale}) {
+export async function getStaticProps({ locale }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ["therapists", "common"])),
             // Will be passed to the page component as props
         },
-    }
+    };
 }
