@@ -1,0 +1,14 @@
+{
+  "invalidCard":"Enter a valid CreditCard Number!",
+  "header": "ADD CARD DETAILS",
+  "info": "Please make sure that all the info you enter are the same as your card registration info.",
+  "cardNum": "Card Number",
+  "date": "Expiry Date",
+  "cvc": "CVC",
+  "name": "Name on Card",
+  "country": "Country",
+  "zip": "ZIP Code",
+  "city": "City",
+  "address": "Address",
+  "addCard": "ADD CARD"
+}
