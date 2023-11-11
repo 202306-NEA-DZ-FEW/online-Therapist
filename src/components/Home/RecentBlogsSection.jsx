@@ -78,12 +78,12 @@ const RecentBlogsSection = () => {
         ],
     };
     return (
-        <div className='container max-w-[90%] mx-auto p-5'>
-            <h2 className='font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black/80 mb-5  md:mb-10'>
+        <div className='container max-w-[100%] bg-[#EAF8F9] p-16'>
+            <h2 className='lg:ml-24 md:ml-12 ml-5 font-bold font-atkinson block text-3xl md:text-4xl lg:text-5xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black mb-5  md:mb-10'>
                 Recent Blogs
             </h2>
 
-            <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5'>
+            <Slider {...settings} className='p-1 m-1 md:p-5 md:m-6 lg:m-16'>
                 {blogs.map((blog, index) => (
                     <Card
                         key={index}
