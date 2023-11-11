@@ -1,45 +1,35 @@
-import React from "react";
+import React from 'react'
 import { FiPhoneCall } from "react-icons/fi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { FiVideo } from "react-icons/fi";
 
-export default function CommunicationCard({
-    icon,
-    title,
-    paragraph,
-    greenBackground,
-}) {
+export default function CommunicationCard({ icon, title, paragraph, greenBackground }) {
     const IconComponent = {
-        call: <FiPhoneCall />,
+        call: <FiPhoneCall />, 
         videoCall: <FiVideo />,
         chat: <LuMessagesSquare />,
     }[icon];
-    return (
-        <div className='border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl'>
-            <div
-                className={`flex flex-col h-44 w-[2356x] rounded-3xl  ${greenBackground} `}
-            >
-                <span className='text-6xl m-auto'>{IconComponent}</span>
-                <h3 className='mx-auto text-3xl font-atkinson font- mb-8'>
-                    {title}
-                </h3>
-            </div>
-            <p className='font-atkinson text-center p-6 text-lg text-gray-700'>
-                {paragraph}
-            </p>
+  return (
+    <div className='border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl'>
+        <div className={`flex flex-col h-44 w-[2356x] rounded-3xl  ${greenBackground} `}>
+        <span className='text-6xl m-auto'>{IconComponent}</span>
+        <h3 className='mx-auto text-3xl font-atkinson font- mb-8'>{title}</h3>
         </div>
-    );
+        <p className='font-atkinson text-center p-6 text-lg text-gray-700'>{paragraph}</p>
+    </div>
+  )
 }
+
 
 // import { FaComment, FaVideo } from "react-icons/fa";
 // import { FiHeadphones } from "react-icons/fi";
 
 // function CommunicationCard({ icon, title, paragraph, greenBackground }) {
-// const IconComponent = {
-//     call: <FiHeadphones />,
-//     videoCall: <FaVideo />,
-//     chat: <FaComment />,
-// }[icon];
+    // const IconComponent = {
+    //     call: <FiHeadphones />,
+    //     videoCall: <FaVideo />,
+    //     chat: <FaComment />,
+    // }[icon];
 //     return (
 //         <div className='flex flex-col justify-evenly bg-white w-64 h-64 p-1 m-1 border border-separate rounded-xl shadow-xl text-center'>
 //             <div

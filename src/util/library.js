@@ -15,10 +15,10 @@ export const slideImages = [
     //     imgSrc: "12",
     //     id: "2",
     // },
-    {
-        imgSrc: "5",
-        id: "3",
-    },
+    // {
+    //     imgSrc: "5",
+    //     id: "3",
+    // },
     {
         imgSrc: "6",
         id: "4",

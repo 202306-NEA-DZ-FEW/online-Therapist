@@ -2,15 +2,15 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="container mx-auto p-12"
+  className="lg:mx-20 md:mx-auto mx-auto p-16"
 >
   <h2
-    className="font-atkinson font-bold block text-DarkTeal text-center text-3xl md:text-4xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+    className="font-atkinson font-bold block text-DarkTeal text-center text-2xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
   >
     Our Plan Options
   </h2>
   <p
-    className=" uppercase font-atkinson font-bold text-center text-lg md:text-xl lg:text-3xl text-black mt-2"
+    className=" uppercase font-atkinson font-bold text-center text-2xl md:text-2xl lg:text-3xl text-black mt-2"
   >
     purchase tickets that can be used to book appointments!
   </p>
@@ -18,40 +18,50 @@ exports[`renders correctly 1`] = `
     className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 my-10 "
   />
   <div
-    className="font-atkinson mt-20"
+    className="font-atkinson mt-24"
   >
     <h2
-      className="font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+      className="text-center lg:text-start font-bold block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
     >
       Join our team
     </h2>
     <p
-      className="uppercase text-lg md:text-xl text-black/70 my-2"
+      className="uppercase text-center lg:text-start text-lg md:text-xl text-black/70 my-2"
     >
       Are you a counselor?
     </p>
     <div
-      className="bg-white/95 flex flex-col items-center justify-center text-center py-10 px-5 rounded-md space-y-6 shadow-2xl min-h-[20rem]"
+      className="bg-white/95 flex flex-col lg:flex-row items-center justify-center text-start  rounded-md  shadow-2xl min-h-[20rem]"
     >
-      <span
-        className="sm:text-xl text-base text-black/80"
+      <div
+        className="p-16 space-y-4 lg:p-0 lg:space-y-0 lg:flex lg:flex-col lg:items-center lg:justify-center"
       >
-        Interested in becoming a part of our revolutionary mental health platform? We offer you the freedom to set your own schedule and decide how much you want to work. Meanwhile, we take care of all the heavy lifting, from handling client referrals to managing all billing details. Join us and focus on what you do best – providing quality mental health services, while we ensure a seamless experience for both you and your clients.
-      </span>
-      <div>
-        <a
-          href="/requirements"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
+        <span
+          className="text-lg p-12 font-atkinson text-black/80"
         >
-          <button
-            className="uppercase cursor-pointer py-2 px-3 text-lg rounded text-black/80 font-light bg-[#2DD3E3]"
+          Interested in becoming a part of our revolutionary mental health platform? We offer you the freedom to set your own schedule and decide how much you want to work. Meanwhile, we take care of all the heavy lifting, from handling client referrals to managing all billing details. Join us and focus on what you do best – providing quality mental health services, while we ensure a seamless experience for both you and your clients.
+        </span>
+        <div
+          className="flex items-center justify-center "
+        >
+          <a
+            href="/requirements"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
           >
-            Learn more
-          </button>
-        </a>
+            <div
+              className="bg-white border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-Teal whitespace-no-wrap rounded-lg shadow-md hover:bg-Teal hover:text-white focus:outline-none hover:cursor-pointer w-48 h-14"
+            >
+              LEARN MORE
+            </div>
+          </a>
+        </div>
       </div>
+      <img
+        className="w-96"
+        src="https://img.freepik.com/photos-gratuite/therapeute-femme-mid-shot-presse-papiers_23-2148759113.jpg?w=740&t=st=1699732213~exp=1699732813~hmac=35c0aab09ef3427110b056edfd168654a1c1643ba81298c3268a4b9d7a06805d"
+      />
     </div>
   </div>
 </div>
