@@ -2359,15 +2359,15 @@ Array [
     </div>
   </div>,
   <div
-    className="container mx-auto p-10"
+    className="container mx-auto p-12"
   >
     <h2
-      className="font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+      className="font-atkinson font-bold block text-DarkTeal text-center text-3xl md:text-4xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
     >
-      purchase tickets
+      Our Plan Options
     </h2>
     <p
-      className="uppercase text-lg md:text-xl text-black/70 mt-2"
+      className=" uppercase font-atkinson font-bold text-center text-lg md:text-xl lg:text-3xl text-black mt-2"
     >
       purchase tickets that can be used to book appointments!
     </p>
