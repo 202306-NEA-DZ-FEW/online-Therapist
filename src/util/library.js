@@ -35,7 +35,7 @@ export const slideImages = [
         imgSrc: "13",
         id: "7",
     },
-    
+
     {
         imgSrc: "1",
         id: "9",
@@ -52,7 +52,7 @@ export const slideImages = [
         imgSrc: "17",
         id: "12",
     },
-    
+
     {
         imgSrc: "14",
         id: "14",
@@ -65,8 +65,7 @@ export const slideImages = [
     //     imgSrc: "20",
     //     id: "15",
     // },
-]
-
+];
 
 export const images = [
     {
