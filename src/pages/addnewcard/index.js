@@ -87,6 +87,32 @@ function AddNewCard() {
     };
 
     const handleChange = (e) => {
+        function formatText(text) {
+            const sanitizedText = text.replace(/[^0-9/]/g, "");
+            const parts = sanitizedText.split("/");
+
+            if (parts.length > 2) {
+                if (parts[1] == undefined) {
+                    return parts[0] + "/";
+                } else {
+                    return parts[0] + "/" + parts[1];
+                }
+            }
+
+            if (parts[0] && parts[0].length > 2) {
+                if (parts[1] == undefined) {
+                    return parts[0].substring(0, 2) + "/";
+                } else {
+                    return parts[0].substring(0, 2) + "/" + parts[1];
+                }
+            }
+
+            if (parts[1] && parts[1].length > 2) {
+                return parts[0] + "/" + parts[1].substring(0, 2);
+            }
+
+            return sanitizedText;
+        }
         if (e.target) {
             const { name, value } = e.target;
             if (name === "expiryDate") {
@@ -95,33 +121,6 @@ function AddNewCard() {
                     ...inputValues,
                     expiryDate: formattedText,
                 });
-
-                function formatText(text) {
-                    const sanitizedText = text.replace(/[^0-9/]/g, "");
-                    const parts = sanitizedText.split("/");
-
-                    if (parts.length > 2) {
-                        if (parts[1] == undefined) {
-                            return parts[0] + "/";
-                        } else {
-                            return parts[0] + "/" + parts[1];
-                        }
-                    }
-
-                    if (parts[0] && parts[0].length > 2) {
-                        if (parts[1] == undefined) {
-                            return parts[0].substring(0, 2) + "/";
-                        } else {
-                            return parts[0].substring(0, 2) + "/" + parts[1];
-                        }
-                    }
-
-                    if (parts[1] && parts[1].length > 2) {
-                        return parts[0] + "/" + parts[1].substring(0, 2);
-                    }
-
-                    return sanitizedText;
-                }
             } else {
                 setInputValues({
                     ...inputValues,

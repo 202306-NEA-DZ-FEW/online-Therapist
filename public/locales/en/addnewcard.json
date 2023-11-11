@@ -14,7 +14,7 @@
     "cardNumRequired": "Card number is required.",
     "expiryDate": "The cards expiry date is required.",
     "fullExpiry": "Please enter the full expiry date.",
-    "validCVC":"Please enter a valid CVC number.",
+    "validCVC": "Please enter a valid CVC number.",
     "CVCRequired": "CVC is required.",
     "enterName": "Please enter your name.",
     "enterZIP": "Please enter your ZIP code.",
