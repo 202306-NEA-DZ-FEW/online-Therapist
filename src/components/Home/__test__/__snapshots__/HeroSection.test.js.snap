@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="slick-slider bg-GreenLight slick-initialized"
+  className="slick-slider bg-white slick-initialized"
   dir="ltr"
 >
   <div
@@ -21,9 +21,9 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="slick-track"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onMouseOver={[Function]}
+      onMouseEnter={null}
+      onMouseLeave={null}
+      onMouseOver={null}
       style={
         Object {
           "opacity": 1,
@@ -49,51 +49,40 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <div
+            className="h-[90vh] bg-cover bg-center"
             style={
               Object {
-                "display": "inline-block",
-                "width": "100%",
+                "backgroundImage": "url(/Images/2.jpg)",
               }
             }
-            tabIndex={-1}
           >
-            <img
-              alt="Therapist Sessions"
-              className="object-cover w-full max-h-[80vh]"
-              data-nimg="1"
-              decoding="async"
-              height={400}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75"
-              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75 2x"
-              style={
-                Object {
-                  "color": "transparent",
-                }
-              }
-              width={400}
-            />
             <div
-              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
-                className=""
+                className="space-y-4"
               >
                 <h2
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  Therapy at Your Fingertips 
+                  <br />
                 </h2>
                 <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
                 </p>
               </div>
               <div
-                className="px-auto pt-4 mx-auto"
+                className="px-auto pt-6 mx-auto"
               >
                 <a
                   href="/bookAnAppointment"
@@ -159,51 +148,40 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <div
+            className="h-[90vh] bg-cover bg-center"
             style={
               Object {
-                "display": "inline-block",
-                "width": "100%",
+                "backgroundImage": "url(/Images/4.jpg)",
               }
             }
-            tabIndex={-1}
           >
-            <img
-              alt="Therapist Sessions"
-              className="object-cover w-full max-h-[80vh]"
-              data-nimg="1"
-              decoding="async"
-              height={400}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=828&q=75"
-              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FHVAM00%2Fza%2F5283595.jpg&w=828&q=75 2x"
-              style={
-                Object {
-                  "color": "transparent",
-                }
-              }
-              width={400}
-            />
             <div
-              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
-                className=""
+                className="space-y-4"
               >
                 <h2
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  Therapy at Your Fingertips 
+                  <br />
                 </h2>
                 <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
                 </p>
               </div>
               <div
-                className="px-auto pt-4 mx-auto"
+                className="px-auto pt-6 mx-auto"
               >
                 <a
                   href="/bookAnAppointment"
@@ -269,51 +247,40 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <div
+            className="h-[90vh] bg-cover bg-center"
             style={
               Object {
-                "display": "inline-block",
-                "width": "100%",
+                "backgroundImage": "url(/Images/5.jpg)",
               }
             }
-            tabIndex={-1}
           >
-            <img
-              alt="Therapist Sessions"
-              className="object-cover w-full max-h-[80vh]"
-              data-nimg="1"
-              decoding="async"
-              height={400}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=828&q=75"
-              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FGEqF00%2Fza%2F3775692.jpg&w=828&q=75 2x"
-              style={
-                Object {
-                  "color": "transparent",
-                }
-              }
-              width={400}
-            />
             <div
-              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
-                className=""
+                className="space-y-4"
               >
                 <h2
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  Therapy at Your Fingertips 
+                  <br />
                 </h2>
                 <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
                 </p>
               </div>
               <div
-                className="px-auto pt-4 mx-auto"
+                className="px-auto pt-6 mx-auto"
               >
                 <a
                   href="/bookAnAppointment"
@@ -379,51 +346,40 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <div
+            className="h-[90vh] bg-cover bg-center"
             style={
               Object {
-                "display": "inline-block",
-                "width": "100%",
+                "backgroundImage": "url(/Images/6.jpg)",
               }
             }
-            tabIndex={-1}
           >
-            <img
-              alt="Therapist Sessions"
-              className="object-cover w-full max-h-[80vh]"
-              data-nimg="1"
-              decoding="async"
-              height={400}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=828&q=75"
-              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FVSOH00%2Fza%2F4145599.jpg&w=828&q=75 2x"
-              style={
-                Object {
-                  "color": "transparent",
-                }
-              }
-              width={400}
-            />
             <div
-              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
-                className=""
+                className="space-y-4"
               >
                 <h2
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  Therapy at Your Fingertips 
+                  <br />
                 </h2>
                 <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
                 </p>
               </div>
               <div
-                className="px-auto pt-4 mx-auto"
+                className="px-auto pt-6 mx-auto"
               >
                 <a
                   href="/bookAnAppointment"
@@ -489,51 +445,40 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <div
+            className="h-[90vh] bg-cover bg-center"
             style={
               Object {
-                "display": "inline-block",
-                "width": "100%",
+                "backgroundImage": "url(/Images/8.jpg)",
               }
             }
-            tabIndex={-1}
           >
-            <img
-              alt="Therapist Sessions"
-              className="object-cover w-full max-h-[80vh]"
-              data-nimg="1"
-              decoding="async"
-              height={400}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75"
-              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FuBaE00%2Fza%2F3475714.jpg&w=828&q=75 2x"
-              style={
-                Object {
-                  "color": "transparent",
-                }
-              }
-              width={400}
-            />
             <div
-              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
-                className=""
+                className="space-y-4"
               >
                 <h2
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  Therapy at Your Fingertips 
+                  <br />
                 </h2>
                 <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
                 </p>
               </div>
               <div
-                className="px-auto pt-4 mx-auto"
+                className="px-auto pt-6 mx-auto"
               >
                 <a
                   href="/bookAnAppointment"
@@ -599,51 +544,40 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <div
+            className="h-[90vh] bg-cover bg-center"
             style={
               Object {
-                "display": "inline-block",
-                "width": "100%",
+                "backgroundImage": "url(/Images/13.jpg)",
               }
             }
-            tabIndex={-1}
           >
-            <img
-              alt="Therapist Sessions"
-              className="object-cover w-full max-h-[80vh]"
-              data-nimg="1"
-              decoding="async"
-              height={400}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=828&q=75"
-              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FEUzL00%2Fza%2F5241246.jpg&w=828&q=75 2x"
-              style={
-                Object {
-                  "color": "transparent",
-                }
-              }
-              width={400}
-            />
             <div
-              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
-                className=""
+                className="space-y-4"
               >
                 <h2
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  Therapy at Your Fingertips 
+                  <br />
                 </h2>
                 <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
                 </p>
               </div>
               <div
-                className="px-auto pt-4 mx-auto"
+                className="px-auto pt-6 mx-auto"
               >
                 <a
                   href="/bookAnAppointment"
@@ -709,51 +643,238 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <div
+            className="h-[90vh] bg-cover bg-center"
             style={
               Object {
-                "display": "inline-block",
-                "width": "100%",
+                "backgroundImage": "url(/Images/1.jpg)",
               }
             }
-            tabIndex={-1}
           >
-            <img
-              alt="Therapist Sessions"
-              className="object-cover w-full max-h-[80vh]"
-              data-nimg="1"
-              decoding="async"
-              height={400}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              src="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=828&q=75"
-              srcSet="/_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fc.stocksy.com%2Fa%2FcBaE00%2Fza%2F3475696.jpg&w=828&q=75 2x"
-              style={
-                Object {
-                  "color": "transparent",
-                }
-              }
-              width={400}
-            />
             <div
-              className=" flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding"
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
-                className=""
+                className="space-y-4"
               >
                 <h2
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson"
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips: Access the World's Largest Network of Therapists
+                  Therapy at Your Fingertips 
+                  <br />
                 </h2>
                 <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans"
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and flexibility of online.
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
                 </p>
               </div>
               <div
-                className="px-auto pt-4 mx-auto"
+                className="px-auto pt-6 mx-auto"
+              >
+                <a
+                  href="/bookAnAppointment"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  >
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      Book An Appointment
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      Book An Appointment
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={7}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            className="h-[90vh] bg-cover bg-center"
+            style={
+              Object {
+                "backgroundImage": "url(/Images/17.jpg)",
+              }
+            }
+          >
+            <div
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className="space-y-4"
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips 
+                  <br />
+                </h2>
+                <p
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                >
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-6 mx-auto"
+              >
+                <a
+                  href="/bookAnAppointment"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  >
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      Book An Appointment
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      Book An Appointment
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        className="slick-slide"
+        data-index={8}
+        onClick={[Function]}
+        style={
+          Object {
+            "left": -0,
+            "opacity": 0,
+            "outline": "none",
+            "position": "relative",
+            "transition": "opacity 500ms ease, visibility 500ms ease",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      >
+        <div>
+          <div
+            className="h-[90vh] bg-cover bg-center"
+            style={
+              Object {
+                "backgroundImage": "url(/Images/14.jpg)",
+              }
+            }
+          >
+            <div
+              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+            >
+              <div
+                className="space-y-4"
+              >
+                <h2
+                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                >
+                  Therapy at Your Fingertips 
+                  <br />
+                </h2>
+                <p
+                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                >
+                  Access the World's Largest Network of Therapists
+                </p>
+                <p
+                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                >
+                  Get the same quality care as in-office therapy, but with the convenience and  
+                  <br />
+                   flexibility of online.
+                </p>
+              </div>
+              <div
+                className="px-auto pt-6 mx-auto"
               >
                 <a
                   href="/bookAnAppointment"
