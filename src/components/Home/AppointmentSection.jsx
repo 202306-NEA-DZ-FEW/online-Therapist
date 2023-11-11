@@ -11,8 +11,8 @@ function AppointmentSection() {
     return (
         <div className=' p-10 md:pl-10 bg-LightBeige md:pr-10 lg:pl-32 lg:pr-32'>
             <h2 className='text-start leading-loose	pt-12 sm:text-xl md:text-2xl lg:text-5xl uppercase text-dark font-atkinson m-0 pl-6 pr-6'>
-                Professional, licensed, and
-                accredited <br/> therapists that you can trust
+                Professional, licensed, and accredited <br /> therapists that
+                you can trust
             </h2>
             <div className='md:p-8 lg:p-0 max-w-2xl lg:max-w-none'>
                 <div className='flex flex-wrap text-base font-semibold leading-7 text-white lg:space-x-10 md:space-x-5 space-x-5/2 items-center justify-evenly'>
@@ -50,7 +50,7 @@ function AppointmentSection() {
                     That&apos;s where we come in. We offer a unique opportunity
                     to access the world&apos;s largest network of licensed,
                     accredited, and experienced therapists, all from the comfort
-                    of your own home. 
+                    of your own home.
                     {/* With us, you can get the same
                     professionalism and quality care as you would expect from an
                     in-office therapist, but with the ability to communicate
