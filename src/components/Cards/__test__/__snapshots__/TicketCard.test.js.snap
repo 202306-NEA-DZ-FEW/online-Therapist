@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="bg-white/95 flex flex-col items-center justify-center text-center py-10 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full"
 >
   <span
-    className="text-4xl"
+    className="flex text-4xl"
   >
     <svg
       baseProfile="tiny"
@@ -42,18 +42,20 @@ exports[`renders correctly 1`] = `
     </span>
   </div>
   <span
-    className="text-3xl rtl:text-3xl text-DarkTeal"
+    className="text-3xl rtl:text-3xl font-semibold text-Teal"
   >
     10
     $
   </span>
-  <p
-    className="text-2xl text-DarkTeal"
-  >
-    NaN
-    $
+  <p>
     <span
-      className="text-black"
+      className="text-2xl font-semibold text-Teal"
+    >
+      NaN
+      $
+    </span>
+    <span
+      className="text-black text-lg"
     >
       / Ticket 
     </span>
@@ -69,6 +71,7 @@ exports[`renders correctly 1`] = `
         className="flex flex-row space-x-2 items-center"
       >
         <svg
+          className="text-Teal"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -78,12 +81,12 @@ exports[`renders correctly 1`] = `
               "color": undefined,
             }
           }
-          viewBox="0 0 512 512"
+          viewBox="0 0 16 16"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z"
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
           />
         </svg>
          
@@ -95,6 +98,7 @@ exports[`renders correctly 1`] = `
         className="flex flex-row space-x-2 items-center"
       >
         <svg
+          className="text-Teal"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -104,12 +108,12 @@ exports[`renders correctly 1`] = `
               "color": undefined,
             }
           }
-          viewBox="0 0 512 512"
+          viewBox="0 0 16 16"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z"
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
           />
         </svg>
          
@@ -121,6 +125,7 @@ exports[`renders correctly 1`] = `
         className="flex flex-row space-x-2 items-center"
       >
         <svg
+          className="text-Teal"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -130,12 +135,12 @@ exports[`renders correctly 1`] = `
               "color": undefined,
             }
           }
-          viewBox="0 0 512 512"
+          viewBox="0 0 16 16"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z"
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
           />
         </svg>
          
