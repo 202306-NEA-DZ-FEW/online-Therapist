@@ -14,25 +14,13 @@ export default function HomePage() {
     return (
         <Layout>
             <div className='space-y-2 z-50 '>
-                                            <Link
-                                                href='#'
-                                                locale='en'
-                                                className='hover:text-Teal'
-                                            >
-                                                <li className='w-full hover:bg-gray-50'>
-                                                    English
-                                                </li>
-                                            </Link>
-                                            <Link
-                                                href='#'
-                                                locale='ar'
-                                                className='hover:text-Teal'
-                                            >
-                                                <li className='w-full hover:bg-gray-50'>
-                                                    العربية
-                                                </li>
-                                            </Link>
-                                        </div>
+                <Link href='#' locale='en' className='hover:text-Teal'>
+                    <li className='w-full hover:bg-gray-50'>English</li>
+                </Link>
+                <Link href='#' locale='ar' className='hover:text-Teal'>
+                    <li className='w-full hover:bg-gray-50'>العربية</li>
+                </Link>
+            </div>
             <HomePageWrapper />
         </Layout>
     );

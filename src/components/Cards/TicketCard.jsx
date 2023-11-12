@@ -18,7 +18,7 @@ const TicketCard = ({ price }) => {
 
     const { t } = useTranslation("common");
     const { user } = UserAuth();
-    
+
     const handleClick = () => {
         // Check if the user is logged in
         if (!user) {
@@ -47,7 +47,9 @@ const TicketCard = ({ price }) => {
                 <span className='text-2xl font-semibold text-Teal'>
                     {price.unit_amount / 100 / ticketNumbers}$
                 </span>
-                <span className='text-black text-lg'>/ {t("tickets.ticket")} </span>
+                <span className='text-black text-lg'>
+                    / {t("tickets.ticket")}{" "}
+                </span>
             </p>
             <div className='font-atkinson text-xl text-start'>
                 <p>{t("tickets.text")} </p>
@@ -70,7 +72,7 @@ const TicketCard = ({ price }) => {
                 <Button
                     color='teal'
                     transition={false}
-                    buttonText={t("tickets.purchaseButton")} 
+                    buttonText={t("tickets.purchaseButton")}
                     buttonSize='fit'
                     clickFunction={handleClick}
                 />

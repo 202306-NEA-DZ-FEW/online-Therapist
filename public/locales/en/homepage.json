@@ -1,39 +1,39 @@
 {
-  "hero": {
-      "heading": "Therapy at Your Fingertips",
-      "text1": "Access the World's Largest Network of Therapists",
-      "text2": "Get the same quality care as in-office therapy, but with the convenience and flexibility of online.",
-      "bookingButton": "Book An Appointment"
-  },
-  "booking": {
-      "heading1": "Professional, licensed, and accredited",
-      "heading2": "THERAPISTS THAT YOU CAN TRUST",
-      "paragraph": "Life can be tough sometimes. We all go through challenges that can make us feel overwhelmed, stressed, and anxious. When things are getting difficult, it's important to reach out for help. Therapy can be a great way to work through your challenges and improve your overall well-being. But traditional therapy can be inconvenient and expensive. That's where we come in. We offer a unique opportunity to access the world's largest network of licensed, accredited, and experienced therapists, all from the comfort of your own home."
-  },
-  "communication": {
-      "heading": "WE CAN COMMUNICATE THROUGH",
-      "voiceCall": "Voice Call",
-      "videoCall": "Video Call",
-      "chat": "Chat",
-      "voiceText": "Ready to talk to a therapist? Give them a call and let it all out!",
-      "videoText": "Your therapist recommends video calls, but it's your choice.",
-      "chatText": "Need to talk? Let your therapist listen."
-  },
-  "blogs": {
-      "heading": "RECENT BLOGS"
-  },
-  "tickets": {
-      "heading1": "OUR PLAN OPTIONS",
-      "heading2": "PURCHASE TICKETS THAT CAN BE USED TO BOOK APPOINTMENTS!",
-      "tickets": "TICKETS",
-      "ticket": "Ticket",
-      "text": "You can use the tickets for :",
-      "purchaseButton": "PURCHASE"
-  },
-  "counselor": {
-      "heading": "JOIN OUR TEAM",
-      "subHeading": "ARE YOU A COUNSELOR?",
-      "paragraph": "Interested in becoming a part of our revolutionary mental health platform? We offer you the freedom to set your own schedule and decide how much you want to work. Meanwhile, we take care of all the heavy lifting, from handling client referrals to managing all billing details. Join us and focus on what you do best – providing quality mental health services, while we ensure a seamless experience for both you and your clients.",
-      "learnMore": "LEARN MORE"
-  }
+    "hero": {
+        "heading": "Therapy at Your Fingertips",
+        "text1": "Access the World's Largest Network of Therapists",
+        "text2": "Get the same quality care as in-office therapy, but with the convenience and flexibility of online.",
+        "bookingButton": "Book An Appointment"
+    },
+    "booking": {
+        "heading1": "Professional, licensed, and accredited",
+        "heading2": "THERAPISTS THAT YOU CAN TRUST",
+        "paragraph": "Life can be tough sometimes. We all go through challenges that can make us feel overwhelmed, stressed, and anxious. When things are getting difficult, it's important to reach out for help. Therapy can be a great way to work through your challenges and improve your overall well-being. But traditional therapy can be inconvenient and expensive. That's where we come in. We offer a unique opportunity to access the world's largest network of licensed, accredited, and experienced therapists, all from the comfort of your own home."
+    },
+    "communication": {
+        "heading": "WE CAN COMMUNICATE THROUGH",
+        "voiceCall": "Voice Call",
+        "videoCall": "Video Call",
+        "chat": "Chat",
+        "voiceText": "Ready to talk to a therapist? Give them a call and let it all out!",
+        "videoText": "Your therapist recommends video calls, but it's your choice.",
+        "chatText": "Need to talk? Let your therapist listen."
+    },
+    "blogs": {
+        "heading": "RECENT BLOGS"
+    },
+    "tickets": {
+        "heading1": "OUR PLAN OPTIONS",
+        "heading2": "PURCHASE TICKETS THAT CAN BE USED TO BOOK APPOINTMENTS!",
+        "tickets": "TICKETS",
+        "ticket": "Ticket",
+        "text": "You can use the tickets for :",
+        "purchaseButton": "PURCHASE"
+    },
+    "counselor": {
+        "heading": "JOIN OUR TEAM",
+        "subHeading": "ARE YOU A COUNSELOR?",
+        "paragraph": "Interested in becoming a part of our revolutionary mental health platform? We offer you the freedom to set your own schedule and decide how much you want to work. Meanwhile, we take care of all the heavy lifting, from handling client referrals to managing all billing details. Join us and focus on what you do best – providing quality mental health services, while we ensure a seamless experience for both you and your clients.",
+        "learnMore": "LEARN MORE"
+    }
 }

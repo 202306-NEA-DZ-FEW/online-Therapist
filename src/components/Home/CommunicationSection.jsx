@@ -17,21 +17,21 @@ function CommunicationSection() {
                             greenBackground='bg-LightTeal'
                             icon='call' // Use 'call' for the phone icon
                             title={t("communication.voiceCall")}
-                            paragraph= {t("communication.voiceText")}
+                            paragraph={t("communication.voiceText")}
                         />
 
                         <CommunicationCard
                             greenBackground='bg-SkyBlue'
                             icon='videoCall' // Use 'videoCall' for the video call icon
                             title={t("communication.videoCall")}
-                            paragraph= {t("communication.videoText")}
+                            paragraph={t("communication.videoText")}
                         />
 
                         <CommunicationCard
                             greenBackground='bg-LightOrange'
                             icon='chat' // Use 'chat' for the chat icon
-                            title= {t("communication.chat")}
-                            paragraph= {t("communication.chatText")}
+                            title={t("communication.chat")}
+                            paragraph={t("communication.chatText")}
                         />
                     </div>
                 </div>
