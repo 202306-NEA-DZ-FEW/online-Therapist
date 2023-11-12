@@ -18,6 +18,17 @@
     "CVCRequired": "CVC is required.",
     "enterName": "Please enter your name.",
     "enterZIP": "Please enter your ZIP code.",
+    "enterCountry": "Please select a country.",
     "enterCity": "Please enter your city.",
-    "enterAddress": "Please enter your address."
+    "enterAddress": "Please enter your address.",
+    "cardNumInput": "Enter your card number here..",
+    "expiryDateInput": "MM/YY",
+    "CVCInput": "Enter your CVC here..",
+    "nameInput": "Enter your name here..",
+    "countrySelect": "Select a country..",
+    "ZIPInput": "Enter your ZIP code here..",
+    "cityInput": "Enter your city here..",
+    "addressInput": "Enter your address here..",
+    "addCardThankYou.text1": "YOUR CARD HAS BEEN ADDED",
+    "addCardThankYou.text2": "Your new payment method has been added, thank you for choosing Inner Space."
 }
