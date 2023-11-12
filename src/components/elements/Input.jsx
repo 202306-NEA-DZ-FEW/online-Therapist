@@ -1,29 +1,26 @@
-import clsx from "clsx";
-import React from "react";
+import React from "react"
 
-export default function Input({
+export default function Input ({
     placeholder,
     type,
     label,
     name,
+    width,
     errorMessage,
     value,
-    styles,
     onChange,
     register,
-    isDisabled = false,
 }) {
     return (
-        <div className='flex flex-col md:flex-row w-full'>
-            <div className='flex justify-between items-start'>
+        <>
+            <div className='flex justify-between items-center'>
                 <label
                     htmlFor={name}
-                    className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
+                    className='block text-md font-medium leading-6 text-gray-900'
                 >
                     {label}
                 </label>
             </div>
-
             <div className='flex flex-col w-full'>
                 <input
                     {...register}
@@ -33,15 +30,12 @@ export default function Input({
                     name={name}
                     onChange={onChange}
                     value={value}
-                    className={clsx(
-                        `border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer ${styles}`
-                    )}
-                    disabled={isDisabled}
+                    className={`border border-gray-300 h-12 w-${width} pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer`}
                 />
                 <p className='text-sm text-red-500 mt-1 animate-pulse '>
                     {errorMessage}
                 </p>
             </div>
-        </div>
-    );
+        </>
+    )
 }
