@@ -7,9 +7,10 @@ exports[`renders correctly 1`] = `
   <h2
     className="text-start leading-loose pt-12 sm:text-xl md:text-2xl lg:text-5xl uppercase text-dark font-atkinson m-0 pl-6 pr-6"
   >
-    Professional, licensed, and accredited 
+    booking.heading1
+     
     <br />
-     therapists that you can trust
+    booking.heading2
   </h2>
   <div
     className="md:p-8 lg:p-0 max-w-2xl lg:max-w-none"
@@ -173,7 +174,7 @@ exports[`renders correctly 1`] = `
     className="text-black lg:text-lg md:text-xs sm:text-xs text-left mx-auto mt-20 p-4 md:p-8 lg:p-8 max-w-2xl lg:max-w-none"
   >
     <p>
-      Life can be tough sometimes. We all go through challenges that can make us feel overwhelmed, stressed, and anxious. When things are getting difficult, it's important to reach out for help. Therapy can be a great way to work through your challenges and improve your overall well-being. But traditional therapy can be inconvenient and expensive. That's where we come in. We offer a unique opportunity to access the world's largest network of licensed, accredited, and experienced therapists, all from the comfort of your own home.
+      booking.paragraph
     </p>
   </div>
   <div
@@ -209,13 +210,13 @@ exports[`renders correctly 1`] = `
         <span
           className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
         >
-          Book An Appointment
+          hero.bookingButton
         </span>
         <span
           className="relative invisible"
         >
           $
-          Book An Appointment
+          hero.bookingButton
         </span>
       </div>
     </a>

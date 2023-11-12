@@ -65,21 +65,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -115,13 +112,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>
@@ -165,21 +162,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -215,13 +209,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>
@@ -265,21 +259,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -315,13 +306,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>
@@ -365,21 +356,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -415,13 +403,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>
@@ -465,21 +453,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -515,13 +500,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>
@@ -565,21 +550,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -615,13 +597,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>
@@ -665,21 +647,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -715,13 +694,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>
@@ -765,21 +744,18 @@ exports[`renders correctly 1`] = `
                 <h2
                   className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                 >
-                  Therapy at Your Fingertips 
+                  hero.heading
                   <br />
                 </h2>
                 <p
                   className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                 >
-                  Access the World's Largest Network of Therapists
+                  hero.text1
                 </p>
                 <p
                   className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                 >
-                  Get the same quality care as in-office therapy, but with the convenience and 
-                  <br />
-                   
-                  flexibility of online.
+                  hero.text2
                 </p>
               </div>
               <div
@@ -815,13 +791,13 @@ exports[`renders correctly 1`] = `
                     <span
                       className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                     >
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                     <span
                       className="relative invisible"
                     >
                       $
-                      Book An Appointment
+                      hero.bookingButton
                     </span>
                   </div>
                 </a>

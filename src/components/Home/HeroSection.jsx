@@ -7,13 +7,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { slideImages } from "@/util/library";
 import Button from "../elements/Button";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 // import { UserAuth } from "@/context/AuthContext";
 
 function HeroSection() {
     // const { user } = UserAuth();
     // Define the paths based on the user's authentication status
     // const bookingPath = user ? "/bookAnAppointment" : "/login/login";
-
+    const { t } = useTranslation("common");
     const settings = {
         fade: true,
         infinite: true,
@@ -40,16 +41,13 @@ function HeroSection() {
                         <div className=' flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding'>
                             <div className='space-y-4'>
                                 <h2 className='text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson'>
-                                    Therapy at Your Fingertips <br />
+                                {t("hero.heading")}<br />
                                 </h2>
                                 <p className='text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson'>
-                                    Access the World&apos;s Largest Network of
-                                    Therapists
+                                {t("hero.text1")}
                                 </p>
                                 <p className='hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose'>
-                                    Get the same quality care as in-office
-                                    therapy, but with the convenience and <br />{" "}
-                                    flexibility of online.
+                                {t("hero.text2")}
                                 </p>
                             </div>
                             <div className='px-auto pt-6 mx-auto'>
@@ -57,7 +55,7 @@ function HeroSection() {
                                     <Button
                                         color='teal'
                                         transition={true}
-                                        buttonText='Book An Appointment'
+                                        buttonText={t("hero.bookingButton")}
                                         buttonSize='fit'
                                     />
                                 </Link>

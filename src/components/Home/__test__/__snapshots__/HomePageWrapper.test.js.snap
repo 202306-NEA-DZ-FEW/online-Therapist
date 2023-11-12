@@ -66,21 +66,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -116,13 +113,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -166,21 +163,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -216,13 +210,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -266,21 +260,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -316,13 +307,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -366,21 +357,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -416,13 +404,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -466,21 +454,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -516,13 +501,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -566,21 +551,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -616,13 +598,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -666,21 +648,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -716,13 +695,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -766,21 +745,18 @@ Array [
                   <h2
                     className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    Therapy at Your Fingertips 
+                    hero.heading
                     <br />
                   </h2>
                   <p
                     className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
                   >
-                    Access the World's Largest Network of Therapists
+                    hero.text1
                   </p>
                   <p
                     className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
                   >
-                    Get the same quality care as in-office therapy, but with the convenience and 
-                    <br />
-                     
-                    flexibility of online.
+                    hero.text2
                   </p>
                 </div>
                 <div
@@ -816,13 +792,13 @@ Array [
                       <span
                         className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
                       >
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                       <span
                         className="relative invisible"
                       >
                         $
-                        Book An Appointment
+                        hero.bookingButton
                       </span>
                     </div>
                   </a>
@@ -840,9 +816,10 @@ Array [
     <h2
       className="text-start leading-loose pt-12 sm:text-xl md:text-2xl lg:text-5xl uppercase text-dark font-atkinson m-0 pl-6 pr-6"
     >
-      Professional, licensed, and accredited 
+      booking.heading1
+       
       <br />
-       therapists that you can trust
+      booking.heading2
     </h2>
     <div
       className="md:p-8 lg:p-0 max-w-2xl lg:max-w-none"
@@ -1006,7 +983,7 @@ Array [
       className="text-black lg:text-lg md:text-xs sm:text-xs text-left mx-auto mt-20 p-4 md:p-8 lg:p-8 max-w-2xl lg:max-w-none"
     >
       <p>
-        Life can be tough sometimes. We all go through challenges that can make us feel overwhelmed, stressed, and anxious. When things are getting difficult, it's important to reach out for help. Therapy can be a great way to work through your challenges and improve your overall well-being. But traditional therapy can be inconvenient and expensive. That's where we come in. We offer a unique opportunity to access the world's largest network of licensed, accredited, and experienced therapists, all from the comfort of your own home.
+        booking.paragraph
       </p>
     </div>
     <div
@@ -1042,13 +1019,13 @@ Array [
           <span
             className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
           >
-            Book An Appointment
+            hero.bookingButton
           </span>
           <span
             className="relative invisible"
           >
             $
-            Book An Appointment
+            hero.bookingButton
           </span>
         </div>
       </a>
@@ -1060,7 +1037,7 @@ Array [
     <h2
       className="lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson"
     >
-      we can communicate through
+      communication.heading
     </h2>
     <div
       className="flex justify-center mx-auto mt-12 mr-16 h-auto "
@@ -1104,13 +1081,13 @@ Array [
               <h3
                 className="mx-auto text-3xl font-atkinson font- mb-8"
               >
-                Voice Call
+                communication.voiceCall
               </h3>
             </div>
             <p
               className="font-atkinson text-center p-6 text-lg text-gray-700"
             >
-              Ready to talk to a therapist? Give them a call and let it all out!
+              communication.voiceText
             </p>
           </div>
           <div
@@ -1154,13 +1131,13 @@ Array [
               <h3
                 className="mx-auto text-3xl font-atkinson font- mb-8"
               >
-                Video Call
+                communication.videoCall
               </h3>
             </div>
             <p
               className="font-atkinson text-center p-6 text-lg text-gray-700"
             >
-              Your therapist recommends video calls, but it's your choice.
+              communication.videoText
             </p>
           </div>
           <div
@@ -1199,13 +1176,13 @@ Array [
               <h3
                 className="mx-auto text-3xl font-atkinson font- mb-8"
               >
-                Chat
+                communication.chat
               </h3>
             </div>
             <p
               className="font-atkinson text-center p-6 text-lg text-gray-700"
             >
-              Need to talk? Let your therapist listen.
+              communication.chatText
             </p>
           </div>
         </div>
@@ -1218,7 +1195,7 @@ Array [
     <h2
       className="lg:ml-24 md:ml-12 ml-5 font-bold font-atkinson block text-3xl md:text-4xl lg:text-5xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black mb-5  md:mb-10"
     >
-      Recent Blogs
+      blogs.heading
     </h2>
     <div
       className="slick-slider p-1 m-1 md:p-5 md:m-6 lg:m-16 slick-initialized"
@@ -2264,12 +2241,12 @@ Array [
     <h2
       className="font-atkinson font-bold block text-DarkTeal text-center text-2xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
     >
-      Our Plan Options
+      tickets.heading1
     </h2>
     <p
       className=" uppercase font-atkinson font-bold text-center text-2xl md:text-2xl lg:text-3xl text-black mt-2"
     >
-      purchase tickets that can be used to book appointments!
+      tickets.heading2
     </p>
     <div
       className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 my-10 "
@@ -2280,12 +2257,12 @@ Array [
       <h2
         className="text-center lg:text-start font-bold block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
       >
-        Join our team
+        counselor.heading
       </h2>
       <p
         className="uppercase text-center lg:text-start text-lg md:text-xl text-black/70 my-2"
       >
-        Are you a counselor?
+        counselor.subHeading
       </p>
       <div
         className="bg-white/95 flex flex-col lg:flex-row items-center justify-center text-start  rounded-md  shadow-2xl min-h-[20rem]"
@@ -2296,7 +2273,7 @@ Array [
           <span
             className="text-lg p-12 font-atkinson text-black/80"
           >
-            Interested in becoming a part of our revolutionary mental health platform? We offer you the freedom to set your own schedule and decide how much you want to work. Meanwhile, we take care of all the heavy lifting, from handling client referrals to managing all billing details. Join us and focus on what you do best – providing quality mental health services, while we ensure a seamless experience for both you and your clients.
+            counselor.paragraph
           </span>
           <div
             className="flex items-center justify-center "
@@ -2310,7 +2287,7 @@ Array [
               <div
                 className="bg-white border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-Teal whitespace-no-wrap rounded-lg shadow-md hover:bg-Teal hover:text-white focus:outline-none hover:cursor-pointer w-48 h-14"
               >
-                LEARN MORE
+                counselor.learnMore
               </div>
             </a>
           </div>

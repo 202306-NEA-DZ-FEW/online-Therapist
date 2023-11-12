@@ -7,7 +7,7 @@ exports[`renders correctly 1`] = `
   <h2
     className="lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson"
   >
-    we can communicate through
+    communication.heading
   </h2>
   <div
     className="flex justify-center mx-auto mt-12 mr-16 h-auto "
@@ -51,13 +51,13 @@ exports[`renders correctly 1`] = `
             <h3
               className="mx-auto text-3xl font-atkinson font- mb-8"
             >
-              Voice Call
+              communication.voiceCall
             </h3>
           </div>
           <p
             className="font-atkinson text-center p-6 text-lg text-gray-700"
           >
-            Ready to talk to a therapist? Give them a call and let it all out!
+            communication.voiceText
           </p>
         </div>
         <div
@@ -101,13 +101,13 @@ exports[`renders correctly 1`] = `
             <h3
               className="mx-auto text-3xl font-atkinson font- mb-8"
             >
-              Video Call
+              communication.videoCall
             </h3>
           </div>
           <p
             className="font-atkinson text-center p-6 text-lg text-gray-700"
           >
-            Your therapist recommends video calls, but it's your choice.
+            communication.videoText
           </p>
         </div>
         <div
@@ -146,13 +146,13 @@ exports[`renders correctly 1`] = `
             <h3
               className="mx-auto text-3xl font-atkinson font- mb-8"
             >
-              Chat
+              communication.chat
             </h3>
           </div>
           <p
             className="font-atkinson text-center p-6 text-lg text-gray-700"
           >
-            Need to talk? Let your therapist listen.
+            communication.chatText
           </p>
         </div>
       </div>

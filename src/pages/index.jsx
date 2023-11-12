@@ -6,12 +6,33 @@ import * as React from "react";
 import HomePageWrapper from "@/components/Home/HomePageWrapper";
 
 import Layout from "@/layout/Layout";
+import Link from "next/link";
 
 export default function HomePage() {
     const { t } = useTranslation("common");
 
     return (
         <Layout>
+            <div className='space-y-2 z-50 '>
+                                            <Link
+                                                href='#'
+                                                locale='en'
+                                                className='hover:text-Teal'
+                                            >
+                                                <li className='w-full hover:bg-gray-50'>
+                                                    English
+                                                </li>
+                                            </Link>
+                                            <Link
+                                                href='#'
+                                                locale='ar'
+                                                className='hover:text-Teal'
+                                            >
+                                                <li className='w-full hover:bg-gray-50'>
+                                                    العربية
+                                                </li>
+                                            </Link>
+                                        </div>
             <HomePageWrapper />
         </Layout>
     );

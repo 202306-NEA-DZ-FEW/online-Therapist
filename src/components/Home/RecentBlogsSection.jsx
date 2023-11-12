@@ -5,7 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Card from "../Cards/BlogCard";
 
+import { useTranslation } from "next-i18next";
+
 const RecentBlogsSection = () => {
+    const { t } = useTranslation("common");
     const blogs = [
         {
             title: "Mental Health and technology",
@@ -80,7 +83,7 @@ const RecentBlogsSection = () => {
     return (
         <div className='container max-w-[100%] bg-[#EAF8F9] p-16'>
             <h2 className='lg:ml-24 md:ml-12 ml-5 font-bold font-atkinson block text-3xl md:text-4xl lg:text-5xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black mb-5  md:mb-10'>
-                Recent Blogs
+                {t("blogs.heading")}
             </h2>
 
             <Slider {...settings} className='p-1 m-1 md:p-5 md:m-6 lg:m-16'>
