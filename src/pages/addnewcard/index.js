@@ -324,6 +324,7 @@ function AddNewCard() {
                             />
                         </div>
                     </div>
+                    <></>
                 </main>
             )}
         </Layout>
