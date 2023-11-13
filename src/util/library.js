@@ -28,7 +28,7 @@ export const slideImages = [
         imgSrc: "17",
         id: "7",
     },
-    
+
     {
         imgSrc: "14",
         id: "8",

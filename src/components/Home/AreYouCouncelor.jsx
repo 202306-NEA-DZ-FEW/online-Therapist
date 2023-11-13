@@ -30,10 +30,7 @@ const AreYouCouncelor = () => {
                         </Link>
                     </div>
                 </div>
-                <img
-                    className='w-96'
-                    src='/Images/therapist.jpg'
-                />
+                <img className='w-96' src='/Images/therapist.jpg' />
             </div>
         </div>
     );
