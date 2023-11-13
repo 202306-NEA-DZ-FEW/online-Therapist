@@ -9,9 +9,9 @@ function CommunicationSection() {
     return (
         <div className=' p-16 bg-white'>
             <Reveal>
-            <h2 className='lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson'>
-                {t("communication.heading")}
-            </h2>
+                <h2 className='lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson'>
+                    {t("communication.heading")}
+                </h2>
             </Reveal>
             <div className='flex justify-center mx-auto mt-12 mr-16 h-auto '>
                 <div className='flex-1 overflow-y-auto sm:pl-16'>

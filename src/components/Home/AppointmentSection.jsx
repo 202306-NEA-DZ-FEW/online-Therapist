@@ -13,15 +13,13 @@ function AppointmentSection() {
 
     return (
         <div className=' p-10 md:pl-10 bg-LightBeige md:pr-10 lg:pl-32 lg:pr-32'>
-          
             <Reveal>
-            <h2 className='text-center font-semibold lg:font-normal lg:leading-tight lg:text-start pt-12 text-2xl md:text-2xl lg:text-5xl uppercase text-black font-atkinson m-0 pl-6 pr-6'>
-                {t("booking.heading1")} <br />
-                {t("booking.heading2")}
-            </h2>
+                <h2 className='text-center font-semibold lg:font-normal lg:leading-tight lg:text-start pt-12 text-2xl md:text-2xl lg:text-5xl uppercase text-black font-atkinson m-0 pl-6 pr-6'>
+                    {t("booking.heading1")} <br />
+                    {t("booking.heading2")}
+                </h2>
             </Reveal>
-    
-                   
+
             <div className='ml-24 lg:ml-0 md:p-8 lg:p-0 max-w-2xl lg:max-w-none'>
                 <div className='flex flex-wrap text-base font-semibold leading-7 text-white lg:space-x-10 md:space-x-5 space-x-5/2 items-center justify-evenly'>
                     {teamMembers.map((member) => (
@@ -46,30 +44,28 @@ function AppointmentSection() {
                     ))}
                 </div>
             </div>
-                  
-            
+
             <div className=' text-black lg:text-lg md:text-lg text-md text-left mx-auto mt-20 p-4 md:p-8 lg:p-8 max-w-2xl lg:max-w-none'>
-            <Reveal>
-                <p>
-                    {t("booking.paragraph")}
-                    {/* With us, you can get the same
+                <Reveal>
+                    <p>
+                        {t("booking.paragraph")}
+                        {/* With us, you can get the same
                     professionalism and quality care as you would expect from an
                     in-office therapist, but with the ability to communicate
                     whenever and however you want. */}
-                </p>
-            </Reveal>
+                    </p>
+                </Reveal>
             </div>
             <Reveal>
-            <div className='flex justify-center m-4 md:m-6 lg:mb-16 '>
-                <Link href={bookingPath}>
-                    <Button
-                        buttonText={t("hero.bookingButton")}
-                        buttonSize='fit'
-                    />
-                </Link>
-            </div>
+                <div className='flex justify-center m-4 md:m-6 lg:mb-16 '>
+                    <Link href={bookingPath}>
+                        <Button
+                            buttonText={t("hero.bookingButton")}
+                            buttonSize='fit'
+                        />
+                    </Link>
+                </div>
             </Reveal>
-       
         </div>
     );
 }

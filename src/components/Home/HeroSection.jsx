@@ -70,7 +70,7 @@ function HeroSection() {
         // -----------------------------------------------------------------------------------------
 
         //  <div
-        //       style={{ backgroundImage: "url(/Images/20.jpg)" }}
+        //       style={{ backgroundImage: "url(/Images/13.jpg)" }}
         //       className="h-[90vh] bg-cover bg-center "
         //     >
         //      <div className=' flex flex-col justify-between absolute leading-loose text-start mt-40 ml-32'>
@@ -100,7 +100,7 @@ function HeroSection() {
 
         // -----------------------------------------------------------------------------------------
 
-        // {/* <div className="flex flex-row space-x-44 h-[90vh]">
+        //  <div className="flex flex-row space-x-44 h-[90vh]">
 
         //                     <div className=' flex flex-col justify-between leading-loose text-start mt-36 ml-44'>
 
@@ -133,7 +133,7 @@ function HeroSection() {
         //                         src="/Images/heroo.svg"
         //                         alt='Therapist Sessions'
         //                     />
-        // </div> */}
+        // </div> 
 
         // -----------------------------------------------------------------------------------------
 
