@@ -133,7 +133,7 @@ function HeroSection() {
         //                         src="/Images/heroo.svg"
         //                         alt='Therapist Sessions'
         //                     />
-        // </div> 
+        // </div>
 
         // -----------------------------------------------------------------------------------------
 

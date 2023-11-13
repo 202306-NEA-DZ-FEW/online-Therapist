@@ -16,8 +16,10 @@ export default function CommunicationCard({
         chat: <LuMessagesSquare />,
     }[icon];
     return (
-                <Reveal>
-        <div className='hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl'>
+        <Reveal>
+            <div className="h-auto lg:h-[355px]">
+
+            <div className='hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl'>
                 <div
                     className={`flex flex-col h-44 w-[2356x] rounded-3xl  ${greenBackground} `}
                 >
@@ -29,6 +31,7 @@ export default function CommunicationCard({
                 <p className='font-atkinson text-center p-6 text-lg text-gray-700'>
                     {paragraph}
                 </p>
+            </div>
             </div>
         </Reveal>
     );
