@@ -32,7 +32,7 @@ const AreYouCouncelor = () => {
                 </div>
                 <img
                     className='w-96'
-                    src='https://img.freepik.com/photos-gratuite/therapeute-femme-mid-shot-presse-papiers_23-2148759113.jpg?w=740&t=st=1699732213~exp=1699732813~hmac=35c0aab09ef3427110b056edfd168654a1c1643ba81298c3268a4b9d7a06805d'
+                    src='/Images/therapist.jpg'
                 />
             </div>
         </div>

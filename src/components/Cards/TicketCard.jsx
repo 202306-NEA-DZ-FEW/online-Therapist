@@ -1,12 +1,9 @@
-import Link from "next/link";
 import { UserAuth } from "@/context/AuthContext";
 import { useRouter } from "next/router";
 import Button from "../elements/Button";
-import { GiCheckMark } from "react-icons/gi";
 import { TiTicket } from "react-icons/ti";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { useTranslation } from "next-i18next";
-import { useEffect } from "react";
 
 const TicketCard = ({ price }) => {
     const router = useRouter();
@@ -25,7 +22,7 @@ const TicketCard = ({ price }) => {
     const ticketNumbers = Number(price.nickname);
 
     return (
-        <div className='hover:scale-105 bg-white/95 flex flex-col items-center justify-center text-center py-10 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full'>
+        <div className='hover:border hover:border-Teal hover:scale-105 bg-white/95 flex flex-col items-center justify-center text-center py-10 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full'>
             <span className='flex text-4xl'>
                 <TiTicket />
             </span>
