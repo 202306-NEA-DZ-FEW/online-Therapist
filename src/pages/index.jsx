@@ -13,14 +13,14 @@ export default function HomePage() {
 
     return (
         <Layout>
-            {/* <div>
+            <div>
                 <Link href='#' locale='en' className='hover:text-Teal'>
                     English
                 </Link>
                 <Link href='#' locale='ar' className='hover:text-Teal'>
 العربية
                 </Link>
-            </div> */}
+            </div>
             <HomePageWrapper />
         </Layout>
     );
