@@ -8,7 +8,7 @@ import Card from "../Cards/BlogCard";
 import { useTranslation } from "next-i18next";
 
 const RecentBlogsSection = () => {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation("homepage");
     const blogs = [
         {
             title: "Mental Health and technology",

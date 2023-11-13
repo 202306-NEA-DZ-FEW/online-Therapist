@@ -4,7 +4,7 @@ import Button from "../elements/Button";
 import { useTranslation } from "next-i18next";
 
 const AreYouCouncelor = () => {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation("homepage");
     return (
         <div className='font-atkinson mt-24'>
             <h2 className='text-center lg:text-start font-bold block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words'>

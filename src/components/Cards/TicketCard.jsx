@@ -10,13 +10,7 @@ import { useEffect } from "react";
 
 const TicketCard = ({ price }) => {
     const router = useRouter();
-    const language = router.locale;
-
-    useEffect(() => {
-        document.body.dir = language == "ar" ? "rtl" : "ltr";
-    }, [language]);
-
-    const { t } = useTranslation("common");
+    const { t } = useTranslation("homepage");
     const { user } = UserAuth();
 
     const handleClick = () => {

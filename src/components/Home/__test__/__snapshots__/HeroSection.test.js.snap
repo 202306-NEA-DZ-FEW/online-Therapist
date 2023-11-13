@@ -2,805 +2,809 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="slick-slider bg-white slick-initialized"
   dir="ltr"
 >
   <div
-    className="slick-list"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={null}
-    onMouseMove={null}
-    onMouseUp={[Function]}
-    onTouchCancel={null}
-    onTouchEnd={[Function]}
-    onTouchMove={null}
-    onTouchStart={[Function]}
-    style={Object {}}
+    className="slick-slider bg-white slick-initialized"
+    dir="ltr"
   >
     <div
-      className="slick-track"
-      onMouseEnter={null}
+      className="slick-list"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
       onMouseLeave={null}
-      onMouseOver={null}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
+      onMouseMove={null}
+      onMouseUp={[Function]}
+      onTouchCancel={null}
+      onTouchEnd={[Function]}
+      onTouchMove={null}
+      onTouchStart={[Function]}
+      style={Object {}}
     >
       <div
-        aria-hidden={false}
-        className="slick-slide slick-active slick-current"
-        data-index={0}
-        onClick={[Function]}
+        className="slick-track"
+        onMouseEnter={null}
+        onMouseLeave={null}
+        onMouseOver={null}
         style={
           Object {
-            "left": -0,
             "opacity": 1,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
           }
         }
-        tabIndex="-1"
       >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/2.jpg)",
-              }
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active slick-current"
+          data-index={0}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 1,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/2.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="slick-slide"
-        data-index={1}
-        onClick={[Function]}
-        style={
-          Object {
-            "left": -0,
-            "opacity": 0,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
-          }
-        }
-        tabIndex="-1"
-      >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/4.jpg)",
-              }
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={1}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/4.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="slick-slide"
-        data-index={2}
-        onClick={[Function]}
-        style={
-          Object {
-            "left": -0,
-            "opacity": 0,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
-          }
-        }
-        tabIndex="-1"
-      >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/6.jpg)",
-              }
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={2}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/6.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="slick-slide"
-        data-index={3}
-        onClick={[Function]}
-        style={
-          Object {
-            "left": -0,
-            "opacity": 0,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
-          }
-        }
-        tabIndex="-1"
-      >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/8.jpg)",
-              }
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={3}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/8.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="slick-slide"
-        data-index={4}
-        onClick={[Function]}
-        style={
-          Object {
-            "left": -0,
-            "opacity": 0,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
-          }
-        }
-        tabIndex="-1"
-      >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/13.jpg)",
-              }
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={4}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/13.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="slick-slide"
-        data-index={5}
-        onClick={[Function]}
-        style={
-          Object {
-            "left": -0,
-            "opacity": 0,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
-          }
-        }
-        tabIndex="-1"
-      >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/1.jpg)",
-              }
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={5}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/1.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="slick-slide"
-        data-index={6}
-        onClick={[Function]}
-        style={
-          Object {
-            "left": -0,
-            "opacity": 0,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
-          }
-        }
-        tabIndex="-1"
-      >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/17.jpg)",
-              }
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={6}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/17.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="slick-slide"
-        data-index={7}
-        onClick={[Function]}
-        style={
-          Object {
-            "left": -0,
-            "opacity": 0,
-            "outline": "none",
-            "position": "relative",
-            "transition": "opacity 500ms ease, visibility 500ms ease",
-            "width": 0,
-          }
-        }
-        tabIndex="-1"
-      >
-        <div>
-          <div
-            className="h-[90vh] bg-cover bg-center"
-            style={
-              Object {
-                "backgroundImage": "url(/Images/14.jpg)",
-              }
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={7}
+          onClick={[Function]}
+          style={
+            Object {
+              "left": -0,
+              "opacity": 0,
+              "outline": "none",
+              "position": "relative",
+              "transition": "opacity 500ms ease, visibility 500ms ease",
+              "width": 0,
             }
-          >
+          }
+          tabIndex="-1"
+        >
+          <div>
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="h-[90vh] bg-cover bg-center"
+              style={
+                Object {
+                  "backgroundImage": "url(/Images/14.jpg)",
+                }
+              }
             >
               <div
-                className="space-y-4"
+                className=" flex flex-col justify-between absolute leading-loose bottom-[25%] text-center left-48 right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
               >
-                <h2
-                  className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
+                <div
+                  className="space-y-4"
                 >
-                  hero.heading
-                  <br />
-                </h2>
-                <p
-                  className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
-                >
-                  hero.text1
-                </p>
-                <p
-                  className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
-                >
-                  hero.text2
-                </p>
-              </div>
-              <div
-                className="px-auto pt-6 mx-auto"
-              >
-                <a
-                  href="/bookAnAppointment"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onTouchStart={[Function]}
-                >
-                  <div
-                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                  <h2
+                    className="text-lg md:text-xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson"
                   >
-                    <span
-                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                    hero.heading
+                    <br />
+                  </h2>
+                  <p
+                    className="text-lg md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson"
+                  >
+                    hero.text1
+                  </p>
+                  <p
+                    className="hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose"
+                  >
+                    hero.text2
+                  </p>
+                </div>
+                <div
+                  className="px-auto pt-6 mx-auto"
+                >
+                  <a
+                    href="/bookAnAppointment"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     >
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                       >
-                        <path
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                    >
-                      hero.bookingButton
-                    </span>
-                    <span
-                      className="relative invisible"
-                    >
-                      $
-                      hero.bookingButton
-                    </span>
-                  </div>
-                </a>
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                      >
+                        hero.bookingButton
+                      </span>
+                      <span
+                        className="relative invisible"
+                      >
+                        $
+                        hero.bookingButton
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

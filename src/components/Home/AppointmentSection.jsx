@@ -5,7 +5,7 @@ import { UserAuth } from "@/context/AuthContext";
 import { useTranslation } from "next-i18next";
 
 function AppointmentSection() {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation("homepage");
     const { user } = UserAuth();
     // Define the paths based on the user's authentication status
     const bookingPath = user ? "/bookAnAppointment" : "/login/";

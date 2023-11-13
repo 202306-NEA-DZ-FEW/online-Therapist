@@ -14,7 +14,7 @@ function HeroSection() {
     // const { user } = UserAuth();
     // Define the paths based on the user's authentication status
     // const bookingPath = user ? "/bookAnAppointment" : "/login/login";
-    const { t } = useTranslation("common");
+    const { t } = useTranslation("homepage");
     const settings = {
         fade: true,
         infinite: true,
@@ -28,6 +28,8 @@ function HeroSection() {
     };
 
     return (
+        <div dir="ltr">
+
         <Slider {...settings} className='bg-white'>
             {slideImages.map((img) => (
                 <>
@@ -66,6 +68,7 @@ function HeroSection() {
                 </>
             ))}
         </Slider>
+        </div>
         // -----------------------------------------------------------------------------------------
 
         //  <div

@@ -4,7 +4,7 @@ import CommunicationCard from "../Cards/CommunicationCard";
 import { useTranslation } from "next-i18next";
 
 function CommunicationSection() {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation("homepage");
     return (
         <div className=' p-16 bg-white'>
             <h2 className='lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson'>

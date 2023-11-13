@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 
 const TicketsSection = () => {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation("homepage");
     const [prices, setPrices] = useState([]);
 
     useEffect(() => {
