@@ -2,20 +2,38 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+  style={
+    Object {
+      "overflow": "hidden",
+      "position": "relative",
+    }
+  }
 >
   <div
-    className="flex flex-col h-44 w-[2356x] rounded-3xl  undefined "
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateY(75px) translateZ(0)",
+      }
+    }
   >
-    <span
-      className="text-6xl m-auto"
-    />
-    <h3
-      className="mx-auto text-3xl font-atkinson font- mb-8"
-    />
+    <div
+      className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+    >
+      <div
+        className="flex flex-col h-44 w-[2356x] rounded-3xl  undefined "
+      >
+        <span
+          className="text-6xl m-auto"
+        />
+        <h3
+          className="mx-auto text-3xl font-atkinson font- mb-8"
+        />
+      </div>
+      <p
+        className="font-atkinson text-center p-6 text-lg text-gray-700"
+      />
+    </div>
   </div>
-  <p
-    className="font-atkinson text-center p-6 text-lg text-gray-700"
-  />
 </div>
 `;

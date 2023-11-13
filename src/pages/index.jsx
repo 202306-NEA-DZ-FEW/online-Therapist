@@ -7,6 +7,7 @@ import HomePageWrapper from "@/components/Home/HomePageWrapper";
 
 import Layout from "@/layout/Layout";
 import Link from "next/link";
+import Reveal from "@/components/utils/Reveal";
 
 export default function HomePage() {
     const { t } = useTranslation("common");
@@ -18,7 +19,7 @@ export default function HomePage() {
                     English
                 </Link>
                 <Link href='#' locale='ar' className='hover:text-Teal'>
-العربية
+                    العربية
                 </Link>
             </div>
             <HomePageWrapper />

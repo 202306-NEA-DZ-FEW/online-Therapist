@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "overflow": "hidden",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateY(75px) translateZ(0)",
+      }
+    }
+  />
+</div>
+`;

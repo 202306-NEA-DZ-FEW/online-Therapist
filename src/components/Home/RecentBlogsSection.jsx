@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Card from "../Cards/BlogCard";
 
 import { useTranslation } from "next-i18next";
+import Reveal from "../utils/Reveal";
 
 const RecentBlogsSection = () => {
     const { t } = useTranslation("homepage");
@@ -82,10 +83,12 @@ const RecentBlogsSection = () => {
     };
     return (
         <div className='container max-w-[100%] bg-[#EAF8F9] p-16'>
+            <Reveal>
             <h2 className='lg:ml-24 md:ml-12 ml-5 font-bold font-atkinson block text-3xl md:text-4xl lg:text-5xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black mb-5  md:mb-10'>
                 {t("blogs.heading")}
             </h2>
-
+            </Reveal>
+            <Reveal>
             <Slider {...settings} className='p-1 m-1 md:p-5 md:m-6 lg:m-16'>
                 {blogs.map((blog, index) => (
                     <Card
@@ -97,6 +100,7 @@ const RecentBlogsSection = () => {
                     />
                 ))}
             </Slider>
+            </Reveal>
         </div>
     );
 };

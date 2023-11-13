@@ -2,6 +2,7 @@ import React from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { FiVideo } from "react-icons/fi";
+import Reveal from "../utils/Reveal";
 
 export default function CommunicationCard({
     icon,
@@ -15,6 +16,7 @@ export default function CommunicationCard({
         chat: <LuMessagesSquare />,
     }[icon];
     return (
+  <Reveal>
         <div className='hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl'>
             <div
                 className={`flex flex-col h-44 w-[2356x] rounded-3xl  ${greenBackground} `}
@@ -28,6 +30,7 @@ export default function CommunicationCard({
                 {paragraph}
             </p>
         </div>
+        </Reveal>
     );
 }
 

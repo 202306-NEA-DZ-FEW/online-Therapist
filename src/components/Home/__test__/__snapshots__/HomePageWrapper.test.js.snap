@@ -1614,14 +1614,32 @@ Array [
   <div
     className=" p-10 md:pl-10 bg-LightBeige md:pr-10 lg:pl-32 lg:pr-32"
   >
-    <h2
-      className="text-center font-semibold lg:font-normal lg:leading-tight lg:text-start pt-12 text-2xl md:text-2xl lg:text-5xl uppercase text-black font-atkinson m-0 pl-6 pr-6"
+    <div
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
-      booking.heading1
-       
-      <br />
-      booking.heading2
-    </h2>
+      <div
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
+          }
+        }
+      >
+        <h2
+          className="text-center font-semibold lg:font-normal lg:leading-tight lg:text-start pt-12 text-2xl md:text-2xl lg:text-5xl uppercase text-black font-atkinson m-0 pl-6 pr-6"
+        >
+          booking.heading1
+           
+          <br />
+          booking.heading2
+        </h2>
+      </div>
+    </div>
     <div
       className="ml-24 lg:ml-0 md:p-8 lg:p-0 max-w-2xl lg:max-w-none"
     >
@@ -1783,63 +1801,117 @@ Array [
     <div
       className=" text-black lg:text-lg md:text-lg text-md text-left mx-auto mt-20 p-4 md:p-8 lg:p-8 max-w-2xl lg:max-w-none"
     >
-      <p>
-        booking.paragraph
-      </p>
-    </div>
-    <div
-      className="flex justify-center m-4 md:m-6 lg:mb-16 "
-    >
-      <a
-        href="/bookAnAppointment"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
+      <div
+        style={
+          Object {
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
       >
         <div
-          className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "translateY(75px) translateZ(0)",
+            }
+          }
         >
-          <span
-            className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-              />
-            </svg>
-          </span>
-          <span
-            className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-          >
-            hero.bookingButton
-          </span>
-          <span
-            className="relative invisible"
-          >
-            $
-            hero.bookingButton
-          </span>
+          <p>
+            booking.paragraph
+          </p>
         </div>
-      </a>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
+          }
+        }
+      >
+        <div
+          className="flex justify-center m-4 md:m-6 lg:mb-16 "
+        >
+          <a
+            href="/bookAnAppointment"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+            >
+              <span
+                className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </span>
+              <span
+                className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+              >
+                hero.bookingButton
+              </span>
+              <span
+                className="relative invisible"
+              >
+                $
+                hero.bookingButton
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>,
   <div
     className=" p-16 bg-white"
   >
-    <h2
-      className="lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson"
+    <div
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
-      communication.heading
-    </h2>
+      <div
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
+          }
+        }
+      >
+        <h2
+          className="lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson"
+        >
+          communication.heading
+        </h2>
+      </div>
+    </div>
     <div
       className="flex justify-center mx-auto mt-12 mr-16 h-auto "
     >
@@ -1850,141 +1922,195 @@ Array [
           className="flex flex-wrap justify-center bg m-4 md:flex-row md:gap-8 gap-4"
         >
           <div
-            className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
           >
             <div
-              className="flex flex-col h-44 w-[2356x] rounded-3xl  bg-LightTeal "
+              style={
+                Object {
+                  "opacity": 0,
+                  "transform": "translateY(75px) translateZ(0)",
+                }
+              }
             >
-              <span
-                className="text-6xl m-auto"
+              <div
+                className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
               >
-                <svg
-                  fill="none"
-                  height="1em"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  className="flex flex-col h-44 w-[2356x] rounded-3xl  bg-LightTeal "
                 >
-                  <path
-                    d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                  />
-                </svg>
-              </span>
-              <h3
-                className="mx-auto text-3xl font-atkinson font- mb-8"
-              >
-                communication.voiceCall
-              </h3>
+                  <span
+                    className="text-6xl m-auto"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                  </span>
+                  <h3
+                    className="mx-auto text-3xl font-atkinson font- mb-8"
+                  >
+                    communication.voiceCall
+                  </h3>
+                </div>
+                <p
+                  className="font-atkinson text-center p-6 text-lg text-gray-700"
+                >
+                  communication.voiceText
+                </p>
+              </div>
             </div>
-            <p
-              className="font-atkinson text-center p-6 text-lg text-gray-700"
-            >
-              communication.voiceText
-            </p>
           </div>
           <div
-            className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
           >
             <div
-              className="flex flex-col h-44 w-[2356x] rounded-3xl  bg-SkyBlue "
+              style={
+                Object {
+                  "opacity": 0,
+                  "transform": "translateY(75px) translateZ(0)",
+                }
+              }
             >
-              <span
-                className="text-6xl m-auto"
+              <div
+                className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
               >
-                <svg
-                  fill="none"
-                  height="1em"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  className="flex flex-col h-44 w-[2356x] rounded-3xl  bg-SkyBlue "
                 >
-                  <polygon
-                    points="23 7 16 12 23 17 23 7"
-                  />
-                  <rect
-                    height="14"
-                    rx="2"
-                    ry="2"
-                    width="15"
-                    x="1"
-                    y="5"
-                  />
-                </svg>
-              </span>
-              <h3
-                className="mx-auto text-3xl font-atkinson font- mb-8"
-              >
-                communication.videoCall
-              </h3>
+                  <span
+                    className="text-6xl m-auto"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="23 7 16 12 23 17 23 7"
+                      />
+                      <rect
+                        height="14"
+                        rx="2"
+                        ry="2"
+                        width="15"
+                        x="1"
+                        y="5"
+                      />
+                    </svg>
+                  </span>
+                  <h3
+                    className="mx-auto text-3xl font-atkinson font- mb-8"
+                  >
+                    communication.videoCall
+                  </h3>
+                </div>
+                <p
+                  className="font-atkinson text-center p-6 text-lg text-gray-700"
+                >
+                  communication.videoText
+                </p>
+              </div>
             </div>
-            <p
-              className="font-atkinson text-center p-6 text-lg text-gray-700"
-            >
-              communication.videoText
-            </p>
           </div>
           <div
-            className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
           >
             <div
-              className="flex flex-col h-44 w-[2356x] rounded-3xl  bg-LightOrange "
+              style={
+                Object {
+                  "opacity": 0,
+                  "transform": "translateY(75px) translateZ(0)",
+                }
+              }
             >
-              <span
-                className="text-6xl m-auto"
+              <div
+                className="hover:scale-105 border border-gray h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
               >
-                <svg
-                  fill="none"
-                  height="1em"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  className="flex flex-col h-44 w-[2356x] rounded-3xl  bg-LightOrange "
                 >
-                  <path
-                    d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"
-                  />
-                  <path
-                    d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"
-                  />
-                </svg>
-              </span>
-              <h3
-                className="mx-auto text-3xl font-atkinson font- mb-8"
-              >
-                communication.chat
-              </h3>
+                  <span
+                    className="text-6xl m-auto"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"
+                      />
+                      <path
+                        d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"
+                      />
+                    </svg>
+                  </span>
+                  <h3
+                    className="mx-auto text-3xl font-atkinson font- mb-8"
+                  >
+                    communication.chat
+                  </h3>
+                </div>
+                <p
+                  className="font-atkinson text-center p-6 text-lg text-gray-700"
+                >
+                  communication.chatText
+                </p>
+              </div>
             </div>
-            <p
-              className="font-atkinson text-center p-6 text-lg text-gray-700"
-            >
-              communication.chatText
-            </p>
           </div>
         </div>
       </div>
@@ -1993,1104 +2119,1248 @@ Array [
   <div
     className="container max-w-[100%] bg-[#EAF8F9] p-16"
   >
-    <h2
-      className="lg:ml-24 md:ml-12 ml-5 font-bold font-atkinson block text-3xl md:text-4xl lg:text-5xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black mb-5  md:mb-10"
-    >
-      blogs.heading
-    </h2>
     <div
-      className="slick-slider p-1 m-1 md:p-5 md:m-6 lg:m-16 slick-initialized"
-      dir="ltr"
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
-      <button
-        className="slick-arrow slick-prev"
-        data-role="none"
-        onClick={[Function]}
+      <div
         style={
           Object {
-            "display": "block",
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
           }
         }
-        type="button"
       >
-         
-        Previous
-      </button>
+        <h2
+          className="lg:ml-24 md:ml-12 ml-5 font-bold font-atkinson block text-3xl md:text-4xl lg:text-5xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black mb-5  md:mb-10"
+        >
+          blogs.heading
+        </h2>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
       <div
-        className="slick-list"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={null}
-        onMouseMove={null}
-        onMouseUp={[Function]}
-        onTouchCancel={null}
-        onTouchEnd={[Function]}
-        onTouchMove={null}
-        onTouchStart={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
+          }
+        }
       >
         <div
-          className="slick-track"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          style={
-            Object {
-              "WebkitTransform": "translate3d(0px, 0px, 0px)",
-              "WebkitTransition": "",
-              "msTransform": "translateX(0px)",
-              "opacity": 1,
-              "transform": "translate3d(0px, 0px, 0px)",
-              "transition": "",
-            }
-          }
+          className="slick-slider p-1 m-1 md:p-5 md:m-6 lg:m-16 slick-initialized"
+          dir="ltr"
         >
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={-3}
+          <button
+            className="slick-arrow slick-prev"
+            data-role="none"
             onClick={[Function]}
             style={
               Object {
-                "width": 0,
+                "display": "block",
               }
             }
-            tabIndex="-1"
+            type="button"
           >
-            <div>
+             
+            Previous
+          </button>
+          <div
+            className="slick-list"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={null}
+            onMouseMove={null}
+            onMouseUp={[Function]}
+            onTouchCancel={null}
+            onTouchEnd={[Function]}
+            onTouchMove={null}
+            onTouchStart={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="slick-track"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                  "WebkitTransition": "",
+                  "msTransform": "translateX(0px)",
+                  "opacity": 1,
+                  "transform": "translate3d(0px, 0px, 0px)",
+                  "transition": "",
+                }
+              }
+            >
               <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={-3}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
               >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
                     <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
                     >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
                         >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
                   </div>
                 </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={-2}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
                   }
-                  width={300}
-                />
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={-1}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active slick-current"
+                data-index={0}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={1}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={2}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={3}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={4}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={5}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={6}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={7}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={8}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={9}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                  >
+                    <div
+                      className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
+                    >
+                      <div>
+                        <div
+                          className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
+                        >
+                          <div
+                            className="font-semibold text-xl md:text-2xl"
+                          >
+                            Mental Health and technology
+                          </div>
+                          <div
+                            className=" text-sm  text-white "
+                          >
+                            <p
+                              className=" line-clamp-1"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
+                            </p>
+                            <a
+                              className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
+                              href=""
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                               
+                              Read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      alt="Mental Health and technology"
+                      className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                      data-nimg="1"
+                      decoding="async"
+                      height={200}
+                      loading="lazy"
+                      onError={[Function]}
+                      onLoad={[Function]}
+                      src="/Images/blog-img-placeholder.svg"
+                      style={
+                        Object {
+                          "color": "transparent",
+                        }
+                      }
+                      width={300}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={-2}
+          <button
+            className="slick-arrow slick-next"
+            data-role="none"
             onClick={[Function]}
             style={
               Object {
-                "width": 0,
+                "display": "block",
               }
             }
-            tabIndex="-1"
+            type="button"
           >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
-              >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={-1}
-            onClick={[Function]}
+             
+            Next
+          </button>
+          <ul
+            className="slick-dots"
+            onMouseEnter={null}
+            onMouseLeave={null}
+            onMouseOver={null}
             style={
               Object {
-                "width": 0,
+                "display": "block",
               }
             }
-            tabIndex="-1"
           >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+            <li
+              className="slick-active"
+            >
+              <button
+                onClick={[Function]}
               >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={false}
-            className="slick-slide slick-active slick-current"
-            data-index={0}
-            onClick={[Function]}
-            style={
-              Object {
-                "outline": "none",
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                1
+              </button>
+            </li>
+            <li
+              className=""
+            >
+              <button
+                onClick={[Function]}
               >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={false}
-            className="slick-slide slick-active"
-            data-index={1}
-            onClick={[Function]}
-            style={
-              Object {
-                "outline": "none",
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                2
+              </button>
+            </li>
+            <li
+              className=""
+            >
+              <button
+                onClick={[Function]}
               >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={false}
-            className="slick-slide slick-active"
-            data-index={2}
-            onClick={[Function]}
-            style={
-              Object {
-                "outline": "none",
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                3
+              </button>
+            </li>
+            <li
+              className=""
+            >
+              <button
+                onClick={[Function]}
               >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide"
-            data-index={3}
-            onClick={[Function]}
-            style={
-              Object {
-                "outline": "none",
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
+                4
+              </button>
+            </li>
+            <li
+              className=""
+            >
+              <button
+                onClick={[Function]}
               >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide"
-            data-index={4}
-            onClick={[Function]}
-            style={
-              Object {
-                "outline": "none",
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
-              >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={5}
-            onClick={[Function]}
-            style={
-              Object {
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
-              >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={6}
-            onClick={[Function]}
-            style={
-              Object {
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
-              >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={7}
-            onClick={[Function]}
-            style={
-              Object {
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
-              >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={8}
-            onClick={[Function]}
-            style={
-              Object {
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
-              >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="slick-slide slick-cloned"
-            data-index={9}
-            onClick={[Function]}
-            style={
-              Object {
-                "width": 0,
-              }
-            }
-            tabIndex="-1"
-          >
-            <div>
-              <div
-                className="mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1"
-              >
-                <div
-                  className="h-full z-50 opacity-90 group-hover:opacity-100 transition duration-300 ease-in-out cursor-auto absolute from-teal-950 to-transparent bg-gradient-to-t inset-x-0 -bottom-2  text-white flex items-end"
-                >
-                  <div>
-                    <div
-                      className="transform-gpu p-4 space-y-0 text-lg group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pb-8  transition duration-300 ease-in-out"
-                    >
-                      <div
-                        className="font-semibold text-xl md:text-2xl"
-                      >
-                        Mental Health and technology
-                      </div>
-                      <div
-                        className=" text-sm  text-white "
-                      >
-                        <p
-                          className=" line-clamp-1"
-                        >
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem
-                        </p>
-                        <a
-                          className="underline flex justify-end mr-5 mt-2 text-teal-100 hover:text-teal-400 group-hover:animate-bounce text-base"
-                          href=""
-                          onClick={[Function]}
-                          onMouseEnter={[Function]}
-                          onTouchStart={[Function]}
-                        >
-                           
-                          Read more
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  alt="Mental Health and technology"
-                  className="object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                  data-nimg="1"
-                  decoding="async"
-                  height={200}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="/Images/blog-img-placeholder.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={300}
-                />
-              </div>
-            </div>
-          </div>
+                5
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-      <button
-        className="slick-arrow slick-next"
-        data-role="none"
-        onClick={[Function]}
-        style={
-          Object {
-            "display": "block",
-          }
-        }
-        type="button"
-      >
-         
-        Next
-      </button>
-      <ul
-        className="slick-dots"
-        onMouseEnter={null}
-        onMouseLeave={null}
-        onMouseOver={null}
-        style={
-          Object {
-            "display": "block",
-          }
-        }
-      >
-        <li
-          className="slick-active"
-        >
-          <button
-            onClick={[Function]}
-          >
-            1
-          </button>
-        </li>
-        <li
-          className=""
-        >
-          <button
-            onClick={[Function]}
-          >
-            2
-          </button>
-        </li>
-        <li
-          className=""
-        >
-          <button
-            onClick={[Function]}
-          >
-            3
-          </button>
-        </li>
-        <li
-          className=""
-        >
-          <button
-            onClick={[Function]}
-          >
-            4
-          </button>
-        </li>
-        <li
-          className=""
-        >
-          <button
-            onClick={[Function]}
-          >
-            5
-          </button>
-        </li>
-      </ul>
     </div>
   </div>,
   <div
     className="lg:mx-20 md:mx-auto mx-auto p-16"
   >
-    <h2
-      className="font-atkinson font-bold block text-DarkTeal text-center text-2xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+    <div
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
-      tickets.heading1
-    </h2>
-    <p
-      className=" uppercase font-atkinson font-bold text-center text-2xl md:text-2xl lg:text-3xl text-black mt-2"
+      <div
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
+          }
+        }
+      >
+        <h2
+          className="font-atkinson font-bold block text-DarkTeal text-center text-2xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+        >
+          tickets.heading1
+        </h2>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
-      tickets.heading2
-    </p>
+      <div
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
+          }
+        }
+      >
+        <p
+          className=" uppercase font-atkinson font-bold text-center text-2xl md:text-2xl lg:text-3xl text-black mt-2"
+        >
+          tickets.heading2
+        </p>
+      </div>
+    </div>
     <div
       className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 my-10 "
     />
     <div
       className="font-atkinson mt-24"
     >
-      <h2
-        className="text-center lg:text-start font-bold block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+      <div
+        style={
+          Object {
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
       >
-        counselor.heading
-      </h2>
-      <p
-        className="uppercase text-center lg:text-start text-lg md:text-xl text-black/70 my-2"
+        <div
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "translateY(75px) translateZ(0)",
+            }
+          }
+        >
+          <h2
+            className="text-center lg:text-start font-bold block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+          >
+            counselor.heading
+          </h2>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
       >
-        counselor.subHeading
-      </p>
+        <div
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "translateY(75px) translateZ(0)",
+            }
+          }
+        >
+          <p
+            className="uppercase text-center lg:text-start text-lg md:text-xl text-black/70 my-2"
+          >
+            counselor.subHeading
+          </p>
+        </div>
+      </div>
       <div
         className="bg-white/95 flex flex-col lg:flex-row items-center justify-center text-start  rounded-md  shadow-2xl min-h-[20rem]"
       >
         <div
-          className="p-16 space-y-4 lg:p-0 lg:space-y-0 lg:flex lg:flex-col lg:items-center lg:justify-center"
+          style={
+            Object {
+              "overflow": "hidden",
+              "position": "relative",
+            }
+          }
         >
-          <span
-            className="text-lg p-12 font-atkinson text-black/80"
-          >
-            counselor.paragraph
-          </span>
           <div
-            className="flex items-center justify-center "
+            style={
+              Object {
+                "opacity": 0,
+                "transform": "translateY(75px) translateZ(0)",
+              }
+            }
           >
-            <a
-              href="/requirements"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onTouchStart={[Function]}
+            <div
+              className="p-16 space-y-4 lg:p-0 lg:space-y-0 lg:flex lg:flex-col lg:items-center lg:justify-center"
             >
-              <div
-                className="bg-white border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-Teal whitespace-no-wrap rounded-lg shadow-md hover:bg-Teal hover:text-white focus:outline-none hover:cursor-pointer w-48 h-14"
+              <span
+                className="text-lg p-12 font-atkinson text-black/80"
               >
-                counselor.learnMore
+                counselor.paragraph
+              </span>
+              <div
+                className="flex items-center justify-center "
+              >
+                <a
+                  href="/requirements"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  <div
+                    style={
+                      Object {
+                        "overflow": "hidden",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "opacity": 0,
+                          "transform": "translateY(75px) translateZ(0)",
+                        }
+                      }
+                    >
+                      <div
+                        className="bg-white border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-Teal whitespace-no-wrap rounded-lg shadow-md hover:bg-Teal hover:text-white focus:outline-none hover:cursor-pointer w-48 h-14"
+                      >
+                        counselor.learnMore
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
         <img
