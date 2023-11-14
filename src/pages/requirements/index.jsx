@@ -63,12 +63,16 @@ function RequirementsPage() {
                             alt='therapist illustration'
                             width={600}
                             height={300}
-                            className=""
+                            className=''
                         />
                     </div>
                 </div>
 
-                <div className={`mx-24 pl-10 ${language === "ar" ? "pr-10" : ""}`}>
+                <div
+                    className={`mx-24 pl-10 ${
+                        language === "ar" ? "pr-10" : ""
+                    }`}
+                >
                     <h1 className='text-2xl font-bold text-Teal pb-5'>
                         {t("requirement.principaleTitle2")}
                     </h1>
