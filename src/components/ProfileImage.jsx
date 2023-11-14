@@ -1,13 +1,16 @@
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 import Edit from "public/edit-profile.svg";
 import Profile from "public/profile.png";
 import Spinner from "public/spinner.svg";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 import { useAuth } from "@/context/AuthContext";
 import { storage } from "@/util/firebase";
 const ProfileImage = () => {
+    const { t } = useTranslation("therapists");
     const [uploading, setUploading] = useState(false);
     const { user, updateProfilePhoto } = useAuth();
     const [ProfileImage, setProfileImage] = useState("");
@@ -34,6 +37,7 @@ const ProfileImage = () => {
             console.error(error);
         } finally {
             setUploading(false);
+            toast.success(t("profile.notifications.image"));
         }
     };
     return (

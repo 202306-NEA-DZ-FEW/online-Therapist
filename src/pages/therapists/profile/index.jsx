@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 import Button from "@/components/elements/Button";
 import Input from "@/components/Profile/Input";
@@ -22,7 +23,6 @@ const Profile = ({ t }) => {
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false
     );
-    const [formErrors, setFormErrors] = useState("");
 
     const { user } = useAuth();
     const [photo] = useState(
@@ -36,7 +36,8 @@ const Profile = ({ t }) => {
         phone: "",
         age: "",
         gender: "",
-        speciality: "",
+        specialty: "",
+        availability: "",
     });
 
     const onChange = (e) => {
@@ -56,8 +57,11 @@ const Profile = ({ t }) => {
         try {
             const therapistRef = doc(db, "therapists", user.uid);
             await updateDoc(therapistRef, { ...formData, photoURL: photo });
+            toast.success(t("therapists:profile.notifications.updateSuccess"));
         } catch (err) {
-            setFormErrors({ ...formErrors, err });
+            toast.error(`Error ${err} `, {
+                position: toast.POSITION.BOTTOM_LEFT,
+            });
         }
     };
     async function fetchTherapist() {
@@ -217,7 +221,7 @@ const Profile = ({ t }) => {
 
                             <div className=' lg:mx-0 mx-2 p-1 flex flex-col md:flex-row my-5 gap-2 min-w-max'>
                                 <label
-                                    htmlFor='speciality'
+                                    htmlFor='specialty'
                                     className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
                                 >
                                     {t("therapists:profile.speciality")}
@@ -225,28 +229,60 @@ const Profile = ({ t }) => {
                                 <div className='w-full mx-0 flex flex-col md:w-[35rem] lg:w-[27.5rem] '>
                                     <select
                                         disabled={!edit}
-                                        name='speciality'
+                                        name='specialty'
                                         className='rtl:ml-0 md:w-[34rem] lg:w-[27rem] w-full md:ml-[6.3rem]  rtl:md:mr-[6.7rem] rtl:md:w-[28.5rem] rtl:lg:w-[21.5rem] border border-gray-300 h-12 bg-white pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer cursor-pointer'
-                                        register={{ ...register("speciality") }}
-                                        value={formData.speciality}
+                                        register={{ ...register("specialty") }}
+                                        value={formData.specialty}
                                         onChange={onChange}
                                     >
                                         <option defaultValue disabled>
                                             {" "}
                                             {t("therapists:profile.choose")}
                                         </option>
-                                        <option value='individual counceling'>
+                                        <option value='individual counseling'>
                                             {t("therapists:profile.individual")}
                                         </option>
-                                        <option value='couple counceling'>
+                                        <option value='couple counseling'>
                                             {t("therapists:profile.couple")}
                                         </option>
-                                        <option value='teen counceling'>
+                                        <option value='teen counseling'>
                                             {t("therapists:profile.teen")}
                                         </option>
                                     </select>
                                     <p className='md:self-center md:ml-[-16rem] lg:ml-[-8rem]  text-sm text-red-500 mt-1 animate-pulse '>
-                                        {errors.speciality?.message}
+                                        {errors.specialty?.message}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className=' lg:mx-0 mx-2 p-1 flex flex-col md:flex-row my-5 gap-2 min-w-max'>
+                                <label
+                                    htmlFor='specialty'
+                                    className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
+                                >
+                                    {t("therapists:profile.availability")}
+                                </label>
+                                <div className='w-full mx-0 flex flex-col md:w-[35rem] lg:w-[27.5rem] '>
+                                    <select
+                                        disabled={!edit}
+                                        name='availability'
+                                        className='rtl:ml-0 md:w-[34rem] lg:w-[27rem] w-full md:ml-[6.3rem]  rtl:md:mr-[8rem] rtl:md:w-[28.5rem] rtl:lg:w-[21.5rem] border border-gray-300 h-12 bg-white pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer cursor-pointer'
+                                        register={{ ...register("specialty") }}
+                                        value={formData.specialty}
+                                        onChange={onChange}
+                                    >
+                                        <option defaultValue disabled>
+                                            {" "}
+                                            {t("therapists:profile.choose")}
+                                        </option>
+                                        <option value='on'>
+                                            {t("therapists:profile.yes")}
+                                        </option>
+                                        <option value='off'>
+                                            {t("therapists:profile.no")}
+                                        </option>
+                                    </select>
+                                    <p className='md:self-center md:ml-[-16rem] lg:ml-[-8rem]  text-sm text-red-500 mt-1 animate-pulse '>
+                                        {errors.specialty?.message}
                                     </p>
                                 </div>
                             </div>
