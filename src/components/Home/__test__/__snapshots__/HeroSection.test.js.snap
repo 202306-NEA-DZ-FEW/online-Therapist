@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -150,7 +150,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -243,7 +243,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -336,7 +336,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -429,7 +429,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -522,7 +522,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -615,7 +615,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -708,7 +708,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -801,7 +801,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -893,7 +893,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -985,7 +985,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -1077,7 +1077,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -1169,7 +1169,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -1261,7 +1261,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -1353,7 +1353,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -1445,7 +1445,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
@@ -1537,7 +1537,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <div
-              className=" flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
+              className="flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding"
             >
               <div
                 className="space-y-4"
