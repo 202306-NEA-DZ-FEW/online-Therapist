@@ -172,7 +172,7 @@ const Login = () => {
                             <div className='flex justify-space-between lg:space-x-9 rtl:space-x-reverse space-x-8 pb-10'>
                                 <button type='submit'>
                                     <Button
-                                    transition={false}
+                                        transition={false}
                                         buttonText={t("login.logIn")}
                                         buttonSize='md'
                                         color='darkteal'
@@ -180,7 +180,7 @@ const Login = () => {
                                 </button>
                                 <Link href='/sign-up'>
                                     <Button
-                                    transition={false}
+                                        transition={false}
                                         buttonText={t("login.signUp")}
                                         buttonSize='md'
                                     />

@@ -154,7 +154,7 @@ function Contact() {
 
                             <Link
                                 href='/contactThankYou'
-                                className='mx-auto mb-5'
+                                className='mx-auto mb-16'
                             >
                                 <Button
                                     buttonText={t("contact.submit")}

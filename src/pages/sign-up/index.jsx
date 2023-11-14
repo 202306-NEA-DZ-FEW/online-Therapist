@@ -276,7 +276,10 @@ export default function SignUp() {
                             </div>
                             <div className='flex items-center justify-center space-x-4 '>
                                 <hr className='w-24 lg:w-48 border-Teal' />
-                                <p className='text-lg uppercase font-medium text-gray-700'> {t("signup.or")}</p>
+                                <p className='text-lg uppercase font-medium text-gray-700'>
+                                    {" "}
+                                    {t("signup.or")}
+                                </p>
                                 <hr className='w-24 lg:w-48 border-Teal' />
                             </div>
                             <div className='flex justify-center items-center space-x-10'>
