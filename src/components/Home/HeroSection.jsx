@@ -11,19 +11,18 @@ import { UserAuth } from "@/context/AuthContext";
 import { useRouter } from "next/router";
 
 function HeroSection() {
-    const router = useRouter()
-    const { user } = UserAuth()
+    const router = useRouter();
+    const { user } = UserAuth();
 
     const handleBooking = () => {
-         // Check if the user is logged in
-         if (!user) {
+        // Check if the user is logged in
+        if (!user) {
             // If not logged in, show an alert
             window.alert("You need to be logged in Book an appointment");
         } else {
             router.push("/bookAnAppointment/");
         }
-        
-    }
+    };
     // Define the paths based on the user's authentication status
     // const bookingPath = user ? "/bookAnAppointment" : "/login/login";
     const { t } = useTranslation("homepage");
@@ -64,15 +63,13 @@ function HeroSection() {
                                 </p>
                             </div>
                             <div className='px-auto pt-6 mx-auto'>
-                                
-                                    <Button
-                                        color='teal'
-                                        transition={true}
-                                        buttonText={t("hero.bookingButton")}
-                                        buttonSize='fit'
-                                        clickFunction={handleBooking}
-                                    />
-                                
+                                <Button
+                                    color='teal'
+                                    transition={true}
+                                    buttonText={t("hero.bookingButton")}
+                                    buttonSize='fit'
+                                    clickFunction={handleBooking}
+                                />
                             </div>
                         </div>
                     </div>

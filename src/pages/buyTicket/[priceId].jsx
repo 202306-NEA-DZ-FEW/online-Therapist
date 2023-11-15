@@ -198,7 +198,7 @@ export default function BuyTickect() {
                             clickFunction={handleConfirm}
                         />
                         <p className='font-atkinson text-3xl'>
-                        {t("buyticket.paragraph3")}
+                            {t("buyticket.paragraph3")}
                         </p>
                         <Button
                             transition={false}
