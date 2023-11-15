@@ -36,6 +36,7 @@ function ChangePassword() {
         setLoading(true);
 
         const user = auth.currentUser;
+        console.log("Current User:", user);
         if (!oldPassword) {
             setError(t("password.oldPasswordRequired"));
             return;
@@ -160,24 +161,22 @@ function ChangePassword() {
                                 />
                             </div>
                         )}
-                        {changed ? (
-                            <p>Changed!</p>
-                        ) : (
-                            <button
-                                type='submit'
-                                //disabled={loading}
-                                onClick={handleSubmit}
-                            >
-                                <Button
-                                    transition={false}
-                                    buttonText={
-                                        loading
-                                            ? t("password.Loading")
-                                            : t("password.button")
-                                    }
-                                />
-                            </button>
-                        )}
+
+                        <button
+                            type='submit'
+                            //disabled={loading}
+                            onClick={handleSubmit}
+                        >
+                            <Button
+                                transition={false}
+                                buttonText={
+                                    loading
+                                        ? t("password.Loading")
+                                        : t("password.button")
+                                }
+                            />
+                        </button>
+
                         {/*  <button type='submit'>
                             <Button
                                 transition={false}

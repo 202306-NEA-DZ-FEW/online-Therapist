@@ -16,7 +16,8 @@
         "release": "standard-version",
         "push-release": "git push --follow-tags origin main",
         "postbuild": "next-sitemap --config next-sitemap.config.js",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "dependencies": {
         "@hookform/resolvers": "^3.3.2",
