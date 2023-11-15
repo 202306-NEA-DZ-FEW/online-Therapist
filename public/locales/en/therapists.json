@@ -1,6 +1,8 @@
 {
     "heading": "create an account",
     "buttonText": "Sign Up",
+    "text1": "Thank you for your interest in working with Healing, we have recieved your application.",
+    "text2": "You will receive an email guiding you for the next steps soon after your information is reviewed.",
     "placeholder": {
         "username": "User name",
         "email": "You email",

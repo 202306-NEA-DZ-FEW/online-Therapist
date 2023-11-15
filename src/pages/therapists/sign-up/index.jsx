@@ -92,8 +92,8 @@ const TherapistSignUp = ({ t }) => {
         <Layout>
             {signupSuccess ? (
                 <Thankyou
-                    text1='Thank you for your interest in working with Healing, we have recieved your application.'
-                    text2='You will receive an email guiding you for the next steps soon after your information is reviewed.'
+                    text1={t("therapists:text1")} 
+                    text2={t("therapists:text2")} 
                 />
             ) : (
                 <div className='container px-16 mx-auto my-16 flex flex-col md:flex-row '>

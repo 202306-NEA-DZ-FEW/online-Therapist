@@ -3,15 +3,27 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { images } from "@/util/library";
 import { slideImages } from "@/util/library";
 import Button from "../elements/Button";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-// import { UserAuth } from "@/context/AuthContext";
+import { UserAuth } from "@/context/AuthContext";
+import { useRouter } from "next/router";
 
 function HeroSection() {
-    // const { user } = UserAuth();
+    const router = useRouter()
+    const { user } = UserAuth()
+
+    const handleBooking = () => {
+         // Check if the user is logged in
+         if (!user) {
+            // If not logged in, show an alert
+            window.alert("You need to be logged in Book an appointment");
+        } else {
+            router.push("/bookAnAppointment/");
+        }
+        
+    }
     // Define the paths based on the user's authentication status
     // const bookingPath = user ? "/bookAnAppointment" : "/login/login";
     const { t } = useTranslation("homepage");
@@ -52,14 +64,15 @@ function HeroSection() {
                                 </p>
                             </div>
                             <div className='px-auto pt-6 mx-auto'>
-                                <Link href='/bookAnAppointment'>
+                                
                                     <Button
                                         color='teal'
                                         transition={true}
                                         buttonText={t("hero.bookingButton")}
                                         buttonSize='fit'
+                                        clickFunction={handleBooking}
                                     />
-                                </Link>
+                                
                             </div>
                         </div>
                     </div>

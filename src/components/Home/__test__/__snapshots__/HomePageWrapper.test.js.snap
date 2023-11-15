@@ -83,46 +83,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -176,46 +170,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -269,46 +257,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -362,46 +344,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -455,46 +431,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -548,46 +518,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -641,46 +605,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -734,46 +692,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -827,46 +779,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -919,46 +865,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1011,46 +951,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1103,46 +1037,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1195,46 +1123,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1287,46 +1209,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1379,46 +1295,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1471,46 +1381,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1563,46 +1467,40 @@ Array [
                 <div
                   className="px-auto pt-6 mx-auto"
                 >
-                  <a
-                    href="/bookAnAppointment"
+                  <div
+                    className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onTouchStart={[Function]}
                   >
-                    <div
-                      className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+                    <span
+                      className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                     >
-                      <span
-                        className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-                      >
-                        hero.bookingButton
-                      </span>
-                      <span
-                        className="relative invisible"
-                      >
-                        $
-                        hero.bookingButton
-                      </span>
-                    </div>
-                  </a>
+                        <path
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+                    >
+                      hero.bookingButton
+                    </span>
+                    <span
+                      className="relative invisible"
+                    >
+                      $
+                      hero.bookingButton
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

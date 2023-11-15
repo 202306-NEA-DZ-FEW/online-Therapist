@@ -21,7 +21,7 @@ function RequirementsPage() {
     return (
         <>
             <Layout>
-                <div className='font-atkinson flex flex-col-reverse sm:flex-row mx-24'>
+                <div className='font-atkinson flex flex-col-reverse sm:flex-row mx-16'>
                     <div className='w-full sm:w-2/3 p-5 sm:p-10'>
                         <h1 className='text-4xl font-bold text-Black my-4 lg:my-16 pb-8 text-center  sm:text-center'>
                             {t("requirement.principaleTitle")}
