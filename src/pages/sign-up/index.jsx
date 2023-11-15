@@ -257,7 +257,7 @@ export default function SignUp() {
                                             onChange={onChange}
                                         />
                                     </div>
-                                    <div className='flex items-center justify-center space-x-4 py-4 lg:space-x-9'>
+                                    <div className='flex items-center justify-center rtl:space-x-reverse space-x-4 py-4 lg:space-x-9'>
                                         <Link href='/login'>
                                             <Button
                                                 transition={false}

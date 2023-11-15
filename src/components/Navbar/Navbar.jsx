@@ -73,7 +73,7 @@ export default function Navbar() {
                                     <Link href='/login'>
                                         <Button
                                             transition={false}
-                                            buttonText={t("navbar.login")}
+                                            buttonText={t("signup.login")}
                                             color='darkteal'
                                             buttonSize='fit'
                                         />
@@ -168,7 +168,7 @@ export default function Navbar() {
                                         <Link href='/login'>
                                             <Button
                                                 transition={false}
-                                                buttonText={t("navbar.login")}
+                                                buttonText={t("signup.login")}
                                                 color='darkteal'
                                                 buttonSize='fit'
                                             />

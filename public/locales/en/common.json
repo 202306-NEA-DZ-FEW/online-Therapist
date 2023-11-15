@@ -5,7 +5,6 @@
     "titre21": "Our vision",
     "about2": "We're creating a truly unified and personalized consumer experience; developing technologies to connect to patients and extend the reach of care providers; delivering the highest standard of clinical quality at every touchpoint; and enhancing health decisions and outcomes with smart data and actionable insights.",
     "navbar": {
-        "login": "Log In",
         "home": "Home",
         "blogs": "Blogs",
         "about": "About",
@@ -22,8 +21,6 @@
         "header": "login",
         "email": "Your Email",
         "password": "Your Password",
-        "logIn": "log in",
-        "signUp": "sign up",
         "paragraph": "or"
     },
     "contact": {
@@ -74,8 +71,8 @@
         "password": "Password",
         "passwordconfirm": "Confirm Password",
         "birthdate": "Birth Date",
-        "login": "Login",
-        "signup": "Signup",
+        "login": "Log in",
+        "signup": "Sign up",
         "or": "Or"
     },
     "signupthank": {

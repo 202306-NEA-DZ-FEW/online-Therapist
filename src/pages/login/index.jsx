@@ -173,7 +173,7 @@ const Login = () => {
                                 <button type='submit'>
                                     <Button
                                         transition={false}
-                                        buttonText={t("login.logIn")}
+                                        buttonText={t("signup.login")}
                                         buttonSize='md'
                                         color='darkteal'
                                     />
@@ -181,7 +181,7 @@ const Login = () => {
                                 <Link href='/sign-up'>
                                     <Button
                                         transition={false}
-                                        buttonText={t("login.signUp")}
+                                        buttonText={t("signup.signup")}
                                         buttonSize='md'
                                     />
                                 </Link>
