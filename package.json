@@ -16,7 +16,8 @@
         "release": "standard-version",
         "push-release": "git push --follow-tags origin main",
         "postbuild": "next-sitemap --config next-sitemap.config.js",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "dependencies": {
         "@hookform/resolvers": "^3.3.2",
@@ -29,10 +30,12 @@
         "next-i18next": "^11.2.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-firebase-hooks": "^5.1.1",
         "react-hook-form": "^7.47.0",
         "react-icons": "^4.11.0",
         "react-router-dom": "^6.3.0",
         "react-slick": "^0.29.0",
+        "react-spinners": "^0.13.8",
         "react-test-renderer": "^18.2.0",
         "react-toastify": "^9.1.3",
         "slick-carousel": "^1.8.1",
