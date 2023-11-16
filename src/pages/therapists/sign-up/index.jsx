@@ -10,10 +10,10 @@ import * as yup from "yup";
 
 import Button from "@/components/elements/Button";
 import Input from "@/components/elements/Input";
+import Thankyou from "@/components/Thankyou/Thankyou";
 
 import Layout from "@/layout/Layout";
 import { auth, db } from "@/util/firebase";
-import Thankyou from "@/components/Thankyou/Thankyou";
 
 const TherapistSignUp = ({ t }) => {
     const [signupSuccess, setSignupSuccess] = useState(false);
@@ -62,7 +62,7 @@ const TherapistSignUp = ({ t }) => {
                 data.password
             );
             if (userCredential) {
-                console.log("Success UID: ", userCredential.user.uid);
+                // add toastr
             }
             await setDoc(
                 doc(
@@ -80,7 +80,7 @@ const TherapistSignUp = ({ t }) => {
                 }
             );
         } catch (error) {
-            console.error("Error signing up:", error);
+            // add toastr
         } finally {
             setSignupSuccess(true);
         }
