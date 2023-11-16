@@ -1,4 +1,4 @@
-import Link from "next/link";
+// pages/About.jsx
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React from "react";
@@ -10,31 +10,48 @@ export default function About() {
 
     return (
         <Layout>
-            <div className='w-full lg:w-full bg-white flex justify-center items-center h-screen'>
-                <div className='w-full max-w-screen-lg p-4'>
-                    <section className='w-full relative my-4 lg:my-0'>
-                        <h1 className='rtl:text-right text-3xl font-bold sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl'>
+            <div className='max-w-screen-lg mx-auto p-4'>
+                {/* First Section */}
+                <section className='my-4 lg:my-8 flex flex-col md:flex-row items-center justify-center lg:justify-between bg-gray-100 p-8 rounded-lg border border-gray-300 transition duration-500 ease-in-out transform hover:scale-105'>
+                    <div className='w-full md:w-1/2 lg:w-5/12 mx-auto md:order-2 mb-4 md:mb-0'>
+                        <Image
+                            src='/Images/photo1.jpeg'
+                            alt='Inner Space Therapy 1'
+                            width={800}
+                            height={600}
+                            className='rounded-md shadow-md'
+                        />
+                    </div>
+                    <div className='w-full md:w-1/2 lg:w-5/12 mx-auto md:order-1 text-center md:text-left'>
+                        <h1 className='rtl:text-right text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-Teal'>
                             {t("titre11")}
                         </h1>
-                        <p className='text-description'>{t("about1")}</p>
-                    </section>
-                    <section className='w-full bg-[#ace2e4] relative my-4 lg:my-0'>
-                        <Image
-                            className='w-full lg:w-[400px] lg:h-[246px] max-w-full mx-auto sm:max-w-xs md:max-w-sm lg:max-w-lg'
-                            alt='Rectangle'
-                            src='https://c.animaapp.com/l6bgJnV5/img/rectangle.svg'
-                            width={500}
-                            height={500}
-                        />
-                        <div className='w-full'>
-                            <h1 className='text-3xl font-bold sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl'>
-                                {t("titre21")}
-                            </h1>
+                        <p className='rtl:text-right text-lg text-gray-700 mb-4'>
+                            {t("about1")}
+                        </p>
+                    </div>
+                </section>
 
-                            <p className='text-description'>{t("about2")}</p>
-                        </div>
-                    </section>
-                </div>
+                {/* Second Section */}
+                <section className='my-4 lg:my-8 flex flex-col md:flex-row items-center justify-center lg:justify-between bg-blue-100 p-6 rounded-md border border-blue-500 hover:border-blue-700 transition duration-300 ease-in-out transform hover:scale-105'>
+                    <div className='w-full md:w-1/2 lg:w-5/12 mx-auto md:order-1 mb-4 md:mb-0'>
+                        <Image
+                            src='/Images/photo2.jpeg'
+                            alt='Inner Space Therapy 2'
+                            width={800}
+                            height={600}
+                            className='rounded-md shadow-md'
+                        />
+                    </div>
+                    <div className='w-full md:w-1/2 lg:w-5/12 mx-auto md:order-2 text-center md:text-left'>
+                        <h1 className='rtl:text-right text-4xl font-extrabold text-Teal mb-2'>
+                            {t("titre21")}
+                        </h1>
+                        <p className='rtl:text-right text-lg text-gray-600 mb-4'>
+                            {t("about2")}
+                        </p>
+                    </div>
+                </section>
             </div>
         </Layout>
     );
