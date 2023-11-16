@@ -1,4 +1,8 @@
 import * as React from "react";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import { motion } from "framer-motion";
@@ -15,6 +19,8 @@ export default function Layout({ children }) {
             >
                 {children}
             </motion.div>
+            <ToastContainer position='top-center' />
+            {children}
             <Footer />
         </>
     );
