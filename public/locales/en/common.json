@@ -127,5 +127,16 @@
         "paragraph": "We only support cards as a payment method at the moment!",
         "deleteButton": "Delete Card",
         "addButton": "ADD NEW CARD"
+    },
+    "password": {
+        "input1": "Old password ",
+        "input2": "New password",
+        "button": "change Password",
+        "message": "Password updated successfully",
+        "wrongPasswordError": "Incorrect old password entered. Please try again.",
+        "Loading": "Loading...",
+        "authError": "User is not authenticated.",
+        "oldPasswordRequired": "Old password is required",
+        "newPasswordRequired": "New password is required"
     }
 }
