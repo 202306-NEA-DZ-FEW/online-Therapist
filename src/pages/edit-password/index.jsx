@@ -140,7 +140,6 @@ function ChangePassword() {
                         />
                     </div>
                     <div className='mb-4'>
-
                         <label htmlFor='new-password'>
                             {t("password.input2")}
                         </label>
@@ -153,7 +152,6 @@ function ChangePassword() {
                         />
                     </div>
                     <div className='flex justify-center'>
-
                         {loading && (
                             <div className='text-center'>
                                 <DotLoader
