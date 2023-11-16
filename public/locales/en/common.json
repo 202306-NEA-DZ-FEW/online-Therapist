@@ -136,5 +136,9 @@
         "authError": "User is not authenticated.",
         "oldPasswordRequired": "Old password is required",
         "newPasswordRequired": "New password is required"
+    },
+    "404": {
+        "titre": "Page Not Found",
+        "text": "Page you are trying to open does not exist. You may have mistyped the address, or the page has been moved to another URL."
     }
 }
