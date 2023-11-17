@@ -5,18 +5,22 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/Navbar";
+import { motion } from "framer-motion";
 
 export default function Layout({ children }) {
-    // Put Header or Footer around the children element
-    // Example
     return (
         <>
             <Navbar />
             <ToastContainer position='top-center' />
-            {children}
+            <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 15 }}
+                transition={{ delay: 0.25 }}
+            >
+                {children}
+            </motion.div>
             <Footer />
         </>
     );
-
-    // return <>{children}</>;
 }

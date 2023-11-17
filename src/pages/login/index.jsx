@@ -132,7 +132,7 @@ const Login = () => {
         <Layout>
             <div className='flex justify-center items-center space-x-20 rtl:space-x-reverse p-10 lg:pb-28 pb-10 '>
                 <div className=''>
-                    <h1 className='md:text-4xl text-3xl font-atkinson w-fit lg:mb-16 mb-10 uppercase'>
+                    <h1 className='md:text-4xl text-3xl text-center font-atkinson font-bold w-fit lg:mb-10 mb-10 uppercase'>
                         {t("login.header")}
                     </h1>
                     <div className='flex flex-col gap-10 lg:w-96 w-80 h-96 border shadow-xl rounded-lg lg:mb-6 mb-4 justify-center items-center'>
@@ -169,16 +169,19 @@ const Login = () => {
                                     }
                                 />
                             </div>
-                            <div className='flex justify-space-between lg:space-x-16 rtl:space-x-reverse space-x-8 pb-10'>
+                            <div className='flex justify-space-between lg:space-x-9 rtl:space-x-reverse space-x-8 pb-10'>
                                 <button type='submit'>
                                     <Button
-                                        buttonText={t("login.logIn")}
+                                        transition={false}
+                                        buttonText={t("signup.login")}
                                         buttonSize='md'
+                                        color='darkteal'
                                     />
                                 </button>
                                 <Link href='/sign-up'>
                                     <Button
-                                        buttonText={t("login.signUp")}
+                                        transition={false}
+                                        buttonText={t("signup.signup")}
                                         buttonSize='md'
                                     />
                                 </Link>
@@ -187,14 +190,14 @@ const Login = () => {
                         </form>
                     </div>
 
-                    <div className=' flex items-center justify-center uppercase rtl:space-x-reverse space-x-4'>
+                    <div className='mb-2 flex items-center justify-center uppercase rtl:space-x-reverse space-x-4'>
                         <hr className='lg:w-28 w-20 shadow-lg border-Teal border-top' />
-                        <p className='text-md font-medium text-gray-700'>
+                        <p className='text-lg font-medium text-gray-700'>
                             {t("login.paragraph")}
                         </p>
                         <hr className='lg:w-28 w-20 shadow-lg border-Teal border-top' />
                     </div>
-                    <div className='flex justify-center items-center rtl:space-x-reverse space-x-6 pt-2'>
+                    <div className='flex justify-center items-center rtl:space-x-reverse space-x-10 pt-2'>
                         <button onClick={handleFacebookLogin}>
                             <Image
                                 src='/Images/facebook.svg'
@@ -220,7 +223,7 @@ const Login = () => {
                         src='/Images/login.svg'
                         alt='Login image'
                         className='login-image mx-auto'
-                        width={674}
+                        width={500}
                         height={404}
                         priority={true}
                     />
