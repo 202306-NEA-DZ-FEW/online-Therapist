@@ -201,6 +201,7 @@ export function AppWrapper({ children }) {
                 updateProfilePhoto,
                 fetchUserCards,
                 cards,
+                setCards
             }}
         >
             {loading ? (

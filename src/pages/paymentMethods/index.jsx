@@ -15,10 +15,8 @@ import { UserAuth } from "@/context/AuthContext";
 import { doc, deleteDoc } from "firebase/firestore";
 
 export default function PaymentMethods() {
-    const { cards } = UserAuth();
+    const { cards, setCards } = UserAuth();
     const { t } = useTranslation("common");
-    // const [cards, setCards] = useState([]);
-    // const [loading, setLoading] = useState(true);
     const router = useRouter();
     const language = router.locale;
 
