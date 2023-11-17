@@ -27,6 +27,7 @@ export function AppWrapper({ children }) {
     const [loading, setLoading] = useState(true);
     const [profilePicture, setProfilePicture] = useState(null);
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false);
+    const [cards, setCards] = useState([]);
 
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider(); // State to track signup success
@@ -148,20 +149,40 @@ export function AppWrapper({ children }) {
 
     const fetchUserCards = async (userUid) => {
         try {
-          const cardsCollection = collection(db, 'cards');
-          const userCardsQuery = query(cardsCollection, where('uid', '==', userUid));
-          const querySnapshot = await getDocs(userCardsQuery);
-          const userCards = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-    
-          console.log('User Cards:', userCards);
-          return userCards;
+            const cardsCollection = collection(db, "cards");
+            const userCardsQuery = query(
+                cardsCollection,
+                where("uid", "==", userUid)
+            );
+            const querySnapshot = await getDocs(userCardsQuery);
+            const userCards = querySnapshot.docs.map((doc) => ({
+                ...doc.data(),
+                id: doc.id,
+            }));
+
+            console.log("User Cards:", userCards);
+            return userCards;
         } catch (error) {
-          console.error('Error fetching user cards:', error);
-          return [];
-        }  finally {
-          setLoading(false); 
+            console.error("Error fetching user cards:", error);
+            return [];
+        } finally {
+            setLoading(false);
         }
-      };
+    };
+
+    useEffect(() => {
+        const fetchCards = async () => {
+            try {
+                const userId = user.uid;
+                const userCards = await fetchUserCards(userId);
+                setCards(userCards);
+            } catch (error) {
+                console.error("Error fetching cards:", error);
+            }
+        };
+
+        fetchCards();
+    }, [user]);
 
     return (
         <AuthContext.Provider
@@ -178,7 +199,8 @@ export function AppWrapper({ children }) {
                 loading,
                 setLoading,
                 updateProfilePhoto,
-                fetchUserCards
+                fetchUserCards,
+                cards
             }}
         >
             {loading ? (
