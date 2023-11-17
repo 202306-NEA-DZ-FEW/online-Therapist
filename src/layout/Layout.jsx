@@ -11,6 +11,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Navbar />
+            <ToastContainer position='top-center' />
             <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -19,8 +20,6 @@ export default function Layout({ children }) {
             >
                 {children}
             </motion.div>
-            <ToastContainer position='top-center' />
-            {children}
             <Footer />
         </>
     );

@@ -43,9 +43,6 @@ const TicketsSection = () => {
                     prices.map((price) => (
                         <TicketCard price={price} key={price.id} />
                     ))}
-                {/* <TicketCard numberOfTickets={5} price={10} />
-                <TicketCard numberOfTickets={25} price={40} />
-                <TicketCard numberOfTickets={50} price={70} /> */}
             </div>
             <AreYouCouncelor />
         </div>
