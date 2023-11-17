@@ -169,10 +169,9 @@ export default function BuyTickect() {
                         </Slider>
                     ) : (
                         <div className='flex justify-center w-1/2 p-4 m-auto rounded-xl border-2 h-44 items-center'>
-                           
                             <p className='font-atkinson text-xl items-center text-center'>
                                 {" "}
-                                 {t("buyticket.noCardsMessage")} <br />
+                                {t("buyticket.noCardsMessage")} <br />
                                 <Link
                                     href='/addnewcard/'
                                     className='py-2 my-4 px-3 inline-flex items-center gap-x-1 text-lg font-medium rounded-full border border-dashed border-Teal bg-white text-gray-800 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
