@@ -88,7 +88,7 @@ export default function BuyTickect() {
             console.error("Error creating Stripe session:", error);
         }
     };
-    
+
     const settings = {
         dots: false,
         arrows: true,
@@ -145,38 +145,41 @@ export default function BuyTickect() {
                     </div>
 
                     {cards.length > 0 ? ( // Check if there are saved cards
-                    <Slider {...settings} className='p-1 m-1 md:p-5 md:m-5 lg:m-16 lg:p-5'>
-                        {cards.map((card, index) => (
-                            <div key={index} className=" pl-6 md:pl-10 lg:pl-5 w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[370px] lg:h-[220px] rounded-2xl flex content-center items-center justify-center">
-
-                                <PaymentCard
-                                     name={card.nameOnCard}
-                                     number={`**** **** **** ${card.cardNumber.slice(
-                                         -4
-                                     )}`}
-                                     expDate={card.expiryDate}
-                                     // CardType={card.CardType}
-                                    // name={card.name}
-                                    // number={card.number}
-                                    // expDate={card.expDate}
-                                    // CardType={card.CardType}
-                                    selected={selectedCard === card}
-                                    onClick={() => handleCardClick(card)}
-                                />
-                            </div>
-                        ))}
-                    </Slider>
-                     ) : (
+                        <Slider
+                            {...settings}
+                            className='p-1 m-1 md:p-5 md:m-5 lg:m-16 lg:p-5'
+                        >
+                            {cards.map((card, index) => (
+                                <div
+                                    key={index}
+                                    className=' pl-6 md:pl-10 lg:pl-5 w-[270px] h-[190px] md:w-[280px] md:h-[190px] lg:w-[370px] lg:h-[220px] rounded-2xl flex content-center items-center justify-center'
+                                >
+                                    <PaymentCard
+                                        name={card.nameOnCard}
+                                        number={`**** **** **** ${card.cardNumber.slice(
+                                            -4
+                                        )}`}
+                                        expDate={card.expiryDate}
+                                        // CardType={card.CardType}
+                                        selected={selectedCard === card}
+                                        onClick={() => handleCardClick(card)}
+                                    />
+                                </div>
+                            ))}
+                        </Slider>
+                    ) : (
                         <div className='flex justify-center w-1/2 p-4 m-auto rounded-xl border-2 h-44 items-center'>
-                            {/* {t("paymentMethods.noCardsMessage")} */}
+                           
                             <p className='font-atkinson text-xl items-center text-center'>
                                 {" "}
-                                You have no saved cards <br/>
-                                {/* <Link href="/addnewcard/">Add new card</Link> */}
-                                <Link href="/addnewcard/" className="py-2 my-4 px-3 inline-flex items-center gap-x-1 text-lg font-medium rounded-full border border-dashed border-Teal bg-white text-gray-800 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                <FaPlus />
-  Add new card
-</Link>
+                                 {t("buyticket.noCardsMessage")} <br />
+                                <Link
+                                    href='/addnewcard/'
+                                    className='py-2 my-4 px-3 inline-flex items-center gap-x-1 text-lg font-medium rounded-full border border-dashed border-Teal bg-white text-gray-800 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
+                                >
+                                    <FaPlus />
+                                    {t("paymentMethods.addButton")}
+                                </Link>
                             </p>
                         </div>
                     )}

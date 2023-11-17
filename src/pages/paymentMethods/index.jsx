@@ -12,10 +12,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { db } from "@/util/firebase";
 import { UserAuth } from "@/context/AuthContext";
-import {
-    doc,
-    deleteDoc,
-} from "firebase/firestore";
+import { doc, deleteDoc } from "firebase/firestore";
 
 export default function PaymentMethods() {
     const { cards } = UserAuth();
@@ -135,11 +132,9 @@ export default function PaymentMethods() {
                     </Slider>
                 ) : (
                     <div className='flex justify-center w-1/2 p-4 m-auto rounded-xl border-2 h-44 items-center'>
-                        {/* {t("paymentMethods.noCardsMessage")} */}
                         <p className='font-atkinson text-xl items-center text-center'>
                             {" "}
-                            You have no saved cards, click the button below to
-                            add new card
+                            {t("paymentMethods.noCardsMessage")}
                         </p>
                     </div>
                 )}
