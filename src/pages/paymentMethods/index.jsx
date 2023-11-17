@@ -91,7 +91,7 @@ export default function PaymentMethods() {
     };
     return (
         <Layout>
-            <div className='h-screen m-16 space-y-16'>
+            <div className='h-[vh] m-16 space-y-16'>
                 <div className='ml-10 lg:rtl:mr-24 space-y-4'>
                     <h1 className='font-atkinson text-4xl uppercase'>
                         {t("paymentMethods.title")}
