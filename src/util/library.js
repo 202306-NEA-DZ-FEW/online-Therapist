@@ -77,7 +77,7 @@ export const teamMembers = [
     },
 ];
 
-export  const links = [
+export const links = [
     {
         id: 1,
         name: "home",

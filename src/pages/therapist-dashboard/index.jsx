@@ -26,7 +26,7 @@ export default function TherapistDashboard() {
                 return null;
         }
     };
-   
+
     return (
         <div className='font-poppins'>
             <div className='h-full flex flex-row'>
@@ -74,24 +74,25 @@ export default function TherapistDashboard() {
                                     </div>
                                 </>
                             )}
-                        </div>     
+                        </div>
                         <div className='flex font- flex-col space-y-2'>
                             <hr />
                             {links.map((link) => (
-                              <Link
-                                key={link.id}
-                                onClick={() => setActiveLink(link.name)}
-                                href={link.href}
-                                className={`flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out ${activeLink === link.name
-                                    ? "bg-Teal text-white"
-                                    : ""}`}
-                              >
-                                <span className='text-2xl'>
-                                  {link.icon}
-                                </span>
-                                <span>{link.text}</span>
-                              </Link>
-                               
+                                <Link
+                                    key={link.id}
+                                    onClick={() => setActiveLink(link.name)}
+                                    href={link.href}
+                                    className={`flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out ${
+                                        activeLink === link.name
+                                            ? "bg-Teal text-white"
+                                            : ""
+                                    }`}
+                                >
+                                    <span className='text-2xl'>
+                                        {link.icon}
+                                    </span>
+                                    <span>{link.text}</span>
+                                </Link>
                             ))}
 
                             <hr />
