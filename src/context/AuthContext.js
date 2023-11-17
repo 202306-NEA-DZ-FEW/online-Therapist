@@ -14,6 +14,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 import { auth } from "@/util/firebase";
 import { db } from "@/util/firebase";
+import { collection, getDocs, where, query } from "firebase/firestore";
 
 const AuthContext = createContext();
 
@@ -26,6 +27,7 @@ export function AppWrapper({ children }) {
     const [loading, setLoading] = useState(true);
     const [profilePicture, setProfilePicture] = useState(null);
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false);
+
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider(); // State to track signup success
 
@@ -144,6 +146,23 @@ export function AppWrapper({ children }) {
         updateProfile(user, { photoURL });
     };
 
+    const fetchUserCards = async (userUid) => {
+        try {
+          const cardsCollection = collection(db, 'cards');
+          const userCardsQuery = query(cardsCollection, where('uid', '==', userUid));
+          const querySnapshot = await getDocs(userCardsQuery);
+          const userCards = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    
+          console.log('User Cards:', userCards);
+          return userCards;
+        } catch (error) {
+          console.error('Error fetching user cards:', error);
+          return [];
+        }  finally {
+          setLoading(false); 
+        }
+      };
+
     return (
         <AuthContext.Provider
             value={{
@@ -159,6 +178,7 @@ export function AppWrapper({ children }) {
                 loading,
                 setLoading,
                 updateProfilePhoto,
+                fetchUserCards
             }}
         >
             {loading ? (
