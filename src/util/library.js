@@ -6,6 +6,51 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { HiHome } from "react-icons/hi";
 
+export const slideImages = [
+    {
+        imgSrc: "2",
+        id: "1",
+    },
+    {
+        imgSrc: "4",
+        id: "2",
+    },
+    {
+        imgSrc: "6",
+        id: "3",
+    },
+    {
+        imgSrc: "8",
+        id: "4",
+    },
+    {
+        imgSrc: "13",
+        id: "5",
+    },
+
+    {
+        imgSrc: "1",
+        id: "6",
+    },
+    {
+        imgSrc: "17",
+        id: "7",
+    },
+
+    {
+        imgSrc: "14",
+        id: "8",
+    },
+    // {
+    //     imgSrc: "18",
+    //     id: "9",
+    // },
+    // {
+    //     imgSrc: "20",
+    //     id: "10",
+    // },
+];
+
 export const images = [
     {
         id: 1,
