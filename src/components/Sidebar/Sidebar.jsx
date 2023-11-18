@@ -8,37 +8,37 @@ export default function Sidebar() {
     const { user, activeLink, setActiveLink } = UserAuth();
     const renderLinks = () => {
         if (user && user.isTherapist) {
-          return therapistLinks.map((link) => (
-            <Link
-              key={link.id}
-              onClick={() => setActiveLink(link.name)}
-              href={link.href}
-              className={`flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out ${
-                activeLink === link.name ? "bg-Teal text-white" : ""
-              }`}
-            >
-              <span className='text-2xl'>{link.icon}</span>
-              <span className='hidden md:block'>{link.text}</span>
-            </Link>
-          ));
+            return therapistLinks.map((link) => (
+                <Link
+                    key={link.id}
+                    onClick={() => setActiveLink(link.name)}
+                    href={link.href}
+                    className={`flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out ${
+                        activeLink === link.name ? "bg-Teal text-white" : ""
+                    }`}
+                >
+                    <span className='text-2xl'>{link.icon}</span>
+                    <span className='hidden md:block'>{link.text}</span>
+                </Link>
+            ));
         } else if (user) {
-          return patientLinks.map((link) => (
-            <Link
-              key={link.id}
-              onClick={() => setActiveLink(link.name)}
-              href={link.href}
-              className={`flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out ${
-                activeLink === link.name ? "bg-Teal text-white" : ""
-              }`}
-            >
-              <span className='text-2xl'>{link.icon}</span>
-              <span className='hidden md:block'>{link.text}</span>
-            </Link>
-          ));
+            return patientLinks.map((link) => (
+                <Link
+                    key={link.id}
+                    onClick={() => setActiveLink(link.name)}
+                    href={link.href}
+                    className={`flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out ${
+                        activeLink === link.name ? "bg-Teal text-white" : ""
+                    }`}
+                >
+                    <span className='text-2xl'>{link.icon}</span>
+                    <span className='hidden md:block'>{link.text}</span>
+                </Link>
+            ));
         }
-    
+
         return null;
-      };
+    };
 
     return (
         <div className='bg-white h-screen md:block shadow-xl px-3 w-16 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out'>
