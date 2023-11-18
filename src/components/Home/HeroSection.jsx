@@ -3,62 +3,77 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import { images } from "@/util/library";
+import { slideImages } from "@/util/library";
 import Button from "../elements/Button";
 import Link from "next/link";
-// import { UserAuth } from "@/context/AuthContext";
+import { useTranslation } from "next-i18next";
+import { UserAuth } from "@/context/AuthContext";
+import { useRouter } from "next/router";
 
 function HeroSection() {
-    // const { user } = UserAuth();
+    const router = useRouter();
+    const { user } = UserAuth();
+
+    const handleBooking = () => {
+        // Check if the user is logged in
+        if (!user) {
+            // If not logged in, show an alert
+            window.alert("You need to be logged in to Book an appointment");
+        } else {
+            router.push("/bookAnAppointment/");
+        }
+    };
     // Define the paths based on the user's authentication status
     // const bookingPath = user ? "/bookAnAppointment" : "/login/login";
-
+    const { t } = useTranslation("homepage");
     const settings = {
-        fade: true,
+        fade: false,
         infinite: true,
         arrows: false,
         autoplay: true,
         autoplaySpeed: 5000,
-        pauseOnHover: true,
+        pauseOnHover: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,
     };
 
     return (
-        <Slider {...settings} className='bg-GreenLight'>
-            {images.map((image) => (
-                <div key={image.id}>
-                    <Image
-                        className='object-cover w-full max-h-[80vh]'
-                        width={400}
-                        height={400}
-                        src={image.imgSrc}
-                        alt='Therapist Sessions'
-                    />
-                    <div className=' flex justify-between absolute bottom-1.5 text-left left-0 right-0 p-4 bg-opacity-50 bg-white bg-clip-padding'>
-                        <div className=''>
-                            <h2 className='text-lg md:text-xl lg:text-3xl sm:text-md text-DarkTeal font-extrabold font-atkinson'>
-                                Therapy at Your Fingertips: Access the
-                                World&apos;s Largest Network of Therapists
-                            </h2>
-                            <p className='hidden sm:block text-lg md:text-xl lg:text-2xl font-opensans'>
-                                Get the same quality care as in-office therapy,
-                                but with the convenience and flexibility of
-                                online.
-                            </p>
-                        </div>
-                        <div className='px-auto pt-4 mx-auto'>
-                            <Link href='/bookAnAppointment'>
+        <Slider {...settings} className='bg-white'>
+            {slideImages.map((img) => (
+                <>
+                    <div
+                        key={img.id}
+                        style={{
+                            backgroundImage: `url(/Images/${img.imgSrc}.jpg)`,
+                        }}
+                        className='h-[90vh] bg-cover bg-center relative'
+                    >
+                        <div className='flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding'>
+                            <div className='space-y-4'>
+                                <h2 className='text-3xl md:text-4xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson'>
+                                    {t("hero.heading")}
+                                    <br />
+                                </h2>
+                                <p className='text-xl md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson'>
+                                    {t("hero.text1")}
+                                </p>
+                                <p className='hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose'>
+                                    {t("hero.text2")}
+                                </p>
+                            </div>
+                            <div className='px-auto pt-6 mx-auto'>
                                 <Button
-                                    buttonText='Book An Appointment'
+                                    color='teal'
+                                    transition={true}
+                                    buttonText={t("hero.bookingButton")}
                                     buttonSize='fit'
+                                    clickFunction={handleBooking}
                                 />
-                            </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </>
             ))}
         </Slider>
     );

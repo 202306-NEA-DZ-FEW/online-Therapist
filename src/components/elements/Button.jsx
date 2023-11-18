@@ -120,7 +120,7 @@ function Button({
         ) : (
             <div
                 onClick={clickFunction}
-                className={`bg-Teal border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-black whitespace-no-wrap rounded-lg shadow-md hover:bg-DarkTeal hover:text-white focus:outline-none hover:cursor-pointer ${size}`}
+                className={`bg-Teal border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-white whitespace-no-wrap rounded-lg shadow-md hover:bg-DarkTeal hover:text-white focus:outline-none hover:cursor-pointer ${size}`}
             >
                 {buttonText}
             </div>

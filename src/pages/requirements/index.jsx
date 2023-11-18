@@ -21,12 +21,12 @@ function RequirementsPage() {
     return (
         <>
             <Layout>
-                <div className='flex flex-col-reverse sm:flex-row'>
+                <div className='font-atkinson flex flex-col-reverse sm:flex-row mx-16'>
                     <div className='w-full sm:w-2/3 p-5 sm:p-10'>
-                        <h1 className='text-2xl font-bold text-Teal pb-5 text-center  sm:text-center'>
+                        <h1 className='text-4xl font-bold text-Black my-4 lg:my-16 pb-8 text-center  sm:text-center'>
                             {t("requirement.principaleTitle")}
                         </h1>
-                        <h3 className='text-lg font-semibold text-Teal p-1'>
+                        <h3 className=' uppercase text-lg font-semibold text-Teal p-1'>
                             {t("requirement.title1")}
                         </h3>
                         <p
@@ -36,7 +36,7 @@ function RequirementsPage() {
                         >
                             {t("requirement.paragraph1")}
                         </p>
-                        <h3 className='text-lg font-semibold text-Teal p-1'>
+                        <h3 className='uppercase text-lg font-semibold text-Teal p-1'>
                             {t("requirement.title2")}
                         </h3>
                         <p
@@ -46,7 +46,7 @@ function RequirementsPage() {
                         >
                             {t("requirement.paragraph2")}
                         </p>
-                        <h3 className='text-lg font-semibold text-Teal p-1'>
+                        <h3 className='uppercase text-lg font-semibold text-Teal p-1'>
                             {t("requirement.title3")}
                         </h3>
                         <p
@@ -63,16 +63,21 @@ function RequirementsPage() {
                             alt='therapist illustration'
                             width={600}
                             height={300}
+                            className=''
                         />
                     </div>
                 </div>
 
-                <div className={`pl-10 ${language === "ar" ? "pr-10" : ""}`}>
+                <div
+                    className={`mx-24 pl-10 ${
+                        language === "ar" ? "pr-10" : ""
+                    }`}
+                >
                     <h1 className='text-2xl font-bold text-Teal pb-5'>
                         {t("requirement.principaleTitle2")}
                     </h1>
                     <ul
-                        className={`list-disc ${
+                        className={`ml-4 list-disc ${
                             language === "ar" ? "text-right" : ""
                         }`}
                     >
@@ -84,7 +89,7 @@ function RequirementsPage() {
                     </ul>
                 </div>
 
-                <div className='p-10'>
+                <div className='mx-36 mb-16 mt-10 '>
                     <Link href='/therapists/sign-up'>
                         <Button
                             buttonText={t("requirement.getStarted")}

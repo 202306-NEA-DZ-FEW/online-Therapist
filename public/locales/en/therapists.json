@@ -1,6 +1,8 @@
 {
     "heading": "create an account",
     "buttonText": "Sign Up",
+    "text1": "Thank you for your interest in working with Healing, we have recieved your application.",
+    "text2": "You will receive an email guiding you for the next steps soon after your information is reviewed.",
     "placeholder": {
         "username": "User name",
         "email": "You email",
@@ -17,5 +19,31 @@
         "password": "Password is required",
         "passwordMin": "Password must be at least 8 characters",
         "passwordMatch": "Password don't match"
+    },
+    "profile": {
+        "title": "therapist profile",
+        "fullname": "Full Name",
+        "bio": "Bio",
+        "birthdate": "Birth Date",
+        "email": "Email",
+        "phone": "Phone Number",
+        "age": "Age",
+        "gender": "Gender",
+        "speciality": "Specialty",
+        "male": "Male",
+        "female": "Female",
+        "individual": "Individual Counceling",
+        "couple": "Couple Counceling",
+        "teen": "Teen Counceling",
+        "save": "Save",
+        "edit": "edit",
+        "choose": "Choose ...",
+        "availability": "Available",
+        "yes": "Yes",
+        "no": "No",
+        "notifications": {
+            "updateSuccess": "Profile information updated successfully ",
+            "image": "Image has been saved successfully"
+        }
     }
 }

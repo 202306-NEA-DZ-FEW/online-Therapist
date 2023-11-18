@@ -2,27 +2,48 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="p-10 md:pl-10 bg-GreenLight md:pr-10 lg:pl-20 lg:pr-20"
+  className=" p-10 md:pl-10 bg-LightBeige md:pr-10 lg:pl-32 lg:pr-32"
 >
-  <h2
-    className="text-center sm:text-xl md:text-2xl lg:text-4xl uppercase text-DarkTeal font-atkinson m-0 pl-6 pr-6"
-  >
-    the world's largest network of professional, licensed, accredited, and experienced therapists
-  </h2>
   <div
-    className="md:p-8 lg:p-0 max-w-2xl lg:max-w-none"
+    style={
+      Object {
+        "overflow": "hidden",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "opacity": 0,
+          "transform": "translateY(75px) translateZ(0)",
+        }
+      }
+    >
+      <h2
+        className="text-center font-semibold lg:font-normal lg:leading-tight lg:text-start pt-12 text-2xl md:text-2xl lg:text-5xl uppercase text-black font-atkinson m-0 pl-6 pr-6"
+      >
+        booking.heading1
+         
+        <br />
+        booking.heading2
+      </h2>
+    </div>
+  </div>
+  <div
+    className="ml-24 lg:ml-0 md:p-8 lg:p-0 max-w-2xl lg:max-w-none"
   >
     <div
       className="flex flex-wrap text-base font-semibold leading-7 text-white lg:space-x-10 md:space-x-5 space-x-5/2 items-center justify-evenly"
     >
       <div
-        className="m-10 p-8"
+        className="m-10 p-10"
       >
         <div
           className="group flip-card relative"
         >
           <div
-            className="flip-card-inner flex flex-col items-center"
+            className="flip-card-inner flex flex-col items-end"
           >
             <div
               className="flip-card-front absolute w-32 h-32"
@@ -46,13 +67,13 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="m-10 p-8"
+        className="m-10 p-10"
       >
         <div
           className="group flip-card relative"
         >
           <div
-            className="flip-card-inner flex flex-col items-center"
+            className="flip-card-inner flex flex-col items-end"
           >
             <div
               className="flip-card-front absolute w-32 h-32"
@@ -76,13 +97,13 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="m-10 p-8"
+        className="m-10 p-10"
       >
         <div
           className="group flip-card relative"
         >
           <div
-            className="flip-card-inner flex flex-col items-center"
+            className="flip-card-inner flex flex-col items-end"
           >
             <div
               className="flip-card-front absolute w-32 h-32"
@@ -106,13 +127,13 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="m-10 p-8"
+        className="m-10 p-10"
       >
         <div
           className="group flip-card relative"
         >
           <div
-            className="flip-card-inner flex flex-col items-center"
+            className="flip-card-inner flex flex-col items-end"
           >
             <div
               className="flip-card-front absolute w-32 h-32"
@@ -136,13 +157,13 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="m-10 p-8"
+        className="m-10 p-10"
       >
         <div
           className="group flip-card relative"
         >
           <div
-            className="flip-card-inner flex flex-col items-center"
+            className="flip-card-inner flex flex-col items-end"
           >
             <div
               className="flip-card-front absolute w-32 h-32"
@@ -168,55 +189,91 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="text-black lg:text-sm md:text-xs sm:text-xs text-left mx-auto mt-20 p-4 md:p-8 lg:p-10 max-w-2xl lg:max-w-none"
+    className=" text-black lg:text-lg md:text-lg text-md text-left mx-auto mt-20 p-4 md:p-8 lg:p-8 max-w-2xl lg:max-w-none"
   >
-    <p>
-      Life can be tough sometimes. We all go through challenges that can make us feel overwhelmed, stressed, and anxious. When things are getting difficult, it's important to reach out for help. Therapy can be a great way to work through your challenges and improve your overall well-being. But traditional therapy can be inconvenient and expensive. That's where we come in. We offer a unique opportunity to access the world's largest network of licensed, accredited, and experienced therapists, all from the comfort of your own home. With us, you can get the same professionalism and quality care as you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.
-    </p>
-  </div>
-  <div
-    className="flex justify-center m-4 md:m-6 lg:m-10 p-4"
-  >
-    <a
-      href="/bookAnAppointment"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onTouchStart={[Function]}
+    <div
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
       <div
-        className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateY(75px) translateZ(0)",
+          }
+        }
       >
-        <span
-          className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
-        >
-          <svg
-            className="w-6 h-6 "
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-            />
-          </svg>
-        </span>
-        <span
-          className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
-        >
-          Book An Appointment
-        </span>
-        <span
-          className="relative invisible"
-        >
-          $
-          Book An Appointment
-        </span>
+        <p>
+          booking.paragraph
+        </p>
       </div>
-    </a>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "overflow": "hidden",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "opacity": 0,
+          "transform": "translateY(75px) translateZ(0)",
+        }
+      }
+    >
+      <div
+        className="flex justify-center m-4 md:m-6 lg:mb-16 "
+      >
+        <a
+          href="/bookAnAppointment"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+          >
+            <span
+              className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
+            </span>
+            <span
+              className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+            >
+              hero.bookingButton
+            </span>
+            <span
+              className="relative invisible"
+            >
+              $
+              hero.bookingButton
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 `;
