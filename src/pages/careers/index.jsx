@@ -16,7 +16,7 @@ function Careers() {
 
     return (
         <Layout className='font-atkinson'>
-            <div className='mx-8 my-5 lg:mx-20 lg:my-10'>
+            <div className='mx-8 my-5 lg:mx-24 lg:my-10'>
                 <h1 className='text-4xl lg:text-5xl pb-4 bg-LightBeige lg:bg-inherit text-center p-3 lg:text-left lg:p-0 rounded-lg lg:rtl:text-right'>
                     {t("careers.mainTitle")}
                 </h1>

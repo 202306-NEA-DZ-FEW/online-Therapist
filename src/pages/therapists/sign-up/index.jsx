@@ -92,17 +92,17 @@ const TherapistSignUp = ({ t }) => {
         <Layout>
             {signupSuccess ? (
                 <Thankyou
-                    text1='Thank you for your interest in working with Healing, we have recieved your application.'
-                    text2='You will receive an email guiding you for the next steps soon after your information is reviewed.'
+                    text1={t("therapists:text1")}
+                    text2={t("therapists:text2")}
                 />
             ) : (
-                <div className='container mx-auto my-10 flex flex-col md:flex-row '>
+                <div className='container px-16 mx-auto my-16 flex flex-col md:flex-row '>
                     <div className='p-8 shadow-lg lg:p-4 rounded w-full'>
                         <form
                             className='space-y-4 lg:space-y-4'
                             onSubmit={handleSubmit(onSubmit)}
                         >
-                            <h2 className='font-normal block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black/80 mx-5 mb-10'>
+                            <h2 className='font-atkinson block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words text-black/80 mx-5 mb-10'>
                                 {/* create an account */}
 
                                 {t("therapists:heading")}

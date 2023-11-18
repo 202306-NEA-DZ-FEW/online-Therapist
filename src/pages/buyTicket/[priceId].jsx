@@ -201,13 +201,13 @@ export default function BuyTickect() {
                             clickFunction={handleConfirm}
                         />
                         <p className='font-atkinson text-3xl'>
-                            Or click checkout to use Stripe payment
+                            {t("buyticket.paragraph3")}
                         </p>
                         <Button
                             transition={false}
                             color='teal'
                             buttonSize='xl'
-                            buttonText='CHECKOUT'
+                            buttonText={t("buyticket.checkoutButton")}
                             clickFunction={handleCheckout}
                         />
                     </div>
