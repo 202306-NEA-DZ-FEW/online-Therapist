@@ -10,12 +10,12 @@ import { useRouter } from "next/router";
 export default function UserDropdown() {
     const { t } = useTranslation("common");
     const { user, logOut } = UserAuth();
-    const router = useRouter()
+    const router = useRouter();
 
     const handleSignOut = async () => {
         try {
             await logOut();
-            router.push("/")
+            router.push("/");
         } catch (error) {
             console.log(error);
         }

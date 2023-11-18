@@ -122,7 +122,7 @@ export const teamMembers = [
     },
 ];
 
-export const links = [
+export const therapistLinks = [
     {
         id: 1,
         name: "home",
@@ -169,6 +169,58 @@ export const links = [
         id: 7,
         name: "settings",
         href: "/therapists/profile/",
+        icon: <IoSettingsSharp />,
+        text: "Settings",
+    },
+];
+
+export const patientLinks = [
+    {
+        id: 1,
+        name: "home",
+        href: "/",
+        icon: <HiHome />,
+        text: "Home",
+    },
+    {
+        id: 2,
+        name: "appointments",
+        href: "",
+        icon: <FaClipboardList />,
+        text: "Appointments",
+    },
+    {
+        id: 3,
+        name: "messages",
+        href: "",
+        icon: <LuMessagesSquare />,
+        text: "Messages",
+    },
+    {
+        id: 4,
+        name: "calendar",
+        href: "",
+        icon: <IoCalendar />,
+        text: "Calendar",
+    },
+    {
+        id: 5,
+        name: "therapists",
+        href: "",
+        icon: <HiUserGroup />,
+        text: "Therapists",
+    },
+    {
+        id: 6,
+        name: "profile",
+        href: "/userProfile/",
+        icon: <CgProfile />,
+        text: "Profile",
+    },
+    {
+        id: 7,
+        name: "settings",
+        href: "/userProfile/",
         icon: <IoSettingsSharp />,
         text: "Settings",
     },

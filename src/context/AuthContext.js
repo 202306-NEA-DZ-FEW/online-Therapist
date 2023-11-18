@@ -120,6 +120,7 @@ export function AppWrapper({ children }) {
                         email: user.email,
                         uid: user.uid,
                         photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
                         isTherapist,
                     });
                 } else {
@@ -128,6 +129,7 @@ export function AppWrapper({ children }) {
                         email: user.email,
                         uid: user.uid,
                         photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
                         isTherapist,
                     });
                 }
