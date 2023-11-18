@@ -90,7 +90,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -177,7 +177,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -264,7 +264,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -351,7 +351,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -438,7 +438,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -525,7 +525,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -612,7 +612,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -699,7 +699,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -786,7 +786,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -872,7 +872,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -958,7 +958,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1044,7 +1044,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1130,7 +1130,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1216,7 +1216,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1302,7 +1302,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1388,7 +1388,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1474,7 +1474,7 @@ exports[`renders correctly 1`] = `
                     className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-6 h-6 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
