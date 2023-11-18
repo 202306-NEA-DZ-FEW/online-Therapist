@@ -47,9 +47,9 @@ export default function TherapistDashboard() {
           ></path>
         </svg>
       </button> */}
-                <div className='bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out'>
+                <div className='bg-white h-screen md:block shadow-xl px-3 w-16 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out'>
                     <div className='space-y-6 md:space-y-10 mt-10'>
-                        <h1 className=' md:block font-bold text-sm md:text-2xl text-center'>
+                        <h1 className='hidden md:block font-bold text-sm md:text-2xl text-center'>
                             Dashboard
                         </h1>
                         <div className='space-y-3'>
@@ -62,13 +62,13 @@ export default function TherapistDashboard() {
                                             className='w-10 md:w-16 rounded-full mx-auto'
                                         />
                                     ) : (
-                                        <CgProfile className='w-10 h-10 md:w-16  rounded-full mx-auto text-gray-500' />
+                                        <CgProfile className='w-10 h-10 md:w-16 rounded-full mx-auto text-gray-500' />
                                     )}
                                     <div>
                                         <h2 className='font-medium text-xs md:text-sm text-center text-Teal'>
                                             {user.displayName}
                                         </h2>
-                                        <p className='text-xs text-gray-500 text-center'>
+                                        <p className='hidden md:block text-xs text-gray-500 text-center'>
                                             {user.email}
                                         </p>
                                     </div>
@@ -91,7 +91,7 @@ export default function TherapistDashboard() {
                                     <span className='text-2xl'>
                                         {link.icon}
                                     </span>
-                                    <span>{link.text}</span>
+                                    <span className="hidden md:block">{link.text}</span>
                                 </Link>
                             ))}
 
