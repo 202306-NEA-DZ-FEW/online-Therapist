@@ -6,7 +6,6 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import { UserAuth } from "@/context/AuthContext";
 
 export default function TherapistDashboard() {
-
     const { activeLink } = UserAuth();
 
     const renderContent = () => {
@@ -27,7 +26,7 @@ export default function TherapistDashboard() {
     return (
         <div className='font-poppins'>
             <div className='h-full flex flex-row'>
-               <Sidebar/>
+                <Sidebar />
                 <div className='flex-grow p-4'>{renderContent()}</div>
             </div>
         </div>
