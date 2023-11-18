@@ -28,8 +28,7 @@ export function AppWrapper({ children }) {
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
     const [activeLink, setActiveLink] = useState("appointments");
     const googleProvider = new GoogleAuthProvider();
-    const facebookProvider = new FacebookAuthProvider(); // State to track signup success
-
+    const facebookProvider = new FacebookAuthProvider();
 
     const AuthWithGoogle = () => {
         // Implement Google login using Firebase here

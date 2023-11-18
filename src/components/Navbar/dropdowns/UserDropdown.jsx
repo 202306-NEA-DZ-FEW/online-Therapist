@@ -5,18 +5,20 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosLogOut } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 export default function UserDropdown() {
     const { t } = useTranslation("common");
     const { user, logOut } = UserAuth();
+    const router = useRouter()
 
     const handleSignOut = async () => {
         try {
             await logOut();
+            router.push("/")
         } catch (error) {
             console.log(error);
         }
-        console.log(user);
     };
 
     return (
@@ -45,7 +47,7 @@ export default function UserDropdown() {
             <hr />
             <div class='py-2 first:pt-0 last:pb-0'>
                 <Link
-                    href='/'
+                    href='/dashboard/'
                     className='flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700'
                 >
                     <FaRegUser />

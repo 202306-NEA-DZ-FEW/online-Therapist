@@ -1,7 +1,7 @@
-import Appointments from "@/components/dashboard/Appointments";
-import Patients from "@/components/dashboard/Patients";
-import Messages from "@/components/dashboard/Messages";
-import Calender from "@/components/dashboard/Calender";
+import Appointments from "@/components/Dashboards/Links/Appointments";
+import Patients from "@/components/Dashboards/Links/Patients";
+import Messages from "@/components/Dashboards/Links/Messages";
+import Calender from "@/components/Dashboards/Links/Calender";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { UserAuth } from "@/context/AuthContext";
 
