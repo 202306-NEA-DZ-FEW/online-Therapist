@@ -16,6 +16,7 @@ export function AppWrapper({ children }) {
     const facebookProvider = new FacebookAuthProvider();
     const [profilePicture, setProfilePicture] = useState(null);
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
+    const [activeLink, setActiveLink] = useState("appointments");
 
     const AuthWithGoogle = () => {
         // Implement Google login using Firebase here
@@ -131,7 +132,7 @@ export function AppWrapper({ children }) {
                 AuthWithFacebook,
                 profilePicture,
                 isSignUpSuccessful,
-                setIsSignUpSuccessful,
+                setIsSignUpSuccessful, activeLink, setActiveLink
             }}
         >
             {children}
