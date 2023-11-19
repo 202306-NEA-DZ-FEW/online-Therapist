@@ -26,11 +26,11 @@ export function AppWrapper({ children }) {
     });
     const [loading, setLoading] = useState(true);
     const [profilePicture, setProfilePicture] = useState(null);
-    const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false);
+    const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
+    const [activeLink, setActiveLink] = useState("appointments");
     const [cards, setCards] = useState([]);
-
     const googleProvider = new GoogleAuthProvider();
-    const facebookProvider = new FacebookAuthProvider(); // State to track signup success
+    const facebookProvider = new FacebookAuthProvider();
 
     const AuthWithGoogle = () => {
         // Implement Google login using Firebase here
@@ -122,6 +122,7 @@ export function AppWrapper({ children }) {
                         email: user.email,
                         uid: user.uid,
                         photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
                         isTherapist,
                     });
                 } else {
@@ -130,6 +131,7 @@ export function AppWrapper({ children }) {
                         email: user.email,
                         uid: user.uid,
                         photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
                         isTherapist,
                     });
                 }
@@ -196,6 +198,8 @@ export function AppWrapper({ children }) {
                 profilePicture,
                 isSignUpSuccessful,
                 setIsSignUpSuccessful,
+                activeLink,
+                setActiveLink,
                 loading,
                 setLoading,
                 updateProfilePhoto,
