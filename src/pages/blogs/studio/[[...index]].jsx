@@ -1,9 +1,11 @@
-import Head from "next/head";
-import { NextStudio } from "next-sanity/studio";
-import { metadata } from "next-sanity/studio/metadata";
-import config from "../../../../sanity.config";
+import Head from "next/head"
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
+import {NextStudio} from "next-sanity/studio"
+import {metadata} from "next-sanity/studio/metadata"
 
-export default function StudioPage() {
+import config from "../../../../sanity.config"
+
+export default function StudioPage () {
     return (
         <>
             <Head>
@@ -13,5 +15,15 @@ export default function StudioPage() {
             </Head>
             <NextStudio config={config} />
         </>
-    );
+    )
+}
+
+
+
+export async function getServerSideProps ({locale}) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+        }
+    }
 }

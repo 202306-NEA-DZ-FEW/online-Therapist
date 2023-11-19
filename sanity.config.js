@@ -2,16 +2,18 @@
  * This configuration is used to for the Sanity Studio that’s mounted on the `/pages/blogs/studio/[[...index]].jsx` route
  */
 
-import { documentInternationalization } from "@sanity/document-internationalization";
-import { visionTool } from "@sanity/vision";
-import { defineConfig } from "sanity";
-import { deskTool } from "sanity/desk";
+import {documentInternationalization} from "@sanity/document-internationalization"
+import {visionTool} from "@sanity/vision"
+import {defineConfig} from "sanity"
+import {deskTool} from "sanity/desk"
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import { apiVersion, dataset, projectId } from "./sanity/env";
-import { schema } from "./sanity/schema";
+import {apiVersion, dataset, projectId} from "./sanity/env"
+import {schema} from "./sanity/schema"
 
 export default defineConfig({
+    name: "default",
+    title: "InnerSpace Blog",
     basePath: "/blogs/studio",
     projectId,
     dataset,
@@ -24,11 +26,11 @@ export default defineConfig({
         documentInternationalization({
             // Required configuration
             supportedLanguages: [
-                { id: "en", title: "English" },
-                { id: "ar", title: "Arabic" },
+                {id: "en", title: "English"},
+                {id: "ar", title: "Arabic"},
             ],
             schemaTypes: ["post"],
         }),
-        visionTool({ defaultApiVersion: apiVersion }),
+        visionTool({defaultApiVersion: apiVersion}),
     ],
-});
+})

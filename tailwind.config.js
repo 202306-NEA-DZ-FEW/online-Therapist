@@ -7,7 +7,7 @@ module.exports = {
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-],
+  ],
   theme: {
     extend: {
       colors: {
@@ -24,7 +24,7 @@ module.exports = {
         Gray: "#797877",
         Crovet: "#ffe8b3",
 
-      
+
       },
       fontFamily: {
         young: ["Young Serif", "serif"],
@@ -45,7 +45,7 @@ module.exports = {
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-],
+  ],
   theme: {
     extend: {
       colors: {
@@ -70,5 +70,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
