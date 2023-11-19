@@ -6,7 +6,7 @@ import BookingStep4 from "./BookingStep4";
 import BookingStep5 from "./BookingStep5";
 import BookingStep6 from "./BookingStep6";
 import BookingStep7 from "./BookingStep7";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "@/util/firebase";
 import { UserAuth } from "@/context/AuthContext";
 import BookingStepFinal from "./BookingStepFinal";
@@ -75,23 +75,40 @@ const MultiStepForm = ({ showStepNumber }) => {
             alert("Error: You must agree to the Terms of Services!");
         } else {
             try {
-                await setDoc(doc(db, "appointments", user.uid), {
-                    uid: user.uid,
-                    counselingType: formData.counselingType,
-                    maritalStatus: formData.maritalStatus,
-                    firstSession: formData.firstSession,
-                    counselorQualities: formData.counselorQualities,
-                    issues: formData.issues,
-                    specification: formData.specification,
-                    therapistId: "",
-                    appointmentStatus: "waiting",
-                    agreeToTerms: false,
-                });
-                alert("Form data saved successfully.");
-                setStep("Final");
+                // Fetch user data
+                const userRef = doc(db, "users", user.uid);
+                const userSnapshot = await getDoc(userRef);
+
+                if (userSnapshot.exists()) {
+                    const { firstname, lastname } = userSnapshot.data();
+
+                    // Create the "appointments" document with user data
+                    await setDoc(doc(db, "appointments", user.uid), {
+                        uid: user.uid,
+                        counselingType: formData.counselingType,
+                        maritalStatus: formData.maritalStatus,
+                        firstSession: formData.firstSession,
+                        counselorQualities: formData.counselorQualities,
+                        issues: formData.issues,
+                        specification: formData.specification,
+                        therapistId: "",
+                        appointmentStatus: "waiting",
+                        agreeToTerms: false,
+                        userFirstName: firstname,
+                        userLastName: lastname,
+                    });
+                    alert(
+                        "Form data saved successfully, look for you matching list!"
+                    );
+                    setStep("Final");
+                } else {
+                    console.log("User data not found for the user.");
+                    alert("Error: User data not found!");
+                }
             } catch (error) {
                 console.error("Error adding document: ", error);
-                alert("Error: Form data could not be saved!");
+                // alert("Error: Form data could not be saved!");
+                alert(`Error: Form data could not be saved!\n${error.message}`);
             }
         }
     };

@@ -67,7 +67,8 @@ const TherapistSignUp = ({ t }) => {
             await setDoc(
                 doc(
                     db,
-                    process.env.NEXT_PUBLIC_THERAPIST_COLLECTION,
+                    "therapists",
+                    // process.env.NEXT_PUBLIC_THERAPIST_COLLECTION,
                     userCredential.user.uid
                 ),
                 {
