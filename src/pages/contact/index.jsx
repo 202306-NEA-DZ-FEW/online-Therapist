@@ -17,7 +17,7 @@ function Contact() {
 
     return (
         <Layout>
-            <main className='mx-8 mt-5 lg:mx-20 lg:mt-10 font-atkinson'>
+            <main className='mx-8 mt-5 lg:mx-24 lg:mt-10 font-atkinson'>
                 <div className='mb-10'>
                     <h1 className='text-4xl lg:text-5xl font-medium pb-4 bg-LightBeige lg:bg-inherit text-center p-3 lg:text-left lg:p-0 rounded-lg rtl:lg:text-right'>
                         {t("contact.title")}
@@ -154,7 +154,7 @@ function Contact() {
 
                             <Link
                                 href='/contactThankYou'
-                                className='mx-auto mb-5'
+                                className='mx-auto mb-16'
                             >
                                 <Button
                                     buttonText={t("contact.submit")}
