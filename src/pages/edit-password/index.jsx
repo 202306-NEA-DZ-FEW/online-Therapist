@@ -130,6 +130,7 @@ function ChangePassword() {
                         <label htmlFor='old-password'>
                             {t("password.input1")}
                         </label>
+
                         <Input
                             type='password'
                             id='old-password'

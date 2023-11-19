@@ -12,6 +12,7 @@ module.exports = {
             "source.unsplash.com",
             "images.unsplash.com",
             "c.stocksy.com",
+            "firebasestorage.googleapis.com",
         ],
     },
 };
