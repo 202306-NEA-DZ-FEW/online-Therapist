@@ -257,7 +257,7 @@ export default function SignUp() {
                                             onChange={onChange}
                                         />
                                     </div>
-                                    <div className='flex items-center justify-center space-x-4 py-4 lg:space-x-9'>
+                                    <div className='flex items-center justify-center rtl:space-x-reverse space-x-4 py-4 lg:space-x-9'>
                                         <Link href='/login'>
                                             <Button
                                                 transition={false}
@@ -276,19 +276,22 @@ export default function SignUp() {
                             </div>
                             <div className='flex items-center justify-center space-x-4 '>
                                 <hr className='w-24 lg:w-48 border-Teal' />
-                                <p className='text-lg'> {t("signup.or")}</p>
+                                <p className='text-lg uppercase font-medium text-gray-700'>
+                                    {" "}
+                                    {t("signup.or")}
+                                </p>
                                 <hr className='w-24 lg:w-48 border-Teal' />
                             </div>
-                            <div className='flex justify-center items-center space-x-12'>
+                            <div className='flex justify-center items-center space-x-10'>
                                 <span
                                     onClick={handleGoogleSignup}
                                     className='cursor-pointer '
                                 >
                                     <Image
                                         src='/Images/google.svg'
-                                        width={30}
-                                        height={30}
-                                        alt='google'
+                                        width={32}
+                                        height={32}
+                                        alt='Google'
                                         className=' '
                                     />
                                 </span>
@@ -299,9 +302,9 @@ export default function SignUp() {
                                 >
                                     <Image
                                         src='/Images/facebook.svg'
-                                        width={30}
-                                        height={30}
-                                        alt='facebook'
+                                        width={32}
+                                        height={32}
+                                        alt='Facebook'
                                         className=' '
                                     />
                                 </span>
