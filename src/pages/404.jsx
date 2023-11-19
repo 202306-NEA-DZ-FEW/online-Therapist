@@ -18,7 +18,7 @@ export default function NotFoundPage() {
     }, [language]);
     return (
         <Layout>
-            <div className='flex flex-col lg:flex-row items-center justify-center p-4 lg:p-8'>
+            <div className='container mx-auto h-screen flex flex-col lg:flex-row items-center justify-center p-4 lg:p-8'>
                 <div className='order-2 lg:order-1 text-center lg:text-left mb-8 lg:mb-0'>
                     <h1 className='rtl:text-right text-5xl font-bold mb-4'>
                         {t("404.titre")}
