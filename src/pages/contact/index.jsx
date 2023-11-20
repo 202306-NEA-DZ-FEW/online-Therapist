@@ -231,13 +231,17 @@ function Contact() {
                                         onChange={onChange}
                                     />
                                 </div>
-                                <button className='mb-16 mt-4' type='submit' disabled={loading}>
+                                <button
+                                    className='mb-16 mt-4'
+                                    type='submit'
+                                    disabled={loading}
+                                >
                                     {loading ? (
                                         <Button
-                                        buttonText={t("contact.submit")}
-                                        buttonSize='lg'
-                                        disabled 
-                                    />
+                                            buttonText={t("contact.submit")}
+                                            buttonSize='lg'
+                                            disabled
+                                        />
                                     ) : (
                                         <Button
                                             buttonText={t("contact.submit")}
