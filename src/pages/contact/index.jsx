@@ -221,14 +221,18 @@ function Contact() {
                                     </div>
                                 </div>
                                 <div className='lg:pt-3'>
-                                    <label className='font-medium grid-span-2'>
+                                    <label htmlFor="details" className='font-medium grid-span-2'>
                                         {t("contact.details")}
                                     </label>
                                     <textarea
+                                        type="text"
                                         className='w-full border border-gray-300 h-12 w-96 pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal h-24'
                                         placeholder='Enter your details here...'
                                         value={formData.details}
                                         onChange={onChange}
+                                        id="details"
+                                        name="details"
+                                        rows='10'
                                     />
                                 </div>
                                 <button
