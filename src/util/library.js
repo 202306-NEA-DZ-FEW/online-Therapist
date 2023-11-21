@@ -5,7 +5,7 @@ export const members = [
         name_ar: "ليليا بن جدو",
         role_en: "Front-end & Web Developer",
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
-        imgUrl: "/member1.png",
+        imgUrl: "/Images/member1.png",
         linkedIn: "www.linkedin.com/in/lilia-bendjeddou-705679256/",
         github: "Lilicod",
     },
@@ -15,7 +15,7 @@ export const members = [
         name_ar: "محمد مطاسي",
         role_en: "Front-end & Web Developer",
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
-        imgUrl: "/member2.png",
+        imgUrl: "/Images/member2.png",
         linkedIn: "www.linkedin.com/in/matassi-mohamed",
 
         github: "M07am3dM",
@@ -26,7 +26,7 @@ export const members = [
         name_ar: "وليد لعمراوي",
         role_en: "Front-end & Web Developer",
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
-        imgUrl: "/member3.png",
+        imgUrl: "/Images/member3.png",
         linkedIn: " linkedin.com/in/walid-lamraoui/",
 
         github: "dzc0d3r",
@@ -37,7 +37,7 @@ export const members = [
         name_ar: "مريم منصوري",
         role_en: "Front-end & Web Developer",
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
-        imgUrl: "/member4.png",
+        imgUrl: "/Images/member4.png",
         linkedIn: "https://www.linkedin.com/in/meriem-mansouri-1b1643276/",
 
         github: "meryem08",
@@ -48,7 +48,7 @@ export const members = [
         name_ar: "بن حامد دليلة",
         role_en: "Front-end & Web Developer",
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
-        imgUrl: "/member5.png",
+        imgUrl: "/Images/member5.png",
         linkedIn: "www.linkedin.com/in/dalila-dalila-81a3a3200",
 
         github: "dalilia",
@@ -59,7 +59,7 @@ export const members = [
         name_ar: "حبشي سيد علي",
         role_en: "Front-end & Web Developer",
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
-        imgUrl: "/member6.png",
+        imgUrl: "/Images/member6.png",
         linkedIn: "www.linkedin.com/in/sid-ali-habchi-10216125a/",
 
         github: "HabchiSidAli",

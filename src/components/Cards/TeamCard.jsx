@@ -1,32 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const TeamCard = ({ name, role, imgUrl, github, linkedIn }) => {
-    return (
-        <div className='flex flex-col bg-[#EAF8F9] rounded-t-[25px] w-[178.39px] h-[390.21px]'>
+const TeamCard = ({ name, role, imgUrl, github, linkedIn }) => (
+    <div className='relative bg-blue-100 rounded-2xl shadow-lg p-6 w-card h-card flex flex-col justify-between transition hover:scale-105'>
+        <div className='absolute top-0 left-0 w-full h-48'>
             <Image
-                className='rounded-t-[25px] w-full'
-                src={imgUrl}
-                width={178.39}
-                height={190.42}
+                className='rounded-t-lg object-cover w-full h-full'
+                src={imgUrl || "/default-image.jpg"}
+                alt={name}
+                layout='responsive'
+                width={100}
+                height={100}
             />
-
-            <div className='w-full h-1 bg-green-500 rounded-full -mt-1' />
-            <h3 className='mt-4 text-xl font-bold justify-center'>{name}</h3>
-
-            <p className='mt-2 text-base justify-center'>{role}</p>
-
-            <div className='flex justify-center mx-4 my-8'>
-                <Link href={`https://github.com/${github}`}>
-                    <img className='w-[30px]' src='./github.svg' />
-                </Link>
-
-                <Link href={`${linkedIn}`} className='ml-2'>
-                    <img className='w-[30px]' src='./linkedin.svg' />
-                </Link>
-            </div>
         </div>
-    );
-};
+
+        <div className='relative pt-48 text-center mt-8'>
+            {/* Increased margin-top for even more padding */}
+            <h3 className='text-xl font-bold'>{name}</h3>
+            <p className='text-gray-600'>{role}</p>
+        </div>
+
+        <SocialLinks github={github} linkedIn={linkedIn} />
+    </div>
+);
+
+const SocialLink = ({ href, icon, alt }) => (
+    <Link
+        href={href || "#"}
+        target='_blank'
+        rel='noopener noreferrer'
+        className='block p-1 rounded-full hover:bg-gray-300 transition mr-2'
+    >
+        <img src={icon} alt={alt} />
+    </Link>
+);
+
+const SocialLinks = ({ github, linkedIn }) => (
+    <div className='flex justify-center mt-2'>
+        <SocialLink
+            href={`https://github.com/${github}`}
+            icon='/github.svg'
+            alt='GitHub'
+        />
+        <SocialLink href={linkedIn} icon='/linkedin.svg' alt='LinkedIn' />
+    </div>
+);
 
 export default TeamCard;
