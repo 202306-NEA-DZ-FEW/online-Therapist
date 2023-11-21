@@ -2,7 +2,7 @@ import Stripe from "stripe";
 import { buffer } from "micro";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-const apisecret = process.env.STRIPE_WEBHOOK_SECRET
+const apisecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 export const config = {
     api: {
