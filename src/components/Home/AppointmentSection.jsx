@@ -9,7 +9,7 @@ function AppointmentSection() {
     const { t } = useTranslation("homepage");
     const { user } = UserAuth();
     // Define the paths based on the user's authentication status
-    const bookingPath = user ? "/bookAnAppointment" : "/login/";
+    const bookingPath = user ? "/bookAnAppointment" : "/login";
 
     return (
         <div className=' p-10 md:pl-10 bg-LightBeige md:pr-10 lg:pl-32 lg:pr-32'>

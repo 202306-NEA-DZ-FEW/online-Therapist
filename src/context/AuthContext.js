@@ -15,6 +15,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import Layout from "@/layout/Layout";
 import { auth } from "@/util/firebase";
 import { db } from "@/util/firebase";
+import { collection, getDocs, where, query } from "firebase/firestore";
 
 const AuthContext = createContext();
 
@@ -26,9 +27,11 @@ export function AppWrapper({ children }) {
     });
     const [loading, setLoading] = useState(true);
     const [profilePicture, setProfilePicture] = useState(null);
-    const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false);
+    const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
+    const [activeLink, setActiveLink] = useState("appointments");
+    const [cards, setCards] = useState([]);
     const googleProvider = new GoogleAuthProvider();
-    const facebookProvider = new FacebookAuthProvider(); // State to track signup success
+    const facebookProvider = new FacebookAuthProvider();
 
     const AuthWithGoogle = () => {
         // Implement Google login using Firebase here
@@ -120,6 +123,7 @@ export function AppWrapper({ children }) {
                         email: user.email,
                         uid: user.uid,
                         photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
                         isTherapist,
                     });
                 } else {
@@ -128,6 +132,7 @@ export function AppWrapper({ children }) {
                         email: user.email,
                         uid: user.uid,
                         photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
                         isTherapist,
                     });
                 }
@@ -145,6 +150,43 @@ export function AppWrapper({ children }) {
         updateProfile(user, { photoURL });
     };
 
+    const fetchUserCards = async (userUid) => {
+        try {
+            const cardsCollection = collection(db, "cards");
+            const userCardsQuery = query(
+                cardsCollection,
+                where("uid", "==", userUid)
+            );
+            const querySnapshot = await getDocs(userCardsQuery);
+            const userCards = querySnapshot.docs.map((doc) => ({
+                ...doc.data(),
+                id: doc.id,
+            }));
+
+            console.log("User Cards:", userCards);
+            return userCards;
+        } catch (error) {
+            console.error("Error fetching user cards:", error);
+            return [];
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        const fetchCards = async () => {
+            try {
+                const userId = user.uid;
+                const userCards = await fetchUserCards(userId);
+                setCards(userCards);
+            } catch (error) {
+                console.error("Error fetching cards:", error);
+            }
+        };
+
+        fetchCards();
+    }, [user]);
+
     return (
         <AuthContext.Provider
             value={{
@@ -157,9 +199,14 @@ export function AppWrapper({ children }) {
                 profilePicture,
                 isSignUpSuccessful,
                 setIsSignUpSuccessful,
+                activeLink,
+                setActiveLink,
                 loading,
                 setLoading,
                 updateProfilePhoto,
+                fetchUserCards,
+                cards,
+                setCards,
             }}
         >
             {loading ? (

@@ -122,6 +122,7 @@
         "button": "CONFIRM PURCHASE",
         "alertText": "Please select a card",
         "thankstext": "You purchase has been submitted, you should receive an email with the receipt soon.",
+        "noCardsMessage": "You have no saved cards",
         "checkoutButton": "CHECKOUT",
         "paragraph3": "Or click checkout to use Stripe payment"
     },
@@ -129,7 +130,8 @@
         "title": "YOUR SAVED CARDS",
         "paragraph": "We only support cards as a payment method at the moment!",
         "deleteButton": "Delete Card",
-        "addButton": "ADD NEW CARD"
+        "addButton": "ADD NEW CARD",
+        "noCardsMessage": "You have no saved cards, click the button below to add new card"
     },
     "password": {
         "input1": "Old password ",
@@ -141,5 +143,9 @@
         "authError": "User is not authenticated.",
         "oldPasswordRequired": "Old password is required",
         "newPasswordRequired": "New password is required"
+    },
+    "404": {
+        "titre": "Page Not Found",
+        "text": "Page you are trying to open does not exist. You may have mistyped the address, or the page has been moved to another URL."
     }
 }
