@@ -1,21 +1,21 @@
-import Image from "next/image"
-import Link from "next/link"
-import {useTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import {groq} from "next-sanity"
-import React from "react"
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { groq } from "next-sanity";
+import React from "react";
 import {
     PiArrowLineUpLeftLight,
     PiArrowLineUpRightLight,
-} from "react-icons/pi"
+} from "react-icons/pi";
 
-import Layout from "@/layout/Layout"
+import Layout from "@/layout/Layout";
 
-import {client} from "../../../sanity/lib/client"
-import {urlForImage} from "../../../sanity/lib/image"
+import { client } from "../../../sanity/lib/client";
+import { urlForImage } from "../../../sanity/lib/image";
 
-const Blogs = ({posts}) => {
-    const {t} = useTranslation("blog")
+const Blogs = ({ posts }) => {
+    const { t } = useTranslation("blog");
     return (
         <Layout>
             <div className='container mx-auto w-full font-atkinson  mb-10'>
@@ -24,9 +24,10 @@ const Blogs = ({posts}) => {
                         {posts.map((post) => (
                             <Link
                                 key={post._id}
-                                href={`/${post.language == "ar" ? "/ar" : ""
-                                    }/blogs/${post.slug.current}`}
-                                className="overflow-clip shadow-lg rounded-md mt-5"
+                                href={`/${
+                                    post.language == "ar" ? "/ar" : ""
+                                }/blogs/${post.slug.current}`}
+                                className='overflow-clip shadow-lg rounded-md mt-5'
                             >
                                 <div className='flex flex-col group cursor-pointer '>
                                     <div className='relative min-w-full will-change-contents  md:h-64 h-56'>
@@ -45,7 +46,7 @@ const Blogs = ({posts}) => {
                                         >
                                             <div className='md:flex flex-col hidden -ml-5 rtl:-mr-5'>
                                                 <p className='font-bold text-base w-56'>
-                                                    {t("written_by")} : {" "}
+                                                    {t("written_by")} :{" "}
                                                     {post.author.name}
                                                 </p>
                                                 <p className='text-xs'>
@@ -103,19 +104,19 @@ const Blogs = ({posts}) => {
                 </div>
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default Blogs
+export default Blogs;
 
-export async function getStaticProps ({locale}) {
+export async function getStaticProps({ locale }) {
     const query = groq`*[_type == "post" && language == $locale]{
     ...,
     author->,
     categories[]->
     | order(created_At desc)
-  }`
-    const posts = await client.fetch(query, {locale})
+  }`;
+    const posts = await client.fetch(query, { locale });
 
     return {
         props: {
@@ -123,5 +124,5 @@ export async function getStaticProps ({locale}) {
             posts,
         },
         revalidate: 60,
-    }
+    };
 }
