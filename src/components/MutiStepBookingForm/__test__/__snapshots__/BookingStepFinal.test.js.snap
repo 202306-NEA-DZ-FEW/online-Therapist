@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h3
+    className="mb-2 lg:text-2xl text-lg text-center font-young text-DarkTeal uppercase"
+  >
+    stepFinal.header
+  </h3>
+  <p
+    className="lg:text-lg text-center font-atkinson text-gray-900"
+  >
+    stepFinal.paragraph1
+    <br />
+    stepFinal.paragraph2
+  </p>
+   
+  <div
+    className="my-2 flex justify-center items-center lg:pt-6 pt-3"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      <button
+        href="/"
+      >
+        <div
+          className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl undefined bg-white hover:cursor-pointer"
+        >
+          <span
+            className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease"
+          >
+            <svg
+              className="w-6 h-6 "
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+              />
+            </svg>
+          </span>
+          <span
+            className="absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease"
+          >
+            stepFinal.btnText
+          </span>
+          <span
+            className="relative invisible"
+          >
+            $
+            stepFinal.btnText
+          </span>
+        </div>
+      </button>
+    </a>
+  </div>
+</div>
+`;
