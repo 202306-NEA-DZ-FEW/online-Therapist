@@ -1,21 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { groq } from "next-sanity";
-import React from "react";
+import Image from "next/image"
+import Link from "next/link"
+import {useTranslation} from "next-i18next"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import {groq} from "next-sanity"
+import React from "react"
 import {
     PiArrowLineUpLeftLight,
     PiArrowLineUpRightLight,
-} from "react-icons/pi";
+} from "react-icons/pi"
 
-import Layout from "@/layout/Layout";
+import Layout from "@/layout/Layout"
 
-import { client } from "../../../sanity/lib/client";
-import { urlForImage } from "../../../sanity/lib/image";
+import {client} from "../../../sanity/lib/client"
+import {urlForImage} from "../../../sanity/lib/image"
 
-const Blogs = ({ posts }) => {
-    const { t } = useTranslation("blog");
+const Blogs = ({posts}) => {
+    const {t} = useTranslation("blog")
     return (
         <Layout>
             <div className='container mx-auto w-full font-atkinson  mb-10'>
@@ -24,9 +24,8 @@ const Blogs = ({ posts }) => {
                         {posts.map((post) => (
                             <Link
                                 key={post._id}
-                                href={`/${
-                                    post.language == "ar" ? "/ar" : ""
-                                }/blogs/${post.slug.current}`}
+                                href={`/${post.language == "ar" ? "/ar" : ""
+                                    }/blogs/${post.slug.current}`}
                             >
                                 <div className='flex flex-col group cursor-pointer '>
                                     <div className='relative min-w-full will-change-contents h-56 md:h-80'>
@@ -44,7 +43,7 @@ const Blogs = ({ posts }) => {
                       backdrop-blur-md text-white/90 p-7  justify-between group-hover:-bottom-3 group-hover:backdrop-blur-[5px] transition-all duration-300 ease-out '
                                         >
                                             <div className='md:flex flex-col hidden'>
-                                                <p className='font-bold text-lg md:text-xl'>
+                                                <p className='font-bold text-lg line-clamp-1'>
                                                     {t("written_by")} :{" "}
                                                     {post.author.name}
                                                 </p>
@@ -103,19 +102,19 @@ const Blogs = ({ posts }) => {
                 </div>
             </div>
         </Layout>
-    );
-};
+    )
+}
 
-export default Blogs;
+export default Blogs
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps ({locale}) {
     const query = groq`*[_type == "post" && language == $locale]{
     ...,
     author->,
     categories[]->
     | order(created_At desc)
-  }`;
-    const posts = await client.fetch(query, { locale });
+  }`
+    const posts = await client.fetch(query, {locale})
 
     return {
         props: {
@@ -123,5 +122,5 @@ export async function getStaticProps({ locale }) {
             posts,
         },
         revalidate: 60,
-    };
+    }
 }
