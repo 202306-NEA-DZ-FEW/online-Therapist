@@ -1,13 +1,13 @@
-import {PortableText} from "@portabletext/react"
-import Image from "next/image"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import {groq} from "next-sanity"
-import React from "react"
+import { PortableText } from "@portabletext/react";
+import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { groq } from "next-sanity";
+import React from "react";
 
-import Layout from "@/layout/Layout"
+import Layout from "@/layout/Layout";
 
-import {client} from "../../../../sanity/lib/client"
-import {urlForImage} from "../../../../sanity/lib/image"
+import { client } from "../../../../sanity/lib/client";
+import { urlForImage } from "../../../../sanity/lib/image";
 
 const RichTextChildren = {
     types: {
@@ -21,50 +21,50 @@ const RichTextChildren = {
                         fill
                     />
                 </div>
-            )
+            );
         },
     },
     lists: {
-        bullet: ({children}) => {
+        bullet: ({ children }) => {
             <ul className='ml-10 rtl:mr-10 list-disc space-y-5 rtl:space-y-reverse'>
                 {children}
-            </ul>
+            </ul>;
         },
         number: (children) => {
             <ol className='ml-10 rtl:mr-10 list-decimal space-y-5 rtl:space-y-reverse'>
                 {children}
-            </ol>
+            </ol>;
         },
     },
     block: {
-        h1: ({children}) => (
+        h1: ({ children }) => (
             <h1 className='mb-2 mt-4 text-2xl md:text-5xl font-bold text-transparent  bg-clip-text bg-gradient-to-r rtl:bg-gradient-to-l from-teal-600 via-fuchsia-950 to-sky-100'>
                 {children}
             </h1>
         ),
-        h2: ({children}) => (
+        h2: ({ children }) => (
             <h2 className='mb-2 mt-4 text-xl md:text-4xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-teal-600 via-fuchsia-950 to-sky-100'>
                 {children}
             </h2>
         ),
-        h3: ({children}) => (
+        h3: ({ children }) => (
             <h3 className='mb-2 mt-4 text-xl md:text-2xl font-bold text-black/80'>
                 {children}
             </h3>
         ),
-        h4: ({children}) => (
+        h4: ({ children }) => (
             <h4 className='mb-2 mt-4 text-lg md:text-xl font-bold text-black/80'>
                 {children}
             </h4>
         ),
-        normal: ({children}) => (
+        normal: ({ children }) => (
             <p className='text-black/80 md:text-lg md:mb-7 font-medium rtl:md:text-xl'>
                 {children}
             </p>
         ),
     },
-}
-const Post = ({post}) => {
+};
+const Post = ({ post }) => {
     return (
         <Layout>
             <div className='h-full  my-7 container md:mx-auto'>
@@ -153,26 +153,26 @@ const Post = ({post}) => {
                 </article>
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default Post
-export async function getStaticPaths () {
+export default Post;
+export async function getStaticPaths() {
     const query_path = groq`
                *[_type == "post" &&
                 defined(slug.current)][].slug.current
-              `
-    const paths = await client.fetch(query_path)
+              `;
+    const paths = await client.fetch(query_path);
 
     return {
-        paths: paths.map((slug) => ({params: {slug}})),
+        paths: paths.map((slug) => ({ params: { slug } })),
         fallback: "blocking",
-    }
+    };
 }
 
-export async function getStaticProps (context) {
-    const {slug} = context.params
-    const {locale} = context
+export async function getStaticProps(context) {
+    const { slug } = context.params;
+    const { locale } = context;
     const query = groq`
             *[_type == "post" && slug.current == $slug && language == $language][0]
             {
@@ -180,14 +180,14 @@ export async function getStaticProps (context) {
               author->,
               categories[]->,
             }
-    `
+    `;
 
-    const post = await client.fetch(query, {slug, language: locale})
+    const post = await client.fetch(query, { slug, language: locale });
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             post,
         },
         revalidate: 60,
-    }
+    };
 }
