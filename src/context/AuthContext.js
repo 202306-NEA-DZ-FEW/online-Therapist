@@ -7,6 +7,7 @@ import {
     updateProfile,
 } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import Image from "next/image";
 import Spinner from "public/loading.svg";
 import Profile from "public/profile.png";
@@ -14,11 +15,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 import { auth } from "@/util/firebase";
 import { db } from "@/util/firebase";
-import { collection, getDocs, where, query } from "firebase/firestore";
 
 const AuthContext = createContext();
 
-export function AppWrapper({ children }) {
+export function AppWrapper({ Component, children }) {
     const [user, setUser] = useState({
         email: null,
         uid: null,
@@ -209,12 +209,13 @@ export function AppWrapper({ children }) {
             }}
         >
             {loading ? (
-                <div className='flex justify-center items-center h-screen'>
+                <div className='grid place-items-center h-screen '>
                     <Image
                         src={Spinner}
                         alt='loading'
-                        height={200}
-                        width={200}
+                        height={150}
+                        width={150}
+                        className='h-28 w-28'
                     />
                 </div>
             ) : (
