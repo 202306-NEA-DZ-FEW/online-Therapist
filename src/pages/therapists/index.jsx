@@ -26,14 +26,14 @@ const Therapists = () => {
             if (user) {
                 const q = query(
                     collection(db, "appointments"),
-                    where("therapistId", "==", user.uid)
+                    where("therapistId", "==", user.uid),
                 );
                 const querySnapshot = await getDocs(q);
 
                 if (!querySnapshot.empty) {
                     const appointmentsData = querySnapshot.docs.map(
                         // (doc) => doc.data()
-                        (doc) => ({ id: doc.id, ...doc.data() })
+                        (doc) => ({ id: doc.id, ...doc.data() }),
                     );
                     setAppointments(appointmentsData);
                 } else {
@@ -96,8 +96,8 @@ const Therapists = () => {
                 prevAppointments.map((appointment) =>
                     appointment.id === appointmentId
                         ? { ...appointment, appointmentStatus: "ready" }
-                        : appointment
-                )
+                        : appointment,
+                ),
             );
 
             // Update the approved field in the therapist document
@@ -112,7 +112,7 @@ const Therapists = () => {
     const fetchAppointmentsData = async (uid) => {
         const q = query(
             collection(db, "appointments"),
-            where("therapistId", "==", uid)
+            where("therapistId", "==", uid),
         );
         const querySnapshot = await getDocs(q);
 
@@ -179,7 +179,7 @@ const Therapists = () => {
                     const q = query(
                         collection(db, "appointments"),
                         where("therapistId", "==", user.uid),
-                        where("appointmentStatus", "==", "ready")
+                        where("appointmentStatus", "==", "ready"),
                     );
                     const patientSnapshot = await getDocs(q);
 
@@ -187,10 +187,10 @@ const Therapists = () => {
                         const patientsData = await Promise.all(
                             patientSnapshot.docs.map(async (doc) => {
                                 const userData = await getDoc(doc.ref).then(
-                                    (snapshot) => snapshot.data()
+                                    (snapshot) => snapshot.data(),
                                 );
                                 return { id: doc.id, ...userData };
-                            })
+                            }),
                         );
                         setPatientsList(patientsData);
                     } else {

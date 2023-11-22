@@ -191,7 +191,7 @@ function Contact() {
                                             type='text'
                                             label={t("contact.name")}
                                             placeholder={t(
-                                                "contact.namePlaceholder"
+                                                "contact.namePlaceholder",
                                             )}
                                             name='name'
                                             errorMessage={errors.name?.message}
@@ -208,7 +208,7 @@ function Contact() {
                                             type='text'
                                             label={t("contact.email")}
                                             placeholder={t(
-                                                "contact.emailPlaceholder"
+                                                "contact.emailPlaceholder",
                                             )}
                                             name='email'
                                             errorMessage={errors.email?.message}

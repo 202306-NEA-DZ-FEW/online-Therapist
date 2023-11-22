@@ -55,7 +55,7 @@ const MultiStepForm = ({ showStepNumber }) => {
                 updatedCheckboxData = [...updatedCheckboxData, value]; // Add the new value to the array
             } else {
                 updatedCheckboxData = updatedCheckboxData.filter(
-                    (item) => item !== value
+                    (item) => item !== value,
                 ); // Remove the unchecked value
             }
             setFormData({
@@ -98,7 +98,7 @@ const MultiStepForm = ({ showStepNumber }) => {
                         userLastName: lastname,
                     });
                     alert(
-                        "Form data saved successfully, look for you matching list!"
+                        "Form data saved successfully, look for you matching list!",
                     );
                     setStep("Final");
                 } else {

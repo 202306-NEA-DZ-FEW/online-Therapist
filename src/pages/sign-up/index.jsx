@@ -50,7 +50,7 @@ export default function SignUp() {
             const userCredential = await createUserWithEmailAndPassword(
                 auth,
                 data.email,
-                data.password
+                data.password,
             );
             const user = userCredential.user;
             sendEmailVerification(auth.currentUser).then(() => {
@@ -198,7 +198,7 @@ export default function SignUp() {
                                             width='full'
                                             type='email'
                                             placeholder={t(
-                                                "signup.emailconfirm"
+                                                "signup.emailconfirm",
                                             )}
                                             name='confirmemail'
                                             errorMessage={
@@ -231,7 +231,7 @@ export default function SignUp() {
                                             width='full'
                                             type='password'
                                             placeholder={t(
-                                                "signup.passwordconfirm"
+                                                "signup.passwordconfirm",
                                             )}
                                             name='confirmpassword'
                                             errorMessage={

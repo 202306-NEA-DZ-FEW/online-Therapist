@@ -20,7 +20,7 @@ it("renders correctly", () => {
                 handleChangeInput={mockHandleChangeInput}
                 handlePrevStep={mockHandlePrevStep}
                 handleNextStep={mockHandleNextStep}
-            />
+            />,
         )
         .toJSON();
 

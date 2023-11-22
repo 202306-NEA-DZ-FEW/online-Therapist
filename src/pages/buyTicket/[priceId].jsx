@@ -35,7 +35,7 @@ export default function BuyTickect() {
                 .then((response) => response.json())
                 .then((data) => setTicketDetails(data))
                 .catch((error) =>
-                    console.error("Error fetching tickets details:", error)
+                    console.error("Error fetching tickets details:", error),
                 );
         }
     }, [priceId]);
@@ -157,7 +157,7 @@ export default function BuyTickect() {
                                     <PaymentCard
                                         name={card.nameOnCard}
                                         number={`**** **** **** ${card.cardNumber.slice(
-                                            -4
+                                            -4,
                                         )}`}
                                         expDate={card.expiryDate}
                                         // CardType={card.CardType}

@@ -91,7 +91,7 @@ const Post = ({ post }) => {
                                         </h1>
                                         <p className='mt-2 text-xs md:text-base'>
                                             {new Date(
-                                                post._createdAt
+                                                post._createdAt,
                                             ).toLocaleDateString(
                                                 post.language == "en"
                                                     ? "en-US"
@@ -100,14 +100,14 @@ const Post = ({ post }) => {
                                                     day: "numeric",
                                                     month: "long",
                                                     year: "numeric",
-                                                }
+                                                },
                                             )}
                                         </p>
                                     </div>
                                     <div className='flex items-start justify-start rtl:mr-4 space-x-2 rtl:space-x-reverse '>
                                         <Image
                                             src={urlForImage(
-                                                post.author.image
+                                                post.author.image,
                                             ).url()}
                                             height={60}
                                             width={60}

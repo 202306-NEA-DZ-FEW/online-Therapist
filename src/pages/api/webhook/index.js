@@ -22,7 +22,7 @@ export default async function handler(req, res) {
             event = stripe.webhooks.constructEvent(
                 rawBody.toString(),
                 signature,
-                apisecret
+                apisecret,
             );
         } catch (err) {
             console.log(` Error message: ${err.message}`);

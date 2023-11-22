@@ -35,7 +35,7 @@ const Blogs = ({ posts }) => {
                                             className='object-cover 
             lg:object-center group-hover:scale-[1.07]  transition-all duration-300 ease-out '
                                             src={urlForImage(
-                                                post.mainImage
+                                                post.mainImage,
                                             ).url()}
                                             alt={post.title}
                                             fill
@@ -51,7 +51,7 @@ const Blogs = ({ posts }) => {
                                                 </p>
                                                 <p className='text-xs'>
                                                     {new Date(
-                                                        post._createdAt
+                                                        post._createdAt,
                                                     ).toLocaleDateString(
                                                         post.language == "en"
                                                             ? "en-US"
@@ -60,7 +60,7 @@ const Blogs = ({ posts }) => {
                                                             day: "numeric",
                                                             month: "long",
                                                             year: "numeric",
-                                                        }
+                                                        },
                                                     )}
                                                 </p>
                                             </div>
@@ -76,7 +76,7 @@ const Blogs = ({ posts }) => {
                                                                 {category.title}
                                                             </p>
                                                         </div>
-                                                    )
+                                                    ),
                                                 )}
                                             </div>
                                         </div>
