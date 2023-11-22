@@ -66,7 +66,7 @@ function ChangePassword() {
 
         const credential = EmailAuthProvider.credential(
             user.email,
-            oldPassword,
+            oldPassword
         );
 
         try {

@@ -21,12 +21,12 @@ const Profile = ({ t }) => {
 
     /** state */
     const [edit, setEdit] = useState(
-        searchParams.get("edit") == "true" ? true : false,
+        searchParams.get("edit") == "true" ? true : false
     );
 
     const { user } = useAuth();
     const [photo] = useState(
-        localStorage?.getItem(`therapist_image_${user.uid}`),
+        localStorage?.getItem(`therapist_image_${user.uid}`)
     );
     const [formData, setFormData] = useState({
         fullname: "",
@@ -290,7 +290,7 @@ const Profile = ({ t }) => {
                                 <button type='submit'>
                                     <Button
                                         buttonText={t(
-                                            "therapists:profile.save",
+                                            "therapists:profile.save"
                                         )}
                                         disabled={!edit}
                                         transition={false}

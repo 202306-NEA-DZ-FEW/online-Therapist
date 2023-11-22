@@ -48,7 +48,7 @@ const ProfileImage = () => {
                         uploading
                             ? Spinner
                             : localStorage.getItem(
-                                  `therapist_image_${user.uid}`,
+                                  `therapist_image_${user.uid}`
                               ) ||
                               user.photoURL ||
                               ProfileImage ||

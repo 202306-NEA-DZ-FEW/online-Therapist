@@ -87,21 +87,21 @@ const TherapistsAppointments = () => {
                 ) {
                     if (
                         (counselorQualities.includes(
-                            "I Prefer A Female Counselor",
+                            "I Prefer A Female Counselor"
                         ) &&
                             therapist.gender === "female") ||
                         (counselorQualities.includes(
-                            "I Prefer A Male Counselor",
+                            "I Prefer A Male Counselor"
                         ) &&
                             therapist.gender === "male")
                     ) {
                         if (
                             (counselorQualities.includes(
-                                "I Prefer An Older Counselor (45+)",
+                                "I Prefer An Older Counselor (45+)"
                             ) &&
                                 therapist.age >= "45") ||
                             (counselorQualities.includes(
-                                "I Prefer An Young Counselor (45-)",
+                                "I Prefer An Young Counselor (45-)"
                             ) &&
                                 therapist.age < "45")
                         )
@@ -124,7 +124,7 @@ const TherapistsAppointments = () => {
                         docSnapshot.data().appointmentStatus === "in progress";
                     return acc;
                 },
-                {},
+                {}
             );
 
             setBookingStatus(initialBookingStatus);

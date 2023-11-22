@@ -114,7 +114,7 @@ export default function PaymentMethods() {
                                 <PaymentCard
                                     name={card.nameOnCard}
                                     number={`**** **** **** ${card.cardNumber.slice(
-                                        -4,
+                                        -4
                                     )}`}
                                     expDate={card.expiryDate}
                                     // CardType={card.CardType}

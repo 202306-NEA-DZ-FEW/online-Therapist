@@ -48,7 +48,7 @@ const TherapistSignUp = ({ t }) => {
             .required(t("therapists:formErrors.password"))
             .oneOf(
                 [yup.ref("password")],
-                t("therapists:formErrors.passwordMatch"),
+                t("therapists:formErrors.passwordMatch")
             ),
     });
 
@@ -59,7 +59,7 @@ const TherapistSignUp = ({ t }) => {
             const userCredential = await createUserWithEmailAndPassword(
                 auth,
                 data.email,
-                data.password,
+                data.password
             );
             if (userCredential) {
                 // add toastr
@@ -69,7 +69,7 @@ const TherapistSignUp = ({ t }) => {
                     db,
                     "therapists",
                     // process.env.NEXT_PUBLIC_THERAPIST_COLLECTION,
-                    userCredential.user.uid,
+                    userCredential.user.uid
                 ),
                 {
                     uid: userCredential.user.uid,
@@ -78,7 +78,7 @@ const TherapistSignUp = ({ t }) => {
                     licenseNumber: formData.licenseNumber,
                     city: formData.city,
                     approved: false,
-                },
+                }
             );
         } catch (error) {
             // add toastr
@@ -113,7 +113,7 @@ const TherapistSignUp = ({ t }) => {
                                     width='full'
                                     type='text'
                                     placeholder={t(
-                                        "therapists:placeholder.username",
+                                        "therapists:placeholder.username"
                                     )}
                                     name='username'
                                     errorMessage={errors.username?.message}
@@ -127,7 +127,7 @@ const TherapistSignUp = ({ t }) => {
                                     width='full'
                                     type='email'
                                     placeholder={t(
-                                        "therapists:placeholder.email",
+                                        "therapists:placeholder.email"
                                     )}
                                     name='email'
                                     errorMessage={errors.email?.message}
@@ -141,7 +141,7 @@ const TherapistSignUp = ({ t }) => {
                                     width='full'
                                     type='text'
                                     placeholder={t(
-                                        "therapists:placeholder.city",
+                                        "therapists:placeholder.city"
                                     )}
                                     name='city'
                                     errorMessage={errors.city?.message}
@@ -155,7 +155,7 @@ const TherapistSignUp = ({ t }) => {
                                     width='full'
                                     type='text'
                                     placeholder={t(
-                                        "therapists:placeholder.license",
+                                        "therapists:placeholder.license"
                                     )}
                                     name='licenseNumber'
                                     errorMessage={errors.licenseNumber?.message}
@@ -170,7 +170,7 @@ const TherapistSignUp = ({ t }) => {
                                     width='full'
                                     type='password'
                                     placeholder={t(
-                                        "therapists:placeholder.password",
+                                        "therapists:placeholder.password"
                                     )}
                                     name='password'
                                     errorMessage={errors.password?.message}
@@ -182,7 +182,7 @@ const TherapistSignUp = ({ t }) => {
                                     width='full'
                                     type='password'
                                     placeholder={t(
-                                        "therapists:placeholder.passwordConfirm",
+                                        "therapists:placeholder.passwordConfirm"
                                     )}
                                     name='confirPassword'
                                     errorMessage={

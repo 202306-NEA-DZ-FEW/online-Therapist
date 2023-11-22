@@ -34,7 +34,7 @@ export default function Input({
                     onChange={onChange}
                     value={value}
                     className={clsx(
-                        `border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer ${styles}`,
+                        `border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer ${styles}`
                     )}
                     disabled={isDisabled}
                 />
