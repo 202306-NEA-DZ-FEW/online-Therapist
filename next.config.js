@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require("./next-i18next.config");
+const {i18n} = require("./next-i18next.config")
 
 module.exports = {
+    experimental: {urlImports: ['https://themer.sanity.build/']},
     i18n,
     eslint: {
         dirs: ["src"],
@@ -16,4 +17,4 @@ module.exports = {
             "cdn.sanity.io",
         ],
     },
-};
+}
