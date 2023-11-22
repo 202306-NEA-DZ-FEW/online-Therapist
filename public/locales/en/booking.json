@@ -1,0 +1,68 @@
+{
+    "booking": {
+        "header": "LET'S MATCH YOU WITH THE RIGHT THERAPIST",
+        "paragraph": "Please fill out this short questionnaire to provide some general and anonymous background about you and the issues you'd like to deal with in online therapy. It would help us match you with the most suitable therapist for you."
+    },
+    "step1": {
+        "header": "What Type Of Counseling Are You Looking For?",
+        "valueText1": "Individual Counseling",
+        "valueText2": "couple counseling",
+        "valueText3": "Teen Counseling (For My Child)"
+    },
+    "step2": {
+        "header": "What is Your Marital Status?",
+        "valueText1": "Single",
+        "valueText2": "Married",
+        "valueText3": "Divorced",
+        "valueText4": "Widow (er)",
+        "prev": "Previous",
+        "next": "Next"
+    },
+    "step3": {
+        "header": "Have You Ever Been In Therapy Before?",
+        "valueText1": "Yes",
+        "valueText2": "No"
+    },
+    "step4": {
+        "header": "Are There Any Specific Qualities That You'd Like In A Counselor?",
+        "valueText1": "I Prefer A Male Counselor",
+        "valueText2": "I Prefer A Female Counselor",
+        "valueText3": "I Prefer An Young Counselor (45-)",
+        "valueText4": "I Prefer A Non-Religious Counselor",
+        "valueText5": "I Prefer A Non-Religious Counselor (45+)"
+    },
+    "step5": {
+        "header": "Are There Any Issues You'd Like To Focus On?",
+        "valueText1": "Depression",
+        "valueText2": "Stress And Anxiety",
+        "valueText3": "Relationship Issues",
+        "valueText4": "Family Conflicts",
+        "valueText5": "Trauma And Abuse",
+        "valueText6": "Eating Disorders"
+    },
+    "step6": {
+        "header": "What Brings You Here?",
+        "paragraph1": "Please specify (in a few sentences) why you'd like counseling.",
+        "paragraph2": "This will give your counselor a good understanding of where to start.",
+        "placeholder": "Write your thoughts here ..."
+    },
+    "step7": {
+        "header": "Submit Your Appointment",
+        "paragraph1": "Click Submit if you are sure of all your choices.",
+        "paragraph2": "Please Be Aware That This Action Will Cost You A Ticket!",
+        "label1": "Counseling Type:",
+        "label2": "Marital Status:",
+        "label3": "First Session:",
+        "label4": "Counselor Qualities:",
+        "label5": "Issues:",
+        "label6": "Specification:",
+        "label7": "I Agree to Terms of Services",
+        "submit": "SUBMIT"
+    },
+    "stepFinal": {
+        "header": "your request has been submitted ",
+        "paragraph1": "You Will Receive A Confirmation Email Guiding You To Book A Date And Time Soon.",
+        "paragraph2": "Please Keep An Eye On Your Mail.",
+        "btnText": "Back To Home"
+    }
+}

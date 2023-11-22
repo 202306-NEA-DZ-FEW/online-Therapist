@@ -8,6 +8,7 @@ function Button({
     buttonHoverText,
     clickFunction,
     disabled = false,
+    rotate = false,
 }) {
     // transition: takes true or false, if true the button has a sliding transition, else the button is simple.
     // color: can be "teal" or "darkteal".
@@ -16,6 +17,7 @@ function Button({
     // buttonHoverText: takes a string and replaces the the text onHover when the transition is true (if left empty its an arrow).
     // clickFunction: Not neccesarry, here you can pass your onClick function, doesn't work if the button is disabled.
     // disabled: disables the transition, the onClick function and makes the curson a "not-allowed" cursor.
+    // rotate: rotates the animation so it can fit better to arabic.
 
     let size;
 
@@ -37,12 +39,16 @@ function Button({
                 onClick={clickFunction}
                 className={`relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-Teal rounded-lg shadow-md group text-xl ${size} bg-white hover:cursor-pointer`}
             >
-                <span className='absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-Teal group-hover:translate-x-0 ease'>
+                <span
+                    className={`absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 ${
+                        rotate ? "translate-x-full" : "-translate-x-full"
+                    } bg-Teal group-hover:translate-x-0 ease`}
+                >
                     {buttonHoverText ? (
                         buttonHoverText
                     ) : (
                         <svg
-                            className='w-6 h-6'
+                            className={`w-6 h-6 ${rotate ? "rotate-180" : ""}`}
                             fill='none'
                             stroke='currentColor'
                             viewBox='0 0 24 24'
@@ -57,7 +63,13 @@ function Button({
                         </svg>
                     )}
                 </span>
-                <span className='absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform group-hover:translate-x-full ease'>
+                <span
+                    className={`absolute flex items-center justify-center w-full h-full text-Teal transition-all duration-300 transform ${
+                        rotate
+                            ? "group-hover:-translate-x-full"
+                            : "group-hover:translate-x-full"
+                    } ease`}
+                >
                     {buttonText}
                 </span>
                 <span className='relative invisible'>${buttonText}</span>
@@ -108,7 +120,7 @@ function Button({
         ) : (
             <div
                 onClick={clickFunction}
-                className={`bg-Teal border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-black whitespace-no-wrap rounded-lg shadow-md hover:bg-DarkTeal hover:text-white focus:outline-none hover:cursor-pointer ${size}`}
+                className={`bg-Teal border-2 border-Teal flex items-center justify-center text-xl px-4 py-2 font-medium leading-6 text-white whitespace-no-wrap rounded-lg shadow-md hover:bg-DarkTeal hover:text-white focus:outline-none hover:cursor-pointer ${size}`}
             >
                 {buttonText}
             </div>

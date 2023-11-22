@@ -66,6 +66,59 @@ export const members = [
     },
     /*name,id,img,github,linkedin*/
 ];
+import { HiUserGroup } from "react-icons/hi";
+import { LuMessagesSquare } from "react-icons/lu";
+import { IoCalendar } from "react-icons/io5";
+import { FaClipboardList } from "react-icons/fa";
+import { IoSettingsSharp } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
+import { HiHome } from "react-icons/hi";
+
+export const slideImages = [
+    {
+        imgSrc: "2",
+        id: "1",
+    },
+    {
+        imgSrc: "4",
+        id: "2",
+    },
+    {
+        imgSrc: "6",
+        id: "3",
+    },
+    {
+        imgSrc: "8",
+        id: "4",
+    },
+    {
+        imgSrc: "13",
+        id: "5",
+    },
+
+    {
+        imgSrc: "1",
+        id: "6",
+    },
+    {
+        imgSrc: "17",
+        id: "7",
+    },
+
+    {
+        imgSrc: "14",
+        id: "8",
+    },
+    // {
+    //     imgSrc: "18",
+    //     id: "9",
+    // },
+    // {
+    //     imgSrc: "20",
+    //     id: "10",
+    // },
+];
+
 export const images = [
     {
         id: 1,
@@ -134,5 +187,109 @@ export const teamMembers = [
         name: "Jor-El Caraballo",
         //   linkedin: "",
         image: "https://www.talkspace.com/blog/wp-content/uploads/2020/06/Jor-El-Caraballo-150x150.jpg",
+    },
+];
+
+export const therapistLinks = [
+    {
+        id: 1,
+        name: "home",
+        href: "/",
+        icon: <HiHome />,
+        text: "Home",
+    },
+    {
+        id: 2,
+        name: "appointments",
+        href: "",
+        icon: <FaClipboardList />,
+        text: "Appointments",
+    },
+    {
+        id: 3,
+        name: "messages",
+        href: "",
+        icon: <LuMessagesSquare />,
+        text: "Messages",
+    },
+    {
+        id: 4,
+        name: "calendar",
+        href: "",
+        icon: <IoCalendar />,
+        text: "Calendar",
+    },
+    {
+        id: 5,
+        name: "patients",
+        href: "",
+        icon: <HiUserGroup />,
+        text: "Patients",
+    },
+    {
+        id: 6,
+        name: "profile",
+        href: "/therapists/profile/",
+        icon: <CgProfile />,
+        text: "Profile",
+    },
+    {
+        id: 7,
+        name: "settings",
+        href: "/therapists/profile/",
+        icon: <IoSettingsSharp />,
+        text: "Settings",
+    },
+];
+
+export const patientLinks = [
+    {
+        id: 1,
+        name: "home",
+        href: "/",
+        icon: <HiHome />,
+        text: "Home",
+    },
+    {
+        id: 2,
+        name: "appointments",
+        href: "",
+        icon: <FaClipboardList />,
+        text: "Appointments",
+    },
+    {
+        id: 3,
+        name: "messages",
+        href: "",
+        icon: <LuMessagesSquare />,
+        text: "Messages",
+    },
+    {
+        id: 4,
+        name: "calendar",
+        href: "",
+        icon: <IoCalendar />,
+        text: "Calendar",
+    },
+    {
+        id: 5,
+        name: "therapists",
+        href: "",
+        icon: <HiUserGroup />,
+        text: "Therapists",
+    },
+    {
+        id: 6,
+        name: "profile",
+        href: "/userProfile/",
+        icon: <CgProfile />,
+        text: "Profile",
+    },
+    {
+        id: 7,
+        name: "settings",
+        href: "/userProfile/",
+        icon: <IoSettingsSharp />,
+        text: "Settings",
     },
 ];

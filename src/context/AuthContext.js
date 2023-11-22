@@ -1,21 +1,36 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import { auth } from "@/util/firebase";
 import {
+    FacebookAuthProvider,
+    GoogleAuthProvider,
+    onAuthStateChanged,
     signInWithPopup,
     signOut,
-    onAuthStateChanged,
-    GoogleAuthProvider,
-    FacebookAuthProvider,
+    updateProfile,
 } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
+import Image from "next/image";
+import Spinner from "public/loading.svg";
+import Profile from "public/profile.png";
+import { createContext, useContext, useEffect, useState } from "react";
+
+import { auth } from "@/util/firebase";
+import { db } from "@/util/firebase";
+import { collection, getDocs, where, query } from "firebase/firestore";
 
 const AuthContext = createContext();
 
 export function AppWrapper({ children }) {
-    const [user, setUser] = useState(null);
-    const googleProvider = new GoogleAuthProvider();
-    const facebookProvider = new FacebookAuthProvider();
+    const [user, setUser] = useState({
+        email: null,
+        uid: null,
+        isTherapist: false,
+    });
+    const [loading, setLoading] = useState(true);
     const [profilePicture, setProfilePicture] = useState(null);
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
+    const [activeLink, setActiveLink] = useState("appointments");
+    const [cards, setCards] = useState([]);
+    const googleProvider = new GoogleAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
 
     const AuthWithGoogle = () => {
         // Implement Google login using Firebase here
@@ -61,7 +76,7 @@ export function AppWrapper({ children }) {
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...
                 fetch(
-                    `https://graph.facebook.com/${result.user.providerData[0].uid}/picture?type=large&access_token=${accessToken}`
+                    `https://graph.facebook.com/${result.user.providerData[0].uid}/picture?type=large&access_token=${accessToken}`,
                 )
                     .then((response) => response.blob())
                     .then((blob) => {
@@ -97,28 +112,79 @@ export function AppWrapper({ children }) {
     // }, [user])
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
-                setUser(user);
+                const docRef = doc(db, "therapists", user.uid);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    const isTherapist = true;
+                    setUser({
+                        email: user.email,
+                        uid: user.uid,
+                        photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
+                        isTherapist,
+                    });
+                } else {
+                    const isTherapist = false;
+                    setUser({
+                        email: user.email,
+                        uid: user.uid,
+                        photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
+                        isTherapist,
+                    });
+                }
             } else {
                 setUser(null);
             }
+            setLoading(false);
         });
 
         return () => unsubscribe();
     }, []);
 
-    // useEffect(() => {
-    //     const unsubscribe = auth.onAuthStateChanged((user) => {
-    //         if (user) {
-    //             setUser(user);
-    //         } else {
-    //             setUser(null);
-    //         }
-    //     });
+    const updateProfilePhoto = async (photoURL) => {
+        const user = auth.currentUser;
+        updateProfile(user, { photoURL });
+    };
 
-    //     return () => unsubscribe();
-    // }, []);
+    const fetchUserCards = async (userUid) => {
+        try {
+            const cardsCollection = collection(db, "cards");
+            const userCardsQuery = query(
+                cardsCollection,
+                where("uid", "==", userUid),
+            );
+            const querySnapshot = await getDocs(userCardsQuery);
+            const userCards = querySnapshot.docs.map((doc) => ({
+                ...doc.data(),
+                id: doc.id,
+            }));
+
+            console.log("User Cards:", userCards);
+            return userCards;
+        } catch (error) {
+            console.error("Error fetching user cards:", error);
+            return [];
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        const fetchCards = async () => {
+            try {
+                const userId = user.uid;
+                const userCards = await fetchUserCards(userId);
+                setCards(userCards);
+            } catch (error) {
+                console.error("Error fetching cards:", error);
+            }
+        };
+
+        fetchCards();
+    }, [user]);
 
     return (
         <AuthContext.Provider
@@ -130,12 +196,35 @@ export function AppWrapper({ children }) {
                 AuthWithGoogle,
                 AuthWithFacebook,
                 profilePicture,
+                isSignUpSuccessful,
+                setIsSignUpSuccessful,
+                activeLink,
+                setActiveLink,
+                loading,
+                setLoading,
+                updateProfilePhoto,
+                fetchUserCards,
+                cards,
+                setCards,
             }}
         >
-            {children}
+            {loading ? (
+                <div className='flex justify-center items-center h-screen'>
+                    <Image
+                        src={Spinner}
+                        alt='loading'
+                        height={200}
+                        width={200}
+                    />
+                </div>
+            ) : (
+                children
+            )}
         </AuthContext.Provider>
     );
 }
 export function UserAuth() {
     return useContext(AuthContext);
 }
+
+export const useAuth = () => useContext(AuthContext);
