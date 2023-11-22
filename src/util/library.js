@@ -1,3 +1,4 @@
+
 export const members = [
     {
         id: 1,
@@ -66,6 +67,7 @@ export const members = [
     },
     /*name,id,img,github,linkedin*/
 ];
+
 import { HiUserGroup } from "react-icons/hi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { IoCalendar } from "react-icons/io5";
