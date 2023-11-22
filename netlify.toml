@@ -5,6 +5,6 @@
 
 [[redirects]]
   from = "/blogs/studio/*"
-  to = "/studio.html"
+  to = "/blogs/studio.html"
   status = 301
   force = true
