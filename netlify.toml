@@ -1,2 +1,10 @@
 [functions]
   included_files = ["blogs/**"]
+
+
+
+[[redirects]]
+  from = "/blogs/studio/*"
+  to = "/studio.html"
+  status = 301
+  force = true
