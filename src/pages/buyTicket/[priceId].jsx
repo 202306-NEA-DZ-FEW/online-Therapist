@@ -13,9 +13,11 @@ import { useRouter } from "next/router";
 import { UserAuth } from "@/context/AuthContext";
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa6";
+import { collection, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { db } from "@/util/firebase";
 
 export default function BuyTickect() {
-    const { cards } = UserAuth();
+    const { cards, user } = UserAuth();
     const router = useRouter();
     const { priceId } = router.query;
     const [displayThanks, setDisplayThanks] = useState(false);
@@ -59,11 +61,51 @@ export default function BuyTickect() {
         setSelectedCard(card);
     };
 
-    const handleConfirm = () => {
+    const handleConfirm = async () => {
         if (selectedCard) {
-            // If a card is selected, render the thank you page
-            setDisplayThanks(true);
-        } else alert(t("buyticket.alertText"));
+            try {
+                const userDocRef = doc(collection(db, "users"), user.uid);
+                const userDocSnapshot = await getDoc(userDocRef);
+    
+                if (userDocSnapshot.exists()) {
+                    const existingTickets = userDocSnapshot.data().tickets || {};
+    
+                    // Check if the user has bought this ticket before
+                    if (existingTickets.hasOwnProperty(priceId)) {
+                        // If the user has bought this ticket before, update the quantity
+                        existingTickets[priceId].quantity += Number(ticketDetails.nickname);
+                    } else {
+                        existingTickets[priceId] = {
+                            
+                            quantity: Number(ticketDetails.nickname),
+                           
+                        };
+                    }
+    
+                    // Update the document with the modified ticket information
+                    await updateDoc(userDocRef, {
+                        tickets: existingTickets,
+                    });
+                } else {
+                    await setDoc(userDocRef, {
+                        tickets: {
+                            [priceId]: {
+                               
+                                quantity: Number(ticketDetails.nickname),
+                               
+                            },
+                        },
+                    });
+                }
+    
+                // Render the thank you page
+                setDisplayThanks(true);
+            } catch (error) {
+                console.error("Error updating user document:", error);
+            }
+        } else {
+            alert(t("buyticket.alertText"));
+        }
     };
 
     const handleCheckout = async (e) => {

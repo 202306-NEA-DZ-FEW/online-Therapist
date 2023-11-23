@@ -1,14 +1,14 @@
 import Stripe from "stripe";
-import { buffer } from "micro";
+// import { buffer } from "micro";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const apisecret = process.env.STRIPE_WEBHOOK_SECRET;
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
+// export const config = {
+//     api: {
+//         bodyParser: false,
+//     },
+// };
 
 export default async function handler(req, res) {
     if (req.method === "POST") {
@@ -20,7 +20,8 @@ export default async function handler(req, res) {
             const signature = req.headers["stripe-signature"];
 
             event = stripe.webhooks.constructEvent(
-                rawBody.toString(),
+                // rawBody.toString(),
+                req.body,
                 signature,
                 apisecret
             );

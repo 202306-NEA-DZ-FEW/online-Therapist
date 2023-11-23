@@ -162,7 +162,6 @@ export function AppWrapper({ Component, children }) {
                 id: doc.id,
             }));
 
-            console.log("User Cards:", userCards);
             return userCards;
         } catch (error) {
             console.error("Error fetching user cards:", error);
