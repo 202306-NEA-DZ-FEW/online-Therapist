@@ -48,8 +48,7 @@ function HeroSection() {
                                 backgroundImage: `url(/Images/${img.imgSrc}.jpg)`,
                             }}
                             className='h-[90vh] bg-cover bg-center relative'
-                        >
-                        </div>
+                        ></div>
                     </div>
                 ))}
             </Slider>
