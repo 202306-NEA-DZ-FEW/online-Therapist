@@ -30,6 +30,7 @@ export function AppWrapper({ Component, children }) {
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
     const [activeLink, setActiveLink] = useState("appointments");
     const [cards, setCards] = useState([]);
+    const [totalTickets, setTotalTickets] = useState(0);
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
 
@@ -219,6 +220,41 @@ export function AppWrapper({ Component, children }) {
         fetchCards();
     }, [user]);
 
+    useEffect(() => {
+        const fetchTickets = async () => {
+            try {
+                const userDocRef = doc(collection(db, "users"), user.uid);
+                const userDocSnapshot = await getDoc(userDocRef);
+
+                if (userDocSnapshot.exists()) {
+                    const userData = userDocSnapshot.data();
+                    const userTickets = userData.tickets || {};
+
+                    // Convert the tickets object into an array
+                    const ticketArray = Object.keys(userTickets).map(
+                        (ticketId) => ({
+                            id: ticketId,
+                            quantity: userTickets[ticketId].quantity,
+                        })
+                    );
+
+                    // Calculate the total quantity
+                    const totalQuantity = ticketArray.reduce(
+                        (total, ticket) => total + ticket.quantity,
+                        0
+                    );
+                    setTotalTickets(totalQuantity);
+                }
+            } catch (error) {
+                console.error("Error fetching user tickets:", error);
+            }
+        };
+
+        if (user) {
+            fetchTickets();
+        }
+    }, [user]);
+
     return (
         <AuthContext.Provider
             value={{
@@ -239,6 +275,7 @@ export function AppWrapper({ Component, children }) {
                 fetchUserCards,
                 cards,
                 setCards,
+                totalTickets
             }}
         >
             {loading ? (
