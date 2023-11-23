@@ -1,11 +1,11 @@
-export const commentReaction = {
-    name: "commentReactions",
-    title: "Comment Reactions",
+export const reaction = {
+    name: "reaction",
+    title: "Post Reactions",
     type: "document",
     fields: [
         {
-            name: "commentId",
-            title: "Comment Id",
+            name: "postId",
+            title: "Post Id",
             type: "string",
         },
         {
@@ -38,14 +38,14 @@ export const commentReaction = {
         {
             name: "post",
             type: "reference",
-            to: [{ type: "post" }],
+            to: [{type: "post"}],
         },
     ],
     preview: {
         select: {
-            name: "name",
-            comment: "comment",
+            title: "post.title",
             post: "post.title",
+
         },
     },
-};
+}
