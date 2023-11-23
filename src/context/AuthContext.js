@@ -23,6 +23,7 @@ export function AppWrapper({ Component, children }) {
         email: null,
         uid: null,
         isTherapist: false,
+        isUser: false,
     });
     const [loading, setLoading] = useState(true);
     const [profilePicture, setProfilePicture] = useState(null);
@@ -134,6 +135,39 @@ export function AppWrapper({ Component, children }) {
                         photoURL: user.photoURL || Profile,
                         displayName: user.displayName,
                         isTherapist,
+                    });
+                }
+            } else {
+                setUser(null);
+            }
+            setLoading(false);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                const docRef = doc(db, "users", user.uid);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    const isUser = true;
+                    setUser({
+                        email: user.email,
+                        uid: user.uid,
+                        photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
+                        isUser,
+                    });
+                } else {
+                    const isUser = false;
+                    setUser({
+                        email: user.email,
+                        uid: user.uid,
+                        photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
+                        isUser,
                     });
                 }
             } else {
