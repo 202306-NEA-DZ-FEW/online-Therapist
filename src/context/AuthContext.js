@@ -43,7 +43,7 @@ export function AppWrapper({ Component, children }) {
                 const token = credential.accessToken;
                 // The signed-in user info.
                 const user = result.user;
-                console.log("google user", user);
+                // console.log("google user", user);
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...
             })
@@ -69,7 +69,7 @@ export function AppWrapper({ Component, children }) {
             .then((result) => {
                 // The signed-in user info.
                 const user = result.user;
-                console.log("facebook user", user);
+                // console.log("facebook user", user);
                 // This gives you a Facebook Access Token. You can use it to access the Facebook API.
                 const credential =
                     FacebookAuthProvider.credentialFromResult(result);
@@ -88,7 +88,7 @@ export function AppWrapper({ Component, children }) {
                 // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
+                // console.log(errorCode, errorMessage);
                 // The email of the user's account used.
                 const email = error.customData.email;
                 // console.log("wrong email", email);
@@ -196,7 +196,7 @@ export function AppWrapper({ Component, children }) {
                 id: doc.id,
             }));
 
-            console.log("User Cards:", userCards);
+            // console.log("User Cards:", userCards);
             return userCards;
         } catch (error) {
             console.error("Error fetching user cards:", error);
