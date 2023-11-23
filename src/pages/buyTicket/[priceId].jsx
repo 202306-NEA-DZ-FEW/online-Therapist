@@ -66,22 +66,23 @@ export default function BuyTickect() {
             try {
                 const userDocRef = doc(collection(db, "users"), user.uid);
                 const userDocSnapshot = await getDoc(userDocRef);
-    
+
                 if (userDocSnapshot.exists()) {
-                    const existingTickets = userDocSnapshot.data().tickets || {};
-    
+                    const existingTickets =
+                        userDocSnapshot.data().tickets || {};
+
                     // Check if the user has bought this ticket before
                     if (existingTickets.hasOwnProperty(priceId)) {
                         // If the user has bought this ticket before, update the quantity
-                        existingTickets[priceId].quantity += Number(ticketDetails.nickname);
+                        existingTickets[priceId].quantity += Number(
+                            ticketDetails.nickname
+                        );
                     } else {
                         existingTickets[priceId] = {
-                            
                             quantity: Number(ticketDetails.nickname),
-                           
                         };
                     }
-    
+
                     // Update the document with the modified ticket information
                     await updateDoc(userDocRef, {
                         tickets: existingTickets,
@@ -90,14 +91,12 @@ export default function BuyTickect() {
                     await setDoc(userDocRef, {
                         tickets: {
                             [priceId]: {
-                               
                                 quantity: Number(ticketDetails.nickname),
-                               
                             },
                         },
                     });
                 }
-    
+
                 // Render the thank you page
                 setDisplayThanks(true);
             } catch (error) {
