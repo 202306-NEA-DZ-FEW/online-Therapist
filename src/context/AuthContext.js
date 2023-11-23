@@ -275,7 +275,7 @@ export function AppWrapper({ Component, children }) {
                 fetchUserCards,
                 cards,
                 setCards,
-                totalTickets
+                totalTickets,
             }}
         >
             {loading ? (

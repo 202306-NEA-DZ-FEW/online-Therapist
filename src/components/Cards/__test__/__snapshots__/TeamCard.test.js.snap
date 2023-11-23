@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="relative bg-blue-100 rounded-2xl shadow-lg p-6 w-card h-card flex flex-col justify-between transition hover:scale-105"
+>
+  <div
+    className="absolute top-0 left-0 w-full h-48"
+  >
+    <img
+      className="rounded-t-lg object-cover w-full h-full"
+      data-nimg="1"
+      decoding="async"
+      height={100}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="100vw"
+      src="/_next/image?url=%2Fdefault-image.jpg&w=3840&q=75"
+      srcSet="/_next/image?url=%2Fdefault-image.jpg&w=640&q=75 640w, /_next/image?url=%2Fdefault-image.jpg&w=750&q=75 750w, /_next/image?url=%2Fdefault-image.jpg&w=828&q=75 828w, /_next/image?url=%2Fdefault-image.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-image.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-image.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-image.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-image.jpg&w=3840&q=75 3840w"
+      style={
+        Object {
+          "color": "transparent",
+          "height": "auto",
+          "width": "100%",
+        }
+      }
+      width={100}
+    />
+  </div>
+  <div
+    className="relative pt-48 text-center mt-8"
+  >
+    <h3
+      className="text-xl font-bold"
+    />
+    <p
+      className="text-gray-600"
+    />
+  </div>
+  <div
+    className="flex justify-center mt-2"
+  >
+    <a
+      className="block p-1 rounded-full hover:bg-gray-300 transition mr-2"
+      href="https://github.com/undefined"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="GitHub"
+        src="/github.svg"
+      />
+    </a>
+    <a
+      className="block p-1 rounded-full hover:bg-gray-300 transition mr-2"
+      href="#"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="LinkedIn"
+        src="/linkedin.svg"
+      />
+    </a>
+  </div>
+</div>
+`;

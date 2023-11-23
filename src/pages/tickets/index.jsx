@@ -1,7 +1,5 @@
 import { UserAuth } from "@/context/AuthContext";
 
-
-
 const patientProfile = () => {
     const { totalTickets } = UserAuth();
 

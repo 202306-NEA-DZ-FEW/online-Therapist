@@ -54,7 +54,7 @@ export default function Success() {
                 const existingTickets = userDocSnapshot.data().tickets || {};
 
                 // Check if the user has bought this ticket before
-                if (existingTickets.hasOwnProperty(priceId)) {
+                if (priceId in existingTickets) {
                     existingTickets[priceId].quantity += Number(
                         ticketDetails.nickname
                     );

@@ -72,8 +72,7 @@ export default function BuyTickect() {
                         userDocSnapshot.data().tickets || {};
 
                     // Check if the user has bought this ticket before
-                    if (existingTickets.hasOwnProperty(priceId)) {
-                        // If the user has bought this ticket before, update the quantity
+                    if (priceId in existingTickets) {
                         existingTickets[priceId].quantity += Number(
                             ticketDetails.nickname
                         );
