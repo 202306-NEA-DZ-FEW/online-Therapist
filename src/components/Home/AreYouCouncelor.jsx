@@ -41,7 +41,10 @@ const AreYouCouncelor = () => {
                     </div>
                 </Reveal>
 
-                <img className='hidden md:block w-96' src='/Images/therapist.jpg' />
+                <img
+                    className='hidden md:block w-96'
+                    src='/Images/therapist.jpg'
+                />
             </div>
         </div>
     );

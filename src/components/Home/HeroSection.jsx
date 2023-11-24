@@ -17,8 +17,8 @@ function HeroSection() {
     const handleBooking = () => {
         // Check if the user is logged in
         if (!user) {
-            // If not logged in, show an alert
-            window.alert("You need to be logged in to Book an appointment");
+            router.push("/login/");
+            // window.alert("You need to be logged in to Book an appointment");
         } else {
             router.push("/bookAnAppointment/");
         }
@@ -39,43 +39,43 @@ function HeroSection() {
     };
 
     return (
+        <div>
         <Slider {...settings} className='bg-white'>
             {slideImages.map((img) => (
-                <>
+                <div key={img.id}>
                     <div
-                        key={img.id}
                         style={{
                             backgroundImage: `url(/Images/${img.imgSrc}.jpg)`,
                         }}
                         className='h-[90vh] bg-cover bg-center relative'
-                    >
-                        <div className='flex flex-col justify-between absolute leading-loose bottom-[25%] left-24 right-24 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding'>
-                            <div className='space-y-4'>
-                                <h2 className='text-3xl md:text-4xl lg:text-7xl leading-loose sm:text-md text-black font-extrabold font-atkinson'>
-                                    {t("hero.heading")}
-                                    <br />
-                                </h2>
-                                <p className='text-xl md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson'>
-                                    {t("hero.text1")}
-                                </p>
-                                <p className='hidden sm:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose'>
-                                    {t("hero.text2")}
-                                </p>
-                            </div>
-                            <div className='px-auto pt-6 mx-auto'>
-                                <Button
-                                    color='teal'
-                                    transition={true}
-                                    buttonText={t("hero.bookingButton")}
-                                    buttonSize='fit'
-                                    clickFunction={handleBooking}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </>
+                    ></div>
+                </div>
             ))}
         </Slider>
+        <div className='flex flex-col justify-between absolute leading-loose bottom-[25%] left-8 right-8 text-center lg:left-48 lg:right-48 p-6 bg-opacity-50 bg-white bg-clip-padding'>
+            <div className='space-y-4'>
+                <h2 className='text-4xl md:text-4xl lg:text-7xl  text-black font-extrabold font-atkinson'>
+                    {t("hero.heading")}
+                    <br />
+                </h2>
+                <p className='hidden md:block md:text-xl lg:text-3xl sm:text-md font-medium text-black leading-loose font-atkinson'>
+                    {t("hero.text1")}
+                </p>
+                <p className='hidden md:block text-lg md:text-xl lg:text-3xl font-medium  font-atkinson leading-loose'>
+                    {t("hero.text2")}
+                </p>
+            </div>
+            <div className='px-auto pt-6 mx-auto'>
+                <Button
+                    color='teal'
+                    transition={true}
+                    buttonText={t("hero.bookingButton")}
+                    buttonSize='fit'
+                    clickFunction={handleBooking}
+                />
+            </div>
+        </div>
+    </div>
     );
 }
 

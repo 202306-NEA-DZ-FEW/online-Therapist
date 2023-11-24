@@ -1510,7 +1510,7 @@ Array [
     </div>
   </div>,
   <div
-    className=" p-10 md:pl-10 bg-LightBeige md:pr-10 lg:pl-32 lg:pr-32"
+    className=" p-6 md:pl-10 bg-LightBeige md:pr-10 lg:pl-32 lg:pr-32"
   >
     <div
       style={
@@ -1529,7 +1529,7 @@ Array [
         }
       >
         <h2
-          className="text-center font-semibold lg:font-normal lg:leading-tight lg:text-start pt-12 text-2xl md:text-2xl lg:text-5xl uppercase text-black font-atkinson m-0 pl-6 pr-6"
+          className="text-center font-normal lg:font-normal lg:leading-tight lg:text-start pt-8 md:pt-12 text-xl md:text-2xl lg:text-5xl uppercase text-black font-atkinson m-0 pl-4 pr-4"
         >
           booking.heading1
            
@@ -3128,7 +3128,7 @@ Array [
         }
       >
         <h2
-          className="font-atkinson font-bold block text-DarkTeal text-center text-2xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+          className="font-atkinson font-bold block text-DarkTeal text-center text-xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
         >
           tickets.heading1
         </h2>
@@ -3151,7 +3151,7 @@ Array [
         }
       >
         <p
-          className=" uppercase font-atkinson font-bold text-center text-2xl md:text-2xl lg:text-3xl text-black mt-2"
+          className=" uppercase font-atkinson font-normal md:font-bold text-center text-lg md:text-2xl lg:text-3xl text-black mt-2"
         >
           tickets.heading2
         </p>
@@ -3180,7 +3180,7 @@ Array [
           }
         >
           <h2
-            className="text-center lg:text-start font-bold block text-3xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
+            className="text-center lg:text-start font-bold block text-2xl md:text-4xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words"
           >
             counselor.heading
           </h2>
@@ -3232,7 +3232,7 @@ Array [
               className="p-16 space-y-4 lg:p-0 lg:space-y-0 lg:flex lg:flex-col lg:items-center lg:justify-center"
             >
               <span
-                className="text-lg p-12 font-atkinson text-black/80"
+                className="text-md md:text-lg p-12 font-atkinson text-black/80"
               >
                 counselor.paragraph
               </span>
@@ -3274,7 +3274,7 @@ Array [
           </div>
         </div>
         <img
-          className="w-96"
+          className="hidden md:block w-96"
           src="/Images/therapist.jpg"
         />
       </div>

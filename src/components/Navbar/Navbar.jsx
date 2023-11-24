@@ -53,9 +53,9 @@ export default function Navbar() {
             }}
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className='sticky top-0 z-50 bg-white md:h-20 md:pt-4  p-0 md:px-12 border-b'
+            className='sticky bg-white top-0 z-50 md:h-20 md:pt-4  p-0 md:px-12 border-b'
         >
-            <div className=' justify-between px-4 mx-auto md:items-center md:flex md:px-8'>
+            <div className='relative justify-between mx-auto md:items-center md:flex md:px-8'>
                 <div>
                     <div className='flex items-center justify-between py-3 md:py-0 '>
                         {/* LOGO */}
@@ -78,14 +78,7 @@ export default function Navbar() {
                                             buttonSize='fit'
                                         />
                                     </Link>
-                                    <Link href='/sign-up'>
-                                        <Button
-                                            transition={false}
-                                            buttonText={t("signup.signup")}
-                                            color='teal'
-                                            buttonSize='fit'
-                                        />
-                                    </Link>
+                                   
                                 </div>
                             ) : (
                                 <div className='flex justify-end space-y-[30px] md:justify-center md:items-center md:flex-col md:space-y-[300px] z-50'>
@@ -117,13 +110,13 @@ export default function Navbar() {
                 </div>
                 <div>
                     <div
-                        className={`flex-1 justify-self-center pb-3 mt-0 md:block md:pb-0 md:mt-0 ${
-                            navbar ? "p-12 md:p-0 block" : "hidden"
+                        className={`md:block  ${
+                            navbar ? " block" : "hidden"
                         }`}
                     >
-                        <ul className='h-screen md:h-auto space-y-2 md:space-y-0 md:space-x-10 items-center justify-center md:flex md:justify-between md:items-center'>
+                        <ul className='bg-white h-screen mt-10 md:mt-0 md:h-auto space-y-2 md:space-y-0 md:space-x-10 items-center justify-center md:flex md:justify-between md:items-center'>
                             <li
-                                className={`block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal  ${
+                                className={`block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal  ${
                                     language === "ar" ? "pl-9" : ""
                                 }`}
                             >
@@ -134,7 +127,7 @@ export default function Navbar() {
                                     {t("navbar.home")}
                                 </Link>
                             </li>
-                            <li className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
+                            <li className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                 <Link
                                     href='/blogs'
                                     onClick={() => setNavbar(!navbar)}
@@ -142,7 +135,7 @@ export default function Navbar() {
                                     {t("navbar.blogs")}
                                 </Link>
                             </li>
-                            <li className='block text-DarkTeal font-atkinson text-lg text-center md:text-start py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal '>
+                            <li className='block text-DarkTeal font-atkinson text-lg text-center md:text-start py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal '>
                                 <div className='group inline-block relative flex justify-center items-center flex-col space-y-[180px] '>
                                     <button className='block flex justify-center items-center '>
                                         {t("navbar.about")}{" "}
@@ -154,7 +147,7 @@ export default function Navbar() {
                                     </div>
                                 </div>
                             </li>
-                            <li className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
+                            <li className='block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                 <Link
                                     href='/contact'
                                     onClick={() => setNavbar(!navbar)}
@@ -173,14 +166,7 @@ export default function Navbar() {
                                                 buttonSize='fit'
                                             />
                                         </Link>
-                                        <Link href='/sign-up'>
-                                            <Button
-                                                transition={false}
-                                                buttonText={t("signup.signup")}
-                                                color='teal'
-                                                buttonSize='fit'
-                                            />
-                                        </Link>
+    
                                     </div>
                                 </li>
                             ) : (
@@ -191,7 +177,7 @@ export default function Navbar() {
                                     >
                                         <TbUserCircle />
                                     </div>
-                                    <div className='absolute '>
+                                    <div className='absolute outline-none'>
                                         {isDropdownOpen && <UserDropdown />}
                                     </div>
                                 </div>
@@ -207,7 +193,7 @@ export default function Navbar() {
                                     </div>
                                 </div>
                             </li>
-                            <li className='md:hidden block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
+                            <li className='md:hidden block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal'>
                                 <div className='group inline-block relative flex justify-center items-center flex-col space-y-[135px] md:space-y-[150px] '>
                                     <button className=' md:block '>
                                         {t("navbar.language")}
