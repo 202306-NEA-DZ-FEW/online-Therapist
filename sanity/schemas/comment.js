@@ -27,12 +27,12 @@ export const comment = {
             name: "childComments",
             title: "Child Comments",
             type: "array",
-            of: [{type: "comment"}],
+            of: [{ type: "comment" }],
         },
         {
             name: "post",
             type: "reference",
-            to: [{type: "post"}],
+            to: [{ type: "post" }],
         },
         {
             name: "approved",
@@ -47,4 +47,4 @@ export const comment = {
             media: "post.mainImage",
         },
     },
-}
+};
