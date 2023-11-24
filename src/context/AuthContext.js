@@ -5,33 +5,33 @@ import {
     signInWithPopup,
     signOut,
     updateProfile,
-} from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
-import { collection, getDocs, query, where } from "firebase/firestore";
-import Image from "next/image";
-import Spinner from "public/loading.svg";
-import Profile from "public/profile.png";
-import { createContext, useContext, useEffect, useState } from "react";
+} from "firebase/auth"
+import {doc, getDoc} from "firebase/firestore"
+import {collection, getDocs, query, where} from "firebase/firestore"
+import Image from "next/image"
+import Spinner from "public/loading.svg"
+import Profile from "public/profile.png"
+import {createContext, useContext, useEffect, useState} from "react"
 
-import { auth } from "@/util/firebase";
-import { db } from "@/util/firebase";
+import {auth} from "@/util/firebase"
+import {db} from "@/util/firebase"
 
-const AuthContext = createContext();
+const AuthContext = createContext()
 
-export function AppWrapper({ Component, children }) {
+export function AppWrapper ({children}) {
     const [user, setUser] = useState({
         email: null,
         uid: null,
         isTherapist: false,
         isUser: false,
-    });
-    const [loading, setLoading] = useState(true);
-    const [profilePicture, setProfilePicture] = useState(null);
-    const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
-    const [activeLink, setActiveLink] = useState("appointments");
-    const [cards, setCards] = useState([]);
-    const googleProvider = new GoogleAuthProvider();
-    const facebookProvider = new FacebookAuthProvider();
+    })
+    const [loading, setLoading] = useState(true)
+    const [profilePicture, setProfilePicture] = useState(null)
+    const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false) // State to track signup success
+    const [activeLink, setActiveLink] = useState("appointments")
+    const [cards, setCards] = useState([])
+    const googleProvider = new GoogleAuthProvider()
+    const facebookProvider = new FacebookAuthProvider()
 
     const AuthWithGoogle = () => {
         // Implement Google login using Firebase here
@@ -39,41 +39,41 @@ export function AppWrapper({ Component, children }) {
             .then((result) => {
                 // This gives you a Google Access Token. You can use it to access the Google API.
                 const credential =
-                    GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
+                    GoogleAuthProvider.credentialFromResult(result)
+                const token = credential.accessToken
                 // The signed-in user info.
-                const user = result.user;
-                console.log("google user", user);
+                const user = result.user
+                console.log("google user", user)
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...
             })
             .catch((error) => {
                 // Handle Errors here.
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                const errorCode = error.code
+                const errorMessage = error.message
                 // console.log("can't log in", errorMessage, " ", errorCode);
                 // The email of the user's account used.
-                const email = error.customData.email;
+                const email = error.customData.email
                 // console.log("wrong email", email);
                 // The AuthCredential type that was used.
                 const credential =
-                    GoogleAuthProvider.credentialFromError(error);
+                    GoogleAuthProvider.credentialFromError(error)
                 // console.log("error", credential);
                 // ...
-            });
-    };
+            })
+    }
 
     const AuthWithFacebook = () => {
         // Implement Facebook login using Firebase here
         signInWithPopup(auth, facebookProvider)
             .then((result) => {
                 // The signed-in user info.
-                const user = result.user;
-                console.log("facebook user", user);
+                const user = result.user
+                console.log("facebook user", user)
                 // This gives you a Facebook Access Token. You can use it to access the Facebook API.
                 const credential =
-                    FacebookAuthProvider.credentialFromResult(result);
-                const accessToken = credential.accessToken;
+                    FacebookAuthProvider.credentialFromResult(result)
+                const accessToken = credential.accessToken
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...
                 fetch(
@@ -81,29 +81,29 @@ export function AppWrapper({ Component, children }) {
                 )
                     .then((response) => response.blob())
                     .then((blob) => {
-                        setProfilePicture(URL.createObjectURL(blob));
-                    });
+                        setProfilePicture(URL.createObjectURL(blob))
+                    })
             })
             .catch((error) => {
                 // Handle Errors here.
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
+                const errorCode = error.code
+                const errorMessage = error.message
+                console.log(errorCode, errorMessage)
                 // The email of the user's account used.
-                const email = error.customData.email;
+                const email = error.customData.email
                 // console.log("wrong email", email);
                 // The AuthCredential type that was used.
                 const credential =
-                    FacebookAuthProvider.credentialFromError(error);
+                    FacebookAuthProvider.credentialFromError(error)
                 // console.log("error", credential);
 
                 // ...
-            });
-    };
+            })
+    }
 
     const logOut = () => {
-        signOut(auth);
-    };
+        signOut(auth)
+    }
 
     // useEffect(() => {
     //     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -112,114 +112,120 @@ export function AppWrapper({ Component, children }) {
     //     return () => unsubscribe()
     // }, [user])
 
+    /*     useEffect(() => {
+            const unsubscribe = onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    const docRef = doc(db, "therapists", user.uid)
+                    const docSnap = await getDoc(docRef)
+                    if (docSnap.exists()) {
+                        const isTherapist = true
+                        const {fullname} = docSnap.data()
+                        setUser({
+                            email: user.email,
+                            uid: user.uid,
+                            photoURL: user.photoURL || Profile,
+                            displayName: fullname,
+                            isTherapist,
+                        })
+                    } else {
+                        const isTherapist = false
+                        setUser({
+                            email: user.email,
+                            uid: user.uid,
+                            photoURL: user.photoURL || Profile,
+                            displayName: user.displayName,
+                            isTherapist,
+                        })
+                    }
+                } else {
+                    setUser(null)
+                }
+                setLoading(false)
+            })
+    
+            return () => unsubscribe()
+        }, []) */
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
-                const docRef = doc(db, "therapists", user.uid);
-                const docSnap = await getDoc(docRef);
+                const docRef = doc(db, "therapists", user.uid)
+                const docSnap = await getDoc(docRef)
                 if (docSnap.exists()) {
-                    const isTherapist = true;
-                    const { fullname } = docSnap.data();
+                    const isUser = false
+                    const isTherapist = true
+                    const {fullname, username} = docSnap.data()
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL || Profile,
-                        displayName: fullname,
+                        photoURL: user.photoURL || Profile.src,
+                        displayName: fullname ?? username,
                         isTherapist,
-                    });
+                        isUser,
+                    })
+                    localStorage.setItem("uid", user.uid)
                 } else {
-                    const isTherapist = false;
+                    const isUser = true
+                    const isTherapist = false
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL || Profile,
+                        photoURL: user.photoURL || Profile.src,
                         displayName: user.displayName,
                         isTherapist,
-                    });
+                        isUser,
+                    })
                 }
             } else {
-                setUser(null);
+                setUser(null)
             }
-            setLoading(false);
-        });
+            setLoading(false)
+        })
 
-        return () => unsubscribe();
-    }, []);
-
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (user) => {
-            if (user) {
-                const docRef = doc(db, "users", user.uid);
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    const isUser = true;
-                    setUser({
-                        email: user.email,
-                        uid: user.uid,
-                        photoURL: user.photoURL || Profile,
-                        displayName: user.displayName,
-                        isUser,
-                    });
-                } else {
-                    const isUser = false;
-                    setUser({
-                        email: user.email,
-                        uid: user.uid,
-                        photoURL: user.photoURL || Profile,
-                        displayName: user.displayName,
-                        isUser,
-                    });
-                }
-            } else {
-                setUser(null);
-            }
-            setLoading(false);
-        });
-
-        return () => unsubscribe();
-    }, []);
+        return () => unsubscribe()
+    }, [])
 
     const updateProfilePhoto = async (photoURL) => {
-        const user = auth.currentUser;
-        updateProfile(user, { photoURL });
-    };
+        const user = auth.currentUser
+        updateProfile(user, {photoURL})
+    }
 
     const fetchUserCards = async (userUid) => {
         try {
-            const cardsCollection = collection(db, "cards");
+            const cardsCollection = collection(db, "cards")
             const userCardsQuery = query(
                 cardsCollection,
                 where("uid", "==", userUid)
-            );
-            const querySnapshot = await getDocs(userCardsQuery);
+            )
+            const querySnapshot = await getDocs(userCardsQuery)
             const userCards = querySnapshot.docs.map((doc) => ({
                 ...doc.data(),
                 id: doc.id,
-            }));
+            }))
 
-            console.log("User Cards:", userCards);
-            return userCards;
+            console.log("User Cards:", userCards)
+            return userCards
         } catch (error) {
-            console.error("Error fetching user cards:", error);
-            return [];
+            console.error("Error fetching user cards:", error)
+            return []
         } finally {
-            setLoading(false);
+            setLoading(false)
         }
-    };
+    }
 
     useEffect(() => {
         const fetchCards = async () => {
             try {
-                const userId = user.uid;
-                const userCards = await fetchUserCards(userId);
-                setCards(userCards);
+                const userId = user.uid
+                const userCards = await fetchUserCards(userId)
+                setCards(userCards)
             } catch (error) {
-                console.error("Error fetching cards:", error);
+                console.error("Error fetching cards:", error)
             }
-        };
+        }
 
-        fetchCards();
-    }, [user]);
+        fetchCards()
+    }, [user])
 
     return (
         <AuthContext.Provider
@@ -257,10 +263,10 @@ export function AppWrapper({ Component, children }) {
                 children
             )}
         </AuthContext.Provider>
-    );
+    )
 }
-export function UserAuth() {
-    return useContext(AuthContext);
+export function UserAuth () {
+    return useContext(AuthContext)
 }
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext)

@@ -1,4 +1,10 @@
 {
     "more": "Read more",
-    "written_by": "Written By"
+    "written_by": "Written By",
+    "latest": "Latest Comments",
+    "loggin_first": "You must log first",
+    "write_a_comment": "Write a comment..",
+    "comment_btn": "Add a comment",
+    "reaction_saved": "You reaction was saved successfully",
+    "required": "This field is required"
 }

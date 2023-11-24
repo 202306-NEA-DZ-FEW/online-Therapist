@@ -17,14 +17,7 @@ export const comment = {
             name: "image",
             title: "User Image",
             type: "string",
-        },
-        {
-            name: "userImage",
-            title: "User Image",
-            type: "image",
-            options: {
-                hotspot: true,
-            },
+
         },
         {
             name: "comment",
@@ -35,12 +28,12 @@ export const comment = {
             name: "childComments",
             title: "Child Comments",
             type: "array",
-            of: [{ type: "comment" }],
+            of: [{type: "comment"}],
         },
         {
             name: "post",
             type: "reference",
-            to: [{ type: "post" }],
+            to: [{type: "post"}],
         },
         {
             name: "approved",
@@ -50,8 +43,12 @@ export const comment = {
     ],
     preview: {
         select: {
-            title: "name",
-            subtitle: "comment",
+            title: "post.title",
+            subtitle: "email",
+
+            media: "post.mainImage"
+
+
         },
     },
-};
+}

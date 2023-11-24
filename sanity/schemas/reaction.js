@@ -40,12 +40,17 @@ export const reaction = {
             type: "reference",
             to: [{type: "post"}],
         },
+        {
+            name: "media",
+            title: "Post image",
+            type: "image"
+
+        }
     ],
     preview: {
         select: {
             title: "post.title",
-            post: "post.title",
-
+            media: "post.mainImage"
         },
     },
 }

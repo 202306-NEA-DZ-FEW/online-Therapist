@@ -47,7 +47,7 @@ const RichTextChildren = {
             </h1>
         ),
         h2: ({children}) => (
-            <h2 className='mb-2 mt-4 text-xl md:text-4xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-teal-600 via-fuchsia-950 to-sky-100'>
+            <h2 className='mb-2 mt-4 text-xl md:text-4xl font-bold text-transparent  bg-clip-text bg-gradient-to-r rtl:bg-gradient-to-l from-teal-600 via-fuchsia-950 to-sky-100'>
                 {children}
             </h2>
         ),
@@ -74,8 +74,8 @@ const Post = ({post}) => {
             <div className='h-full  my-7 container md:mx-auto'>
                 <article className='px-10 pb-28 py-5'>
                     <section className='rtl:space-y-reverse space-y-2 border border-teal-700 text-white rounded-lg shadow-2xl group'>
-                        <div className='relative h-80 flex flex-col md:flex-row justify-between '>
-                            <div className='absolute top-0 w-full h-full opacity-20 p-10 group-hover:blur-[2px] blur-[5px] group-hover:cursor-not-allowed transition-all duration-300 ease-in-out '>
+                        <div className='relative h-90 lg:h-80 md:h-96 flex flex-col md:flex-row justify-between '>
+                            <div className='absolute top-0 w-full h-full opacity-20 p-10 group-hover:blur-[1px] blur-[5px] transition-all duration-300 ease-in-out '>
                                 <Image
                                     className='object-cover object-center mx-auto pointer-events-none'
                                     src={urlForImage(post.mainImage)?.url()}
@@ -84,12 +84,12 @@ const Post = ({post}) => {
                                 />
                             </div>
 
-                            <section className='rounded-md p-5 bg-transparent bg-gradient-to-tr rtl:bg-gradient-to-tl from-emerald-600 via-sky-700 to-teal-950 w-full md:min-h-full min-h-fit '>
+                            <section className='rounded-md p-5 bg-transparent bg-gradient-to-tr rtl:bg-gradient-to-tl from-emerald-600 via-sky-700 to-teal-950 w-full  min-h-full '>
                                 <div className='flex flex-col md:flex-row justify-between gap-y-5'>
                                     <div className=''>
                                         <h1
                                             className='text-xl md:text-4xl
-                                            font-bold'
+                                            font-bold hover:cursor-text'
                                         >
                                             {post.title}
                                         </h1>
@@ -116,13 +116,13 @@ const Post = ({post}) => {
                                             height={60}
                                             width={60}
                                             alt={post.author.name}
-                                            className='rounded-full -mr-5 rtl:-ml-5'
+                                            className='rounded-full -mr-[.8rem] rtl:-ml-5'
                                         />
                                         <div className='w-64 rtl:w-40 text-center'>
                                             <h3 className='font-semibold text-sm rtl:md:text-xl md:text-lg'>
                                                 {post.author.name}
                                             </h3>
-                                            <p className='line-clamp-2 px-2 mx-1 text-center md:text-xs text-[.65rem]'>
+                                            <p className='line-clamp-2 px-2 mx-1.5 text-center md:text-xs text-[.65rem]'>
                                                 <PortableText
                                                     value={post.author.bio}
                                                 />
@@ -134,7 +134,7 @@ const Post = ({post}) => {
                                     <h2 className='italic pt-7 rtl:pt-10 line-clamp-2'>
                                         {post.description}
                                     </h2>
-                                    <div className='flex items-center justify-end md:mt-10 md:rtl:mt-20 mt-3'>
+                                    <div className='flex items-center justify-end lg:mt-10 lg:rtl:mt-20 md:mt-10 mt-3'>
                                         {post.categories?.map((category) => (
                                             <div
                                                 key={category._id}
@@ -197,7 +197,7 @@ export async function getStaticProps (context) {
               ...,
               author->,
               categories[]->,
-              'comments': *[_type == "comment" && post._ref == ^._id]{_id, name, email, comment, image, _createdAt},
+              'comments': *[_type == "comment" && post._ref == ^._id]{_id, name, email, comment, image, _createdAt} | order(_createdAt asc),
               'emojis': *[_type == "reaction" && post._ref == ^._id][0] {reactions},
             }
     `
