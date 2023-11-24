@@ -12,7 +12,7 @@ export default function About() {
         <Layout>
             <div className='max-w-screen-lg mx-auto p-4'>
                 {/* First Section */}
-                <section className='my-4 lg:my-8 flex flex-col md:flex-row items-center justify-center lg:justify-between bg-gray-100 p-8 rounded-lg border border-gray-300 transition duration-500 ease-in-out transform hover:scale-105'>
+                <section className='my-4 lg:my-8 flex flex-col md:flex-row items-center justify-center lg:justify-between bg-gray-100 p-8 rounded-lg border border-gray-300 transition duration-500 ease-in-out transform lg:hover:scale-105'>
                     <div className='w-full md:w-1/2 lg:w-5/12 mx-auto md:order-2 mb-4 md:mb-0'>
                         <Image
                             src='/Images/photo1.jpeg'
@@ -33,7 +33,7 @@ export default function About() {
                 </section>
 
                 {/* Second Section */}
-                <section className='my-4 lg:my-8 flex flex-col md:flex-row items-center justify-center lg:justify-between bg-blue-100 p-6 rounded-md border border-blue-500 hover:border-blue-700 transition duration-300 ease-in-out transform hover:scale-105'>
+                <section className='my-4 lg:my-8 flex flex-col md:flex-row items-center justify-center lg:justify-between bg-blue-100 p-6 rounded-md border border-blue-500 hover:border-blue-700 transition duration-300 ease-in-out transform lg:hover:scale-105'>
                     <div className='w-full md:w-1/2 lg:w-5/12 mx-auto md:order-1 mb-4 md:mb-0'>
                         <Image
                             src='/Images/photo2.jpeg'
