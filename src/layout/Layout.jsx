@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import { motion } from "framer-motion";
+import ChatCard from "@/components/Cards/ChatCard";
 
 export default function Layout({ children }) {
     return (
@@ -20,6 +21,7 @@ export default function Layout({ children }) {
             >
                 {children}
             </motion.div>
+            <ChatCard />
             <Footer />
         </>
     );

@@ -14,7 +14,7 @@ export default async function POST(req, res) {
             ],
             payment_method_types: ["card"],
             mode: "payment",
-            success_url: `${req.headers.origin}/success`,
+            success_url: `${req.headers.origin}/success?price_id=${priceId}`,
             cancel_url: `${req.headers.origin}/?canceled=true`,
         });
 
