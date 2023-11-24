@@ -7,6 +7,7 @@ import {
     updateProfile,
 } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import Image from "next/image";
 import Spinner from "public/loading.svg";
 import Profile from "public/profile.png";
@@ -14,21 +15,22 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 import { auth } from "@/util/firebase";
 import { db } from "@/util/firebase";
-import { collection, getDocs, where, query } from "firebase/firestore";
 
 const AuthContext = createContext();
 
-export function AppWrapper({ children }) {
+export function AppWrapper({ Component, children }) {
     const [user, setUser] = useState({
         email: null,
         uid: null,
         isTherapist: false,
+        isUser: false,
     });
     const [loading, setLoading] = useState(true);
     const [profilePicture, setProfilePicture] = useState(null);
     const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false); // State to track signup success
     const [activeLink, setActiveLink] = useState("appointments");
     const [cards, setCards] = useState([]);
+    const [totalTickets, setTotalTickets] = useState(0);
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
 
@@ -137,6 +139,39 @@ export function AppWrapper({ children }) {
         return () => unsubscribe();
     }, []);
 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                const docRef = doc(db, "users", user.uid);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    const isUser = true;
+                    setUser({
+                        email: user.email,
+                        uid: user.uid,
+                        photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
+                        isUser,
+                    });
+                } else {
+                    const isUser = false;
+                    setUser({
+                        email: user.email,
+                        uid: user.uid,
+                        photoURL: user.photoURL || Profile,
+                        displayName: user.displayName,
+                        isUser,
+                    });
+                }
+            } else {
+                setUser(null);
+            }
+            setLoading(false);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
     const updateProfilePhoto = async (photoURL) => {
         const user = auth.currentUser;
         updateProfile(user, { photoURL });
@@ -155,7 +190,6 @@ export function AppWrapper({ children }) {
                 id: doc.id,
             }));
 
-            console.log("User Cards:", userCards);
             return userCards;
         } catch (error) {
             console.error("Error fetching user cards:", error);
@@ -179,6 +213,41 @@ export function AppWrapper({ children }) {
         fetchCards();
     }, [user]);
 
+    useEffect(() => {
+        const fetchTickets = async () => {
+            try {
+                const userDocRef = doc(collection(db, "users"), user.uid);
+                const userDocSnapshot = await getDoc(userDocRef);
+
+                if (userDocSnapshot.exists()) {
+                    const userData = userDocSnapshot.data();
+                    const userTickets = userData.tickets || {};
+
+                    // Convert the tickets object into an array
+                    const ticketArray = Object.keys(userTickets).map(
+                        (ticketId) => ({
+                            id: ticketId,
+                            quantity: userTickets[ticketId].quantity,
+                        })
+                    );
+
+                    // Calculate the total quantity
+                    const totalQuantity = ticketArray.reduce(
+                        (total, ticket) => total + ticket.quantity,
+                        0
+                    );
+                    setTotalTickets(totalQuantity);
+                }
+            } catch (error) {
+                console.error("Error fetching user tickets:", error);
+            }
+        };
+
+        if (user) {
+            fetchTickets();
+        }
+    }, [user]);
+
     return (
         <AuthContext.Provider
             value={{
@@ -199,15 +268,17 @@ export function AppWrapper({ children }) {
                 fetchUserCards,
                 cards,
                 setCards,
+                totalTickets,
             }}
         >
             {loading ? (
-                <div className='flex justify-center items-center h-screen'>
+                <div className='grid place-items-center h-screen '>
                     <Image
                         src={Spinner}
                         alt='loading'
-                        height={200}
-                        width={200}
+                        height={150}
+                        width={150}
+                        className='h-28 w-28'
                     />
                 </div>
             ) : (

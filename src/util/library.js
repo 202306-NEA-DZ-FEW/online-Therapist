@@ -1,3 +1,72 @@
+export const members = [
+    {
+        id: 1,
+        name_en: "Lilia Bendjeddou",
+        name_ar: "ليليا بن جدو",
+        role_en: "Front-end & Web Developer",
+        role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
+        imgUrl: "/Images/member1.png",
+        linkedIn: "www.linkedin.com/in/lilia-bendjeddou-705679256/",
+        github: "Lilicod",
+    },
+    {
+        id: 2,
+        name_en: "Mohamed Matassi",
+        name_ar: "محمد مطاسي",
+        role_en: "Front-end & Web Developer",
+        role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
+        imgUrl: "/Images/member2.png",
+        linkedIn: "www.linkedin.com/in/matassi-mohamed",
+
+        github: "M07am3dM",
+    },
+    {
+        id: 3,
+        name_en: "Walid Lamraoui",
+        name_ar: "وليد لعمراوي",
+        role_en: "Front-end & Web Developer",
+        role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
+        imgUrl: "/Images/member3.png",
+        linkedIn: " linkedin.com/in/walid-lamraoui/",
+
+        github: "dzc0d3r",
+    },
+    {
+        id: 4,
+        name_en: "Meriem Mansouri",
+        name_ar: "مريم منصوري",
+        role_en: "Front-end & Web Developer",
+        role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
+        imgUrl: "/Images/member4.png",
+        linkedIn: "https://www.linkedin.com/in/meriem-mansouri-1b1643276/",
+
+        github: "meryem08",
+    },
+    {
+        id: 5,
+        name_en: "Dalila Benhamed",
+        name_ar: "بن حامد دليلة",
+        role_en: "Front-end & Web Developer",
+        role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
+        imgUrl: "/Images/member5.png",
+        linkedIn: "www.linkedin.com/in/dalila-dalila-81a3a3200",
+
+        github: "dalilia",
+    },
+    {
+        id: 6,
+        name_en: " Sid Ali Habchi",
+        name_ar: "حبشي سيد علي",
+        role_en: "Front-end & Web Developer",
+        role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
+        imgUrl: "/Images/member6.png",
+        linkedIn: "www.linkedin.com/in/sid-ali-habchi-10216125a/",
+
+        github: "HabchiSidAli",
+    },
+    /*name,id,img,github,linkedin*/
+];
+
 import { HiUserGroup } from "react-icons/hi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { IoCalendar } from "react-icons/io5";

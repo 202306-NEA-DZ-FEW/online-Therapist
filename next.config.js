@@ -2,6 +2,7 @@
 const { i18n } = require("./next-i18next.config");
 
 module.exports = {
+    experimental: { urlImports: ["https://themer.sanity.build/"] },
     i18n,
     eslint: {
         dirs: ["src"],
@@ -13,6 +14,7 @@ module.exports = {
             "images.unsplash.com",
             "c.stocksy.com",
             "firebasestorage.googleapis.com",
+            "cdn.sanity.io",
         ],
     },
 };
