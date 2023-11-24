@@ -1,17 +1,17 @@
-import {PortableText} from "@portabletext/react"
-import Image from "next/image"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import {groq} from "next-sanity"
-import React from "react"
+import { PortableText } from "@portabletext/react";
+import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { groq } from "next-sanity";
+import React from "react";
 
-import AddComment from "@/components/Blog/AddComment"
-import Comments from "@/components/Blog/Comments"
-import Reactions from "@/components/Blog/Reactions"
+import AddComment from "@/components/Blog/AddComment";
+import Comments from "@/components/Blog/Comments";
+import Reactions from "@/components/Blog/Reactions";
 
-import Layout from "@/layout/Layout"
+import Layout from "@/layout/Layout";
 
-import {client} from "../../../../sanity/lib/client"
-import {urlForImage} from "../../../../sanity/lib/image"
+import { client } from "../../../../sanity/lib/client";
+import { urlForImage } from "../../../../sanity/lib/image";
 
 const RichTextChildren = {
     types: {
@@ -25,50 +25,50 @@ const RichTextChildren = {
                         fill
                     />
                 </div>
-            )
+            );
         },
     },
     lists: {
-        bullet: ({children}) => {
+        bullet: ({ children }) => {
             <ul className='ml-10 rtl:mr-10 list-disc space-y-5 rtl:space-y-reverse'>
                 {children}
-            </ul>
+            </ul>;
         },
         number: (children) => {
             <ol className='ml-10 rtl:mr-10 list-decimal space-y-5 rtl:space-y-reverse'>
                 {children}
-            </ol>
+            </ol>;
         },
     },
     block: {
-        h1: ({children}) => (
+        h1: ({ children }) => (
             <h1 className='mb-2 mt-4 text-2xl md:text-5xl font-bold text-transparent  bg-clip-text bg-gradient-to-r rtl:bg-gradient-to-l from-teal-500 via-emerald-400 to-teal-950'>
                 {children}
             </h1>
         ),
-        h2: ({children}) => (
+        h2: ({ children }) => (
             <h2 className='mb-2 mt-4 text-xl md:text-4xl font-bold'>
                 {children}
             </h2>
         ),
-        h3: ({children}) => (
+        h3: ({ children }) => (
             <h3 className='mb-2 mt-4 text-xl md:text-2xl font-bold text-black/80'>
                 {children}
             </h3>
         ),
-        h4: ({children}) => (
+        h4: ({ children }) => (
             <h4 className='mb-2 mt-4 text-lg md:text-xl font-bold text-black/80'>
                 {children}
             </h4>
         ),
-        normal: ({children}) => (
+        normal: ({ children }) => (
             <p className='text-black/80 md:text-lg md:mb-7 font-medium rtl:md:text-xl'>
                 {children}
             </p>
         ),
     },
-}
-const Post = ({post}) => {
+};
+const Post = ({ post }) => {
     return (
         <Layout>
             <div className='h-full  my-7 container md:mx-auto'>
@@ -170,10 +170,10 @@ const Post = ({post}) => {
                 </article>
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default Post
+export default Post;
 /* export async function getStaticPaths({ locale }) {
     const query_path = groq`
                *[_type == "post" &&
@@ -187,9 +187,9 @@ export default Post
     };
 } */
 
-export async function getServerSideProps (context) {
-    const {slug} = context.params
-    const {locale} = context
+export async function getServerSideProps(context) {
+    const { slug } = context.params;
+    const { locale } = context;
     const query = groq`
             *[_type == "post" && slug.current == $slug && language == $language][0]
             {
@@ -199,14 +199,14 @@ export async function getServerSideProps (context) {
               'comments': *[_type == "comment" && post._ref == ^._id]{_id, name, email, comment, image, _createdAt} | order(_createdAt asc),
               'emojis': *[_type == "reaction" && post._ref == ^._id][0] {reactions},
             }
-    `
+    `;
 
-    const post = await client.fetch(query, {slug, language: locale})
+    const post = await client.fetch(query, { slug, language: locale });
 
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             post,
         },
-    }
+    };
 }
