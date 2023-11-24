@@ -47,7 +47,7 @@ const AddComment = ({postId}) => {
                     router.replace(router.asPath, router.asPath, {
                         scroll: false,
                     })
-                    toast.success("comment added successfully")
+                    toast.success(t("comment_added"))
                 }
             } catch (err) {
                 setFormData(err)
@@ -102,7 +102,7 @@ const AddComment = ({postId}) => {
                 register={{
                     ...register("name"),
                 }}
-                value={user?.displayName || "Ghost?"}
+                value={user?.displayName || "Ghost"}
             />
             <Input
                 width='full'

@@ -2,9 +2,10 @@
     "more": "Read more",
     "written_by": "Written By",
     "latest": "Latest Comments",
-    "loggin_first": "You must log first",
+    "loggin_first": "You must log in first",
     "write_a_comment": "Write a comment..",
     "comment_btn": "Add a comment",
-    "reaction_saved": "You reaction was saved successfully",
+    "comment_added": "Your comment was added successfully",
+    "reaction_saved": "Your reaction was saved successfully",
     "required": "This field is required"
 }

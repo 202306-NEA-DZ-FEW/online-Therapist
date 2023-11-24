@@ -11,10 +11,14 @@ export const reaction = {
         {
             name: "reactions",
             title: "Reactions",
+
             type: "array",
             of: [
                 {
                     type: "object",
+
+
+
                     fields: [
                         {
                             name: "emoji",
@@ -31,20 +35,37 @@ export const reaction = {
                             type: "string",
                             title: "Label",
                         },
+
+
                     ],
+
+                    preview: {
+                        select: {
+
+                            title: 'counter',
+                            subtitle: 'emoji',
+                            media: "post.mainImage",
+
+                        },
+                        prepare (selection) {
+                            const {title, subtitle} = selection
+                            return {
+                                title: `Post have ${title}  ${subtitle}`,
+
+                            }
+                        }
+                    },
                 },
+
             ],
+
         },
         {
             name: "post",
             type: "reference",
-            to: [{ type: "post" }],
+            to: [{type: "post"}],
         },
-        {
-            name: "media",
-            title: "Post image",
-            type: "image",
-        },
+
     ],
     preview: {
         select: {
@@ -52,4 +73,4 @@ export const reaction = {
             media: "post.mainImage",
         },
     },
-};
+}
