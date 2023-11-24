@@ -78,7 +78,6 @@ export default function Navbar() {
                                             buttonSize='fit'
                                         />
                                     </Link>
-                                   
                                 </div>
                             ) : (
                                 <div className='flex justify-end space-y-[30px] md:justify-center md:items-center md:flex-col md:space-y-[300px] z-50'>
@@ -110,9 +109,7 @@ export default function Navbar() {
                 </div>
                 <div>
                     <div
-                        className={`md:block  ${
-                            navbar ? " block" : "hidden"
-                        }`}
+                        className={`md:block  ${navbar ? " block" : "hidden"}`}
                     >
                         <ul className='bg-white h-screen mt-10 md:mt-0 md:h-auto space-y-2 md:space-y-0 md:space-x-10 items-center justify-center md:flex md:justify-between md:items-center'>
                             <li
@@ -166,7 +163,6 @@ export default function Navbar() {
                                                 buttonSize='fit'
                                             />
                                         </Link>
-    
                                     </div>
                                 </li>
                             ) : (

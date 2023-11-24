@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="w-96 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg"
+  className="w-48 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg"
 >
   <ul
     className="py-2 first:pt-0  last:pb-0"
