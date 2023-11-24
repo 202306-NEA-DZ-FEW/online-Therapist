@@ -1,9 +1,9 @@
-import Image from "next/image"
-import {useTranslation} from "next-i18next"
+import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-import Profile from "/public/profile.png"
-const Comments = ({comments = [], language}) => {
-    const {t} = useTranslation("blog")
+import Profile from "/public/profile.png";
+const Comments = ({ comments = [], language }) => {
+    const { t } = useTranslation("blog");
     return (
         <div className=''>
             <ul className='md:px-3'>
@@ -11,7 +11,7 @@ const Comments = ({comments = [], language}) => {
                     {t("latest")}
                 </h2>
                 {comments?.map(
-                    ({_id, _createdAt, name, email, comment, image}) => (
+                    ({ _id, _createdAt, name, email, comment, image }) => (
                         <li key={_id} className='bg-gray-50 rounded-md my-1'>
                             <div className='flex flex-row gap-5 items-center md:p-5 p-2'>
                                 <Image
@@ -49,7 +49,7 @@ const Comments = ({comments = [], language}) => {
                 )}
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default Comments
+export default Comments;
