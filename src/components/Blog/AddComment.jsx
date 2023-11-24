@@ -1,57 +1,60 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import Profile from "public/profile.png";
-import Spinner from "public/spinner.svg";
-import React from "react";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import {revalidatePath} from 'next/cache'
+import Image from "next/image"
+import {useRouter} from "next/router"
+import {useTranslation} from "next-i18next"
+import Profile from "public/profile.png"
+import Spinner from "public/spinner.svg"
+import React from "react"
+import {useState} from "react"
+import {useForm} from "react-hook-form"
+import {toast} from "react-toastify"
 
-import { useAuth } from "@/context/AuthContext";
+import {useAuth} from "@/context/AuthContext"
 
-import Input from "../elements/Input";
-const AddComment = ({ postId }) => {
-    const { t } = useTranslation("blog");
-    const { user } = useAuth();
+import Input from "../elements/Input"
+const AddComment = ({postId}) => {
+    const {t} = useTranslation("blog")
+    const {user} = useAuth()
     const [formData, setFormData] = useState({
         _id: postId,
         name: user?.displayName || "",
         email: user?.email || "",
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const { register, handleSubmit, formState } = useForm();
-    const { errors } = formState;
-    const router = useRouter();
+    })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const {register, handleSubmit, formState} = useForm()
+    const {errors} = formState
+    const router = useRouter()
     const onChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+        const {name, value} = e.target
+        setFormData({...formData, [name]: value})
+    }
     const onSubmit = async (data) => {
         if (!user) {
-            toast.error(t("loggin_first"));
-            setFormData({ ...formData, comment: "" });
-            return;
+            toast.error(t("loggin_first"))
+            setFormData({...formData, comment: ""})
+            return
         } else {
-            setIsSubmitting(true);
-            setFormData(data);
+            setIsSubmitting(true)
+            setFormData(data)
             try {
                 const response = await fetch("/api/blog/create-comment", {
                     method: "POST",
                     body: JSON.stringify(data),
                     type: "application/json",
-                });
+                })
                 if (response.ok) {
-                    setIsSubmitting(false);
-                    router.replace(router.asPath, undefined, { scroll: false });
-                    toast.success("comment added successfully");
-                    setFormData({ ...formData, comment: "" });
+                    setIsSubmitting(false)
+
+                    router.replace(router.asPath, undefined, {scroll: false})
+                    revalidatePath(router.asPath)
+                    toast.success("comment added successfully")
+                    setFormData({...formData, comment: ""})
                 }
             } catch (err) {
-                setFormData(err);
+                setFormData(err)
             }
         }
-    };
+    }
 
     if (isSubmitting) {
         return (
@@ -63,7 +66,7 @@ const AddComment = ({ postId }) => {
                     alt='loading'
                 ></Image>
             </div>
-        );
+        )
     }
 
     return (
@@ -122,7 +125,7 @@ const AddComment = ({ postId }) => {
                     name='comment'
                     errorMessage={errors.comment?.message}
                     register={{
-                        ...register("comment", { required: t("required") }),
+                        ...register("comment", {required: t("required")}),
                     }}
                     value={formData.comment}
                     onChange={onChange}
@@ -134,7 +137,7 @@ const AddComment = ({ postId }) => {
                 />
             </div>
         </form>
-    );
-};
+    )
+}
 
-export default AddComment;
+export default AddComment
