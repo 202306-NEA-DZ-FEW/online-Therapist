@@ -22,7 +22,9 @@ export default function CommunicationCard({
                     <div
                         className={`flex flex-col h-32 w-[215px] lg:h-44 lg:w-[230px] rounded-[20px]  ${greenBackground} `}
                     >
-                        <span className='text-5xl lg:text-6xl m-auto'>{IconComponent}</span>
+                        <span className='text-5xl lg:text-6xl m-auto'>
+                            {IconComponent}
+                        </span>
                         <h3 className='mx-auto text-xl lg:text-3xl font-atkinson mb-4 lg:mb-8'>
                             {title}
                         </h3>
