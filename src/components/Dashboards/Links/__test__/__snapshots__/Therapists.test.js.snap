@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="p-10"
+>
+  <h2
+    className="text-5xl font-young"
+  >
+    Therapists Matches list
+  </h2>
+  <ul
+    className="flex flex-col"
+  />
+</div>
+`;

@@ -104,13 +104,6 @@ export function AppWrapper({ children }) {
         signOut(auth);
     };
 
-    // useEffect(() => {
-    //     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-    //         setUser(currentUser);
-    //     })
-    //     return () => unsubscribe()
-    // }, [user])
-
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {

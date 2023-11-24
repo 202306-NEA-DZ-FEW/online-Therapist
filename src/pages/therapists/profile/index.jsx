@@ -15,6 +15,7 @@ import ProfileImage from "@/components/ProfileImage";
 import { useAuth } from "@/context/AuthContext";
 import Layout from "@/layout/Layout";
 import { db } from "@/util/firebase";
+
 const Profile = ({ t }) => {
     const router = useRouter();
     const searchParams = useSearchParams();
