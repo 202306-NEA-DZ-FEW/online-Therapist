@@ -18,13 +18,11 @@ function HeroSection() {
         // Check if the user is logged in
         if (!user) {
             router.push("/login/");
-            // window.alert("You need to be logged in to Book an appointment");
         } else {
             router.push("/bookAnAppointment/");
         }
     };
-    // Define the paths based on the user's authentication status
-    // const bookingPath = user ? "/bookAnAppointment" : "/login/login";
+
     const { t } = useTranslation("homepage");
     const settings = {
         fade: false,
