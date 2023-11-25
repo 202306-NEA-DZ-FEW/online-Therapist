@@ -1,4 +1,4 @@
-import { addDoc,collection } from "@firebase/firestore";
+import { addDoc, collection } from "@firebase/firestore";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
@@ -15,7 +15,7 @@ import Input from "@/components/elements/Input";
 import Thankyou from "@/components/Thankyou/Thankyou";
 
 import Layout from "@/layout/Layout";
-import { auth,db } from "@/util/firebase";
+import { auth, db } from "@/util/firebase";
 
 function AddNewCard() {
     let isValid = false;
