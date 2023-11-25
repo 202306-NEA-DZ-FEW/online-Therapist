@@ -94,7 +94,7 @@ export default function SignUp() {
         }
     };
 
-    const validatpasswordionSchema = yup.object().shape({
+    const validationSchema = yup.object().shape({
         firstname: yup.string().required(t("formErrors.firstname")),
         lastname: yup.string().required(t("formErrors.lastname")),
         email: yup

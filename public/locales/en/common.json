@@ -161,6 +161,5 @@
         "passwordMin": "Password must be at least 8 characters",
         "passwordMatch": "Password don't match",
         "passwordINvalid": "Password invalid"
-
     }
 }
