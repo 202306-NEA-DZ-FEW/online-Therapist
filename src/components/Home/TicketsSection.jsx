@@ -29,12 +29,12 @@ const TicketsSection = () => {
     return (
         <div className='lg:mx-20 md:mx-auto mx-auto p-16'>
             <Reveal>
-                <h2 className='font-atkinson font-bold block text-DarkTeal text-center text-2xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words'>
+                <h2 className='font-atkinson font-bold block text-DarkTeal text-center text-xl md:text-2xl lg:text-2xl rtl:md:text-3xl  rtl:lg:text-4xl uppercase break-words'>
                     {t("tickets.heading1")}
                 </h2>
             </Reveal>
             <Reveal>
-                <p className=' uppercase font-atkinson font-bold text-center text-2xl md:text-2xl lg:text-3xl text-black mt-2'>
+                <p className=' uppercase font-atkinson font-normal md:font-bold text-center text-lg md:text-2xl lg:text-3xl text-black mt-2'>
                     {t("tickets.heading2")}
                 </p>
             </Reveal>

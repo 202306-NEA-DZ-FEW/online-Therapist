@@ -2,11 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <nav
-  className="sticky top-0 z-50 bg-white md:h-20 md:pt-4  p-0 md:px-12 border-b"
+  className="sticky bg-white top-0 z-50 md:h-20 md:pt-4  p-0 md:px-12 border-b"
   style={Object {}}
 >
   <div
-    className=" justify-between px-4 mx-auto md:items-center md:flex md:px-8"
+    className="relative justify-between mx-auto md:items-center md:flex md:px-8"
   >
     <div>
       <div
@@ -114,13 +114,13 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <div
-        className="flex-1 justify-self-center pb-3 mt-0 md:block md:pb-0 md:mt-0 hidden"
+        className="md:block  hidden"
       >
         <ul
-          className="h-screen md:h-auto space-y-2 md:space-y-0 md:space-x-10 items-center justify-center md:flex md:justify-between md:items-center"
+          className="bg-white h-screen mt-10 md:mt-0 md:h-auto space-y-2 md:space-y-0 md:space-x-10 items-center justify-center md:flex md:justify-between md:items-center"
         >
           <li
-            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal  "
+            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal  "
           >
             <a
               href="/"
@@ -132,7 +132,7 @@ exports[`renders correctly 1`] = `
             </a>
           </li>
           <li
-            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
+            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
           >
             <a
               href="/blogs"
@@ -144,7 +144,7 @@ exports[`renders correctly 1`] = `
             </a>
           </li>
           <li
-            className="block text-DarkTeal font-atkinson text-lg text-center md:text-start py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal "
+            className="block text-DarkTeal font-atkinson text-lg text-center md:text-start py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal "
           >
             <div
               className="group inline-block relative flex justify-center items-center flex-col space-y-[180px] "
@@ -182,7 +182,7 @@ exports[`renders correctly 1`] = `
                 className="absolute hidden bg-white z-50 group-hover:block "
               >
                 <div
-                  className="md:w-36 w-96 bg-white font-atkinson border p-2 shadow-md rounded-lg "
+                  className="md:w-36 w-48 bg-white font-atkinson border p-2 shadow-md rounded-lg "
                 >
                   <ul
                     className="py-2 first:pt-0 z-60 last:pb-0"
@@ -232,7 +232,7 @@ exports[`renders correctly 1`] = `
             </div>
           </li>
           <li
-            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
+            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
           >
             <a
               href="/contact"
@@ -283,7 +283,7 @@ exports[`renders correctly 1`] = `
               </svg>
             </div>
             <div
-              className="absolute "
+              className="absolute outline-none"
             />
           </div>
           <li
@@ -318,7 +318,7 @@ exports[`renders correctly 1`] = `
                 className="absolute hidden group-hover:block"
               >
                 <div
-                  className="w-96 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg"
+                  className="w-48 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg"
                 >
                   <ul
                     className="py-2 first:pt-0  last:pb-0"
@@ -355,7 +355,7 @@ exports[`renders correctly 1`] = `
             </div>
           </li>
           <li
-            className="md:hidden block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-96 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
+            className="md:hidden block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
           >
             <div
               className="group inline-block relative flex justify-center items-center flex-col space-y-[135px] md:space-y-[150px] "
@@ -369,7 +369,7 @@ exports[`renders correctly 1`] = `
                 className="absolute hidden group-hover:block"
               >
                 <div
-                  className="w-96 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg"
+                  className="w-48 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg"
                 >
                   <ul
                     className="py-2 first:pt-0  last:pb-0"
