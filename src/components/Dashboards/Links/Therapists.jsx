@@ -1,4 +1,4 @@
-// import React from "react";
+import React, { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import {
     collection,
@@ -7,9 +7,7 @@ import {
     getDocs,
     updateDoc,
 } from "firebase/firestore";
-// import moment from "moment";
 import moment from "moment-timezone";
-import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
