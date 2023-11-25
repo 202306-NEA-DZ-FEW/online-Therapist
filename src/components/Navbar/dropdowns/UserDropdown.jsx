@@ -1,11 +1,12 @@
-import React from "react";
-import { UserAuth } from "@/context/AuthContext";
 import Link from "next/link";
-import { IoSettingsOutline } from "react-icons/io5";
-import { IoIosLogOut } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa";
-import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import React from "react";
+import { FaRegUser } from "react-icons/fa";
+import { IoIosLogOut } from "react-icons/io";
+import { IoSettingsOutline } from "react-icons/io5";
+
+import { UserAuth } from "@/context/AuthContext";
 
 export default function UserDropdown() {
     const { t } = useTranslation("common");
