@@ -3,7 +3,7 @@ import React from "react";
 
 export default function LangDropdown() {
     return (
-        <div className='w-96 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg'>
+        <div className='w-48 md:w-32 bg-white font-atkinson border bg-grey p-2 shadow-md rounded-lg'>
             <ul className='py-2 first:pt-0  last:pb-0'>
                 <Link href='#' locale='en'>
                     <li

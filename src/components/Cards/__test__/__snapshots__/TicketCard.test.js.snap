@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="hover:border hover:border-Teal hover:scale-105 bg-white/95 flex flex-col items-center justify-center text-center py-10 rounded-2xl space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full"
+  className="hover:border hover:border-Teal hover:scale-105 bg-white/95 flex flex-col items-center justify-center text-center py-10 rounded-2xl space-y-2 md:space-y-6 shadow-2xl md:last-of-type:w-full md:last-of-type:mx-auto md:last-of-type:col-span-2 lg:last-of-type:col-auto lg:last-of-type:w-full"
 >
   <div
     style={
@@ -68,7 +68,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <span
-          className="uppercase font-atkinson text-4xl"
+          className="uppercase font-atkinson text-3xl md:text-4xl"
         >
           Example Ticket
            
@@ -151,7 +151,7 @@ exports[`renders correctly 1`] = `
       }
     >
       <div
-        className="font-atkinson text-xl text-start"
+        className="hidden md:block font-atkinson text-xl text-start"
       >
         <p>
           tickets.text

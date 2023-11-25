@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className=" p-16 bg-white"
+  className=" p-6 lg:p-16 bg-white"
 >
   <div
     style={
@@ -21,20 +21,20 @@ exports[`renders correctly 1`] = `
       }
     >
       <h2
-        className="lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson"
+        className="lg:text-5xl md:text-2xl text-xl text-black font-bold uppercase text-center font-atkinson"
       >
         communication.heading
       </h2>
     </div>
   </div>
   <div
-    className="flex justify-center mx-auto mt-12 mr-16 h-auto "
+    className="flex justify-center mx-auto mt-2 lg:mt-12 mr-0 lg:mr-16 h-auto "
   >
     <div
       className="flex-1 overflow-y-auto sm:pl-16"
     >
       <div
-        className="flex flex-wrap justify-center bg m-4 md:flex-row md:gap-8 gap-4"
+        className="flex flex-wrap justify-center md:flex-row md:gap-8 gap-4"
       >
         <div
           style={
@@ -56,13 +56,13 @@ exports[`renders correctly 1`] = `
               className="h-auto lg:h-[355px]"
             >
               <div
-                className="hover:scale-105 border border-gray p-1 h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+                className="hover:scale-105 border border-gray p-1 h-64 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
               >
                 <div
-                  className="flex flex-col h-44 w-[2356x] rounded-[20px]  bg-LightTeal "
+                  className="flex flex-col h-32 w-[215px] lg:h-44 lg:w-[230px] rounded-[20px]  bg-LightTeal "
                 >
                   <span
-                    className="text-6xl m-auto"
+                    className="text-5xl lg:text-6xl m-auto"
                   >
                     <svg
                       fill="none"
@@ -86,13 +86,13 @@ exports[`renders correctly 1`] = `
                     </svg>
                   </span>
                   <h3
-                    className="mx-auto text-3xl font-atkinson font- mb-8"
+                    className="mx-auto text-xl lg:text-3xl font-atkinson mb-4 lg:mb-8"
                   >
                     communication.voiceCall
                   </h3>
                 </div>
                 <p
-                  className="font-atkinson text-center p-6 text-lg text-gray-700"
+                  className="font-atkinson text-center p-6 text-md lg:text-lg text-gray-700"
                 >
                   communication.voiceText
                 </p>
@@ -120,13 +120,13 @@ exports[`renders correctly 1`] = `
               className="h-auto lg:h-[355px]"
             >
               <div
-                className="hover:scale-105 border border-gray p-1 h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+                className="hover:scale-105 border border-gray p-1 h-64 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
               >
                 <div
-                  className="flex flex-col h-44 w-[2356x] rounded-[20px]  bg-SkyBlue "
+                  className="flex flex-col h-32 w-[215px] lg:h-44 lg:w-[230px] rounded-[20px]  bg-SkyBlue "
                 >
                   <span
-                    className="text-6xl m-auto"
+                    className="text-5xl lg:text-6xl m-auto"
                   >
                     <svg
                       fill="none"
@@ -158,13 +158,13 @@ exports[`renders correctly 1`] = `
                     </svg>
                   </span>
                   <h3
-                    className="mx-auto text-3xl font-atkinson font- mb-8"
+                    className="mx-auto text-xl lg:text-3xl font-atkinson mb-4 lg:mb-8"
                   >
                     communication.videoCall
                   </h3>
                 </div>
                 <p
-                  className="font-atkinson text-center p-6 text-lg text-gray-700"
+                  className="font-atkinson text-center p-6 text-md lg:text-lg text-gray-700"
                 >
                   communication.videoText
                 </p>
@@ -192,13 +192,13 @@ exports[`renders correctly 1`] = `
               className="h-auto lg:h-[355px]"
             >
               <div
-                className="hover:scale-105 border border-gray p-1 h:44 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
+                className="hover:scale-105 border border-gray p-1 h-64 w-56 lg:h-80 lg:w-60 rounded-3xl m-4 shadow-xl"
               >
                 <div
-                  className="flex flex-col h-44 w-[2356x] rounded-[20px]  bg-LightOrange "
+                  className="flex flex-col h-32 w-[215px] lg:h-44 lg:w-[230px] rounded-[20px]  bg-LightOrange "
                 >
                   <span
-                    className="text-6xl m-auto"
+                    className="text-5xl lg:text-6xl m-auto"
                   >
                     <svg
                       fill="none"
@@ -225,13 +225,13 @@ exports[`renders correctly 1`] = `
                     </svg>
                   </span>
                   <h3
-                    className="mx-auto text-3xl font-atkinson font- mb-8"
+                    className="mx-auto text-xl lg:text-3xl font-atkinson mb-4 lg:mb-8"
                   >
                     communication.chat
                   </h3>
                 </div>
                 <p
-                  className="font-atkinson text-center p-6 text-lg text-gray-700"
+                  className="font-atkinson text-center p-6 text-md lg:text-lg text-gray-700"
                 >
                   communication.chatText
                 </p>
