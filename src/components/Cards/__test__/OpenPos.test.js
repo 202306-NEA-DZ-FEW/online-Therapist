@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import OpenPos from "../OpenPos";
 
 it("renders correctly", () => {

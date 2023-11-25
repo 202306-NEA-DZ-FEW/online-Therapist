@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import Reveal from "../Reveal";
 
 it("renders correctly", () => {

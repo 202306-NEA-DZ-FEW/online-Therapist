@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import RadioInput from "../RadioInput";
 
 it("renders correctly", () => {

@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import LangDropdown from "../LangDropdown";
 
 it("renders correctly", () => {

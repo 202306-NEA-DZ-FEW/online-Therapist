@@ -1,20 +1,21 @@
+import { addDoc,collection } from "@firebase/firestore";
+import { yupResolver } from "@hookform/resolvers/yup";
+import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import validator from "validator";
 import React, { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
+import Select from "react-select";
 import countryList from "react-select-country-list";
+import validator from "validator";
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 
-import { collection, addDoc } from "@firebase/firestore";
-import { db, auth } from "@/util/firebase";
 import Button from "@/components/elements/Button";
 import Input from "@/components/elements/Input";
-import Layout from "@/layout/Layout";
-import Select from "react-select";
-import Image from "next/image";
 import Thankyou from "@/components/Thankyou/Thankyou";
+
+import Layout from "@/layout/Layout";
+import { auth,db } from "@/util/firebase";
 
 function AddNewCard() {
     let isValid = false;

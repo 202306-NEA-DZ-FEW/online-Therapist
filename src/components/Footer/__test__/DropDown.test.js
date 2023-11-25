@@ -1,5 +1,6 @@
-import renderer from "react-test-renderer";
 import { useRouter } from "next/router";
+import renderer from "react-test-renderer";
+
 import DropDown from "../DropDown";
 
 // Mock the useRouter function
