@@ -1,6 +1,6 @@
 import { UserAuth } from "@/context/AuthContext";
 
-const patientProfile = () => {
+const PatientProfile = () => {
     const { totalTickets, cards } = UserAuth();
 
     return (
@@ -12,4 +12,4 @@ const patientProfile = () => {
     );
 };
 
-export default patientProfile;
+export default PatientProfile;

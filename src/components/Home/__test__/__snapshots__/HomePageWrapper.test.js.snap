@@ -3110,6 +3110,7 @@ Array [
   </div>,
   <div
     className="lg:mx-20 md:mx-auto mx-auto p-16"
+    id="tickets"
   >
     <div
       style={

@@ -1,20 +1,21 @@
+// Importez les modules nécessaires
 import { deleteDoc, doc, getDoc, updateDoc } from "firebase/firestore";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 import { withTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
+// Importez les composants nécessaires
 import Button from "@/components/elements/Button";
 import Input from "@/components/Profile/Input";
 import ProfileImage from "@/components/ProfileImage";
 
-import { useAuth } from "@/context/AuthContext";
-import { UserAuth } from "@/context/AuthContext";
+// Importez le contexte Auth
+import { useAuth, UserAuth } from "@/context/AuthContext";
 import Layout from "@/layout/Layout";
 import { db } from "@/util/firebase";
 
@@ -84,10 +85,12 @@ const User = ({ t }) => {
                     // Rediriger vers la page de connexion
                     router.push("/login");
                 } else {
+                    // eslint-disable-next-line no-console
                     console.error("Document does not exist.");
                     toast.error(t("users:userProfile.deleteError"));
                 }
             } catch (error) {
+                // eslint-disable-next-line no-console
                 console.error("Error deleting account", error);
                 toast.error(t("users:userProfile.deleteError"));
             }
@@ -106,12 +109,15 @@ const User = ({ t }) => {
                 if (docSnap.exists()) {
                     setFormData({ ...docSnap.data() });
                 } else {
+                    // eslint-disable-next-line no-console
                     console.error("Document does not exist");
                 }
             } else {
+                // eslint-disable-next-line no-console
                 console.error("User is null");
             }
         } catch (error) {
+            // eslint-disable-next-line no-console
             console.error("Error fetching user data", error);
         }
     }
@@ -148,6 +154,7 @@ const User = ({ t }) => {
                                         "users:userProfile.firstname"
                                     )}
                                     errorMessage={errors.firstname?.message}
+                                    è
                                     register={{ ...register("firstname") }}
                                     value={formData.firstname}
                                     onChange={onChange}
