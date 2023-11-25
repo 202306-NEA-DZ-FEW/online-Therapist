@@ -22,14 +22,14 @@ import { db } from "@/util/firebase";
 const User = ({ t }) => {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const { totalTickets, cards } = UserAuth;
+    const { totalTickets, cards } = UserAuth();
 
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false
     );
     const { user } = useAuth();
     const [photo] = useState(
-        localStorage?.getItem(`therapist_image_${user.uid}`)
+        localStorage?.getItem(`therapist_image_${user?.uid}`)
     );
     const [formData, setFormData] = useState({
         firstname: "",
@@ -423,7 +423,7 @@ const User = ({ t }) => {
                                 </div>
                                 <div>
                                     <p>
-                                        {cards.length}{" "}
+                                        {cards && cards.length}{" "}
                                         {t("users:userProfile.cards")}
                                     </p>
                                     <Link href='/#tickets'>

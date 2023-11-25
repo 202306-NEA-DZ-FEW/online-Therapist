@@ -1,32 +1,33 @@
-import { useState } from "react";
-import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { useState } from "react";
 
 const DropDown = () => {
     const [open, setOpen] = useState(false);
     const { t } = useTranslation("common");
-    const router = useRouter();
-    const language = router.locale;
 
     return (
-        <div className='relative '>
+        <div className='relative'>
             <a
-                className={`mr-4 hover:underline md:mr-6 cursor-pointer p-8 mb-3 ${
-                    language === "ar" ? "pr-2" : ""
-                } `}
+                className='hover:underline cursor-pointer mb-3'
                 onClick={() => setOpen(!open)}
             >
                 {t("footer.about")}
             </a>
             <div className={`${open ? "block" : "hidden"} absolute`}>
-                <div className='ml-6 '>
-                    <Link href='#' className='mr-4 hover:underline md:mr-6 '>
+                <div className='ml-4 '>
+                    <Link
+                        href='/about-us/'
+                        className='mr-4 hover:underline md:mr-6 '
+                    >
                         {t("footer.aboutUs")}
                     </Link>
                 </div>
-                <div className='ml-6 text-dark'>
-                    <Link href='#' className='mr-4 hover:underline md:mr-6 '>
+                <div className='ml-4 text-dark'>
+                    <Link
+                        href='/team/'
+                        className='mr-4 hover:underline md:mr-6 '
+                    >
                         {t("footer.team")}
                     </Link>
                 </div>
