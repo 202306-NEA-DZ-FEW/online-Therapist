@@ -21,7 +21,7 @@ function RequirementsPage() {
     return (
         <>
             <Layout>
-                <div className='font-atkinson flex flex-col-reverse sm:flex-row mx-16'>
+                <div className='font-atkinson flex flex-col-reverse sm:flex-row mx-0 lg:mx-16'>
                     <div className='w-full sm:w-2/3 p-5 sm:p-10'>
                         <h1 className='text-4xl font-bold text-Black my-4 lg:my-16 pb-8 text-center  sm:text-center'>
                             {t("requirement.principaleTitle")}
@@ -63,13 +63,13 @@ function RequirementsPage() {
                             alt='therapist illustration'
                             width={600}
                             height={300}
-                            className=''
+                            className='hidden md:block'
                         />
                     </div>
                 </div>
 
                 <div
-                    className={`mx-24 pl-10 ${
+                    className={`mx-4 md:mx-10 lg:mx-24 lg:pl-2 ${
                         language === "ar" ? "pr-10" : ""
                     }`}
                 >
@@ -89,7 +89,7 @@ function RequirementsPage() {
                     </ul>
                 </div>
 
-                <div className='mx-36 mb-16 mt-10 '>
+                <div className='mx-8 lg:mx-36 mb-16 mt-10 '>
                     <Link href='/therapists/sign-up'>
                         <Button
                             buttonText={t("requirement.getStarted")}

@@ -116,9 +116,9 @@ const Login = () => {
     const validationSchema = yup.object().shape({
         email: yup
             .string()
-            .required("Email is required")
-            .email("Email is invalid"),
-        password: yup.string().required("password is required"),
+            .required(t("formErrors.email"))
+            .email(t("formErrors.emailInvalid")),
+        password: yup.string().required(t("formErrors.password")),
     });
 
     const formOptions = { resolver: yupResolver(validationSchema) };

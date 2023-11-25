@@ -58,11 +58,11 @@ function Contact() {
     };
 
     const validationSchema = yup.object().shape({
-        name: yup.string().required("First Name is required"),
+        name: yup.string().required(t("formErrors.firstname")),
         email: yup
             .string()
-            .required("Email is required")
-            .email("Email is invalid"),
+            .required(t("formErrors.email"))
+            .email(t("formErrors.emailInvalid")),
     });
 
     const formOptions = { resolver: yupResolver(validationSchema) };
@@ -230,7 +230,9 @@ function Contact() {
                                     <textarea
                                         type='text'
                                         className='w-full border border-gray-300 h-12 w-96 pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal h-24'
-                                        placeholder='Enter your details here...'
+                                        placeholder={t(
+                                            "contact.detailsPlaceholder"
+                                        )}
                                         value={formData.details}
                                         onChange={onChange}
                                         id='details'
