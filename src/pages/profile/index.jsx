@@ -14,17 +14,18 @@ import Input from "@/components/Profile/Input";
 import ProfileImage from "@/components/ProfileImage";
 
 import { useAuth } from "@/context/AuthContext";
+import { UserAuth } from "@/context/AuthContext";
 import Layout from "@/layout/Layout";
 import { db } from "@/util/firebase";
 
 const User = ({ t }) => {
     const router = useRouter();
     const searchParams = useSearchParams();
+    const { totalTickets, cards } = UserAuth;
 
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false
     );
-
     const { user } = useAuth();
     const [photo] = useState(
         localStorage?.getItem(`therapist_image_${user.uid}`)
@@ -62,7 +63,6 @@ const User = ({ t }) => {
             const userRef = doc(db, "users", user.uid);
             await updateDoc(userRef, { ...formData, photoURL: photo });
             toast.success(t("users:userProfile.notifications.updateSuccess"));
-            // Afficher le composant Thankyou après la mise à jour du profil
         } catch (err) {
             toast.error(`Error ${err} `, {
                 position: toast.POSITION.BOTTOM_LEFT,
@@ -363,21 +363,17 @@ const User = ({ t }) => {
                                 />
                             </div>
                             <div className='flex flex-row  gap-5 my-14 lg:ml-3 lg:rtl:mr-4'>
-                                <Link href='/edit'>
-                                    {" "}
-                                    <button type='submit'>
-                                        <Button
-                                            buttonSize='lg'
-                                            buttonText={t(
-                                                "users:userProfile.save"
-                                            )}
-                                            disabled={!edit}
-                                            transition={false}
-                                            color='teal'
-                                            type='submit'
-                                        />
-                                    </button>
-                                </Link>
+                                <button type='submit'>
+                                    <Button
+                                        buttonSize='lg'
+                                        buttonText={t("users:userProfile.save")}
+                                        disabled={!edit}
+                                        transition={false}
+                                        color='teal'
+                                        type='submit'
+                                    />
+                                </button>
+
                                 <Button
                                     buttonSize='lg'
                                     buttonText={t("users:userProfile.edit")}
@@ -402,22 +398,38 @@ const User = ({ t }) => {
                                 {t("users:userProfile.payment")}
                             </h1>
                             <div className='flex flex-row  gap-5 my-14 lg:ml-3 lg:rtl:mr-4'>
-                                <Link href={`/buyTicket/${user.uid}`}>
-                                    <Button
-                                        buttonSize='lg'
-                                        buttonText={t("users:userProfile.show")}
-                                        transition={false}
-                                        color='teal'
-                                    />
-                                </Link>
-                                <Link href={`/buyTicket/${user.uid}`}>
-                                    <Button
-                                        buttonSize='lg'
-                                        buttonText={t("users:userProfile.buy")}
-                                        transition={false}
-                                        color='teal'
-                                    />
-                                </Link>
+                                <div>
+                                    <p>
+                                        {totalTickets}{" "}
+                                        {t("users:userProfile.tickets")}
+                                    </p>
+                                    <Link href='/paymentMethods'>
+                                        <Button
+                                            buttonSize='lg'
+                                            buttonText={t(
+                                                "users:userProfile.show"
+                                            )}
+                                            transition={false}
+                                            color='teal'
+                                        />
+                                    </Link>
+                                </div>
+                                <div>
+                                    <p>
+                                        {cards.length}{" "}
+                                        {t("users:userProfile.cards")}
+                                    </p>
+                                    <Link href='/#tickets'>
+                                        <Button
+                                            buttonSize='lg'
+                                            buttonText={t(
+                                                "users:userProfile.buy"
+                                            )}
+                                            transition={false}
+                                            color='teal'
+                                        />
+                                    </Link>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -426,7 +438,6 @@ const User = ({ t }) => {
         </Layout>
     );
 };
-
 export default withTranslation("users")(User);
 
 export async function getStaticProps({ locale }) {
