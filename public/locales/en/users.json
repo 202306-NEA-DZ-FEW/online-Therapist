@@ -34,6 +34,8 @@
         "choose": "Choose...",
         "yes": "Yes",
         "no": "No",
+        "cards": "Cards Added",
+        "tickets": "Tickets Remaining",
         "deleteConfirmation": "Your account will be permanently deleted. Do you confirm this action?",
         "notifications": {
             "updateSuccess": "Profile information updated successfully ",
