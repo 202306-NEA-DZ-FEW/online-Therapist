@@ -7,15 +7,15 @@ import Reveal from "../utils/Reveal";
 function CommunicationSection() {
     const { t } = useTranslation("homepage");
     return (
-        <div className=' p-16 bg-white'>
+        <div className=' p-6 lg:p-16 bg-white'>
             <Reveal>
-                <h2 className='lg:text-5xl md:text-3xl text-3xl text-black font-bold uppercase text-center font-atkinson'>
+                <h2 className='lg:text-5xl md:text-2xl text-xl text-black font-bold uppercase text-center font-atkinson'>
                     {t("communication.heading")}
                 </h2>
             </Reveal>
-            <div className='flex justify-center mx-auto mt-12 mr-16 h-auto '>
+            <div className='flex justify-center mx-auto mt-2 lg:mt-12 mr-0 lg:mr-16 h-auto '>
                 <div className='flex-1 overflow-y-auto sm:pl-16'>
-                    <div className='flex flex-wrap justify-center bg m-4 md:flex-row md:gap-8 gap-4'>
+                    <div className='flex flex-wrap justify-center md:flex-row md:gap-8 gap-4'>
                         <CommunicationCard
                             greenBackground='bg-LightTeal'
                             icon='call' // Use 'call' for the phone icon
