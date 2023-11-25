@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="relative "
+  className="relative"
 >
   <a
-    className="mr-4 hover:underline md:mr-6 cursor-pointer p-8 mb-3  "
+    className="hover:underline cursor-pointer mb-3"
     onClick={[Function]}
   >
     footer.about
@@ -14,11 +14,11 @@ exports[`renders correctly 1`] = `
     className="hidden absolute"
   >
     <div
-      className="ml-6 "
+      className="ml-4 "
     >
       <a
         className="mr-4 hover:underline md:mr-6 "
-        href="#"
+        href="/about-us"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
@@ -27,11 +27,11 @@ exports[`renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ml-6 text-dark"
+      className="ml-4 text-dark"
     >
       <a
         className="mr-4 hover:underline md:mr-6 "
-        href="#"
+        href="/team"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
