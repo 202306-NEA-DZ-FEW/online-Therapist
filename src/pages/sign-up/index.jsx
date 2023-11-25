@@ -282,7 +282,7 @@ export default function SignUp() {
                                 </p>
                                 <hr className='w-24 lg:w-48 border-Teal' />
                             </div>
-                            <div className='flex justify-center items-center space-x-10'>
+                            <div className='flex justify-center items-center rtl:space-x-reverse space-x-10'>
                                 <span
                                     onClick={handleGoogleSignup}
                                     className='cursor-pointer '
