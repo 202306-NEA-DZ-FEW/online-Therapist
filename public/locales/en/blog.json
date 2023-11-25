@@ -7,5 +7,6 @@
     "comment_btn": "Add a comment",
     "comment_added": "Your comment was added successfully",
     "reaction_saved": "Your reaction was saved successfully",
-    "required": "This field is required"
+    "required": "This field is required",
+    "related_posts": "Suggested Articles"
 }
