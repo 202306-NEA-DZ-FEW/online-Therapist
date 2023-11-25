@@ -58,11 +58,11 @@ function Contact() {
     };
 
     const validationSchema = yup.object().shape({
-        name: yup.string().required("First Name is required"),
+        name: yup.string().required(t("formErrors.firstname")),
         email: yup
             .string()
-            .required("Email is required")
-            .email("Email is invalid"),
+            .required(t("formErrors.email"))
+            .email(t("formErrors.emailInvalid")),
     });
 
     const formOptions = { resolver: yupResolver(validationSchema) };

@@ -150,5 +150,15 @@
     "404": {
         "titre": "Page Not Found",
         "text": "Page you are trying to open does not exist. You may have mistyped the address, or the page has been moved to another URL."
+    },
+    "formErrors": {
+        "firstname": "First Name is required",
+        "lastname": "Last name is required",
+        "email": "Email is required",
+        "emailInvalid": "Email is invalid",
+        "emailMatch": "Email don't match",
+        "password": "Password is required",
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordMatch": "Password don't match"
     }
 }

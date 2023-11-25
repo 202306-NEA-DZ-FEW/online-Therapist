@@ -94,26 +94,26 @@ export default function SignUp() {
         }
     };
 
-    const validationSchema = yup.object().shape({
-        firstname: yup.string().required("First Name is required"),
-        lastname: yup.string().required("Last name is required"),
+    const validatpasswordionSchema = yup.object().shape({
+        firstname: yup.string().required(t("formErrors.firstname")),
+        lastname: yup.string().required(t("formErrors.lastname")),
         email: yup
             .string()
-            .required("Email is required")
-            .email("Email is invalid"),
+            .required(t("formErrors.email"))
+            .email(t("formErrors.emailInvalid")),
         confirmemail: yup
             .string()
-            .required("Email is required")
-            .email("Email is invalid")
-            .oneOf([yup.ref("email")], "Email don't match"),
+            .required(t("formErrors.email"))
+            .email(t("formErrors.emailInvalid"))
+            .oneOf([yup.ref("email")], t("formErrors.emailMatch")),
         password: yup
             .string()
-            .required("password is required")
-            .min(8, "Password must be at least 8 characters"),
+            .required(t("formErrors.password"))
+            .min(8, t("formErrors.passwordMin")),
         confirmpassword: yup
             .string()
-            .required("password is required")
-            .oneOf([yup.ref("password")], "Password don't match"),
+            .required(t("formErrors.password"))
+            .oneOf([yup.ref("password")], t("formErrors.passwordMatch")),
     });
 
     const formOptions = { resolver: yupResolver(validationSchema) };
