@@ -14,8 +14,7 @@ const TicketCard = ({ price }) => {
     const handleClick = () => {
         // Check if the user is logged in
         if (!user) {
-            // If not logged in, show an alert
-            window.alert("You need to be logged in to purchase the tickets.");
+            router.push("/login/");
         } else {
             router.push(`/buyTicket/${price.id}`);
         }
