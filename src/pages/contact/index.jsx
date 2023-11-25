@@ -230,7 +230,9 @@ function Contact() {
                                     <textarea
                                         type='text'
                                         className='w-full border border-gray-300 h-12 w-96 pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal h-24'
-                                        placeholder='Enter your details here...'
+                                        placeholder={t(
+                                            "contact.detailsPlaceholder"
+                                        )}
                                         value={formData.details}
                                         onChange={onChange}
                                         id='details'
