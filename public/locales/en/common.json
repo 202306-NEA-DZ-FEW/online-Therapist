@@ -159,6 +159,8 @@
         "emailMatch": "Email don't match",
         "password": "Password is required",
         "passwordMin": "Password must be at least 8 characters",
-        "passwordMatch": "Password don't match"
+        "passwordMatch": "Password don't match",
+        "passwordINvalid": "Password invalid"
+
     }
 }
