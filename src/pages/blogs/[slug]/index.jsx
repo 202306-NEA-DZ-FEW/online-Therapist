@@ -1,20 +1,23 @@
-import {PortableText} from "@portabletext/react"
-import Image from "next/image"
-import Link from "next/link"
-import {useTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import {groq} from "next-sanity"
-import React from "react"
-import {PiArrowLineUpLeftLight, PiArrowLineUpRightLight} from "react-icons/pi"
+import { PortableText } from "@portabletext/react";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { groq } from "next-sanity";
+import React from "react";
+import {
+    PiArrowLineUpLeftLight,
+    PiArrowLineUpRightLight,
+} from "react-icons/pi";
 
-import AddComment from "@/components/Blog/AddComment"
-import Comments from "@/components/Blog/Comments"
-import Reactions from "@/components/Blog/Reactions"
+import AddComment from "@/components/Blog/AddComment";
+import Comments from "@/components/Blog/Comments";
+import Reactions from "@/components/Blog/Reactions";
 
-import Layout from "@/layout/Layout"
+import Layout from "@/layout/Layout";
 
-import {client} from "../../../../sanity/lib/client"
-import {urlForImage} from "../../../../sanity/lib/image"
+import { client } from "../../../../sanity/lib/client";
+import { urlForImage } from "../../../../sanity/lib/image";
 
 const RichTextChildren = {
     types: {
@@ -28,51 +31,51 @@ const RichTextChildren = {
                         fill
                     />
                 </div>
-            )
+            );
         },
     },
     lists: {
-        bullet: ({children}) => {
+        bullet: ({ children }) => {
             <ul className='ml-10 rtl:mr-10 list-disc space-y-5 rtl:space-y-reverse'>
                 {children}
-            </ul>
+            </ul>;
         },
         number: (children) => {
             <ol className='ml-10 rtl:mr-10 list-decimal space-y-5 rtl:space-y-reverse'>
                 {children}
-            </ol>
+            </ol>;
         },
     },
     block: {
-        h1: ({children}) => (
+        h1: ({ children }) => (
             <h1 className='mb-2 mt-4 text-2xl md:text-5xl font-bold text-transparent  bg-clip-text bg-gradient-to-r rtl:bg-gradient-to-l from-teal-500 via-emerald-400 to-teal-950'>
                 {children}
             </h1>
         ),
-        h2: ({children}) => (
+        h2: ({ children }) => (
             <h2 className='mb-2 mt-4 text-xl md:text-4xl font-bold text-black/80'>
                 {children}
             </h2>
         ),
-        h3: ({children}) => (
+        h3: ({ children }) => (
             <h3 className='mb-2 mt-4 text-xl md:text-2xl font-bold text-black/80'>
                 {children}
             </h3>
         ),
-        h4: ({children}) => (
+        h4: ({ children }) => (
             <h4 className='mb-2 mt-4 text-lg md:text-xl font-bold text-black/80'>
                 {children}
             </h4>
         ),
-        normal: ({children}) => (
+        normal: ({ children }) => (
             <p className='text-black/80 md:text-lg md:mb-7 font-medium rtl:md:text-xl'>
                 {children}
             </p>
         ),
     },
-}
-const Post = ({post, related_posts}) => {
-    const {t} = useTranslation("blog")
+};
+const Post = ({ post, related_posts }) => {
+    const { t } = useTranslation("blog");
     return (
         <Layout>
             <div className='h-full  mt-7 mb-3 container md:mx-auto'>
@@ -171,17 +174,23 @@ const Post = ({post, related_posts}) => {
                         />
                         <AddComment postId={post._id} />
                     </section>
-                    <section className="mt-20">
+                    <section className='mt-20'>
                         <div className='container mx-auto w-full font-atkinson  my-10 md:px-2'>
-
                             <div className='mx-2 mt-5 '>
-                                {related_posts.length > 0 && <h2 className="my-4 text-2xl lg:text-3xl font-bold text-black/80">{t("related_posts")}</h2>}
+                                {related_posts.length > 0 && (
+                                    <h2 className='my-4 text-2xl lg:text-3xl font-bold text-black/80'>
+                                        {t("related_posts")}
+                                    </h2>
+                                )}
                                 <div className=' mt-5 mx-3 flex flex-wrap justify-center gap-5'>
                                     {related_posts?.map((post) => (
                                         <Link
                                             key={post._id}
-                                            href={`/${post.language == "ar" ? "/ar" : ""
-                                                }/blogs/${post.slug.current}`}
+                                            href={`/${
+                                                post.language == "ar"
+                                                    ? "/ar"
+                                                    : ""
+                                            }/blogs/${post.slug.current}`}
                                             className='overflow-clip shadow-lg rounded-md mt-5 w-[25rem]'
                                         >
                                             <div className='flex flex-col group cursor-pointer '>
@@ -201,14 +210,21 @@ const Post = ({post, related_posts}) => {
                                                     >
                                                         <div className='lg:flex flex-col hidden -ml-5 rtl:-mr-5'>
                                                             <p className='font-bold text-base w-56'>
-                                                                {t("written_by")} :{" "}
-                                                                {post.author.name}
+                                                                {t(
+                                                                    "written_by"
+                                                                )}{" "}
+                                                                :{" "}
+                                                                {
+                                                                    post.author
+                                                                        .name
+                                                                }
                                                             </p>
                                                             <p className='text-xs'>
                                                                 {new Date(
                                                                     post._createdAt
                                                                 ).toLocaleDateString(
-                                                                    post.language == "en"
+                                                                    post.language ==
+                                                                        "en"
                                                                         ? "en-US"
                                                                         : "ar-DZ",
                                                                     {
@@ -224,11 +240,15 @@ const Post = ({post, related_posts}) => {
                                                             {post.categories?.map(
                                                                 (category) => (
                                                                     <div
-                                                                        key={category}
+                                                                        key={
+                                                                            category
+                                                                        }
                                                                         className='mr-1 rtl:ml-1 text-center bg-DarkTeal text-white  rounded-full px-3 p-2 text-sm '
                                                                     >
                                                                         <p className='-mt-1'>
-                                                                            {category.title}
+                                                                            {
+                                                                                category.title
+                                                                            }
                                                                         </p>
                                                                     </div>
                                                                 )
@@ -260,19 +280,16 @@ const Post = ({post, related_posts}) => {
                         </div>
                     </section>
                 </article>
-
-
-
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default Post
+export default Post;
 
-export async function getServerSideProps (context) {
-    const {slug} = context.params
-    const {locale} = context
+export async function getServerSideProps(context) {
+    const { slug } = context.params;
+    const { locale } = context;
     const query = groq`
             *[_type == "post" && slug.current == $slug && language == $language][0]
             {
@@ -282,23 +299,25 @@ export async function getServerSideProps (context) {
               'comments': *[_type == "comment" && post._ref == ^._id]{_id, name, email, comment, image, _createdAt} | order(_createdAt asc),
               'emojis': *[_type == "reaction" && post._ref == ^._id][0] {reactions},
             }
-    `
+    `;
 
-
-    const post = await client.fetch(query, {slug, language: locale})
+    const post = await client.fetch(query, { slug, language: locale });
     const related_posts_query = groq`*[_type == "post" && $category in categories[]->title && $id != _id && language == $language]{
         ...,
               author->,
               categories[]->,
-    }`
-    const related_posts = await client.fetch(related_posts_query, {category: post?.categories[0].title, id: post._id, language: locale})
-
+    }`;
+    const related_posts = await client.fetch(related_posts_query, {
+        category: post?.categories[0].title,
+        id: post._id,
+        language: locale,
+    });
 
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             post,
-            related_posts
+            related_posts,
         },
-    }
+    };
 }
