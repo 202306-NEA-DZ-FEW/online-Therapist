@@ -15,6 +15,7 @@ module.exports = {
             "c.stocksy.com",
             "firebasestorage.googleapis.com",
             "cdn.sanity.io",
+            "lh3.googleusercontent.com",
         ],
     },
 };
