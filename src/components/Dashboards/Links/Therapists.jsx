@@ -236,25 +236,24 @@ const TherapistsMatches = () => {
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-            Therapists Matches list 
+                Therapists Matches list
             </h1>
-            
+
             <ul className='flex flex-col gap-y-8 lg:m-4'>
                 {therapists.map((therapist) => (
-                    <li key={therapist.id} 
-                    className='flex flex-col gap-y-6 lg:flex lg:flex-row lg:gap-x-10 bg-white rounded-xl shadow-xl p-2 lg:p-4 m-0 lg:m-4 '>
-                        <div className="flex flex-col justify-center items-center gap-y-2">
-                        <img
-                            className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
-                            src={`${therapist.photoURL}`}
-                        />
+                    <li
+                        key={therapist.id}
+                        className='flex flex-col gap-y-6 lg:flex lg:flex-row lg:gap-x-10 bg-white rounded-xl shadow-xl p-2 lg:p-4 m-0 lg:m-4 '
+                    >
+                        <div className='flex flex-col justify-center items-center gap-y-2'>
+                            <img
+                                className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
+                                src={`${therapist.photoURL}`}
+                            />
 
-                        <p>
-                    
-                            {`${therapist.fullname}`}
-                        </p>
-                        <p>{` ${therapist.specialty}`}</p>
-                        {/* <p>
+                            <p>{`${therapist.fullname}`}</p>
+                            <p>{` ${therapist.specialty}`}</p>
+                            {/* <p>
                             <span className='text-Gray font-atkinson'>
                                 Approved:{" "}
                             </span>
@@ -262,50 +261,47 @@ const TherapistsMatches = () => {
                         </p> */}
                         </div>
 
-                        <div className="w-[250px] lg:w-96 pt-4 ">
-                        <p className="text-gray-500">Details</p>
-                        <p>
-                                <span className='text-Gray font-atkinson'>
-                                   
-                                </span>
+                        <div className='w-[250px] lg:w-96 pt-4 '>
+                            <p className='text-gray-500'>Details</p>
+                            <p>
+                                <span className='text-Gray font-atkinson'></span>
                                 {`${therapist.bio}`}
                             </p>
                         </div>
 
-                        <div className="lg:flex lg:flex-col lg:gap-y-8 flex flex-col jutsify-center items-center gap-y-8">
+                        <div className='lg:flex lg:flex-col lg:gap-y-8 flex flex-col jutsify-center items-center gap-y-8'>
+                            <div className='flex flex-col gap-y-2'>
+                                <label className='text-Gray font-atkinson'>
+                                    Appointment Date & Time:
+                                </label>
+                                <DatePicker
+                                    className='p-1 border w-48 rounded-md border-Teal'
+                                    selected={selectedDateTimes[therapist.id]}
+                                    onChange={(date) =>
+                                        handleDateTimeChange(therapist.id, date)
+                                    }
+                                    showTimeSelect
+                                    timeFormat='HH:mm'
+                                    timeIntervals={15}
+                                    dateFormat='MM-dd-yyyy HH:mm'
+                                    placeholderText='Select date and time'
+                                />
+                                <label className='text-Gray font-atkinson'>
+                                    Time Zone:
+                                </label>
+                                <select
+                                    className='p-1 border w-48 rounded-md border-Teal'
+                                    value={selectedTimeZone}
+                                    onChange={handleTimeZoneChange}
+                                >
+                                    {timeZones.map((zone) => (
+                                        <option key={zone} value={zone}>
+                                            {zone}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
 
-                        <div className="flex flex-col gap-y-2">
-                        <label className='text-Gray font-atkinson'>
-                            Appointment Date & Time:
-                        </label>
-                        <DatePicker
-                         className="p-1 border w-48 rounded-md border-Teal"
-                            selected={selectedDateTimes[therapist.id]}
-                            onChange={(date) =>
-                                handleDateTimeChange(therapist.id, date)
-                            }
-                            showTimeSelect
-                            timeFormat='HH:mm'
-                            timeIntervals={15}
-                            dateFormat='MM-dd-yyyy HH:mm'
-                            placeholderText='Select date and time'
-                        />
-                        <label className='text-Gray font-atkinson'>
-                            Time Zone:
-                        </label>
-                        <select
-                        className="p-1 border w-48 rounded-md border-Teal"
-                            value={selectedTimeZone}
-                            onChange={handleTimeZoneChange}
-                        >
-                            {timeZones.map((zone) => (
-                                <option key={zone} value={zone}>
-                                    {zone}
-                                </option>
-                            ))}
-                        </select>
-                        </div>
-                      
                             <button
                                 onClick={() =>
                                     handleSubmitAppointment(therapist)
@@ -321,8 +317,6 @@ const TherapistsMatches = () => {
                                     transition={false}
                                 />
                             </button>
-                           
-                        
                         </div>
                     </li>
                 ))}
@@ -332,4 +326,3 @@ const TherapistsMatches = () => {
 };
 
 export default TherapistsMatches;
-

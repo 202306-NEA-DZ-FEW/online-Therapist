@@ -128,7 +128,7 @@ const WaitingAppointments = () => {
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                Waiting Appointments 
+                Waiting Appointments
             </h1>
 
             {/* Display the list of waiting appointments */}
@@ -138,102 +138,97 @@ const WaitingAppointments = () => {
                         key={appointment.id}
                         className='flex flex-col gap-y-6 lg:flex lg:flex-row lg:gap-x-10 bg-white rounded-xl shadow-xl p-2 lg:p-4 m-0 lg:m-4 '
                     >
-                        <div className="flex flex-col justify-center items-center gap-y-2">
-                        <img
-                            src={appointment.photoURL}
-                            alt={`Photo of ${appointment.userFirstName} ${appointment.userLastName}`}
-                            className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
-                        />
-                        <p>{` ${appointment.userFirstName} ${appointment.userLastName}`}</p>
-                        <p>
-                            {`Date : ${appointment.appointmentDate} `}{" "}
-                        </p>
-                        <p>
-                            {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
-                        </p>
+                        <div className='flex flex-col justify-center items-center gap-y-2'>
+                            <img
+                                src={appointment.photoURL}
+                                alt={`Photo of ${appointment.userFirstName} ${appointment.userLastName}`}
+                                className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
+                            />
+                            <p>{` ${appointment.userFirstName} ${appointment.userLastName}`}</p>
+                            <p>{`Date : ${appointment.appointmentDate} `} </p>
+                            <p>
+                                {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
+                            </p>
                         </div>
-                        <div className="lg:w-1/3 pt-2 space-y-1">
-                          <p className="text-gray-400">Details</p>
-                        
-                        <p>{`Counseling Type: ${appointment.counselingType}`}</p>
-                        <p>{`First Session: ${appointment.firstSession}`}</p>
-                        <p>{`Counselor Qualities: ${appointment.counselorQualities}`}</p>
-                        <p>{`Issues: ${appointment.issues}`}</p>
-                        <p>{`Specification: ${appointment.specification}`}</p>
-                        
-                        </div>
-                    <div className="flex flex-col gap-y-8">
+                        <div className='lg:w-1/3 pt-2 space-y-1'>
+                            <p className='text-gray-400'>Details</p>
 
-                        <div className="flex flex-col gap-y-2">
-
-                        <label className='text-Gray font-atkinson'>
-                            Set New Session Date:
-                        </label>
-                        <DatePicker
-                        className="p-1 border w-48 rounded-md border-Teal"
-                            selected={selectedDateTimes[appointment.id]}
-                            onChange={(date) =>
-                                setSelectedDateTimes((prev) => ({
-                                    ...prev,
-                                    [appointment.id]: date,
-                                }))
-                            }
-                            showTimeSelect
-                            timeIntervals={15}
-                            dateFormat='yyyy-MM-dd HH:mm:ss'
-                            timeFormat='HH:mm:ss'
-                            timeCaption='Time'
-                            placeholderText='Select new date and time'
-                        />
-                        {/* Inside the map function in WaitingAppointments component */}
-                        <label className='text-Gray font-atkinson'>
-                            Time Zone:
-                        </label>
-                        <select
-                         className="p-1 border w-48 rounded-md border-Teal"
-                            value={selectedTimeZone}
-                            onChange={(event) =>
-                                setSelectedTimeZone(event.target.value)
-                            }
-                        >
-                            {/* Map over your time zones and create options */}
-                            {timeZones.map((zone) => (
-                                <option key={zone} value={zone}>
-                                    {zone}
-                                </option>
-                            ))}
-                        </select>
+                            <p>{`Counseling Type: ${appointment.counselingType}`}</p>
+                            <p>{`First Session: ${appointment.firstSession}`}</p>
+                            <p>{`Counselor Qualities: ${appointment.counselorQualities}`}</p>
+                            <p>{`Issues: ${appointment.issues}`}</p>
+                            <p>{`Specification: ${appointment.specification}`}</p>
                         </div>
-                        <div className='flex flex-row gap-x-2'>
-                            <button
-                                onClick={() =>
-                                    handleConfirmAppointment(appointment.id)
-                                }
-                            >
-                                <Button
-                                    buttonText={
-                                        appointment.appointmentStatus ===
-                                        "ready"
-                                            ? "Confirmed"
-                                            : "Confirm"
+                        <div className='flex flex-col gap-y-8'>
+                            <div className='flex flex-col gap-y-2'>
+                                <label className='text-Gray font-atkinson'>
+                                    Set New Session Date:
+                                </label>
+                                <DatePicker
+                                    className='p-1 border w-48 rounded-md border-Teal'
+                                    selected={selectedDateTimes[appointment.id]}
+                                    onChange={(date) =>
+                                        setSelectedDateTimes((prev) => ({
+                                            ...prev,
+                                            [appointment.id]: date,
+                                        }))
                                     }
-                                    buttonSize='fit'
-                                    transition={false}
+                                    showTimeSelect
+                                    timeIntervals={15}
+                                    dateFormat='yyyy-MM-dd HH:mm:ss'
+                                    timeFormat='HH:mm:ss'
+                                    timeCaption='Time'
+                                    placeholderText='Select new date and time'
                                 />
-                            </button>
-                            <button
-                                onClick={() =>
-                                    handleSetNewSessionDate(appointment.id)
-                                }
-                            >
-                                <Button
-                                    buttonText='Set New Date'
-                                    buttonSize='fit'
-                                    transition={false}
-                                />
-                            </button>
+                                {/* Inside the map function in WaitingAppointments component */}
+                                <label className='text-Gray font-atkinson'>
+                                    Time Zone:
+                                </label>
+                                <select
+                                    className='p-1 border w-48 rounded-md border-Teal'
+                                    value={selectedTimeZone}
+                                    onChange={(event) =>
+                                        setSelectedTimeZone(event.target.value)
+                                    }
+                                >
+                                    {/* Map over your time zones and create options */}
+                                    {timeZones.map((zone) => (
+                                        <option key={zone} value={zone}>
+                                            {zone}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className='flex flex-row gap-x-2'>
+                                <button
+                                    onClick={() =>
+                                        handleConfirmAppointment(appointment.id)
+                                    }
+                                >
+                                    <Button
+                                        buttonText={
+                                            appointment.appointmentStatus ===
+                                            "ready"
+                                                ? "Confirmed"
+                                                : "Confirm"
+                                        }
+                                        buttonSize='fit'
+                                        transition={false}
+                                    />
+                                </button>
+                                <button
+                                    onClick={() =>
+                                        handleSetNewSessionDate(appointment.id)
+                                    }
+                                >
+                                    <Button
+                                        buttonText='Set New Date'
+                                        buttonSize='fit'
+                                        transition={false}
+                                    />
+                                </button>
+                            </div>
                         </div>
-                    </div>
                     </li>
                 ))}
             </ul>

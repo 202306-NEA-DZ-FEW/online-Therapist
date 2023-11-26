@@ -41,10 +41,10 @@ const PatientsList = () => {
     }, []);
     return (
         <div className="font-atkinson p-2'">
-             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-             Patients list
+            <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
+                Patients list
             </h1>
-            
+
             <div className='flex flex-wrap'>
                 {patientsList.map((patient) => (
                     <div
@@ -57,7 +57,6 @@ const PatientsList = () => {
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                         />
                         <p>{`Name: ${patient.firstName} ${patient.lastName}`}</p>
-                        
                     </div>
                 ))}
             </div>

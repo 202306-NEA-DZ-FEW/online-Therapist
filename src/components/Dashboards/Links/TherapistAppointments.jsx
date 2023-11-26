@@ -46,21 +46,32 @@ const TherapistAppointments = ({ therapistId }) => {
                         key={appointment.id}
                         className='flex flex-col gap-y-8 justify-center items-center bg-white rounded-xl shadow-xl p-4  w-full md:w-1/2 lg:w-1/3 xl:w-1/4'
                     >
-                       
                         <img
                             src={appointment.photoURL}
                             alt={`Photo of ${appointment.userFirstName} ${appointment.userLastName}`}
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                         />
-                        <div className="font-atkinson flex flex-col gap-y-2 ">
-                        <p><span className="text-Teal">Patient :</span>{` ${appointment.userFirstName} ${appointment.userLastName}`}</p>
-                        <p><span className="text-Teal">Counseling Type :</span>{` ${appointment.counselingType}`}</p>
-                        <p>
-                        <span className="text-Teal">Session Date : </span> {`${appointment.appointmentDate}`}
-                        </p>
-                        <p>
-                        <span className="text-Teal">Time :</span> {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}
-                        </p>
+                        <div className='font-atkinson flex flex-col gap-y-2 '>
+                            <p>
+                                <span className='text-Teal'>Patient :</span>
+                                {` ${appointment.userFirstName} ${appointment.userLastName}`}
+                            </p>
+                            <p>
+                                <span className='text-Teal'>
+                                    Counseling Type :
+                                </span>
+                                {` ${appointment.counselingType}`}
+                            </p>
+                            <p>
+                                <span className='text-Teal'>
+                                    Session Date :{" "}
+                                </span>{" "}
+                                {`${appointment.appointmentDate}`}
+                            </p>
+                            <p>
+                                <span className='text-Teal'>Time :</span>{" "}
+                                {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}
+                            </p>
                         </div>
                     </li>
                 ))}
