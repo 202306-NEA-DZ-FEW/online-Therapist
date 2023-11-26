@@ -35,13 +35,13 @@ export default function PaymentCard({
         >
             <div className='p-8 w-full h-full'>
                 <div className='relative w-full h-full'>
-                    <Image
+                    {/* <Image
                         className='absolute w-[45px] md:w-[45px] lg:w-[60px]'
                         alt=''
                         src={`/Images/${CardType}.svg`}
                         width={60}
                         height={24}
-                    />
+                    /> */}
                     <Image
                         className='absolute right-0 bottom-0 top-0 my-auto w-[40px] md:w-[40px] lg:w-[50px]'
                         alt='chip'

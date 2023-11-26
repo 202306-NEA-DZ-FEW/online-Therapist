@@ -174,7 +174,7 @@ export default function BuyTickect() {
                 <Thankyou text1={t("buyticket.thankstext")} />
             ) : (
                 // Render the card selection section
-                <div className='h-vh m-16 space-y-16'>
+                <div className='h-vh m-4 md:m-16 space-y-16'>
                     <div className='ml-10 lg:rtl:mr-24 space-y-4'>
                         <h1 className='font-atkinson text-4xl '>
                             {t("buyticket.title")}

@@ -47,11 +47,9 @@ const ProfileImage = () => {
                     src={
                         uploading
                             ? Spinner
-                            : localStorage.getItem(
-                                  `therapist_image_${user.uid}`
-                              ) ||
-                              user.photoURL ||
-                              ProfileImage ||
+                            : localStorage.getItem(`profile_${user.uid}`) ??
+                              user.photoURL ??
+                              ProfileImage ??
                               Profile
                     }
                     alt='profile preview'

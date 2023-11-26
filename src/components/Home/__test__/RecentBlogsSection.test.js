@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import TicketsSection from "@/components/Home/TicketsSection";
 
 it("renders correctly", () => {

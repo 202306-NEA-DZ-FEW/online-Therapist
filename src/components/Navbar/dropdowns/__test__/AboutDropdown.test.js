@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import AboutDropdown from "../AboutDropdown";
 
 it("renders correctly", () => {

@@ -1,8 +1,7 @@
-import React from "react";
-
 import { UserAuth } from "@/context/AuthContext";
 import TherapistDashboard from "@/components/Dashboards/ThearapistDashboard";
 import PatientDashboard from "@/components/Dashboards/PatientDashboard";
+import Layout from "@/layout/Layout";
 
 export default function Dashboard() {
     const { user } = UserAuth();
@@ -12,5 +11,5 @@ export default function Dashboard() {
         } else return <PatientDashboard />;
     };
 
-    return <div>{renderContent()}</div>;
+    return <Layout>{renderContent()}</Layout>;
 }

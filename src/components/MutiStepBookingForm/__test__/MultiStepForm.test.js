@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import MultiStepForm from "../MultiStepForm";
 
 it("renders correctly", () => {

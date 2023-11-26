@@ -27,9 +27,9 @@
         "header": "Are There Any Specific Qualities That You'd Like In A Counselor?",
         "valueText1": "I Prefer A Male Counselor",
         "valueText2": "I Prefer A Female Counselor",
-        "valueText3": "I Prefer An Young Counselor (45-)",
+        "valueText3": "I Prefer A Young Counselor (45-)",
         "valueText4": "I Prefer A Non-Religious Counselor",
-        "valueText5": "I Prefer A Non-Religious Counselor (45+)"
+        "valueText5": "I Prefer An Older  Counselor (45+)"
     },
     "step5": {
         "header": "Are There Any Issues You'd Like To Focus On?",

@@ -48,7 +48,6 @@
         "description": "Your request has been sent, a Inner Space representative will get in contact with you through the email you provided as soon as possible.",
         "button": "Take me home!"
     },
-
     "careers": {
         "mainTitle": "CAREERS AT INNER SPACE",
         "motto": "Be a part of making people feel better.",
@@ -60,7 +59,6 @@
         "positions": "CURRENT OPEN POSITIONS",
         "sendEmail": "Please send us an email with the application title as the subject with an attached CV in PDF format!"
     },
-
     "signup": {
         "heading": "Healing starts here",
         "signupNow": "SIGNUP NOW",
@@ -81,7 +79,6 @@
         "text2": "Please follow the steps in the email to complete and activateyour account.",
         "button": "BACK TO HOME"
     },
-
     "footer": {
         "subscribe": "Subscribe",
         "subscribeN": "Subscribe",
@@ -96,9 +93,9 @@
         "copyright": ". All Rights Reserved.",
         "spam": "We will never spam you or share your email.",
         "pages": "Pages",
-        "motto": "Inner Space. Your space to heal."
+        "motto": "Inner Space. Your space to heal.",
+        "email_sent": "Thanks for subscribing, Please check your inbox"
     },
-
     "requirement": {
         "principaleTitle": "WHY WORK WITH INNERSPACE ?",
         "title1": "Reliable Income",
