@@ -216,6 +216,11 @@ export function AppWrapper({ Component, children }) {
         updateProfile(user, { photoURL });
     };
 
+    // const updateProfilePhoto = async (photoURL) => {
+    //     const user = auth.currentUser;
+    //     updateProfile(user, { photoURL });
+    // };
+
     const fetchUserCards = async (userUid) => {
         try {
             const cardsCollection = collection(db, "cards");

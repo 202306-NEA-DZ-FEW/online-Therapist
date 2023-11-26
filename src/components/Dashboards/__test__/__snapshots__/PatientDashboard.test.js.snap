@@ -51,7 +51,7 @@ exports[`renders correctly 1`] = `
           </svg>
           <div>
             <h2
-              className="font-medium text-xs md:text-sm text-center text-Teal"
+              className="hidden md:block font-medium text-xs md:text-sm text-center text-Teal"
             />
             <p
               className="hidden md:block text-xs text-gray-500 text-center"

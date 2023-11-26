@@ -59,7 +59,7 @@ export default function Sidebar() {
                                 <CgProfile className='w-10 h-10 md:w-16 rounded-full mx-auto text-gray-500' />
                             )}
                             <div>
-                                <h2 className='font-medium text-xs md:text-sm text-center text-Teal'>
+                                <h2 className='hidden md:block font-medium text-xs md:text-sm text-center text-Teal'>
                                     {user.displayName}
                                 </h2>
                                 <p className='hidden md:block text-xs text-gray-500 text-center'>

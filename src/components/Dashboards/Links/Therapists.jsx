@@ -363,72 +363,74 @@ const TherapistsMatches = () => {
     // Render the filtered therapists for the user to choose from
 
     return (
-        <div className='p-10'>
-            <h2 className='text-5xl font-young'>Therapists Matches list</h2>
-            <ul className='flex flex-col'>
+        <div className='font-atkinson p-2'>
+            <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
+                Therapists Matches list
+            </h1>
+
+            <ul className='flex flex-col gap-y-8 lg:m-4'>
                 {therapists.map((therapist) => (
-                    <li key={therapist.id} className='flex-col-1 p-4 '>
-                        <img
-                            className='w-16 h-16 my-2'
-                            src={`${therapist.photoURL}`}
-                        />
-                        <p>
-                            <span className='text-Gray font-atkinson'>
-                                Name:{" "}
-                            </span>
-                            {`${therapist.fullname}`}
-                        </p>
-                        <p>
+                    <li
+                        key={therapist.id}
+                        className='flex flex-col gap-y-6 lg:flex lg:flex-row lg:gap-x-10 bg-white rounded-xl shadow-xl p-2 lg:p-4 m-0 lg:m-4 '
+                    >
+                        <div className='flex flex-col justify-center items-center gap-y-2'>
+                            <img
+                                className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
+                                src={`${therapist.photoURL}`}
+                            />
+
+                            <p>{`${therapist.fullname}`}</p>
+                            <p>{` ${therapist.specialty}`}</p>
+                            {/* <p>
                             <span className='text-Gray font-atkinson'>
                                 Approved:{" "}
                             </span>
                             {`${therapist.approved}`}
-                        </p>
+                        </p> */}
+                        </div>
 
-                        <details>
-                            <summary className='text-DarkTeal text-lg font-atkinson hover:bg-GreenLight w-20 rounded-lg'>
-                                Details
-                            </summary>
+                        <div className='w-[250px] lg:w-96 pt-4 '>
+                            <p className='text-gray-500'>Details</p>
                             <p>
-                                <span className='text-Gray font-atkinson'>
-                                    Bio:{" "}
-                                </span>
+                                <span className='text-Gray font-atkinson'></span>
                                 {`${therapist.bio}`}
                             </p>
-                            {/* <ul>
-                                <li>{`Age: ${therapist.age}`}</li>
-                                <li>{`Gender: ${therapist.gender}`}</li>
-                                <li>{`Specialty: ${therapist.specialty}`}</li>
-                            </ul> */}
-                        </details>
-                        <label className='text-Gray font-atkinson'>
-                            Appointment Date & Time:
-                        </label>
-                        <DatePicker
-                            selected={selectedDateTimes[therapist.id]}
-                            onChange={(date) =>
-                                handleDateTimeChange(therapist.id, date)
-                            }
-                            showTimeSelect
-                            timeFormat='HH:mm'
-                            timeIntervals={15}
-                            dateFormat='MM-dd-yyyy HH:mm'
-                            placeholderText='Select date and time'
-                        />
-                        <label className='text-Gray font-atkinson'>
-                            Time Zone:
-                        </label>
-                        <select
-                            value={selectedTimeZone}
-                            onChange={handleTimeZoneChange}
-                        >
-                            {timeZones.map((zone) => (
-                                <option key={zone} value={zone}>
-                                    {zone}
-                                </option>
-                            ))}
-                        </select>
-                        <div className='flex space-x-4 pt-3'>
+                        </div>
+
+                        <div className='lg:flex lg:flex-col lg:gap-y-8 flex flex-col jutsify-center items-center gap-y-8'>
+                            <div className='flex flex-col gap-y-2'>
+                                <label className='text-Gray font-atkinson'>
+                                    Appointment Date & Time:
+                                </label>
+                                <DatePicker
+                                    className='p-1 border w-48 rounded-md border-Teal'
+                                    selected={selectedDateTimes[therapist.id]}
+                                    onChange={(date) =>
+                                        handleDateTimeChange(therapist.id, date)
+                                    }
+                                    showTimeSelect
+                                    timeFormat='HH:mm'
+                                    timeIntervals={15}
+                                    dateFormat='MM-dd-yyyy HH:mm'
+                                    placeholderText='Select date and time'
+                                />
+                                <label className='text-Gray font-atkinson'>
+                                    Time Zone:
+                                </label>
+                                <select
+                                    className='p-1 border w-48 rounded-md border-Teal'
+                                    value={selectedTimeZone}
+                                    onChange={handleTimeZoneChange}
+                                >
+                                    {timeZones.map((zone) => (
+                                        <option key={zone} value={zone}>
+                                            {zone}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
                             <button
                                 onClick={() =>
                                     handleSubmitAppointment(therapist)
@@ -437,21 +439,13 @@ const TherapistsMatches = () => {
                                 <Button
                                     buttonText={
                                         bookingStatus[therapist.id]
-                                            ? "unbook"
-                                            : "book"
+                                            ? "Unbook"
+                                            : "Book"
                                     }
-                                    buttonSize='sm'
+                                    buttonSize='lg'
                                     transition={false}
                                 />
                             </button>
-                            {/* <button>
-                                <Button
-                                    buttonText='Calendar'
-                                    buttonSize='md'
-                                    transition={false}
-                                    disabled={!therapist.approved}
-                                />
-                            </button> */}
                         </div>
                     </li>
                 ))}
@@ -461,12 +455,3 @@ const TherapistsMatches = () => {
 };
 
 export default TherapistsMatches;
-// export default function Therapists() {
-//     return (
-//         <div className='font-atkinson p-2 '>
-//             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-//                 Therapists
-//             </h1>
-//         </div>
-//     );
-// }

@@ -1,10 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
 import Image from "next/image";
 import Link from "next/link";
-
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -15,8 +15,6 @@ import Input from "@/components/elements/Input";
 import { UserAuth } from "@/context/AuthContext";
 import Layout from "@/layout/Layout";
 import { auth } from "@/util/firebase";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
 
 const Login = () => {
     const router = useRouter();
@@ -38,7 +36,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
-                router.push("/userProfile");
+                router.push("/");
                 const user = userCredential.user;
                 console.log("User logged in:", user);
                 // ...

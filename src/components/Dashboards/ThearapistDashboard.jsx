@@ -10,7 +10,7 @@ export default function TherapistDashboard() {
 
     const renderContent = () => {
         switch (activeLink) {
-            case "waiting appointments":
+            case "appointments":
                 return <WaitingAppointments />;
             case "messages":
                 return <Messages />;
