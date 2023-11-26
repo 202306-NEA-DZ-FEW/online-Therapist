@@ -1,10 +1,10 @@
-import Image from "next/image"
-import Link from "next/link"
-import {useRouter} from "next/router"
-import {useTranslation} from "next-i18next"
-const Card = ({title, text, imgSrc, url}) => {
-    const {t} = useTranslation("homepage")
-    const router = useRouter()
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+const Card = ({ title, text, imgSrc, url }) => {
+    const { t } = useTranslation("homepage");
+    const router = useRouter();
 
     return (
         <div className='group mx-3 overflow-hidden  aspect-video cursor-auto rounded-md relative group my-1'>
@@ -36,7 +36,7 @@ const Card = ({title, text, imgSrc, url}) => {
                 className='object-cover w-full aspect-square group-hover:scale-110 transition duration-300 ease-in-out'
             />
         </div>
-    )
-}
+    );
+};
 
-export default Card
+export default Card;

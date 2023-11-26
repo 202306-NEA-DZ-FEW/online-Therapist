@@ -1,10 +1,10 @@
-import AppointmentSection from "@/components/Home/AppointmentSection"
-import CommunicationSection from "@/components/Home/CommunicationSection"
-import HeroSection from "@/components/Home/HeroSection"
-import RecentBlogsSection from "@/components/Home/RecentBlogsSection"
-import TicketsSection from "@/components/Home/TicketsSection"
+import AppointmentSection from "@/components/Home/AppointmentSection";
+import CommunicationSection from "@/components/Home/CommunicationSection";
+import HeroSection from "@/components/Home/HeroSection";
+import RecentBlogsSection from "@/components/Home/RecentBlogsSection";
+import TicketsSection from "@/components/Home/TicketsSection";
 
-const HomePageWrapper = ({posts}) => {
+const HomePageWrapper = ({ posts }) => {
     return (
         <>
             <HeroSection />
@@ -13,7 +13,7 @@ const HomePageWrapper = ({posts}) => {
             <RecentBlogsSection posts={posts} />
             <TicketsSection />
         </>
-    )
-}
+    );
+};
 
-export default HomePageWrapper
+export default HomePageWrapper;
