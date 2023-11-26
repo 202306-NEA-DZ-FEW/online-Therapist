@@ -282,14 +282,14 @@ export const patientLinks = [
     {
         id: 5,
         name: "profile",
-        href: "/userProfile/",
+        href: "/profile/",
         icon: <CgProfile />,
         text: "Profile",
     },
     {
         id: 6,
         name: "settings",
-        href: "/userProfile/",
+        href: "/profile/",
         icon: <IoSettingsSharp />,
         text: "Settings",
     },

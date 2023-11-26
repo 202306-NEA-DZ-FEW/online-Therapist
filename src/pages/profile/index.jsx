@@ -128,7 +128,7 @@ const User = ({ t }) => {
     return (
         <Layout>
             <div className='container mx-auto font-atkinson '>
-                <p className='text-red-500 text-center pt-8'>
+                <p className='text-red-500 text-center pt-8 md:ml-5 md:mr-5  sm:mr-4 sm:ml-4'>
                     {t("users:userProfile.remark")}
                 </p>
                 {(user?.isUser && (
@@ -139,9 +139,9 @@ const User = ({ t }) => {
 
                         <form
                             onSubmit={handleSubmit(onSubmit)}
-                            className='w-full justify-self-center lg:justify-self-end px-5 md:px-0'
+                            className='w-full justify-self-center lg:justify-self-end px-5 md:px-0 md:ml-4 md:mr-4'
                         >
-                            <legend className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5'>
+                            <legend className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5  md:mr-3 md:ml-4'>
                                 {t("users:userProfile.title")}
                             </legend>
                             <div className=' lg:mx-0 mx-2 p-1 flex items-center my-5 gap-2 min-w-max '>
@@ -150,11 +150,8 @@ const User = ({ t }) => {
                                     name='firstname'
                                     styles='md:ml-[6.5rem] lg:w-[26.9rem] md:w-[34rem] rtl:md:mr-[6.5rem] rtl:ml-0 rtl:md:w-[28.4rem] rtl:lg:w-[21.5rem]'
                                     isDisabled={!edit}
-                                    placeholder={t(
-                                        "users:userProfile.firstname"
-                                    )}
+                                    placeholder=''
                                     errorMessage={errors.firstname?.message}
-                                    è
                                     register={{ ...register("firstname") }}
                                     value={formData.firstname}
                                     onChange={onChange}
@@ -166,9 +163,7 @@ const User = ({ t }) => {
                                     name='lastname'
                                     styles='md:ml-[6.5rem] lg:w-[26.9rem] md:w-[34rem] rtl:md:mr-[6.5rem] rtl:ml-0 rtl:md:w-[28.4rem] rtl:lg:w-[21.5rem]'
                                     isDisabled={!edit}
-                                    placeholder={t(
-                                        "users:userProfile.lastname"
-                                    )}
+                                    placeholder=''
                                     errorMessage={errors.lastname?.message}
                                     register={{ ...register("lastname") }}
                                     value={formData.lastname}
@@ -182,9 +177,7 @@ const User = ({ t }) => {
                                     type='date'
                                     styles='md:ml-[6.5rem] lg:w-[26.9rem] md:w-[34rem] rtl:md:mr-[3.7rem] rtl:ml-0 rtl:md:w-[28.4rem] rtl:lg:w-[21.5rem]'
                                     isDisabled={!edit}
-                                    placeholder={t(
-                                        "users:userProfile.birthDate"
-                                    )}
+                                    placeholder=''
                                     errorMessage={errors.birthDate?.message}
                                     register={{ ...register("birthDate") }}
                                     value={formData.birthDate}
@@ -198,7 +191,7 @@ const User = ({ t }) => {
                                     name='email'
                                     styles='rtl:ml-0 md:ml-[8.9rem] rtl:md:mr-[1.8rem] rtl:w-full rtl:md:w-[28.5rem] rtl:lg:w-[21.5rem] mx-0 md:w-[34.1rem] lg:w-[27rem]'
                                     isDisabled={!edit}
-                                    placeholder={t("users:userProfile.email")}
+                                    placeholder=''
                                     errorMessage={errors.email?.message}
                                     register={{ ...register("email") }}
                                     value={formData.email}
@@ -214,9 +207,7 @@ const User = ({ t }) => {
                                     styles='md:ml-[4rem] rtl:ml-0 rtl:md:mr-[4.4rem] rtl:w-full
                                     rtl:md:w-[28.5rem] rtl:lg:w-[21.5rem] md:w-[34rem] lg:w-[27rem]'
                                     isDisabled={!edit}
-                                    placeholder={t(
-                                        "users:userProfile.phoneNumber"
-                                    )}
+                                    placeholder=''
                                     errorMessage={errors.phoneNumber?.message}
                                     register={{
                                         ...register("phoneNumber"),
@@ -269,9 +260,7 @@ const User = ({ t }) => {
                                         styles='md:ml-[5.5rem] rtl:ml-0 rtl:md:mr-[2rem] rtl:w-full
                                         rtl:md:w-[28.5rem] rtl:lg:w-[21.5rem] md:w-[34rem] lg:w-[27rem]'
                                         isDisabled={!edit}
-                                        placeholder={t(
-                                            "users:userProfile.familySize"
-                                        )}
+                                        placeholder=''
                                         register={{
                                             ...register("familySize"),
                                         }}
@@ -327,7 +316,7 @@ const User = ({ t }) => {
                                     </p>
                                 </div>
                             </div>
-                            <h1 className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5'>
+                            <h1 className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5  md:mr-3 md:ml-4'>
                                 {t("users:userProfile.security")}
                             </h1>
                             <div className='lg:mx-0 mx-2 p-1 flex items-center my-5 gap-2 rtl:md:max-w-10'>
@@ -369,10 +358,9 @@ const User = ({ t }) => {
                                     onChange={onChange}
                                 />
                             </div>
-                            <div className='flex flex-row  gap-5 my-14 lg:ml-3 lg:rtl:mr-4'>
+                            <div className='flex flex-row justify-center gap-4 my-14 lg:ml-8 lg:rtl:mr-20 md:mr-4 md:ml-4'>
                                 <button type='submit'>
                                     <Button
-                                        buttonSize='lg'
                                         buttonText={t("users:userProfile.save")}
                                         disabled={!edit}
                                         transition={false}
@@ -382,7 +370,6 @@ const User = ({ t }) => {
                                 </button>
 
                                 <Button
-                                    buttonSize='lg'
                                     buttonText={t("users:userProfile.edit")}
                                     disabled={edit}
                                     transition={false}
@@ -391,7 +378,6 @@ const User = ({ t }) => {
                                 />
                                 <button onClick={onDeleteAccount}>
                                     <Button
-                                        buttonSize='lg'
                                         buttonText={t(
                                             "users:userProfile.deleteAccount"
                                         )}
@@ -401,10 +387,10 @@ const User = ({ t }) => {
                                 </button>
                             </div>
 
-                            <h1 className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5'>
+                            <h1 className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5  md:mr-3 md:ml-4'>
                                 {t("users:userProfile.payment")}
                             </h1>
-                            <div className='flex flex-row  gap-5 my-14 lg:ml-3 lg:rtl:mr-4'>
+                            <div className='flex flex-row  gap-5 my-14 lg:ml-3 lg:rtl:mr-4 md:mr-4 md:ml-4'>
                                 <div>
                                     <p>
                                         {totalTickets}{" "}
@@ -412,7 +398,6 @@ const User = ({ t }) => {
                                     </p>
                                     <Link href='/paymentMethods'>
                                         <Button
-                                            buttonSize='lg'
                                             buttonText={t(
                                                 "users:userProfile.show"
                                             )}
@@ -428,7 +413,6 @@ const User = ({ t }) => {
                                     </p>
                                     <Link href='/#tickets'>
                                         <Button
-                                            buttonSize='lg'
                                             buttonText={t(
                                                 "users:userProfile.buy"
                                             )}
