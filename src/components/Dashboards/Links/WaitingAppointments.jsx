@@ -14,9 +14,11 @@ import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment-timezone";
 import timeZones from "@/util/timeZones";
-import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker.css";import { useTranslation } from "next-i18next";
+
 
 const WaitingAppointments = () => {
+    const { t } = useTranslation("dashboard");
     const [appointments, setAppointments] = useState([]);
     const { user, loading, setLoading } = UserAuth();
     // Track selected appointment date and time for each therapist
@@ -128,7 +130,7 @@ const WaitingAppointments = () => {
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                Waiting Appointments
+                 {t("waitingAppointments.heading")}
             </h1>
 
             {/* Display the list of waiting appointments */}
@@ -145,24 +147,24 @@ const WaitingAppointments = () => {
                                 className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                             />
                             <p>{` ${appointment.userFirstName} ${appointment.userLastName}`}</p>
-                            <p>{`Date : ${appointment.appointmentDate} `} </p>
+                            <p>{`${t("waitingAppointments.date")} ${appointment.appointmentDate} `} </p>
                             <p>
                                 {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
                             </p>
                         </div>
                         <div className='lg:w-1/3 pt-2 space-y-1'>
-                            <p className='text-gray-400'>Details</p>
-
-                            <p>{`Counseling Type: ${appointment.counselingType}`}</p>
-                            <p>{`First Session: ${appointment.firstSession}`}</p>
-                            <p>{`Counselor Qualities: ${appointment.counselorQualities}`}</p>
-                            <p>{`Issues: ${appointment.issues}`}</p>
-                            <p>{`Specification: ${appointment.specification}`}</p>
+                            <p className='text-gray-400'>{t("therapists.details")}</p>
+                            <p>{`${t("therapistAppointments.status")} ${appointment.maritalStatus}`}</p>
+                            <p>{` ${t("waitingAppointments.counseling")} ${appointment.counselingType}`}</p>
+                            <p>{`${t("waitingAppointments.first")} ${appointment.firstSession}`}</p>
+                            <p>{`${t("waitingAppointments.qualities")} ${appointment.counselorQualities}`}</p>
+                            <p>{`${t("waitingAppointments.issues")} ${appointment.issues}`}</p>
+                            <p>{`${t("waitingAppointments.specification")} ${appointment.specification}`}</p>
                         </div>
                         <div className='flex flex-col gap-y-8'>
                             <div className='flex flex-col gap-y-2'>
                                 <label className='text-Gray font-atkinson'>
-                                    Set New Session Date:
+                                    {t("waitingAppointments.newDate")}
                                 </label>
                                 <DatePicker
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -178,11 +180,11 @@ const WaitingAppointments = () => {
                                     dateFormat='yyyy-MM-dd HH:mm:ss'
                                     timeFormat='HH:mm:ss'
                                     timeCaption='Time'
-                                    placeholderText='Select new date and time'
+                                    placeholderText= {t("waitingAppointments.selectnew")}
                                 />
                                 {/* Inside the map function in WaitingAppointments component */}
                                 <label className='text-Gray font-atkinson'>
-                                    Time Zone:
+                                    {t("waitingAppointments.zone")}
                                 </label>
                                 <select
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -208,9 +210,9 @@ const WaitingAppointments = () => {
                                     <Button
                                         buttonText={
                                             appointment.appointmentStatus ===
-                                            "ready"
-                                                ? "Confirmed"
-                                                : "Confirm"
+                                            "ready" 
+                                                ? t("waitingAppointments.confirmed")
+                                                :  t("waitingAppointments.confirm")
                                         }
                                         buttonSize='fit'
                                         transition={false}
@@ -222,86 +224,7 @@ const WaitingAppointments = () => {
                                     }
                                 >
                                     <Button
-                                        buttonText='Set New Date'
-                                        buttonSize='fit'
-                                        transition={false}
-                                    />
-                                </button>
-                            </div>
-                            <img
-                                src={appointment.photoURL}
-                                alt={`Photo of ${appointment.userFirstName} ${appointment.userLastName}`}
-                                className='w-full h-auto mb-4 rounded-lg'
-                            />
-                            <p>{`Name: ${appointment.userFirstName} ${appointment.userLastName}`}</p>
-                            <p>{`Marital Status: ${appointment.maritalStatus}`}</p>
-                            <p>{`Counseling Type: ${appointment.counselingType}`}</p>
-                            <p>{`First Session: ${appointment.firstSession}`}</p>
-                            <p>{`Counselor Qualities: ${appointment.counselorQualities}`}</p>
-                            <p>{`Issues: ${appointment.issues}`}</p>
-                            <p>{`Specification: ${appointment.specification}`}</p>
-                            <p>
-                                {`Session Date: ${appointment.appointmentDate} ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
-                            </p>
-                            <label className='text-Gray font-atkinson'>
-                                Set New Session Date:
-                            </label>
-                            <DatePicker
-                                selected={selectedDateTimes[appointment.id]}
-                                onChange={(date) =>
-                                    setSelectedDateTimes((prev) => ({
-                                        ...prev,
-                                        [appointment.id]: date,
-                                    }))
-                                }
-                                showTimeSelect
-                                timeIntervals={15}
-                                dateFormat='yyyy-MM-dd HH:mm:ss'
-                                timeFormat='HH:mm:ss'
-                                timeCaption='Time'
-                                placeholderText='Select new date and time'
-                            />
-                            {/* Inside the map function in WaitingAppointments component */}
-                            <label className='text-Gray font-atkinson'>
-                                Time Zone:
-                            </label>
-                            <select
-                                value={selectedTimeZone}
-                                onChange={(event) =>
-                                    setSelectedTimeZone(event.target.value)
-                                }
-                            >
-                                {/* Map over your time zones and create options */}
-                                {timeZones.map((zone) => (
-                                    <option key={zone} value={zone}>
-                                        {zone}
-                                    </option>
-                                ))}
-                            </select>
-                            <div className='pt-3'>
-                                <button
-                                    onClick={() =>
-                                        handleConfirmAppointment(appointment.id)
-                                    }
-                                >
-                                    <Button
-                                        buttonText={
-                                            appointment.appointmentStatus ===
-                                            "ready"
-                                                ? "Confirmed"
-                                                : "Confirm"
-                                        }
-                                        buttonSize='fit'
-                                        transition={false}
-                                    />
-                                </button>
-                                <button
-                                    onClick={() =>
-                                        handleSetNewSessionDate(appointment.id)
-                                    }
-                                >
-                                    <Button
-                                        buttonText='Set New Date'
+                                        buttonText={t("waitingAppointments.setNew")}
                                         buttonSize='fit'
                                         transition={false}
                                     />
