@@ -1,66 +1,63 @@
-import {motion, useMotionValueEvent, useScroll} from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import {useRouter} from "next/router"
-import {useTranslation} from "next-i18next"
-import {useEffect, useState} from "react"
-import {HiMenu} from "react-icons/hi"
-import {IoLanguage} from "react-icons/io5"
-import {MdArrowDropDown} from "react-icons/md"
-import {MdOutlineClose} from "react-icons/md"
-import {TbUserCircle} from "react-icons/tb"
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
+import { HiMenu } from "react-icons/hi";
+import { IoLanguage } from "react-icons/io5";
+import { MdArrowDropDown } from "react-icons/md";
+import { MdOutlineClose } from "react-icons/md";
+import { TbUserCircle } from "react-icons/tb";
 
-import {UserAuth} from "@/context/AuthContext"
+import { UserAuth } from "@/context/AuthContext";
 
-import AboutDropdown from "./dropdowns/AboutDropdown"
-import LangDropdown from "./dropdowns/LangDropdown"
-import UserDropdown from "./dropdowns/UserDropdown"
-import Button from "../elements/Button"
+import AboutDropdown from "./dropdowns/AboutDropdown";
+import LangDropdown from "./dropdowns/LangDropdown";
+import UserDropdown from "./dropdowns/UserDropdown";
+import Button from "../elements/Button";
 
-export default function Navbar () {
-    const router = useRouter()
-    const [navbar, setNavbar] = useState(false)
-    const {t} = useTranslation("common")
-    const language = router.locale
-    const {user} = UserAuth()
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+export default function Navbar() {
+    const router = useRouter();
+    const [navbar, setNavbar] = useState(false);
+    const { t } = useTranslation("common");
+    const language = router.locale;
+    const { user } = UserAuth();
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen)
-    }
+        setIsDropdownOpen(!isDropdownOpen);
+    };
 
     useEffect(() => {
-        document.body.dir = language == "ar" ? "rtl" : "ltr"
-    }, [language])
+        document.body.dir = language == "ar" ? "rtl" : "ltr";
+    }, [language]);
 
     // Animation
-    const {scrollY} = useScroll()
+    const { scrollY } = useScroll();
 
-    const [hidden, setHidden] = useState(false)
+    const [hidden, setHidden] = useState(false);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = scrollY.getPrevious()
+        const previous = scrollY.getPrevious();
         if (latest > previous && latest > 150) {
-            setHidden(true)
+            setHidden(true);
         } else {
-            setHidden(false)
+            setHidden(false);
         }
-    })
+    });
 
     return (
         <motion.nav
             variants={{
-                visible: {y: 0},
-                hidden: {y: "-100%"},
+                visible: { y: 0 },
+                hidden: { y: "-100%" },
             }}
             animate={hidden ? "hidden" : "visible"}
-            transition={{duration: 0.35, ease: "easeInOut"}}
-            className="z-50 sticky top-0 bg-white "
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className='z-50 sticky top-0 bg-white '
         >
-            <div
-                className=' mx-0 md:container md:mx-auto '
-
-            >
+            <div className=' mx-0 md:container md:mx-auto '>
                 <div className='relative justify-between bg-white md:items-center md:flex md:px-8 h-20 '>
                     <div className=''>
                         <div className='flex items-center justify-between py-3 md:py-0 '>
@@ -114,11 +111,16 @@ export default function Navbar () {
                         </div>
                     </div>
                     <div>
-                        <div className={`md:block ${navbar ? " block" : "hidden"}`}>
+                        <div
+                            className={`md:block ${
+                                navbar ? " block" : "hidden"
+                            }`}
+                        >
                             <ul className='bg-white h-screen md:mt-0 md:h-auto space-y-2 md:space-y-0 md:space-x-10  items-center md:justify-center md:flex justify-start md:items-center flex-col flex md:flex-row pt-10 md:pt-0'>
                                 <li
-                                    className={`block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto  md:hover:border-b md:hover:text-Teal  ${language === "ar" ? "pl-9" : ""
-                                        }`}
+                                    className={`block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto  md:hover:border-b md:hover:text-Teal  ${
+                                        language === "ar" ? "pl-9" : ""
+                                    }`}
                                 >
                                     <Link
                                         href='/'
@@ -161,7 +163,9 @@ export default function Navbar () {
                                             <Link href='/login'>
                                                 <Button
                                                     transition={false}
-                                                    buttonText={t("signup.login")}
+                                                    buttonText={t(
+                                                        "signup.login"
+                                                    )}
                                                     color='darkteal'
                                                     buttonSize='fit'
                                                 />
@@ -209,6 +213,5 @@ export default function Navbar () {
                 </div>
             </div>
         </motion.nav>
-
-    )
+    );
 }
