@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
   style={Object {}}
 >
   <div
-    className="  relative justify-between bg-white md:items-center md:flex md:px-8 h-20 "
+    className="relative justify-between bg-white md:items-center md:flex md:px-8 h-20 "
   >
     <div
       className="mx-0 md:container md:mx-auto"
