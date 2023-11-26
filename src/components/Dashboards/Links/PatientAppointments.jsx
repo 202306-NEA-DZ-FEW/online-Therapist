@@ -49,7 +49,7 @@ const PatientAppointments = () => {
 
                     setReadyAppointments(readyAppointmentsData);
                 } else {
-                    alert("You have confirmed appointments!");
+                    alert("You don't have confirmed appointments yet!");
                 }
             }
         });

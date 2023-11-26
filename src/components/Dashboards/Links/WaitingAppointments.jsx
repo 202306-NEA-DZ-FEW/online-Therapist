@@ -142,6 +142,7 @@ const WaitingAppointments = () => {
                             className='w-full h-auto mb-4 rounded-lg'
                         />
                         <p>{`Name: ${appointment.userFirstName} ${appointment.userLastName}`}</p>
+                        <p>{`Marital Status: ${appointment.maritalStatus}`}</p>
                         <p>{`Counseling Type: ${appointment.counselingType}`}</p>
                         <p>{`First Session: ${appointment.firstSession}`}</p>
                         <p>{`Counselor Qualities: ${appointment.counselorQualities}`}</p>

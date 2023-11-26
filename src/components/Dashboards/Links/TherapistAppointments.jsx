@@ -51,6 +51,7 @@ const TherapistAppointments = ({ therapistId }) => {
                             className='w-full h-auto mb-4 rounded-lg'
                         />
                         <p>{`Name: ${appointment.userFirstName} ${appointment.userLastName}`}</p>
+                        <p>{`Marital Status: ${appointment.maritalStatus}`}</p>
                         <p>{`Counseling Type: ${appointment.counselingType}`}</p>
                         <p>
                             {`Session Date: ${appointment.appointmentDate} ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}

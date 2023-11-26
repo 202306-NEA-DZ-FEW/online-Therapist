@@ -17,10 +17,14 @@ import Button from "@/components/elements/Button";
 import { UserAuth } from "@/context/AuthContext";
 import { auth, db } from "@/util/firebase"; // Replace this path with your Firebase configuration
 import timeZones from "@/util/timeZones"; // Import a list of time zones, replace with your own
+// import { useTranslation } from "next-i18next";
 
 const TherapistsMatches = () => {
     const [therapists, setTherapists] = useState([]);
-    const { user, loading, setLoading } = UserAuth();
+    const { user } = UserAuth();
+    // const { language } = user;
+    // const { t } = useTranslation(["booking", "therapists"], { lng: language });
+
     const [bookingStatus, setBookingStatus] = useState({}); // Track booking status
     const [activeBooking, setActiveBooking] = useState(false); // Track if user has an active booking
     // Track selected appointment date and time for each therapist
@@ -38,26 +42,145 @@ const TherapistsMatches = () => {
             const therapistsRef = collection(db, "therapists");
             const therapistsSnapshot = await getDocs(therapistsRef);
 
+            // // Log all therapists here
+            // const allTherapists = therapistsSnapshot.docs.map((doc) =>
+            //     doc.data()
+            // );
+            // console.log("All Therapists:", allTherapists);
+
             therapistsSnapshot.forEach((doc) => {
                 const therapist = doc.data();
                 // Apply your filtering logic here
+                // if (
+                //     (counselingType === "Teen Counseling (for my child)" &&
+                //         therapist.specialty === "Teen Counseling") ||
+                //     (counselingType === "Couple Counseling" &&
+                //         therapist.specialty === "Couple Counseling") ||
+                //     (counselingType === "Individual Counseling" &&
+                //         therapist.specialty === "Individual Counseling")
+                // ) {
+                //     if (
+                //         (counselorQualities.includes(
+                //             "I Prefer A Female Counselor"
+                //         ) &&
+                //             therapist.gender === "female") ||
+                //         (counselorQualities.includes(
+                //             "I Prefer A Male Counselor"
+                //         ) &&
+                //             therapist.gender === "male")
+                //     ) {
+                //         if (
+                //             (counselorQualities.includes(
+                //                 "I Prefer An Older Counselor (45+)"
+                //             ) &&
+                //                 therapist.age >= "45") ||
+                //             (counselorQualities.includes(
+                //                 "I Prefer A Young Counselor (45-)"
+                //             ) &&
+                //                 therapist.age < "45")
+                //         )
+
+                // if (
+                //     (counselingType === "Teen Counseling (for my child)" &&
+                //         therapist.specialty === "Teen Counseling") ||
+                //     (counselingType === "استشارات المراهقين (لطفلي)" &&
+                //         therapist.specialty === "Teen Counseling") ||
+                //     (counselingType === "Teen Counseling (for my child)" &&
+                //         therapist.specialty === "مشورة للمراهقين") ||
+                //     (counselingType === "استشارات المراهقين (لطفلي)" &&
+                //         therapist.specialty === "مشورة للمراهقين") ||
+                //     (counselingType === "Couple Counseling" &&
+                //         therapist.specialty === "Couple Counseling") ||
+                //     (counselingType === "الاستشارة الزوجية" &&
+                //         therapist.specialty === "Couple Counseling") ||
+                //     (counselingType === "Couple Counseling" &&
+                //         therapist.specialty === "مشورة للأزواج") ||
+                //     (counselingType === "الاستشارة الزوجية" &&
+                //         therapist.specialty === "مشورة للأزواج") ||
+                //     (counselingType === "Individual Counseling" &&
+                //         therapist.specialty === "Individual Counseling") ||
+                //     (counselingType === "الاستشارة الفردية" &&
+                //         therapist.specialty === "Individual Counseling") ||
+                //     (counselingType === "Individual Counseling" &&
+                //         therapist.specialty === "مشورة للأفراد") ||
+                //     (counselingType === "الاستشارة الفردية" &&
+                //         therapist.specialty === "مشورة للأفراد")
+                // ) {
+                //     if (
+                //         (counselorQualities.includes(
+                //             "I Prefer A Female Counselor" ||
+                //                 "أفضّل مستشارة أنثى"
+                //         ) &&
+                //             therapist.gender === ("female" || "أنثى")) ||
+                //         (counselorQualities.includes(
+                //             "I Prefer A Male Counselor" ||
+                //                 "أنا أفضّل مستشار ذكر"
+                //         ) &&
+                //             therapist.gender === ("male" || "ذكر"))
+                //     ) {
+                //         if (
+                //             (counselorQualities.includes(
+                //                 "I Prefer An Older Counselor (45+)" ||
+                //                     "أفضّل المستشار الأكبر سنًا (45+)"
+                //             ) &&
+                //                 therapist.age >= "45") ||
+                //             (counselorQualities.includes(
+                //                 "I Prefer A Young Counselor (45-)" ||
+                //                     "أفضّل مستشارًا شابًا (45-)"
+                //             ) &&
+                //                 therapist.age < "45")
+                //         )
                 if (
                     (counselingType === "Teen Counseling (for my child)" &&
                         therapist.specialty === "Teen Counseling") ||
+                    (counselingType === "استشارات المراهقين (لطفلي)" &&
+                        therapist.specialty === "Teen Counseling") ||
+                    (counselingType === "Teen Counseling (for my child)" &&
+                        therapist.specialty === "مشورة للمراهقين") ||
+                    (counselingType === "استشارات المراهقين (لطفلي)" &&
+                        therapist.specialty === "مشورة للمراهقين") ||
                     (counselingType === "Couple Counseling" &&
                         therapist.specialty === "Couple Counseling") ||
+                    (counselingType === "الاستشارة الزوجية" &&
+                        therapist.specialty === "Couple Counseling") ||
+                    (counselingType === "Couple Counseling" &&
+                        therapist.specialty === "مشورة للأزواج") ||
+                    (counselingType === "الاستشارة الزوجية" &&
+                        therapist.specialty === "مشورة للأزواج") ||
                     (counselingType === "Individual Counseling" &&
-                        therapist.specialty === "individual counseling")
+                        therapist.specialty === "Individual Counseling") ||
+                    (counselingType === "الاستشارة الفردية" &&
+                        therapist.specialty === "Individual Counseling") ||
+                    (counselingType === "Individual Counseling" &&
+                        therapist.specialty === "مشورة للأفراد") ||
+                    (counselingType === "الاستشارة الفردية" &&
+                        therapist.specialty === "مشورة للأفراد")
                 ) {
                     if (
                         (counselorQualities.includes(
                             "I Prefer A Female Counselor"
                         ) &&
                             therapist.gender === "female") ||
+                        (counselorQualities.includes("أفضّل مستشارة أنثى") &&
+                            therapist.gender === "female") ||
+                        (counselorQualities.includes(
+                            "I Prefer A Female Counselor"
+                        ) &&
+                            therapist.gender === "أنثى") ||
+                        (counselorQualities.includes("أفضّل مستشارة أنثى") &&
+                            therapist.gender === "أنثى") ||
                         (counselorQualities.includes(
                             "I Prefer A Male Counselor"
                         ) &&
-                            therapist.gender === "male")
+                            therapist.gender === "male") ||
+                        (counselorQualities.includes("أنا أفضّل مستشار ذكر") &&
+                            therapist.gender === "male") ||
+                        (counselorQualities.includes(
+                            "I Prefer A Male Counselor"
+                        ) &&
+                            therapist.gender === "ذكر") ||
+                        (counselorQualities.includes("أنا أفضّل مستشار ذكر") &&
+                            therapist.gender === "ذكر")
                     ) {
                         if (
                             (counselorQualities.includes(
@@ -65,7 +188,15 @@ const TherapistsMatches = () => {
                             ) &&
                                 therapist.age >= "45") ||
                             (counselorQualities.includes(
-                                "I Prefer An Young Counselor (45-)"
+                                "أفضّل المستشار الأكبر سنًا (45+)"
+                            ) &&
+                                therapist.age >= "45") ||
+                            (counselorQualities.includes(
+                                "I Prefer A Young Counselor (45-)"
+                            ) &&
+                                therapist.age < "45") ||
+                            (counselorQualities.includes(
+                                "أفضّل مستشارًا شابًا (45-)"
                             ) &&
                                 therapist.age < "45")
                         )
@@ -80,6 +211,7 @@ const TherapistsMatches = () => {
             });
 
             setTherapists(filteredTherapists);
+            // console.log("Filtered Therapists:", filteredTherapists);
 
             const initialBookingStatus = filteredTherapists.reduce(
                 (acc, therapist) => {
@@ -225,11 +357,8 @@ const TherapistsMatches = () => {
                 `Error: Appointment could not be updated!\n${error.message}`
             );
         }
-
-        if (loading) {
-            return <p>Loading...</p>;
-        }
     };
+    console.log("Therapists Array:", therapists);
 
     // Render the filtered therapists for the user to choose from
 

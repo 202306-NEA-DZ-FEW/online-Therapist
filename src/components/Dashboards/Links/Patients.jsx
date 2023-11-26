@@ -53,7 +53,7 @@ const PatientsList = () => {
                             alt={`Photo of ${patient.userFirstName} ${patient.userLastName}`}
                             className='w-full h-auto mb-4 rounded-lg'
                         />
-                        <p>{`Name: ${patient.firstName} ${patient.lastName}`}</p>
+                        <p>{`Name: ${patient.userFirstName} ${patient.userLastName}`}</p>
                         {/* Add other patient information as needed */}
                     </div>
                 ))}

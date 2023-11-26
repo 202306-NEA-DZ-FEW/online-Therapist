@@ -1,3 +1,4 @@
+import ChatCard from "@/components/Cards/ChatCard";
 import React from "react";
 
 export default function Messages() {
