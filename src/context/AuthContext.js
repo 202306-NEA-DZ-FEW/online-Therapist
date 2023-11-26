@@ -118,7 +118,7 @@ export function AppWrapper({ children }) {
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL ?? Profile.src,
+                        photoURL: user.photoURL || Profile.src,
                         displayName: fullname ?? username,
                         isTherapist,
                         isUser,
@@ -131,7 +131,7 @@ export function AppWrapper({ children }) {
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL ?? Profile.src,
+                        photoURL: user.photoURL || Profile.src,
                         displayName: user.displayName,
                         isTherapist,
                         isUser,
@@ -150,6 +150,11 @@ export function AppWrapper({ children }) {
         const user = auth.currentUser;
         updateProfile(user, { photoURL });
     };
+
+    // const updateProfilePhoto = async (photoURL) => {
+    //     const user = auth.currentUser;
+    //     updateProfile(user, { photoURL });
+    // };
 
     const fetchUserCards = async (userUid) => {
         try {

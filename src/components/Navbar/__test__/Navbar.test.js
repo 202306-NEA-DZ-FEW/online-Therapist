@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import Navbar from "../Navbar";
 
 it("renders correctly", () => {

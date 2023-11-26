@@ -12,23 +12,6 @@ exports[`renders correctly 1`] = `
       className="relative w-full h-full"
     >
       <img
-        alt=""
-        className="absolute w-[45px] md:w-[45px] lg:w-[60px]"
-        data-nimg="1"
-        decoding="async"
-        height={24}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/Images/undefined.svg"
-        style={
-          Object {
-            "color": "transparent",
-          }
-        }
-        width={60}
-      />
-      <img
         alt="chip"
         className="absolute right-0 bottom-0 top-0 my-auto w-[40px] md:w-[40px] lg:w-[50px]"
         data-nimg="1"

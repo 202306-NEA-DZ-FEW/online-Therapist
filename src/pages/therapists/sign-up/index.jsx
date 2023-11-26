@@ -97,7 +97,7 @@ const TherapistSignUp = ({ t }) => {
                     text2={t("therapists:text2")}
                 />
             ) : (
-                <div className='container px-16 mx-auto my-16 flex flex-col md:flex-row '>
+                <div className='container px-2 md:px-16 mx-auto my-8 md:my-16 flex flex-col md:flex-row '>
                     <div className='p-8 shadow-lg lg:p-4 rounded w-full'>
                         <form
                             className='space-y-4 lg:space-y-4'

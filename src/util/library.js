@@ -67,13 +67,13 @@ export const members = [
     /*name,id,img,github,linkedin*/
 ];
 
-import { HiUserGroup } from "react-icons/hi";
-import { LuMessagesSquare } from "react-icons/lu";
-import { IoCalendar } from "react-icons/io5";
-import { FaClipboardList } from "react-icons/fa";
-import { IoSettingsSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
+import { FaClipboardList } from "react-icons/fa";
+import { HiUserGroup } from "react-icons/hi";
 import { HiHome } from "react-icons/hi";
+import { IoCalendar } from "react-icons/io5";
+import { IoSettingsSharp } from "react-icons/io5";
+import { LuMessagesSquare } from "react-icons/lu";
 
 export const slideImages = [
     {
@@ -203,8 +203,8 @@ export const therapistLinks = [
         id: 2,
         name: "appointments",
         href: "",
-        icon: <FaClipboardList />,
-        text: "Appointments",
+        icon: <IoCalendar />,
+        text: "Waiting Appointments",
     },
     {
         id: 3,
@@ -215,10 +215,10 @@ export const therapistLinks = [
     },
     {
         id: 4,
-        name: "calendar",
+        name: "therapist appointments",
         href: "",
-        icon: <IoCalendar />,
-        text: "Calendar",
+        icon: <FaClipboardList />,
+        text: "Appointments",
     },
     {
         id: 5,
@@ -265,29 +265,29 @@ export const patientLinks = [
         icon: <LuMessagesSquare />,
         text: "Messages",
     },
+    // {
+    //     id: 4,
+    //     name: "calendar",
+    //     href: "",
+    //     icon: <IoCalendar />,
+    //     text: "Calendar",
+    // },
     {
         id: 4,
-        name: "calendar",
-        href: "",
-        icon: <IoCalendar />,
-        text: "Calendar",
-    },
-    {
-        id: 5,
         name: "therapists",
         href: "",
-        icon: <HiUserGroup />,
+        icon: <IoCalendar />,
         text: "Therapists",
     },
     {
-        id: 6,
+        id: 5,
         name: "profile",
         href: "/userProfile/",
         icon: <CgProfile />,
         text: "Profile",
     },
     {
-        id: 7,
+        id: 6,
         name: "settings",
         href: "/userProfile/",
         icon: <IoSettingsSharp />,

@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import ChatCard from "../ChatCard";
 
 jest.mock("@/context/AuthContext", () => ({

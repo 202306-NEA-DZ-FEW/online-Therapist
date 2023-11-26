@@ -1,9 +1,9 @@
-import Appointments from "@/components/Dashboards/Links/Appointments";
 import Messages from "@/components/Dashboards/Links/Messages";
-import Calender from "@/components/Dashboards/Links/Calender";
+// import Calender from "@/components/Dashboards/Links/Calender";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { UserAuth } from "@/context/AuthContext";
 import Therapists from "./Links/Therapists";
+import PatientAppointments from "@/components/Dashboards/Links/PatientAppointments";
 
 export default function PatientDashboard() {
     const { activeLink } = UserAuth();
@@ -11,11 +11,11 @@ export default function PatientDashboard() {
     const renderContent = () => {
         switch (activeLink) {
             case "appointments":
-                return <Appointments />;
+                return <PatientAppointments />;
             case "messages":
                 return <Messages />;
-            case "calendar":
-                return <Calender />;
+            // case "calendar":
+            //     return <Calender />;
             case "therapists":
                 return <Therapists />;
             default:

@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import BookingStep1 from "../BookingStep1";
 
 it("renders correctly", () => {

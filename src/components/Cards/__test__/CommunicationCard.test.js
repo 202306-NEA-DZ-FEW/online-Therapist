@@ -1,4 +1,5 @@
 import renderer from "react-test-renderer";
+
 import CommunicationCard from "../CommunicationCard";
 
 it("renders correctly", () => {

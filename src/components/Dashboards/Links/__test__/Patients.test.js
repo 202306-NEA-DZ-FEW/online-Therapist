@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 
-import BookingStep5 from "../BookingStep5";
+import PatientsList from "../Patients";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<BookingStep5 />).toJSON();
+    const tree = renderer.create(<PatientsList url='' />).toJSON();
     expect(tree).toMatchSnapshot();
 });
