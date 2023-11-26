@@ -1,49 +1,47 @@
-import {addDoc, collection} from "firebase/firestore"
-import Image from "next/image"
-import Link from "next/link"
-import {useTranslation} from "next-i18next"
-import {useState} from "react"
-import {useForm} from "react-hook-form"
-import {BsTwitterX} from "react-icons/bs"
-import {FaFacebook, FaGithub} from "react-icons/fa"
-import {toast} from "react-toastify"
+import { addDoc, collection } from "firebase/firestore";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebook, FaGithub } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-import {db} from "@/util/firebase"
+import { db } from "@/util/firebase";
 
-import DropDown from "./DropDown"
-export default function Footer () {
-    const {t} = useTranslation("common")
+import DropDown from "./DropDown";
+export default function Footer() {
+    const { t } = useTranslation("common");
 
-    const [formData, setFormData] = useState([{
-        email: "",
-    }])
+    const [formData, setFormData] = useState([
+        {
+            email: "",
+        },
+    ]);
     const onChange = (e) => {
-        const {name, value} = e.target
-        setFormData({...formData, [name]: value})
-    }
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
     const onSubmit = async (data) => {
-
         try {
             const response = await fetch("/api/news/subscribe", {
                 method: "POST",
                 body: JSON.stringify(data),
                 type: "application/json",
-            })
+            });
             if (response.ok) {
-
-                setFormData([{email: ""}])
-                toast.success(t("footer.email_sent"))
+                setFormData([{ email: "" }]);
+                toast.success(t("footer.email_sent"));
             }
 
-            await addDoc(collection(db, "news_emails"), {email: data.email})
-
-
+            await addDoc(collection(db, "news_emails"), { email: data.email });
         } catch (err) {
-            toast.success(err)
+            toast.success(err);
         }
-    }
-    const {register, handleSubmit, formState} = useForm()
-    const {errors} = formState
+    };
+    const { register, handleSubmit, formState } = useForm();
+    const { errors } = formState;
     return (
         <footer className='bg-DarkTeal'>
             <div className='mx-auto w-full max-w-screen-xl p-10 xl:p-2 py-8'>
@@ -107,11 +105,10 @@ export default function Footer () {
 
                         <div className='flex items-center flex-shrink-0 w-full mx-auto sm:w-auto rtl:ml-4 ltr:md:mr-4'>
                             <form
-
                                 className='flex flex-col items-start  w-full md:flex-row rtl:text-right'
                                 onSubmit={handleSubmit(onSubmit)}
                             >
-                                <div className="flex flex-col items-start w-full">
+                                <div className='flex flex-col items-start w-full'>
                                     <input
                                         type='email'
                                         id='email'
@@ -119,12 +116,15 @@ export default function Footer () {
                                         className='bg-white border border-gray-300 md:w-64 mb-2 md:mb-0 md:mr-2 text-sm rounded-lg block w-full p-2.5 focus:outline-none md:rtl:mx-2'
                                         value={formData.email}
                                         onChange={onChange}
-                                        {
-                                        ...register("email", {required: t("formErrors.email")})
-                                        }
-
+                                        {...register("email", {
+                                            required: t("formErrors.email"),
+                                        })}
                                     />
-                                    {errors?.email && <p className='mx-1 rtl:mr-2 rtl:text-base text-sm text-red-400 mt-1 animate-pulse'>{errors.email.message}</p>}
+                                    {errors?.email && (
+                                        <p className='mx-1 rtl:mr-2 rtl:text-base text-sm text-red-400 mt-1 animate-pulse'>
+                                            {errors.email.message}
+                                        </p>
+                                    )}
                                 </div>
                                 <button
                                     className='text-white bg-Teal hover:bg-white hover:text-Teal focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-full px-5 py-2.5 center  '
@@ -177,5 +177,5 @@ export default function Footer () {
                 </div>
             </div>
         </footer>
-    )
+    );
 }

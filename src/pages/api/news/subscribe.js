@@ -1,35 +1,33 @@
+import nodemailer from "nodemailer";
 
-import nodemailer from 'nodemailer'
+export default async function handler(req, res) {
+    if (req.method !== "POST") {
+        return res.status(405).json({ error: "method not allowed" });
+    }
+    const { email } = JSON.parse(req.body);
+    if (!email) {
+        return res.status(400).json({ error: "Email is required" });
+    }
 
+    try {
+        // Create a Nodemailer transporter using Gmail credentials from .env
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            host: "smtp.gmail.com",
+            port: 465,
+            secure: true,
+            auth: {
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_PASS,
+            },
+        });
 
-export default async function handler (req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({error: "method not allowed"})
-  }
-  const {email} = JSON.parse(req.body)
-  if (!email) {
-    return res.status(400).json({error: 'Email is required'})
-  }
-
-  try {
-    // Create a Nodemailer transporter using Gmail credentials from .env
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
-      },
-    })
-
-    // Email configuration with HTML content
-    const mailOptions = {
-      from: process.env.FROM_INNERSPACE,
-      to: email,
-      subject: 'Subscription Confirmation',
-      html: `
+        // Email configuration with HTML content
+        const mailOptions = {
+            from: process.env.FROM_INNERSPACE,
+            to: email,
+            subject: "Subscription Confirmation",
+            html: `
         <html>
           <head>
             <style>
@@ -57,22 +55,19 @@ export default async function handler (req, res) {
           </body>
         </html>
       `,
+        };
+
+        // Send the email
+        await transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                return res
+                    .status(500)
+                    .json({ error: "Oops something went wrong" });
+            } else {
+                return res.status(200).json({ success: true });
+            }
+        });
+    } catch (error) {
+        return res.status(500).json({ error: "Internal Server Error" });
     }
-
-    // Send the email
-    await transporter.sendMail(mailOptions
-      , (error, info) => {
-        if (error) {
-          return res.status(500).json({error: 'Oops something went wrong'})
-        } else {
-          return res.status(200).json({success: true})
-        }
-      }
-    )
-
-
-  } catch (error) {
-
-    return res.status(500).json({error: 'Internal Server Error'})
-  }
 }
