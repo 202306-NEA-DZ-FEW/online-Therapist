@@ -20,7 +20,8 @@
         "chatText": "Need to talk? Let your therapist listen."
     },
     "blogs": {
-        "heading": "RECENT BLOGS"
+        "heading": "RECENT BLOGS",
+        "more": "Read more"
     },
     "tickets": {
         "heading1": "OUR PLAN OPTIONS",

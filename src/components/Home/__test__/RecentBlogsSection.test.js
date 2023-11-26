@@ -1,7 +1,9 @@
-import renderer from "react-test-renderer";
-import TicketsSection from "@/components/Home/TicketsSection";
+import renderer from "react-test-renderer"
+
+import TicketsSection from "@/components/Home/TicketsSection"
 
 it("renders correctly", () => {
-    const tree = renderer.create(<TicketsSection />).toJSON();
-    expect(tree).toMatchSnapshot();
-});
+
+    const tree = renderer.create(<TicketsSection />).toJSON()
+    expect(tree).toMatchSnapshot()
+})

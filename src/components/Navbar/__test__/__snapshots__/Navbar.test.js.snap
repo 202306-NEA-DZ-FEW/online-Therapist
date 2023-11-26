@@ -2,11 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <nav
-  className="sticky bg-white top-0 z-50 md:h-20 md:pt-4  p-0 md:px-12 border-b"
+  className="sticky top-0 z-50 mx-0 md:container md:mx-auto "
   style={Object {}}
 >
   <div
-    className="relative justify-between mx-auto md:items-center md:flex md:px-8"
+    className=" relative justify-between  md:items-center md:flex md:px-8 h-20 "
   >
     <div>
       <div
@@ -114,13 +114,13 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <div
-        className="md:block  hidden"
+        className="md:block hidden"
       >
         <ul
-          className="bg-white h-screen mt-10 md:mt-0 md:h-auto space-y-2 md:space-y-0 md:space-x-10 items-center justify-center md:flex md:justify-between md:items-center"
+          className="bg-white h-screen md:mt-0 md:h-auto space-y-2 md:space-y-0 md:space-x-10  items-center md:justify-center md:flex justify-start md:items-center flex-col flex md:flex-row pt-10 md:pt-0"
         >
           <li
-            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal  "
+            className="block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto  md:hover:border-b md:hover:text-Teal  "
           >
             <a
               href="/"
@@ -358,7 +358,7 @@ exports[`renders correctly 1`] = `
             className="md:hidden block text-DarkTeal font-atkinson text-lg text-center py-2 rounded-full w-48 mx-auto border border-gray-200 hover:bg-gray-50 hover:text-Teal md:border-0 md:border-b-[#1E4445] md:hover:bg-white md:rounded-none md:py-0 md:w-auto md:hover:border-b md:hover:text-Teal"
           >
             <div
-              className="group inline-block relative flex justify-center items-center flex-col space-y-[135px] md:space-y-[150px] "
+              className="group  relative flex justify-center items-center flex-col space-y-[135px] md:space-y-[150px] "
             >
               <button
                 className=" md:block "
