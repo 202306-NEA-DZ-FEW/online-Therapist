@@ -2,13 +2,15 @@
 
 exports[`renders correctly 1`] = `
 <nav
-  className="sticky top-0 z-50 mx-0 md:container md:mx-auto "
+  className="sticky top-0 z-50  "
   style={Object {}}
 >
   <div
-    className=" relative justify-between bg-white md:items-center md:flex md:px-8 h-20 "
+    className="  relative justify-between bg-white md:items-center md:flex md:px-8 h-20 "
   >
-    <div>
+    <div
+      className="mx-0 md:container md:mx-auto"
+    >
       <div
         className="flex items-center justify-between py-3 md:py-0 "
       >
