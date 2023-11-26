@@ -10,7 +10,7 @@ export default function PatientDashboard() {
 
     const renderContent = () => {
         switch (activeLink) {
-            case "patient appointments":
+            case "appointments":
                 return <PatientAppointments />;
             case "messages":
                 return <Messages />;

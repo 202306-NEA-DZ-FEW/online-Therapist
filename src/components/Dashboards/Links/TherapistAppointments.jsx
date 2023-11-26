@@ -36,26 +36,32 @@ const TherapistAppointments = ({ therapistId }) => {
     }, [therapistId]);
 
     return (
-        <div>
-            <h2>Appointments List</h2>
-            <ul>
+        <div className='font-atkinson p-2 '>
+            <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
+                Appointments List
+            </h1>
+            <ul className='flex flex-wrap gap-8 m-4'>
                 {readyAppointments.map((appointment) => (
                     <li
                         key={appointment.id}
-                        className='bg-white rounded-xl shadow-xl p-4 m-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4'
+                        className='flex flex-col gap-y-8 justify-center items-center bg-white rounded-xl shadow-xl p-4  w-full md:w-1/2 lg:w-1/3 xl:w-1/4'
                     >
-                        {/* Display appointment details as needed */}
+                       
                         <img
                             src={appointment.photoURL}
                             alt={`Photo of ${appointment.userFirstName} ${appointment.userLastName}`}
-                            className='w-full h-auto mb-4 rounded-lg'
+                            className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                         />
-                        <p>{`Name: ${appointment.userFirstName} ${appointment.userLastName}`}</p>
-                        <p>{`Counseling Type: ${appointment.counselingType}`}</p>
+                        <div className="font-atkinson flex flex-col gap-y-2 ">
+                        <p><span className="text-Teal">Patient :</span>{` ${appointment.userFirstName} ${appointment.userLastName}`}</p>
+                        <p><span className="text-Teal">Counseling Type :</span>{` ${appointment.counselingType}`}</p>
                         <p>
-                            {`Session Date: ${appointment.appointmentDate} ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
+                        <span className="text-Teal">Session Date : </span> {`${appointment.appointmentDate}`}
                         </p>
-                        {/* Add other appointment details */}
+                        <p>
+                        <span className="text-Teal">Time :</span> {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}
+                        </p>
+                        </div>
                     </li>
                 ))}
             </ul>

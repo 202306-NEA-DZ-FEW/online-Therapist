@@ -36,7 +36,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
-                router.push("/profile");
+                router.push("/");
                 const user = userCredential.user;
                 console.log("User logged in:", user);
                 // ...

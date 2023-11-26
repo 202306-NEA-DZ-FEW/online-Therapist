@@ -201,7 +201,7 @@ export const therapistLinks = [
     },
     {
         id: 2,
-        name: "waiting appointments",
+        name: "appointments",
         href: "",
         icon: <IoCalendar />,
         text: "Waiting Appointments",
@@ -253,7 +253,7 @@ export const patientLinks = [
     },
     {
         id: 2,
-        name: "patient appointments",
+        name: "appointments",
         href: "",
         icon: <FaClipboardList />,
         text: "Appointments",

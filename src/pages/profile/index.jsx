@@ -22,7 +22,7 @@ import { db } from "@/util/firebase";
 const User = ({ t }) => {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const { totalTickets, cards } = UserAuth;
+    const { totalTickets, cards } = UserAuth();
 
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false

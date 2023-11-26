@@ -106,60 +106,99 @@ export function AppWrapper({ Component, children }) {
         signOut(auth);
     };
 
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    //         if (user) {
+    //             const docRef = doc(db, "therapists", user.uid);
+    //             const docSnap = await getDoc(docRef);
+    //             if (docSnap.exists()) {
+    //                 const isTherapist = true;
+    //                 setUser({
+    //                     email: user.email,
+    //                     uid: user.uid,
+    //                     photoURL: user.photoURL || Profile,
+    //                     displayName: user.displayName,
+    //                     isTherapist,
+    //                 });
+    //             } else {
+    //                 const isTherapist = false;
+    //                 setUser({
+    //                     email: user.email,
+    //                     uid: user.uid,
+    //                     photoURL: user.photoURL || Profile,
+    //                     displayName: user.displayName,
+    //                     isTherapist,
+    //                 });
+    //             }
+    //         } else {
+    //             setUser(null);
+    //         }
+    //         setLoading(false);
+    //     });
+
+    //     return () => unsubscribe();
+    // }, []);
+
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    //         if (user) {
+    //             const docRef = doc(db, "users", user.uid);
+    //             const docSnap = await getDoc(docRef);
+    //             if (docSnap.exists()) {
+    //                 const isUser = true;
+    //                 setUser({
+    //                     email: user.email,
+    //                     uid: user.uid,
+    //                     photoURL: user.photoURL || Profile,
+    //                     displayName: user.displayName,
+    //                     isUser,
+    //                 });
+    //             } else {
+    //                 const isUser = false;
+    //                 setUser({
+    //                     email: user.email,
+    //                     uid: user.uid,
+    //                     photoURL: user.photoURL || Profile,
+    //                     displayName: user.displayName,
+    //                     isUser,
+    //                 });
+    //             }
+    //         } else {
+    //             setUser(null);
+    //         }
+    //         setLoading(false);
+    //     });
+
+    //     return () => unsubscribe();
+    // }, []);
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
                 const docRef = doc(db, "therapists", user.uid);
                 const docSnap = await getDoc(docRef);
                 if (docSnap.exists()) {
+                    const isUser = false;
                     const isTherapist = true;
+                    const { fullname, username } = docSnap.data();
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL || Profile,
-                        displayName: user.displayName,
+                        photoURL: user.photoURL || Profile.src,
+                        displayName: fullname ?? username,
                         isTherapist,
+                        isUser,
                     });
+                    localStorage.setItem("uid", user.uid);
                 } else {
+                    const isUser = true;
                     const isTherapist = false;
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL || Profile,
+                        photoURL: user.photoURL || Profile.src,
                         displayName: user.displayName,
                         isTherapist,
-                    });
-                }
-            } else {
-                setUser(null);
-            }
-            setLoading(false);
-        });
-
-        return () => unsubscribe();
-    }, []);
-
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (user) => {
-            if (user) {
-                const docRef = doc(db, "users", user.uid);
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    const isUser = true;
-                    setUser({
-                        email: user.email,
-                        uid: user.uid,
-                        photoURL: user.photoURL || Profile,
-                        displayName: user.displayName,
-                        isUser,
-                    });
-                } else {
-                    const isUser = false;
-                    setUser({
-                        email: user.email,
-                        uid: user.uid,
-                        photoURL: user.photoURL || Profile,
-                        displayName: user.displayName,
                         isUser,
                     });
                 }
@@ -176,6 +215,11 @@ export function AppWrapper({ Component, children }) {
         const user = auth.currentUser;
         updateProfile(user, { photoURL });
     };
+
+    // const updateProfilePhoto = async (photoURL) => {
+    //     const user = auth.currentUser;
+    //     updateProfile(user, { photoURL });
+    // };
 
     const fetchUserCards = async (userUid) => {
         try {
