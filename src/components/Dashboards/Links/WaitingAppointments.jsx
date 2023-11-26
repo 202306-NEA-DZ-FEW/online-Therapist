@@ -134,7 +134,7 @@ const WaitingAppointments = () => {
             </h1>
 
             {/* Display the list of waiting appointments */}
-            <ul className='flex flex-wrap gap-8 lg:m-4'>
+            <ul className='flex flex-col gap-y-8  lg:m-4'>
                 {appointments.map((appointment) => (
                     <li
                         key={appointment.id}
