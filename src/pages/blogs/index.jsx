@@ -20,14 +20,14 @@ const Blogs = ({ posts }) => {
         <Layout>
             <div className='container mx-auto w-full font-atkinson  mb-10'>
                 <div className='mx-2 mt-5 '>
-                    <div className=' mt-5 mx-3 grid grid-cols-1 md:grid-cols-3 gap-5'>
+                    <div className=' mt-5 mx-3 flex flex-wrap justify-center gap-2 lg:gap-5'>
                         {posts.map((post) => (
                             <Link
                                 key={post._id}
                                 href={`/${
                                     post.language == "ar" ? "/ar" : ""
                                 }/blogs/${post.slug.current}`}
-                                className='overflow-clip shadow-lg rounded-md mt-5'
+                                className='overflow-clip shadow-lg rounded-md mt-5 md:w-[22rem] lg:w-[25rem]'
                             >
                                 <div className='flex flex-col group cursor-pointer '>
                                     <div className='relative min-w-full will-change-contents  md:h-64 h-56'>
@@ -44,7 +44,7 @@ const Blogs = ({ posts }) => {
                                             className='grid grid-cols-1 md:grid-cols-2 absolute bottom-0 bg-opacity-30 w-full rounded  bg-black/20 
                       backdrop-blur-md text-white/90 p-7  justify-between group-hover:-bottom-3 group-hover:backdrop-blur-[5px] transition-all duration-300 ease-out '
                                         >
-                                            <div className='md:flex flex-col hidden -ml-5 rtl:-mr-5'>
+                                            <div className='lg:flex flex-col hidden -ml-5 rtl:-mr-5'>
                                                 <p className='font-bold text-base w-56'>
                                                     {t("written_by")} :{" "}
                                                     {post.author.name}
@@ -65,7 +65,7 @@ const Blogs = ({ posts }) => {
                                                 </p>
                                             </div>
 
-                                            <div className='flex flex-row items-center justify-start md:justify-end -mr-5 rtl:-ml-2 mt-2'>
+                                            <div className='flex flex-row items-center justify-start lg:justify-end -mr-5 rtl:-ml-2 mt-2'>
                                                 {post.categories?.map(
                                                     (category) => (
                                                         <div
@@ -81,8 +81,8 @@ const Blogs = ({ posts }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='mt-7 flex-1 px-7 py-2'>
-                                        <p className='underline underline-offset-[4px] decoration-double decoration-from-font decoration-teal-700  md:text-2xl font-bold text-xl  text-transparent  bg-clip-text bg-gradient-to-r from-emerald-700 via-sky-600 to-teal-800 break-all outline-slate-950'>
+                                    <div className='mt-7 flex-1 px-5 py-2'>
+                                        <p className='underline underline-offset-[4px] decoration-double decoration-from-font decoration-teal-700  md:text-2xl font-bold text-xl  text-transparent  bg-clip-text bg-gradient-to-r from-emerald-700 via-sky-600 to-teal-800 break-words outline-slate-950 px-0'>
                                             {post.title}
                                         </p>
                                         <p className='mt-3 text-gray-600 line-clamp-2'>
@@ -123,6 +123,6 @@ export async function getStaticProps({ locale }) {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             posts,
         },
-        revalidate: 60,
+        revalidate: 30,
     };
 }

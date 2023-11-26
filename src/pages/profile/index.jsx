@@ -29,7 +29,7 @@ const User = ({ t }) => {
     );
     const { user } = useAuth();
     const [photo] = useState(
-        localStorage?.getItem(`therapist_image_${user.uid}`)
+        localStorage?.getItem(`therapist_image_${user?.uid}`)
     );
     const [formData, setFormData] = useState({
         firstname: "",
@@ -423,7 +423,7 @@ const User = ({ t }) => {
                                 </div>
                                 <div>
                                     <p>
-                                        {cards.length}{" "}
+                                        {cards && cards.length}{" "}
                                         {t("users:userProfile.cards")}
                                     </p>
                                     <Link href='/#tickets'>

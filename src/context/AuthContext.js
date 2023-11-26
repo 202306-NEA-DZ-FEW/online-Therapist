@@ -18,7 +18,7 @@ import { db } from "@/util/firebase";
 
 const AuthContext = createContext();
 
-export function AppWrapper({ Component, children }) {
+export function AppWrapper({ children }) {
     const [user, setUser] = useState({
         email: null,
         uid: null,
@@ -106,72 +106,6 @@ export function AppWrapper({ Component, children }) {
         signOut(auth);
     };
 
-    // useEffect(() => {
-    //     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-    //         if (user) {
-    //             const docRef = doc(db, "therapists", user.uid);
-    //             const docSnap = await getDoc(docRef);
-    //             if (docSnap.exists()) {
-    //                 const isTherapist = true;
-    //                 setUser({
-    //                     email: user.email,
-    //                     uid: user.uid,
-    //                     photoURL: user.photoURL || Profile,
-    //                     displayName: user.displayName,
-    //                     isTherapist,
-    //                 });
-    //             } else {
-    //                 const isTherapist = false;
-    //                 setUser({
-    //                     email: user.email,
-    //                     uid: user.uid,
-    //                     photoURL: user.photoURL || Profile,
-    //                     displayName: user.displayName,
-    //                     isTherapist,
-    //                 });
-    //             }
-    //         } else {
-    //             setUser(null);
-    //         }
-    //         setLoading(false);
-    //     });
-
-    //     return () => unsubscribe();
-    // }, []);
-
-    // useEffect(() => {
-    //     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-    //         if (user) {
-    //             const docRef = doc(db, "users", user.uid);
-    //             const docSnap = await getDoc(docRef);
-    //             if (docSnap.exists()) {
-    //                 const isUser = true;
-    //                 setUser({
-    //                     email: user.email,
-    //                     uid: user.uid,
-    //                     photoURL: user.photoURL || Profile,
-    //                     displayName: user.displayName,
-    //                     isUser,
-    //                 });
-    //             } else {
-    //                 const isUser = false;
-    //                 setUser({
-    //                     email: user.email,
-    //                     uid: user.uid,
-    //                     photoURL: user.photoURL || Profile,
-    //                     displayName: user.displayName,
-    //                     isUser,
-    //                 });
-    //             }
-    //         } else {
-    //             setUser(null);
-    //         }
-    //         setLoading(false);
-    //     });
-
-    //     return () => unsubscribe();
-    // }, []);
-
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -190,6 +124,7 @@ export function AppWrapper({ Component, children }) {
                         isUser,
                     });
                     localStorage.setItem("uid", user.uid);
+                    localStorage.setItem("diplayname", user.displayName);
                 } else {
                     const isUser = true;
                     const isTherapist = false;

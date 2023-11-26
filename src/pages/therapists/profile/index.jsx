@@ -27,7 +27,7 @@ const Profile = ({ t }) => {
 
     const { user } = useAuth();
     const [photo] = useState(
-        localStorage?.getItem(`therapist_image_${user.uid}`)
+        localStorage?.getItem(`therapist_image_${user?.uid}`)
     );
     const [formData, setFormData] = useState({
         fullname: "",
@@ -66,7 +66,7 @@ const Profile = ({ t }) => {
         }
     };
     async function fetchTherapist() {
-        const docRef = doc(db, "therapists", user.uid);
+        const docRef = doc(db, "therapists", localStorage.getItem("uid"));
         const docSnap = await getDoc(docRef);
 
         setFormData({ ...docSnap.data() });
@@ -74,6 +74,8 @@ const Profile = ({ t }) => {
 
     useEffect(() => {
         fetchTherapist();
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

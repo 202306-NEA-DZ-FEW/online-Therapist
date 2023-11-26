@@ -32,7 +32,7 @@ const ProfileImage = () => {
             const downloadURL = await getDownloadURL(profileImageRef);
             updateProfilePhoto(downloadURL);
             setProfileImage(downloadURL);
-            localStorage.setItem(`therapist_image_${user.uid}`, downloadURL);
+            localStorage.setItem(`profile_${user.uid}`, downloadURL);
         } catch (error) {
             console.error(error);
         } finally {

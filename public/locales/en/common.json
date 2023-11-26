@@ -89,12 +89,14 @@
         "blogs": "Blogs",
         "about": "About",
         "contact": "Contact",
-        "team": "Our team",
-        "aboutUs": "About Us",
+        "team": "Team",
+        "aboutUs": "Us",
         "email": "Enter your email",
         "innerSpace": " InnerSpace™",
         "copyright": ". All Rights Reserved.",
-        "spam": " We will never spam you or share your email."
+        "spam": "We will never spam you or share your email.",
+        "pages": "Pages",
+        "motto": "Inner Space. Your space to heal."
     },
 
     "requirement": {
