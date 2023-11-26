@@ -1,45 +1,44 @@
 {
-  "dashboard":"لوحة المعلومات",
-  "patientAppointments": {
-      "heading": "قائمة المواعيد",
-      "therapist": " معالج :",
-      "counseling": " نوع الاستشارة :",
-      "date": " تاريخ الجلسة :",
-      "time": " الوقت :",
-      "photo": "صورة"
-  },
-  "therapists": {
-      "heading": "قائمة المعالجين",
-      "details": "تفاصيل",
-      "Date": " تاريخ ووقت الموعد :",
-      "placeholder": "حدد التاريخ والوقت",
-      "Zone": "وحدة زمنية :",
-      "Book": "حجز",
-      "Unbook": "إلغاء الحجز"
-  },
-  "waitingAppointments": {
-      "heading": " قائمةالمواعيد",
-      "date": " تاريخ :",
-      "counseling": " نوع الاستشارة :",
-      "first": "الجلسة الأولى :",
-      "qualities": " نوع الاستشارة :",
-      "issues": " مشاكل :",
-      "specification": " المواصفات :",
-      "newDate": "ضبط تاريخ جديد للجلسة :",
-      "selectnew": "حدد التاريخ والوقت الجديد",
-      "zone": "وحدة زمنية:",
-      "confirmed": "مؤكد",
-      "confirm": "تأكيد ",
-      "setNew": "تعيين تاريخ جديد"
-  },
-  "therapistAppointments": {
-    "patient": " مريض:",
-      "name": "الاسم:",
-      "status": "الحالة الاجتماعية:"
-    
-  },
-  "patients": {
-    "patient": "قائمة المرضى",
-    "name": "الاسم:"
-  }
+    "dashboard": "لوحة المعلومات",
+    "patientAppointments": {
+        "heading": "قائمة المواعيد",
+        "therapist": " معالج :",
+        "counseling": " نوع الاستشارة :",
+        "date": " تاريخ الجلسة :",
+        "time": " الوقت :",
+        "photo": "صورة"
+    },
+    "therapists": {
+        "heading": "قائمة المعالجين",
+        "details": "تفاصيل",
+        "Date": " تاريخ ووقت الموعد :",
+        "placeholder": "حدد التاريخ والوقت",
+        "Zone": "وحدة زمنية :",
+        "Book": "حجز",
+        "Unbook": "إلغاء الحجز"
+    },
+    "waitingAppointments": {
+        "heading": " قائمةالمواعيد",
+        "date": " تاريخ :",
+        "counseling": " نوع الاستشارة :",
+        "first": "الجلسة الأولى :",
+        "qualities": " نوع الاستشارة :",
+        "issues": " مشاكل :",
+        "specification": " المواصفات :",
+        "newDate": "ضبط تاريخ جديد للجلسة :",
+        "selectnew": "حدد التاريخ والوقت الجديد",
+        "zone": "وحدة زمنية:",
+        "confirmed": "مؤكد",
+        "confirm": "تأكيد ",
+        "setNew": "تعيين تاريخ جديد"
+    },
+    "therapistAppointments": {
+        "patient": " مريض:",
+        "name": "الاسم:",
+        "status": "الحالة الاجتماعية:"
+    },
+    "patients": {
+        "patient": "قائمة المرضى",
+        "name": "الاسم:"
+    }
 }

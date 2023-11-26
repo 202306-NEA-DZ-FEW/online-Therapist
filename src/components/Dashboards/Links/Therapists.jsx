@@ -20,7 +20,7 @@ import timeZones from "@/util/timeZones"; // Import a list of time zones, replac
 import { useTranslation } from "next-i18next";
 
 const TherapistsMatches = () => {
-const { t } = useTranslation("dashboard");
+    const { t } = useTranslation("dashboard");
 
     const [therapists, setTherapists] = useState([]);
     const { user } = UserAuth();
@@ -367,7 +367,7 @@ const { t } = useTranslation("dashboard");
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-               {t("therapists.heading")}
+                {t("therapists.heading")}
             </h1>
 
             <ul className='flex flex-col gap-y-8 lg:m-4'>
@@ -393,7 +393,9 @@ const { t } = useTranslation("dashboard");
                         </div>
 
                         <div className='w-[250px] lg:w-96 pt-4 '>
-                            <p className='text-gray-500'>{t("therapists.details")}</p>
+                            <p className='text-gray-500'>
+                                {t("therapists.details")}
+                            </p>
                             <p>
                                 <span className='text-Gray font-atkinson'></span>
                                 {`${therapist.bio}`}
@@ -415,7 +417,9 @@ const { t } = useTranslation("dashboard");
                                     timeFormat='HH:mm'
                                     timeIntervals={15}
                                     dateFormat='MM-dd-yyyy HH:mm'
-                                    placeholderText= {t("therapists.placeholder")}
+                                    placeholderText={t(
+                                        "therapists.placeholder"
+                                    )}
                                 />
                                 <label className='text-Gray font-atkinson'>
                                     {t("therapists.Zone")}
@@ -441,7 +445,7 @@ const { t } = useTranslation("dashboard");
                                 <Button
                                     buttonText={
                                         bookingStatus[therapist.id]
-                                            ? t("therapists.Unbook") 
+                                            ? t("therapists.Unbook")
                                             : t("therapists.Book")
                                     }
                                     buttonSize='lg'

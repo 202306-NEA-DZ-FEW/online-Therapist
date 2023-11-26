@@ -14,8 +14,8 @@ import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment-timezone";
 import timeZones from "@/util/timeZones";
-import "react-datepicker/dist/react-datepicker.css";import { useTranslation } from "next-i18next";
-
+import "react-datepicker/dist/react-datepicker.css";
+import { useTranslation } from "next-i18next";
 
 const WaitingAppointments = () => {
     const { t } = useTranslation("dashboard");
@@ -130,7 +130,7 @@ const WaitingAppointments = () => {
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                 {t("waitingAppointments.heading")}
+                {t("waitingAppointments.heading")}
             </h1>
 
             {/* Display the list of waiting appointments */}
@@ -147,19 +147,37 @@ const WaitingAppointments = () => {
                                 className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                             />
                             <p>{` ${appointment.userFirstName} ${appointment.userLastName}`}</p>
-                            <p>{`${t("waitingAppointments.date")} ${appointment.appointmentDate} `} </p>
+                            <p>
+                                {`${t("waitingAppointments.date")} ${
+                                    appointment.appointmentDate
+                                } `}{" "}
+                            </p>
                             <p>
                                 {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
                             </p>
                         </div>
                         <div className='lg:w-1/3 pt-2 space-y-1'>
-                            <p className='text-gray-400'>{t("therapists.details")}</p>
-                            <p>{`${t("therapistAppointments.status")} ${appointment.maritalStatus}`}</p>
-                            <p>{` ${t("waitingAppointments.counseling")} ${appointment.counselingType}`}</p>
-                            <p>{`${t("waitingAppointments.first")} ${appointment.firstSession}`}</p>
-                            <p>{`${t("waitingAppointments.qualities")} ${appointment.counselorQualities}`}</p>
-                            <p>{`${t("waitingAppointments.issues")} ${appointment.issues}`}</p>
-                            <p>{`${t("waitingAppointments.specification")} ${appointment.specification}`}</p>
+                            <p className='text-gray-400'>
+                                {t("therapists.details")}
+                            </p>
+                            <p>{`${t("therapistAppointments.status")} ${
+                                appointment.maritalStatus
+                            }`}</p>
+                            <p>{` ${t("waitingAppointments.counseling")} ${
+                                appointment.counselingType
+                            }`}</p>
+                            <p>{`${t("waitingAppointments.first")} ${
+                                appointment.firstSession
+                            }`}</p>
+                            <p>{`${t("waitingAppointments.qualities")} ${
+                                appointment.counselorQualities
+                            }`}</p>
+                            <p>{`${t("waitingAppointments.issues")} ${
+                                appointment.issues
+                            }`}</p>
+                            <p>{`${t("waitingAppointments.specification")} ${
+                                appointment.specification
+                            }`}</p>
                         </div>
                         <div className='flex flex-col gap-y-8'>
                             <div className='flex flex-col gap-y-2'>
@@ -180,7 +198,9 @@ const WaitingAppointments = () => {
                                     dateFormat='yyyy-MM-dd HH:mm:ss'
                                     timeFormat='HH:mm:ss'
                                     timeCaption='Time'
-                                    placeholderText= {t("waitingAppointments.selectnew")}
+                                    placeholderText={t(
+                                        "waitingAppointments.selectnew"
+                                    )}
                                 />
                                 {/* Inside the map function in WaitingAppointments component */}
                                 <label className='text-Gray font-atkinson'>
@@ -210,9 +230,13 @@ const WaitingAppointments = () => {
                                     <Button
                                         buttonText={
                                             appointment.appointmentStatus ===
-                                            "ready" 
-                                                ? t("waitingAppointments.confirmed")
-                                                :  t("waitingAppointments.confirm")
+                                            "ready"
+                                                ? t(
+                                                      "waitingAppointments.confirmed"
+                                                  )
+                                                : t(
+                                                      "waitingAppointments.confirm"
+                                                  )
                                         }
                                         buttonSize='fit'
                                         transition={false}
@@ -224,7 +248,9 @@ const WaitingAppointments = () => {
                                     }
                                 >
                                     <Button
-                                        buttonText={t("waitingAppointments.setNew")}
+                                        buttonText={t(
+                                            "waitingAppointments.setNew"
+                                        )}
                                         buttonSize='fit'
                                         transition={false}
                                     />

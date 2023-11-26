@@ -65,7 +65,7 @@ const PatientAppointments = () => {
         <div className=''>
             <div className='font-atkinson p-2 '>
                 <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                     {t("patientAppointments.heading")}
+                    {t("patientAppointments.heading")}
                 </h1>
             </div>
             <ul className='flex flex-wrap gap-8 m-4'>
@@ -76,12 +76,16 @@ const PatientAppointments = () => {
                     >
                         <img
                             src={appointment.therapistPhotoURL}
-                            alt={`${t("patientAppointments.photo")} ${appointment.therapistFullName}`}
+                            alt={`${t("patientAppointments.photo")} ${
+                                appointment.therapistFullName
+                            }`}
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-4 border-Teal rounded-full'
                         />
                         <div className='font-atkinson flex flex-col gap-y-2'>
                             <p>
-                                <span className='text-Teal'>{t("patientAppointments.therapist")}</span>
+                                <span className='text-Teal'>
+                                    {t("patientAppointments.therapist")}
+                                </span>
                                 {` ${appointment.therapistFullName}`}
                             </p>
 
@@ -98,14 +102,17 @@ const PatientAppointments = () => {
                                 {` ${appointment.appointmentDate}`}
                             </p>
                             <p>
-                                <span className='text-Teal'> {t("patientAppointments.time")}</span>
+                                <span className='text-Teal'>
+                                    {" "}
+                                    {t("patientAppointments.time")}
+                                </span>
                                 {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}
                             </p>
                         </div>
                     </li>
                 ))}
             </ul>
-        </div>       
+        </div>
     );
 };
 

@@ -44,7 +44,9 @@ export default function Sidebar() {
                     }`}
                 >
                     <span className='text-2xl'>{link.icon}</span>
-                    <span className='hidden md:block'>{language === "en" ? link.text_en : link.text_ar}</span>
+                    <span className='hidden md:block'>
+                        {language === "en" ? link.text_en : link.text_ar}
+                    </span>
                 </Link>
             ));
         }

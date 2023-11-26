@@ -206,7 +206,7 @@ export const therapistLinks = [
         href: "",
         icon: <IoCalendar />,
         text_en: "Waiting Appointments",
-        text_ar: "المواعيد في انتظار"
+        text_ar: "المواعيد في انتظار",
     },
     {
         id: 3,
@@ -214,7 +214,7 @@ export const therapistLinks = [
         href: "",
         icon: <LuMessagesSquare />,
         text_en: "Messages",
-        text_ar: "رسائل"
+        text_ar: "رسائل",
     },
     {
         id: 4,
@@ -246,7 +246,7 @@ export const therapistLinks = [
         href: "/therapists/profile/",
         icon: <IoSettingsSharp />,
         text_en: "Settings",
-        text_ar:  "إعدادات",
+        text_ar: "إعدادات",
     },
 ];
 
@@ -273,7 +273,7 @@ export const patientLinks = [
         href: "",
         icon: <LuMessagesSquare />,
         text_en: "Messages",
-        text_ar: "رسائل"
+        text_ar: "رسائل",
     },
     // {
     //     id: 4,
@@ -288,12 +288,12 @@ export const patientLinks = [
         href: "",
         icon: <IoCalendar />,
         text_en: "Therapists",
-        text_ar:  "المعالجين",
+        text_ar: "المعالجين",
     },
     {
         id: 5,
         name: "profile",
-        href: "/userProfile/",
+        href: "/profile/",
         icon: <CgProfile />,
         text_en: "Profile",
         text_ar: "حساب الشخصي",
@@ -301,9 +301,9 @@ export const patientLinks = [
     {
         id: 6,
         name: "settings",
-        href: "/userProfile/",
+        href: "/profile/",
         icon: <IoSettingsSharp />,
         text_en: "Settings",
-        text_ar:  "إعدادات",
+        text_ar: "إعدادات",
     },
 ];
