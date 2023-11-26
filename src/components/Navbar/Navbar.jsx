@@ -57,7 +57,7 @@ export default function Navbar() {
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.35, ease: "easeInOut" }}
         >
-            <div className=' relative justify-between  md:items-center md:flex md:px-8 h-20 '>
+            <div className=' relative justify-between bg-white md:items-center md:flex md:px-8 h-20 '>
                 <div>
                     <div className='flex items-center justify-between py-3 md:py-0 '>
                         {/* LOGO */}
