@@ -152,18 +152,24 @@ exports[`renders correctly 1`] = `
           className="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto rtl:ml-4 ltr:md:mr-4"
         >
           <form
-            action="#"
-            className="flex flex-col items-center w-full md:flex-row rtl:text-right"
+            className="flex flex-col items-start  w-full md:flex-row rtl:text-right"
+            onSubmit={[Function]}
           >
-            <input
-              className="bg-white border border-gray-300 md:w-64 mb-2 md:mb-0 md:mr-2 text-sm rounded-lg block w-full p-2.5 focus:outline-none rtl:m-3"
-              id="email"
-              placeholder="footer.email"
-              required={true}
-              type="email"
-            />
+            <div
+              className="flex flex-col items-start w-full"
+            >
+              <input
+                className="bg-white border border-gray-300 md:w-64 mb-2 md:mb-0 md:mr-2 text-sm rounded-lg block w-full p-2.5 focus:outline-none md:rtl:mx-2"
+                id="email"
+                name="email"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="footer.email"
+                type="email"
+              />
+            </div>
             <button
-              className="text-white bg-Teal hover:bg-white hover:text-Teal focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 center "
+              className="text-white bg-Teal hover:bg-white hover:text-Teal focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-full px-5 py-2.5 center  "
               type="submit"
             >
               footer.subscribe
