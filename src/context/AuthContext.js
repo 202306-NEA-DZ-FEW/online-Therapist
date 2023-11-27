@@ -118,24 +118,28 @@ export function AppWrapper({ children }) {
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL || Profile.src,
+                        photoURL: user.photoURL ?? Profile.src,
                         displayName: fullname ?? username,
                         isTherapist,
                         isUser,
                     });
                     localStorage.setItem("uid", user.uid);
                     localStorage.setItem("diplayname", user.displayName);
+                    localStorage.setItem(`profile_${user.uid}`, user.photoURL);
                 } else {
                     const isUser = true;
                     const isTherapist = false;
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL || Profile.src,
+                        photoURL: user.photoURL ?? Profile.src,
                         displayName: user.displayName,
                         isTherapist,
                         isUser,
                     });
+                    localStorage.setItem(`profile_${user.uid}`, user.photoURL);
+                    localStorage.setItem("uid", user.uid);
+                    localStorage.setItem("diplayname", user.displayName);
                 }
             } else {
                 setUser(null);

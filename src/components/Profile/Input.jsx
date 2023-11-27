@@ -14,8 +14,8 @@ export default function Input({
     isDisabled = false,
 }) {
     return (
-        <div className='flex flex-col md:flex-row w-full'>
-            <div className='flex justify-between items-start'>
+        <div className='grid grid-cols-1 md:grid-cols-3 w-full'>
+            <div className='flex justify-between items-start '>
                 <label
                     htmlFor={name}
                     className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
@@ -24,7 +24,7 @@ export default function Input({
                 </label>
             </div>
 
-            <div className='flex flex-col w-full'>
+            <div className='flex flex-col w-full col-span-2 '>
                 <input
                     {...register}
                     type={type}
