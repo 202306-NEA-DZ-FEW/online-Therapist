@@ -1,29 +1,29 @@
-import { yupResolver } from "@hookform/resolvers/yup";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { withTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Spinner from "public/loading.svg";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
-import * as yup from "yup";
+import {yupResolver} from "@hookform/resolvers/yup"
+import {createUserWithEmailAndPassword} from "firebase/auth"
+import {signInWithEmailAndPassword} from "firebase/auth"
+import {doc, setDoc} from "firebase/firestore"
+import Image from "next/image"
+import {useRouter} from "next/router"
+import {withTranslation} from "next-i18next"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import Spinner from "public/loading.svg"
+import {useEffect, useState} from "react"
+import {useForm} from "react-hook-form"
+import {toast} from "react-toastify"
+import * as yup from "yup"
 
-import Button from "@/components/elements/Button";
-import Input from "@/components/elements/Input";
-import Thankyou from "@/components/Thankyou/Thankyou";
+import Button from "@/components/elements/Button"
+import Input from "@/components/elements/Input"
+import Thankyou from "@/components/Thankyou/Thankyou"
 
-import { useAuth } from "@/context/AuthContext";
-import Layout from "@/layout/Layout";
-import { auth, db } from "@/util/firebase";
+import {useAuth} from "@/context/AuthContext"
+import Layout from "@/layout/Layout"
+import {auth, db} from "@/util/firebase"
 
-const TherapistSignUp = ({ t }) => {
-    const [signupSuccess, setSignupSuccess] = useState(false);
-    const { user } = useAuth();
-    const router = useRouter();
+const TherapistSignUp = ({t}) => {
+    const [signupSuccess, setSignupSuccess] = useState(false)
+    const {user} = useAuth()
+    const router = useRouter()
 
     const [formData, setFormData] = useState({
         username: "",
@@ -32,12 +32,12 @@ const TherapistSignUp = ({ t }) => {
         licenseNumber: "",
         password: "",
         confirPassword: "",
-    });
+    })
 
     const onChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+        const {name, value} = e.target
+        setFormData({...formData, [name]: value})
+    }
 
     const validationSchema = yup.object().shape({
         username: yup.string().required(t("therapists:formErrors.username")),
@@ -58,9 +58,9 @@ const TherapistSignUp = ({ t }) => {
                 [yup.ref("password")],
                 t("therapists:formErrors.passwordMatch")
             ),
-    });
+    })
 
-    const formOptions = { resolver: yupResolver(validationSchema) };
+    const formOptions = {resolver: yupResolver(validationSchema)}
 
     const onSubmit = async (data) => {
         try {
@@ -68,12 +68,12 @@ const TherapistSignUp = ({ t }) => {
                 auth,
                 data.email,
                 data.password
-            );
+            )
             if (userCredential) {
-                setSignupSuccess(true);
+                setSignupSuccess(true)
                 toast.success(
                     `Hi ${data.username}👋, ${t("login:account_created")}`
-                );
+                )
             }
             await setDoc(
                 doc(
@@ -90,34 +90,34 @@ const TherapistSignUp = ({ t }) => {
                     city: formData.city,
                     approved: false,
                 }
-            );
+            )
 
             signInWithEmailAndPassword(auth, data.email, data.password).catch(
                 (error) => {
-                    toast.error("Oops", error);
+                    toast.error("Oops", error)
                 }
-            );
+            )
         } catch (error) {
             if (error.code === "auth/email-already-in-use") {
-                toast.error(t("login:email_in_use"));
+                toast.error(t("login:email_in_use"))
             }
         }
-    };
-    const { register, handleSubmit, formState } = useForm(formOptions);
+    }
+    const {register, handleSubmit, formState} = useForm(formOptions)
 
-    const { errors } = formState;
+    const {errors} = formState
     const redirectUser = () => {
-        if (!user) return;
+        if (!user) return
         if (user?.isUser) {
-            router.push("/profile");
+            router.push("/profile")
         } else if (user?.isTherapist) {
-            user?.isTherapist && router.push("/therapists/profile");
+            router.push("/therapists/profile")
         }
-    };
+    }
     useEffect(() => {
-        redirectUser();
+        redirectUser()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [user]);
+    }, [user])
     return (
         <>
             {!user ? (
@@ -166,7 +166,7 @@ const TherapistSignUp = ({ t }) => {
                                             )}
                                             name='email'
                                             errorMessage={errors.email?.message}
-                                            register={{ ...register("email") }}
+                                            register={{...register("email")}}
                                             value={formData.email}
                                             onChange={onChange}
                                         />
@@ -180,7 +180,7 @@ const TherapistSignUp = ({ t }) => {
                                             )}
                                             name='city'
                                             errorMessage={errors.city?.message}
-                                            register={{ ...register("city") }}
+                                            register={{...register("city")}}
                                             value={formData.city}
                                             onChange={onChange}
                                         />
@@ -276,12 +276,12 @@ const TherapistSignUp = ({ t }) => {
                 </div>
             )}
         </>
-    );
-};
+    )
+}
 
-export default withTranslation("therapists")(TherapistSignUp);
+export default withTranslation("therapists")(TherapistSignUp)
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps ({locale}) {
     return {
         props: {
             ...(await serverSideTranslations(locale, [
@@ -291,5 +291,5 @@ export async function getStaticProps({ locale }) {
             ])),
             // Will be passed to the page component as props
         },
-    };
+    }
 }
