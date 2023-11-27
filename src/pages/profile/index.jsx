@@ -1,36 +1,36 @@
 // Importez les modules nécessaires
-import {deleteDoc, doc, getDoc, setDoc, updateDoc} from "firebase/firestore"
-import Image from "next/image"
-import Link from "next/link"
-import {useSearchParams} from "next/navigation"
-import {useRouter} from "next/router"
-import {withTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import Spinner from "public/loading.svg"
-import React, {useEffect, useState} from "react"
-import {useForm} from "react-hook-form"
-import {toast} from "react-toastify"
+import { deleteDoc, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
+import { withTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Spinner from "public/loading.svg";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 // Importez les composants nécessaires
-import Button from "@/components/elements/Button"
-import Input from "@/components/Profile/Input"
-import ProfileImage from "@/components/ProfileImage"
+import Button from "@/components/elements/Button";
+import Input from "@/components/Profile/Input";
+import ProfileImage from "@/components/ProfileImage";
 
 // Importez le contexte Auth
-import {useAuth, UserAuth} from "@/context/AuthContext"
-import Layout from "@/layout/Layout"
-import {db} from "@/util/firebase"
+import { useAuth, UserAuth } from "@/context/AuthContext";
+import Layout from "@/layout/Layout";
+import { db } from "@/util/firebase";
 
-const User = ({t}) => {
-    const router = useRouter()
-    const searchParams = useSearchParams()
-    const {totalTickets, cards} = UserAuth()
+const User = ({ t }) => {
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const { totalTickets, cards } = UserAuth();
 
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false
-    )
-    const {user} = useAuth()
-    const [photo] = useState(localStorage?.getItem(`profile_${user?.uid}`))
+    );
+    const { user } = useAuth();
+    const [photo] = useState(localStorage?.getItem(`profile_${user?.uid}`));
     const [formData, setFormData] = useState({
         firstname: "",
         lastname: "",
@@ -44,104 +44,104 @@ const User = ({t}) => {
         familySize: "",
         gender: "",
         phoneNumber: "",
-    })
+    });
 
     const onChange = (e) => {
-        const {name, value} = e.target
-        setFormData({...formData, [name]: value})
-    }
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
-    const {register, handleSubmit, formState} = useForm()
-    const {errors} = formState
+    const { register, handleSubmit, formState } = useForm();
+    const { errors } = formState;
     const enableEdit = (e) => {
-        e.preventDefault()
-        setEdit((edit) => !edit)
-        router.query.edit = true
-        router.push(router)
-    }
+        e.preventDefault();
+        setEdit((edit) => !edit);
+        router.query.edit = true;
+        router.push(router);
+    };
     const onSubmit = async () => {
         try {
-            const userRef = doc(db, "users", user?.uid)
+            const userRef = doc(db, "users", user?.uid);
             if (userRef.converter !== null) {
-                await updateDoc(userRef, {...formData, photoURL: photo})
+                await updateDoc(userRef, { ...formData, photoURL: photo });
             } else {
                 await setDoc(doc(db, "users", user.uid), {
                     ...formData,
                     photoURL: localStorage.getItem(`profile_${user.uid}`),
-                })
+                });
             }
 
-            toast.success(t("users:userProfile.notifications.updateSuccess"))
+            toast.success(t("users:userProfile.notifications.updateSuccess"));
         } catch (err) {
-            toast.error(`Error ${err} `)
+            toast.error(`Error ${err} `);
         }
-    }
+    };
 
     const onDeleteAccount = async () => {
         if (window.confirm(t("users:userProfile.deleteConfirmation"))) {
             try {
-                const userRef = doc(db, "users", user.uid)
+                const userRef = doc(db, "users", user.uid);
 
                 // Vérifier si le document existe avant de le supprimer
-                const docSnap = await getDoc(userRef)
+                const docSnap = await getDoc(userRef);
 
                 if (docSnap.exists()) {
                     // Document existe, vous pouvez le supprimer en toute sécurité.
-                    await deleteDoc(userRef)
+                    await deleteDoc(userRef);
                     // Rediriger vers la page de connexion
-                    router.push("/login")
+                    router.push("/login");
                 } else {
                     // eslint-disable-next-line no-console
-                    console.error("Document does not exist.")
-                    toast.error(t("users:userProfile.deleteError"))
+                    console.error("Document does not exist.");
+                    toast.error(t("users:userProfile.deleteError"));
                 }
             } catch (error) {
                 // eslint-disable-next-line no-console
-                console.error("Error deleting account", error)
-                toast.error(t("users:userProfile.deleteError"))
+                console.error("Error deleting account", error);
+                toast.error(t("users:userProfile.deleteError"));
             }
         }
-    }
+    };
 
-    async function fetchUsers () {
+    async function fetchUsers() {
         try {
             // eslint-disable-next-line react-hooks/rules-of-hooks
-            const user = useAuth().user
+            const user = useAuth().user;
 
             if (user) {
-                const docRef = doc(db, "users", user.uid)
-                const docSnap = await getDoc(docRef)
+                const docRef = doc(db, "users", user.uid);
+                const docSnap = await getDoc(docRef);
 
                 if (docSnap.exists()) {
-                    setFormData({...docSnap.data()})
+                    setFormData({ ...docSnap.data() });
                 } else {
                     // eslint-disable-next-line no-console
-                    console.error("Document does not exist")
+                    console.error("Document does not exist");
                 }
             } else {
                 // eslint-disable-next-line no-console
-                console.error("User is null")
+                console.error("User is null");
             }
         } catch (error) {
             // eslint-disable-next-line no-console
-            console.error("Error fetching user data", error)
+            console.error("Error fetching user data", error);
         }
     }
 
     useEffect(() => {
-        fetchUsers()
-    }, [])
+        fetchUsers();
+    }, []);
     const redirectUser = () => {
         if (user?.isTherapist) {
-            router.push("/therapists/profile")
+            router.push("/therapists/profile");
         } else if (!user) {
-            router.push("/login")
+            router.push("/login");
         }
-    }
+    };
     useEffect(() => {
-        redirectUser()
+        redirectUser();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [user])
+    }, [user]);
     return (
         <>
             {!user ? (
@@ -557,24 +557,24 @@ const User = ({t}) => {
                             </div>
                         </Layout>
                     )) || (
-                            <div className='grid place-items-center h-screen '>
-                                <Image
-                                    src={Spinner}
-                                    alt='loading'
-                                    height={150}
-                                    width={150}
-                                    className='h-28 w-28'
-                                />
-                            </div>
-                        )}
+                        <div className='grid place-items-center h-screen '>
+                            <Image
+                                src={Spinner}
+                                alt='loading'
+                                height={150}
+                                width={150}
+                                className='h-28 w-28'
+                            />
+                        </div>
+                    )}
                 </>
             )}
         </>
-    )
-}
-export default withTranslation("users")(User)
+    );
+};
+export default withTranslation("users")(User);
 
-export async function getStaticProps ({locale}) {
+export async function getStaticProps({ locale }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, [
@@ -584,5 +584,5 @@ export async function getStaticProps ({locale}) {
             ])),
             // Will be passed to the page component as props.
         },
-    }
+    };
 }
