@@ -7,10 +7,10 @@ exports[`renders correctly 1`] = `
   <h1
     className="text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider "
   >
-    Waiting Appointments
+    waitingAppointments.heading
   </h1>
   <ul
-    className="flex flex-wrap gap-8 lg:m-4"
+    className="flex flex-col gap-y-8  lg:m-4"
   />
 </div>
 `;

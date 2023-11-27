@@ -16,7 +16,7 @@ exports[`renders correctly 1`] = `
         <h1
           className="hidden md:block font-bold text-sm md:text-2xl text-center"
         >
-          Dashboard
+          dashboard
         </h1>
         <div
           className="space-y-3"
@@ -95,7 +95,7 @@ exports[`renders correctly 1`] = `
             <span
               className="hidden md:block"
             >
-              Home
+              الصفحة الرئيسية
             </span>
           </a>
           <a
@@ -130,7 +130,7 @@ exports[`renders correctly 1`] = `
             <span
               className="hidden md:block"
             >
-              Appointments
+              مواعيد 
             </span>
           </a>
           <a
@@ -170,7 +170,7 @@ exports[`renders correctly 1`] = `
             <span
               className="hidden md:block"
             >
-              Messages
+              رسائل
             </span>
           </a>
           <a
@@ -205,12 +205,12 @@ exports[`renders correctly 1`] = `
             <span
               className="hidden md:block"
             >
-              Therapists
+              المعالجين
             </span>
           </a>
           <a
             className="flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out "
-            href="/userProfile"
+            href="/profile"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
@@ -249,12 +249,12 @@ exports[`renders correctly 1`] = `
             <span
               className="hidden md:block"
             >
-              Profile
+              حساب الشخصي
             </span>
           </a>
           <a
             className="flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out "
-            href="/userProfile"
+            href="/profile"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
@@ -284,7 +284,7 @@ exports[`renders correctly 1`] = `
             <span
               className="hidden md:block"
             >
-              Settings
+              إعدادات
             </span>
           </a>
           <hr />

@@ -2,8 +2,10 @@ import { auth, db } from "@/util/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, query, where, getDocs, getDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 
 const PatientsList = () => {
+    const { t } = useTranslation("dashboard");
     const [patientsList, setPatientsList] = useState([]);
 
     const fetchPatientsList = async () => {
@@ -42,7 +44,7 @@ const PatientsList = () => {
     return (
         <div className="font-atkinson p-2'">
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                Patients list
+                {t("patients.patient")}
             </h1>
 
             <div className='flex flex-wrap'>
@@ -56,7 +58,9 @@ const PatientsList = () => {
                             alt={`Photo of ${patient.userFirstName} ${patient.userLastName}`}
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                         />
-                        <p>{`Name: ${patient.userFirstName} ${patient.userLastName}`}</p>
+                        <p>{` ${t("patients.name")} ${patient.userFirstName} ${
+                            patient.userLastName
+                        }`}</p>
                         {/* Add other patient information as needed */}
                     </div>
                 ))}

@@ -1,10 +1,20 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { CgProfile } from "react-icons/cg";
 import { UserAuth } from "@/context/AuthContext";
 import { therapistLinks, patientLinks } from "@/util/library";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 export default function Sidebar() {
+    const { t } = useTranslation("dashboard");
+    const router = useRouter();
+    const language = router.locale;
+
+    useEffect(() => {
+        document.body.dir = language == "ar" ? "rtl" : "ltr";
+    }, [language]);
+
     const { user, activeLink, setActiveLink } = UserAuth();
     const renderLinks = () => {
         if (user && user.isTherapist) {
@@ -18,7 +28,9 @@ export default function Sidebar() {
                     }`}
                 >
                     <span className='text-2xl'>{link.icon}</span>
-                    <span className='hidden md:block'>{link.text}</span>
+                    <span className='hidden md:block'>
+                        {language === "en" ? link.text_en : link.text_ar}
+                    </span>
                 </Link>
             ));
         } else if (user) {
@@ -32,7 +44,9 @@ export default function Sidebar() {
                     }`}
                 >
                     <span className='text-2xl'>{link.icon}</span>
-                    <span className='hidden md:block'>{link.text}</span>
+                    <span className='hidden md:block'>
+                        {language === "en" ? link.text_en : link.text_ar}
+                    </span>
                 </Link>
             ));
         }
@@ -44,7 +58,7 @@ export default function Sidebar() {
         <div className='bg-white h-screen md:block shadow-xl px-3 w-16 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out'>
             <div className='space-y-6 md:space-y-10 mt-10'>
                 <h1 className='hidden md:block font-bold text-sm md:text-2xl text-center'>
-                    Dashboard
+                    {t("dashboard")}
                 </h1>
                 <div className='space-y-3'>
                     {user && (
