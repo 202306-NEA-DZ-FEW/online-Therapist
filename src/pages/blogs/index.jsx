@@ -1,30 +1,30 @@
-import Image from "next/image"
-import Link from "next/link"
-import {useTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import {groq} from "next-sanity"
-import React from "react"
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { groq } from "next-sanity";
+import React from "react";
 import {
     PiArrowLineUpLeftLight,
     PiArrowLineUpRightLight,
-} from "react-icons/pi"
+} from "react-icons/pi";
 
-import Layout from "@/layout/Layout"
+import Layout from "@/layout/Layout";
 
-import {client} from "../../../sanity/lib/client"
-import {urlForImage} from "../../../sanity/lib/image"
+import { client } from "../../../sanity/lib/client";
+import { urlForImage } from "../../../sanity/lib/image";
 
-const Blogs = ({posts}) => {
-    const {t} = useTranslation("blog")
+const Blogs = ({ posts }) => {
+    const { t } = useTranslation("blog");
     return (
         <Layout>
             <div className='container mx-auto w-full font-atkinson  mb-10'>
                 <div className='mx-2 mt-5 '>
-                    <div className="mx-3 md:mt-10 mt-7">
-                        <h1 className="text-2xl font-semibold md:text-4xl lg:text-5xl  leading-snug text-transparent  bg-clip-text bg-gradient-to-r from-emerald-700 via-sky-600 to-teal-800">
+                    <div className='mx-3 md:mt-10 mt-7'>
+                        <h1 className='text-2xl font-semibold md:text-4xl lg:text-5xl  leading-snug text-transparent  bg-clip-text bg-gradient-to-r from-emerald-700 via-sky-600 to-teal-800'>
                             {t("recent")}
                         </h1>
-                        <p className="mt-3 mb-10 md:text-xl text-sm text-black/80">
+                        <p className='mt-3 mb-10 md:text-xl text-sm text-black/80'>
                             {t("recent_blogs_paragraph")}
                         </p>
                     </div>
@@ -32,8 +32,9 @@ const Blogs = ({posts}) => {
                         {posts.map((post) => (
                             <Link
                                 key={post._id}
-                                href={`/${post.language == "ar" ? "/ar" : ""
-                                    }/blogs/${post.slug.current}`}
+                                href={`/${
+                                    post.language == "ar" ? "/ar" : ""
+                                }/blogs/${post.slug.current}`}
                                 className='overflow-clip shadow-lg rounded-md mt-5 md:w-[22rem] lg:w-[25rem]'
                             >
                                 <div className='flex flex-col group cursor-pointer '>
@@ -111,23 +112,23 @@ const Blogs = ({posts}) => {
                 </div>
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default Blogs
+export default Blogs;
 
-export async function getStaticProps ({locale}) {
+export async function getStaticProps({ locale }) {
     const query = groq`*[_type == "post" && language == $locale] | order(_createdAt desc){
     ...,
     author->,
     categories[]-> 
-  }`
-    const posts = await client.fetch(query, {locale})
+  }`;
+    const posts = await client.fetch(query, { locale });
 
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             posts,
         },
-    }
+    };
 }
