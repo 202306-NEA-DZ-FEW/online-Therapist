@@ -80,7 +80,8 @@ const MultiStepForm = ({ showStepNumber }) => {
                 const userSnapshot = await getDoc(userRef);
 
                 if (userSnapshot.exists()) {
-                    const { firstname, lastname } = userSnapshot.data();
+                    const { firstname, lastname, photoURL } =
+                        userSnapshot.data();
 
                     // Create the "appointments" document with user data
                     await setDoc(doc(db, "appointments", user.uid), {
@@ -96,6 +97,7 @@ const MultiStepForm = ({ showStepNumber }) => {
                         agreeToTerms: false,
                         userFirstName: firstname,
                         userLastName: lastname,
+                        userPhotoURL: photoURL,
                     });
                     alert(
                         "Form data saved successfully, look for you matching list!"
@@ -107,7 +109,6 @@ const MultiStepForm = ({ showStepNumber }) => {
                 }
             } catch (error) {
                 console.error("Error adding document: ", error);
-                // alert("Error: Form data could not be saved!");
                 alert(`Error: Form data could not be saved!\n${error.message}`);
             }
         }

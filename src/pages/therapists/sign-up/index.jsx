@@ -81,7 +81,7 @@ const TherapistSignUp = ({ t }) => {
                 }
             );
         } catch (error) {
-            // add toastr
+            // add toast
         } finally {
             setSignupSuccess(true);
         }

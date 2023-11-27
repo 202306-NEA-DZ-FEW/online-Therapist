@@ -61,8 +61,8 @@
     },
     "stepFinal": {
         "header": "your request has been submitted ",
-        "paragraph1": "You Will Receive A Confirmation Email Guiding You To Book A Date And Time Soon.",
-        "paragraph2": "Please Keep An Eye On Your Mail.",
+        "paragraph1": "Please check the therapists section in your dashboard to select your therapist and book with him.",
+        "paragraph2": "Thank You.",
         "btnText": "Back To Home"
     }
 }

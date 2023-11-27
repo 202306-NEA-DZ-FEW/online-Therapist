@@ -15,21 +15,17 @@ import "react-datepicker/dist/react-datepicker.css";
 import Button from "@/components/elements/Button";
 
 import { UserAuth } from "@/context/AuthContext";
-import { auth, db } from "@/util/firebase"; // Replace this path with your Firebase configuration
-import timeZones from "@/util/timeZones"; // Import a list of time zones, replace with your own
-// import { useTranslation } from "next-i18next";
+import { auth, db } from "@/util/firebase";
+import timeZones from "@/util/timeZones";
 
 const TherapistsMatches = () => {
     const [therapists, setTherapists] = useState([]);
     const { user } = UserAuth();
-    // const { language } = user;
-    // const { t } = useTranslation(["booking", "therapists"], { lng: language });
-
     const [bookingStatus, setBookingStatus] = useState({}); // Track booking status
     const [activeBooking, setActiveBooking] = useState(false); // Track if user has an active booking
-    // Track selected appointment date and time for each therapist
-    const [selectedDateTimes, setSelectedDateTimes] = useState({});
+    const [selectedDateTimes, setSelectedDateTimes] = useState({}); // Track selected appointment date and time for each therapist
     const [selectedTimeZone, setSelectedTimeZone] = useState("UTC");
+    const [therapistsTimeZones, setTherapistsTimeZones] = useState({}); // Define a state to track the time zone for each therapist
 
     const fetchTherapistsData = async (uid) => {
         const docRef = doc(db, "appointments", uid);
@@ -42,115 +38,30 @@ const TherapistsMatches = () => {
             const therapistsRef = collection(db, "therapists");
             const therapistsSnapshot = await getDocs(therapistsRef);
 
-            // // Log all therapists here
-            // const allTherapists = therapistsSnapshot.docs.map((doc) =>
-            //     doc.data()
-            // );
-            // console.log("All Therapists:", allTherapists);
-
             therapistsSnapshot.forEach((doc) => {
                 const therapist = doc.data();
-                // Apply your filtering logic here
-                // if (
-                //     (counselingType === "Teen Counseling (for my child)" &&
-                //         therapist.specialty === "Teen Counseling") ||
-                //     (counselingType === "Couple Counseling" &&
-                //         therapist.specialty === "Couple Counseling") ||
-                //     (counselingType === "Individual Counseling" &&
-                //         therapist.specialty === "Individual Counseling")
-                // ) {
-                //     if (
-                //         (counselorQualities.includes(
-                //             "I Prefer A Female Counselor"
-                //         ) &&
-                //             therapist.gender === "female") ||
-                //         (counselorQualities.includes(
-                //             "I Prefer A Male Counselor"
-                //         ) &&
-                //             therapist.gender === "male")
-                //     ) {
-                //         if (
-                //             (counselorQualities.includes(
-                //                 "I Prefer An Older Counselor (45+)"
-                //             ) &&
-                //                 therapist.age >= "45") ||
-                //             (counselorQualities.includes(
-                //                 "I Prefer A Young Counselor (45-)"
-                //             ) &&
-                //                 therapist.age < "45")
-                //         )
-
-                // if (
-                //     (counselingType === "Teen Counseling (for my child)" &&
-                //         therapist.specialty === "Teen Counseling") ||
-                //     (counselingType === "استشارات المراهقين (لطفلي)" &&
-                //         therapist.specialty === "Teen Counseling") ||
-                //     (counselingType === "Teen Counseling (for my child)" &&
-                //         therapist.specialty === "مشورة للمراهقين") ||
-                //     (counselingType === "استشارات المراهقين (لطفلي)" &&
-                //         therapist.specialty === "مشورة للمراهقين") ||
-                //     (counselingType === "Couple Counseling" &&
-                //         therapist.specialty === "Couple Counseling") ||
-                //     (counselingType === "الاستشارة الزوجية" &&
-                //         therapist.specialty === "Couple Counseling") ||
-                //     (counselingType === "Couple Counseling" &&
-                //         therapist.specialty === "مشورة للأزواج") ||
-                //     (counselingType === "الاستشارة الزوجية" &&
-                //         therapist.specialty === "مشورة للأزواج") ||
-                //     (counselingType === "Individual Counseling" &&
-                //         therapist.specialty === "Individual Counseling") ||
-                //     (counselingType === "الاستشارة الفردية" &&
-                //         therapist.specialty === "Individual Counseling") ||
-                //     (counselingType === "Individual Counseling" &&
-                //         therapist.specialty === "مشورة للأفراد") ||
-                //     (counselingType === "الاستشارة الفردية" &&
-                //         therapist.specialty === "مشورة للأفراد")
-                // ) {
-                //     if (
-                //         (counselorQualities.includes(
-                //             "I Prefer A Female Counselor" ||
-                //                 "أفضّل مستشارة أنثى"
-                //         ) &&
-                //             therapist.gender === ("female" || "أنثى")) ||
-                //         (counselorQualities.includes(
-                //             "I Prefer A Male Counselor" ||
-                //                 "أنا أفضّل مستشار ذكر"
-                //         ) &&
-                //             therapist.gender === ("male" || "ذكر"))
-                //     ) {
-                //         if (
-                //             (counselorQualities.includes(
-                //                 "I Prefer An Older Counselor (45+)" ||
-                //                     "أفضّل المستشار الأكبر سنًا (45+)"
-                //             ) &&
-                //                 therapist.age >= "45") ||
-                //             (counselorQualities.includes(
-                //                 "I Prefer A Young Counselor (45-)" ||
-                //                     "أفضّل مستشارًا شابًا (45-)"
-                //             ) &&
-                //                 therapist.age < "45")
-                //         )
+                // Apply filtering logic
                 if (
                     (counselingType === "Teen Counseling (for my child)" &&
-                        therapist.specialty === "Teen Counseling") ||
+                        therapist.specialty === "teen counseling") ||
                     (counselingType === "استشارات المراهقين (لطفلي)" &&
-                        therapist.specialty === "Teen Counseling") ||
+                        therapist.specialty === "teen counseling") ||
                     (counselingType === "Teen Counseling (for my child)" &&
                         therapist.specialty === "مشورة للمراهقين") ||
                     (counselingType === "استشارات المراهقين (لطفلي)" &&
                         therapist.specialty === "مشورة للمراهقين") ||
                     (counselingType === "Couple Counseling" &&
-                        therapist.specialty === "Couple Counseling") ||
+                        therapist.specialty === "couple counseling") ||
                     (counselingType === "الاستشارة الزوجية" &&
-                        therapist.specialty === "Couple Counseling") ||
+                        therapist.specialty === "couple counseling") ||
                     (counselingType === "Couple Counseling" &&
                         therapist.specialty === "مشورة للأزواج") ||
                     (counselingType === "الاستشارة الزوجية" &&
                         therapist.specialty === "مشورة للأزواج") ||
                     (counselingType === "Individual Counseling" &&
-                        therapist.specialty === "Individual Counseling") ||
+                        therapist.specialty === "individual counseling") ||
                     (counselingType === "الاستشارة الفردية" &&
-                        therapist.specialty === "Individual Counseling") ||
+                        therapist.specialty === "individual counseling") ||
                     (counselingType === "Individual Counseling" &&
                         therapist.specialty === "مشورة للأفراد") ||
                     (counselingType === "الاستشارة الفردية" &&
@@ -211,8 +122,6 @@ const TherapistsMatches = () => {
             });
 
             setTherapists(filteredTherapists);
-            // console.log("Filtered Therapists:", filteredTherapists);
-
             const initialBookingStatus = filteredTherapists.reduce(
                 (acc, therapist) => {
                     acc[therapist.id] =
@@ -236,65 +145,23 @@ const TherapistsMatches = () => {
         }
     };
 
-    useEffect(() => {
-        // Fetch data when the component mounts
-        if (user) {
-            fetchTherapistsData(user.uid);
-        }
-    }, [user]);
-
-    useEffect(() => {
-        // Fetch data when the user logs in
-        const unsubscribe = onAuthStateChanged(auth, (authUser) => {
-            if (authUser) {
-                fetchTherapistsData(authUser.uid);
-            }
-        });
-
-        return () => unsubscribe();
-    }, []);
-    // useEffect(() => {
-    //     // Fetch data when the user logs in
-    //     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
-    //         if (authUser) {
-    //             fetchTherapistsData(authUser.uid);
-    //             // Load values from local storage
-    //             const storedDateTimes = localStorage.getItem("selectedDateTimes");
-    //             const storedTimeZone = localStorage.getItem("selectedTimeZone");
-    //             if (storedDateTimes) {
-    //                 setSelectedDateTimes(JSON.parse(storedDateTimes));
-    //             }
-    //             if (storedTimeZone) {
-    //                 setSelectedTimeZone(storedTimeZone);
-    //             }
-    //         }
-    //     });
-
-    //     return () => unsubscribe();
-    // }, []);
-
-    // const handleDateTimeChange = (event) => {
-    //     setAppointmentDateTime(event.target.value);
-    // }
-    // const saveToLocalStorage = () => {
-    //     localStorage.setItem(
-    //         "selectedDateTimes",
-    //         JSON.stringify(selectedDateTimes)
-    //     );
-    //     localStorage.setItem("selectedTimeZone", selectedTimeZone);
-    // };
-
     const handleDateTimeChange = (therapistId, date) => {
         setSelectedDateTimes((prevDateTimes) => ({
             ...prevDateTimes,
             [therapistId]: date,
         }));
-        // saveToLocalStorage();
     };
 
-    const handleTimeZoneChange = (event) => {
-        setSelectedTimeZone(event.target.value);
-        // saveToLocalStorage();
+    const handleTimeZoneChange = (event, therapistId) => {
+        // setSelectedTimeZone(event.target.value);
+        const selectedTimeZone = event.target.value;
+        setSelectedTimeZone(selectedTimeZone);
+
+        // Update the time zone state for the specific therapist
+        setTherapistsTimeZones((prevTimeZones) => ({
+            ...prevTimeZones,
+            [therapistId]: selectedTimeZone,
+        }));
     };
 
     const handleSubmitAppointment = async (therapist) => {
@@ -309,6 +176,7 @@ const TherapistsMatches = () => {
 
             const formattedDateTime =
                 moment(selectedDateTime).tz(selectedTimeZone);
+
             // Check if formattedDateTime is a valid date
             if (!formattedDateTime.isValid()) {
                 console.error("Invalid date and time");
@@ -358,10 +226,26 @@ const TherapistsMatches = () => {
             );
         }
     };
-    console.log("Therapists Array:", therapists);
+
+    useEffect(() => {
+        // Fetch data when the component mounts
+        if (user) {
+            fetchTherapistsData(user.uid);
+        }
+    }, [user]);
+
+    useEffect(() => {
+        // Fetch data when the user logs in
+        const unsubscribe = onAuthStateChanged(auth, (authUser) => {
+            if (authUser) {
+                fetchTherapistsData(authUser.uid);
+            }
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     // Render the filtered therapists for the user to choose from
-
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
@@ -379,17 +263,9 @@ const TherapistsMatches = () => {
                                 className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                                 src={`${therapist.photoURL}`}
                             />
-
                             <p>{`${therapist.fullname}`}</p>
                             <p>{` ${therapist.specialty}`}</p>
-                            {/* <p>
-                            <span className='text-Gray font-atkinson'>
-                                Approved:{" "}
-                            </span>
-                            {`${therapist.approved}`}
-                        </p> */}
                         </div>
-
                         <div className='w-[250px] lg:w-96 pt-4 '>
                             <p className='text-gray-500'>Details</p>
                             <p>
@@ -420,8 +296,13 @@ const TherapistsMatches = () => {
                                 </label>
                                 <select
                                     className='p-1 border w-48 rounded-md border-Teal'
-                                    value={selectedTimeZone}
-                                    onChange={handleTimeZoneChange}
+                                    value={
+                                        therapistsTimeZones[therapist.id] ||
+                                        selectedTimeZone
+                                    }
+                                    onChange={(e) =>
+                                        handleTimeZoneChange(e, therapist.id)
+                                    }
                                 >
                                     {timeZones.map((zone) => (
                                         <option key={zone} value={zone}>

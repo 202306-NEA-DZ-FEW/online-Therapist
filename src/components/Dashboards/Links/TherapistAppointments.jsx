@@ -47,7 +47,7 @@ const TherapistAppointments = ({ therapistId }) => {
                         className='flex flex-col gap-y-8 justify-center items-center bg-white rounded-xl shadow-xl p-4  w-full md:w-1/2 lg:w-1/3 xl:w-1/4'
                     >
                         <img
-                            src={appointment.photoURL}
+                            src={appointment.userPhotoURL}
                             alt={`Photo of ${appointment.userFirstName} ${appointment.userLastName}`}
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                         />
@@ -79,7 +79,6 @@ const TherapistAppointments = ({ therapistId }) => {
                         <p>
                             {`Session Date: ${appointment.appointmentDate} ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
                         </p>
-                        {/* Add other appointment details */}
                     </li>
                 ))}
             </ul>

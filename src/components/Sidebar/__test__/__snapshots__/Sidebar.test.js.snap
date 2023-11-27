@@ -138,46 +138,6 @@ exports[`renders correctly 1`] = `
           className="text-2xl"
         >
           <svg
-            fill="none"
-            height="1em"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"
-            />
-            <path
-              d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"
-            />
-          </svg>
-        </span>
-        <span
-          className="hidden md:block"
-        >
-          Messages
-        </span>
-      </a>
-      <a
-        className="flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out "
-        href=""
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        <span
-          className="text-2xl"
-        >
-          <svg
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -204,7 +164,7 @@ exports[`renders correctly 1`] = `
       </a>
       <a
         className="flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out "
-        href="/userProfile"
+        href="/profile"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
@@ -248,7 +208,7 @@ exports[`renders correctly 1`] = `
       </a>
       <a
         className="flex items-center gap-x-3 text-sm font-medium text-gray-700 py-2 px-2 hover:bg-Teal hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out "
-        href="/userProfile"
+        href="/profile"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}

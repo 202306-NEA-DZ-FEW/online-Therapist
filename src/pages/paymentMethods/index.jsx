@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Layout from "@/layout/Layout";
 import PaymentCard from "@/components/Cards/PaymentCard";
 import Button from "@/components/elements/Button";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -140,7 +140,7 @@ export default function PaymentMethods() {
                 <div className='text-center'>
                     <Link href='/addnewcard'>
                         <Button
-                            transition={true}
+                            rotate={language == "en" ? false : true}
                             color='teal'
                             buttonSize='xl'
                             buttonText={t("paymentMethods.addButton")}

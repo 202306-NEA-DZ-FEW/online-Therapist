@@ -1,6 +1,7 @@
 import { useTranslation } from "next-i18next";
 import Button from "../elements/Button";
 import CheckboxInput from "../elements/CheckboxInput";
+import { useRouter } from "next/router";
 
 const BookingStep4 = ({
     handleChangeInput,
@@ -8,6 +9,8 @@ const BookingStep4 = ({
     handleNextStep,
 }) => {
     const { t } = useTranslation("booking");
+    const router = useRouter();
+    const language = router.locale;
 
     return (
         <div>
@@ -59,10 +62,18 @@ const BookingStep4 = ({
             </ul>
             <div className='my-2 flex justify-between items-center lg:pt-5 pt-2'>
                 <button onClick={handlePrevStep}>
-                    <Button buttonText={t("step2.prev")} buttonSize='md' />
+                    <Button
+                        buttonText={t("step2.prev")}
+                        rotate={language == "en" ? true : false}
+                        buttonSize='md'
+                    />
                 </button>
                 <button onClick={handleNextStep}>
-                    <Button buttonText={t("step2.next")} buttonSize='sm' />
+                    <Button
+                        buttonText={t("step2.next")}
+                        rotate={language == "en" ? false : true}
+                        buttonSize='sm'
+                    />
                 </button>
             </div>
         </div>
