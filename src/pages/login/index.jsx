@@ -1,29 +1,29 @@
-import {yupResolver} from "@hookform/resolvers/yup"
-import {signInWithEmailAndPassword} from "firebase/auth"
-import Image from "next/image"
-import Link from "next/link"
-import {useRouter} from "next/router"
-import {useTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import Profile from 'public/profile.png'
-import {useState} from "react"
-import {useForm} from "react-hook-form"
-import {toast} from 'react-toastify'
-import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Profile from "public/profile.png";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import * as yup from "yup";
 
-import Button from "@/components/elements/Button"
-import Input from "@/components/elements/Input"
+import Button from "@/components/elements/Button";
+import Input from "@/components/elements/Input";
 
-import {UserAuth} from "@/context/AuthContext"
-import Layout from "@/layout/Layout"
-import {auth} from "@/util/firebase"
+import { UserAuth } from "@/context/AuthContext";
+import Layout from "@/layout/Layout";
+import { auth } from "@/util/firebase";
 
 const Login = () => {
-    const router = useRouter()
-    const {t} = useTranslation(["common", "login"])
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const {user, AuthWithGoogle, AuthWithFacebook} = UserAuth()
+    const router = useRouter();
+    const { t } = useTranslation(["common", "login"]);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const { user, AuthWithGoogle, AuthWithFacebook } = UserAuth();
 
     const handleSignIn = async () => {
         // e.preventDefault();
@@ -38,18 +38,17 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
-                router.push("/")
-                const user = userCredential.user
+                router.push("/");
+                const user = userCredential.user;
 
                 // ...
             })
             .catch((error) => {
                 if (error.code === "auth/invalid-login-credentials") {
-                    toast.error(t("login:invalid"))
+                    toast.error(t("login:invalid"));
                 }
-
-            })
-    }
+            });
+    };
 
     // const handleGoogleLogin = async () => {
     //     try {
@@ -102,19 +101,19 @@ const Login = () => {
 
     const handleGoogleLogin = async () => {
         try {
-            await AuthWithGoogle()
+            await AuthWithGoogle();
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
-    }
+    };
 
     const handleFacebookLogin = async () => {
         try {
-            await AuthWithFacebook()
+            await AuthWithFacebook();
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
-    }
+    };
 
     const validationSchema = yup.object().shape({
         email: yup
@@ -122,12 +121,12 @@ const Login = () => {
             .required(t("formErrors.email"))
             .email(t("formErrors.emailInvalid")),
         password: yup.string().required(t("formErrors.password")),
-    })
+    });
 
-    const formOptions = {resolver: yupResolver(validationSchema)}
+    const formOptions = { resolver: yupResolver(validationSchema) };
     // get functions to build form with useForm() hook
-    const {register, handleSubmit, formState} = useForm(formOptions)
-    const {errors} = formState
+    const { register, handleSubmit, formState } = useForm(formOptions);
+    const { errors } = formState;
 
     return (
         <Layout>
@@ -148,9 +147,7 @@ const Login = () => {
                                 height={70}
                                 alt='login'
                                 className='mx-auto my-5'
-                            >
-
-                            </Image>
+                            ></Image>
                             <div className='flex-1'>
                                 <Input
                                     width='full'
@@ -159,7 +156,7 @@ const Login = () => {
                                     placeholder={t("login.email")}
                                     name='email'
                                     errorMessage={errors.email?.message}
-                                    register={{...register("email")}}
+                                    register={{ ...register("email") }}
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
@@ -172,7 +169,7 @@ const Login = () => {
                                     id='password'
                                     placeholder={t("login.password")}
                                     errorMessage={errors.password?.message}
-                                    register={{...register("password")}}
+                                    register={{ ...register("password") }}
                                     value={password}
                                     onChange={(e) =>
                                         setPassword(e.target.value)
@@ -240,16 +237,16 @@ const Login = () => {
                 </div>
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;
 
-export async function getStaticProps ({locale}) {
+export async function getStaticProps({ locale }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common", "login"])),
             // Will be passed to the page component as props
         },
-    }
+    };
 }
