@@ -123,6 +123,5 @@ export async function getServerSideProps({ locale }) {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             posts,
         },
-  
     };
 }
