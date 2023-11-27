@@ -123,38 +123,41 @@ const ChatCard = () => {
                 otherUser = chatTherapistid;
                 documentName = "therapists";
             }
-    
+
             const userInformationCollection = collection(db, documentName);
             const userInformationQuery = query(
                 userInformationCollection,
                 where("uid", "==", otherUser)
             );
-            
+
             const querySnapshot = await getDocs(userInformationQuery);
             const userInformations = querySnapshot.docs.map((doc) => ({
                 ...doc.data(),
             }));
-            
+
             return userInformations; // Return the result
         } catch (error) {
             console.error("Error fetching userinfo:", error);
         }
     };
-    
+
     useEffect(() => {
         const testuser = async () => {
             try {
                 const isTherapist = user.isTherapist;
                 const result = await test(isTherapist);
-                
-                result[0].fullname? setOtherChatUser(result[0].fullname) : setOtherChatUser(result[0].firstname + ' ' + result[0].lastname);
-                setOtherChatUserPhoto(result[0].photoURL);
 
+                result[0].fullname
+                    ? setOtherChatUser(result[0].fullname)
+                    : setOtherChatUser(
+                          result[0].firstname + " " + result[0].lastname
+                      );
+                setOtherChatUserPhoto(result[0].photoURL);
             } catch (error) {
                 console.error("Error fetching userinfo:", error);
             }
         };
-    
+
         testuser();
     }, [chatUserId]);
 
@@ -233,9 +236,7 @@ const ChatCard = () => {
                                 setIsChatOpen(false);
                             }}
                         >
-                            <p className='font-medium'>
-                                {otherChatUser}
-                            </p>
+                            <p className='font-medium'>{otherChatUser}</p>
                             <svg
                                 className='w-3 h-3'
                                 aria-hidden='true'
@@ -309,11 +310,15 @@ const ChatCard = () => {
                         }}
                     >
                         <Image
-                            src={otherChatUserPhoto? otherChatUserPhoto : "/profile.png"}
+                            src={
+                                otherChatUserPhoto
+                                    ? otherChatUserPhoto
+                                    : "/profile.png"
+                            }
                             width={200}
                             height={200}
                             alt='Profile'
-                            className="fixed bottom-0 right-0 w-[60px] h-[60px] rounded-full cursor-pointer mb-6 mr-2 object-cover z-50"
+                            className='fixed bottom-0 right-0 w-[60px] h-[60px] rounded-full cursor-pointer mb-6 mr-2 object-cover z-50'
                         />
                     </div>
                 )
