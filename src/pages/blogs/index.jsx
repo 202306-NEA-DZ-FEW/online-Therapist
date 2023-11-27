@@ -109,7 +109,7 @@ const Blogs = ({ posts }) => {
 
 export default Blogs;
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
     const query = groq`*[_type == "post" && language == $locale]{
     ...,
     author->,
@@ -123,6 +123,6 @@ export async function getStaticProps({ locale }) {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             posts,
         },
-        revalidate: 30,
+  
     };
 }
