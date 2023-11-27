@@ -22,6 +22,8 @@ const ChatCard = () => {
     const [chatMessages, setChatMessages] = useState([]);
     const [chatUserId, setChatUserId] = useState([]);
     const [chatTherapistid, setChatTherapistid] = useState([]);
+    const [otherChatUser, setOtherChatUser] = useState({});
+    const [otherChatUserPhoto, setOtherChatUserPhoto] = useState([]);
     const { user } = useAuth();
     const bottomEl = useRef(null);
 
@@ -109,6 +111,53 @@ const ChatCard = () => {
         fetchChat();
     }, []);
 
+    ////////////////////////////////////////////
+    const test = async (isTherapist) => {
+        try {
+            let otherUser;
+            let documentName;
+            if (isTherapist) {
+                otherUser = chatUserId;
+                documentName = "users";
+            } else {
+                otherUser = chatTherapistid;
+                documentName = "therapists";
+            }
+    
+            const userInformationCollection = collection(db, documentName);
+            const userInformationQuery = query(
+                userInformationCollection,
+                where("uid", "==", otherUser)
+            );
+            
+            const querySnapshot = await getDocs(userInformationQuery);
+            const userInformations = querySnapshot.docs.map((doc) => ({
+                ...doc.data(),
+            }));
+            
+            return userInformations; // Return the result
+        } catch (error) {
+            console.error("Error fetching userinfo:", error);
+        }
+    };
+    
+    useEffect(() => {
+        const testuser = async () => {
+            try {
+                const isTherapist = user.isTherapist;
+                const result = await test(isTherapist);
+                
+                result[0].fullname? setOtherChatUser(result[0].fullname) : setOtherChatUser(result[0].firstname + ' ' + result[0].lastname);
+                setOtherChatUserPhoto(result[0].photoURL);
+
+            } catch (error) {
+                console.error("Error fetching userinfo:", error);
+            }
+        };
+    
+        testuser();
+    }, [chatUserId]);
+
     const submitHandler = async (e) => {
         e.preventDefault();
         try {
@@ -177,7 +226,7 @@ const ChatCard = () => {
         <div>
             {user && appointments ? (
                 isChatOpen ? (
-                    <div className='fixed flex flex-col bottom-0 sm:right-0 sm:h-[460px] sm:rounded-t-xl sm:mr-5 sm:w-[325px] outline outline-2 outline-gray-100 w-full h-[90%]'>
+                    <div className='fixed flex flex-col bottom-0 sm:right-0 sm:h-[460px] sm:rounded-t-xl sm:mr-5 sm:w-[325px] outline outline-2 outline-gray-100 w-full h-[90%] z-50'>
                         <div
                             className='bg-gray-100 border-b flex justify-between p-4 sm:h-[10%] h-[5%] place-items-center rounded-t-md cursor-pointer'
                             onClick={() => {
@@ -185,9 +234,7 @@ const ChatCard = () => {
                             }}
                         >
                             <p className='font-medium'>
-                                {user.uid === chatUserId
-                                    ? "Your Therapist"
-                                    : "Your Patient"}
+                                {otherChatUser}
                             </p>
                             <svg
                                 className='w-3 h-3'
@@ -260,13 +307,13 @@ const ChatCard = () => {
                         onClick={() => {
                             setIsChatOpen(true);
                         }}
-                        className='fixed bottom-0 right-0 w-[60px] h-[60px] rounded-full cursor-pointer mb-6 mr-2'
                     >
                         <Image
-                            src='/profile.png'
+                            src={otherChatUserPhoto? otherChatUserPhoto : "/profile.png"}
                             width={200}
                             height={200}
                             alt='Profile'
+                            className="fixed bottom-0 right-0 w-[60px] h-[60px] rounded-full cursor-pointer mb-6 mr-2 object-cover z-50"
                         />
                     </div>
                 )
