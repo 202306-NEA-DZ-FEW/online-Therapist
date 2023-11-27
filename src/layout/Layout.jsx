@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import * as React from "react";
 import { Slide, ToastContainer } from "react-toastify";
 
@@ -7,8 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 import ChatCard from "@/components/Cards/ChatCard";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar/Navbar";
-
 export default function Layout({ children }) {
+    const router = useRouter();
+    const language = router.locale;
     return (
         <>
             <Navbar />
@@ -25,7 +27,7 @@ export default function Layout({ children }) {
                     hideProgressBar={false}
                     newestOnTop
                     closeOnClick
-                    rtl={false}
+                    rtl={language == "ar" ? true : false}
                     transition={Slide}
                     pauseOnFocusLoss
                     draggable
