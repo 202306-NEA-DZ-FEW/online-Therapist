@@ -1,19 +1,19 @@
-import { useTranslation } from "next-i18next";
-import Slider from "react-slick";
+import {useTranslation} from "next-i18next"
+import Slider from "react-slick"
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
-import Card from "../Cards/BlogCard";
-import Reveal from "../utils/Reveal";
-import { urlForImage } from "../../../sanity/lib/image";
+import Card from "../Cards/BlogCard"
+import Reveal from "../utils/Reveal"
+import {urlForImage} from "../../../sanity/lib/image"
 
-const RecentBlogsSection = ({ posts }) => {
-    const { t } = useTranslation("homepage");
+const RecentBlogsSection = ({posts}) => {
+    const {t} = useTranslation("homepage")
 
     const settings = {
         dots: true,
-        arrows: true,
+        arrows: false,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -48,7 +48,7 @@ const RecentBlogsSection = ({ posts }) => {
                 },
             },
         ],
-    };
+    }
     return (
         <div className='max-w-[100%] bg-[#EAF8F9] p-5'>
             <Reveal>
@@ -73,7 +73,7 @@ const RecentBlogsSection = ({ posts }) => {
                 </Slider>
             </Reveal>
         </div>
-    );
-};
+    )
+}
 
-export default RecentBlogsSection;
+export default RecentBlogsSection
