@@ -9,11 +9,11 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "@/util/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-// import { UserAuth } from "@/context/AuthContext";
+import { useTranslation } from "next-i18next";
 
 const PatientAppointments = () => {
-    // const { user } = UserAuth();
     const [readyAppointments, setReadyAppointments] = useState([]);
+    const { t } = useTranslation("booking");
 
     const fetchReadyAppointments = async () => {
         onAuthStateChanged(auth, async (user) => {
@@ -49,7 +49,9 @@ const PatientAppointments = () => {
 
                     setReadyAppointments(readyAppointmentsData);
                 } else {
-                    alert("You don't have confirmed appointments yet!");
+                    toast.info(t("appointments.info."), {
+                        position: toast.POSITION.TOP_CENTER,
+                    });
                 }
             }
         });

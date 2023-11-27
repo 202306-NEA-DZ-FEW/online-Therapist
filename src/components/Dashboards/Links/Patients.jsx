@@ -1,10 +1,12 @@
 import { auth, db } from "@/util/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, query, where, getDocs, getDoc } from "firebase/firestore";
+import { useTranslation } from "next-i18next";
 import React, { useEffect, useState } from "react";
 
 const PatientsList = () => {
     const [patientsList, setPatientsList] = useState([]);
+    const { t } = useTranslation("booking");
 
     const fetchPatientsList = async () => {
         onAuthStateChanged(auth, async (user) => {
@@ -28,10 +30,17 @@ const PatientsList = () => {
                         );
                         setPatientsList(patientsData);
                     } else {
-                        alert("No patient found in your list!");
+                        toast.info(t("therapistDashboard.patientsList.info"), {
+                            position: toast.POSITION.TOP_CENTER,
+                        });
                     }
                 } catch (error) {
-                    console.error("Error fetching patient list:", error);
+                    toast.info(
+                        `t("therapistDashboard.patientsList.error"), ${error.message}`,
+                        {
+                            position: toast.POSITION.TOP_CENTER,
+                        }
+                    );
                 }
             }
         });

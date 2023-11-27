@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { auth, db } from "@/util/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { useTranslation } from "next-i18next";
 
 const TherapistAppointments = ({ therapistId }) => {
     const [readyAppointments, setReadyAppointments] = useState([]);
+    const { t } = useTranslation("booking");
 
     const fetchReadyAppointments = async () => {
         onAuthStateChanged(auth, async (user) => {
@@ -25,7 +27,9 @@ const TherapistAppointments = ({ therapistId }) => {
                     );
                     setReadyAppointments(readyAppointmentsData);
                 } else {
-                    alert("No booked appointments!");
+                    toast.info(t("appointments.info"), {
+                        position: toast.POSITION.TOP_CENTER,
+                    });
                 }
             }
         });

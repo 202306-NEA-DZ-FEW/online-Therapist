@@ -65,6 +65,12 @@
         "paragraph2": "Thank You.",
         "btnText": "Back To Home"
     },
+    "multiStepForm": {
+        "warning1": "Error: You must agree to the Terms of Services!",
+        "success": "Form data saved successfully, look at your therapists matching list!",
+        "warning2": "Error: User data not found!",
+        "error": "Error: Form data could not be saved!"
+    },
     "therapistDashboard": {
         "waitingAppointments": {
             "info": "No appointments booked with you yet!",
@@ -72,8 +78,11 @@
             "warning": "Please set the appointment date and time.",
             "error2": "Invalid date and time",
             "error3": "Error setting new session date:"
+        },
+        "patientsList": {
+            "info": "You don't have patients in your list yet!",
+            "error": "An error occurred while displaying the patient list:"
         }
-        
     },
     "patientDashboard": {
         "therapists": {
@@ -82,6 +91,8 @@
             "info": "No matching therapists fit your requirement found yet!",
             "error1": "Appointment could not be updated!"
         }
-
+    },
+    "appointments": {
+        "info": "You don't have confirmed appointments yet!"
     }
 }
