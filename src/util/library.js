@@ -235,7 +235,7 @@ export const patientLinks = [
         text_en: "Appointments",
         text_ar: "مواعيد ",
     },
-    { 
+    {
         id: 3,
         name: "therapists",
         href: "",
