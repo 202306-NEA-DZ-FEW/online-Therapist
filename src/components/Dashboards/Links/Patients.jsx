@@ -66,7 +66,9 @@ const PatientsList = () => {
                     >
                         <img
                             src={patient.userPhotoURL}
-                            alt={`${t("dashboard:patientAppointments.photo")} ${patient.userFirstName} ${patient.userLastName}`}
+                            alt={`${t("dashboard:patientAppointments.photo")} ${
+                                patient.userFirstName
+                            } ${patient.userLastName}`}
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                         />
                         <p>{`${t("dashboard:patients.name")} ${
