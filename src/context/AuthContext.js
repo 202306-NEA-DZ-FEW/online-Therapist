@@ -37,32 +37,32 @@ export function AppWrapper({ children }) {
     const AuthWithGoogle = () => {
         try {
             signInWithPopup(auth, googleProvider).then(async (result) => {
-                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const credential =
+                    GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
-    
+
                 // Save user information in Firestore
-                const userCollection = collection(db, 'users');
+                const userCollection = collection(db, "users");
                 const userDocRef = doc(userCollection, user.uid);
                 const userDocSnapshot = await getDoc(userDocRef);
-    
+
                 if (!userDocSnapshot.exists()) {
                     // If the document doesn't exist, create a new one
                     await setDoc(userDocRef, {
-                        firstname: user.displayName.split(' ')[0],
-                        lastname: user.displayName.split(' ')[1],
+                        firstname: user.displayName.split(" ")[0],
+                        lastname: user.displayName.split(" ")[1],
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL
+                        photoURL: user.photoURL,
                     });
                 }
                 setIsSignUpSuccessful(true);
             });
         } catch (error) {
-            console.error('Error signing in with Google:', error);
+            console.error("Error signing in with Google:", error);
         }
     };
-
 
     const AuthWithFacebook = () => {
         // Implement Facebook login using Firebase here
