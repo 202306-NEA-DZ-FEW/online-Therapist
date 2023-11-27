@@ -46,7 +46,7 @@ export default function Success() {
     const handleConfirm = async () => {
         try {
             // Create a reference to the user's document in Firestore
-            const userDocRef = doc(collection(db, "users"), user.uid);
+            const userDocRef = doc(collection(db, "tickets"), user.uid);
             const userDocSnapshot = await getDoc(userDocRef);
 
             if (userDocSnapshot.exists()) {

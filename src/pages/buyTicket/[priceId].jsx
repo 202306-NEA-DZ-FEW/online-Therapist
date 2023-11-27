@@ -64,7 +64,7 @@ export default function BuyTickect() {
     const handleConfirm = async () => {
         if (selectedCard) {
             try {
-                const userDocRef = doc(collection(db, "users"), user.uid);
+                const userDocRef = doc(collection(db, "tickets"), user.uid);
                 const userDocSnapshot = await getDoc(userDocRef);
 
                 if (userDocSnapshot.exists()) {
