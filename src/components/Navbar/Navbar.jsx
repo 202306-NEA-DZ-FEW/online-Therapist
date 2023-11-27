@@ -178,11 +178,11 @@ export default function Navbar() {
                                             className='text-3xl relative'
                                             onClick={toggleDropdown}
                                         >
-                                              <img
-                                src={user.photoURL}
-                                alt='Profile'
-                                className='w-8 object-cover h-8 rounded-full'
-                            />
+                                            <img
+                                                src={user.photoURL}
+                                                alt='Profile'
+                                                className='w-8 object-cover h-8 rounded-full'
+                                            />
                                         </div>
                                         <div className='absolute outline-none'>
                                             {isDropdownOpen && <UserDropdown />}
