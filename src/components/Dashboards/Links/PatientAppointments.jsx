@@ -13,16 +13,8 @@ import { useTranslation } from "next-i18next";
 import { toast } from "react-toastify";
 
 const PatientAppointments = () => {
-
-// import { UserAuth } from "@/context/AuthContext";
-import { useTranslation } from "next-i18next";
-
-const PatientAppointments = () => {
-    const { t } = useTranslation("dashboard");
-    // const { user } = UserAuth();
-
     const [readyAppointments, setReadyAppointments] = useState([]);
-    const { t } = useTranslation("booking");
+    const { t } = useTranslation(["booking", "dashboard"]);
 
     const fetchReadyAppointments = async () => {
         onAuthStateChanged(auth, async (user) => {

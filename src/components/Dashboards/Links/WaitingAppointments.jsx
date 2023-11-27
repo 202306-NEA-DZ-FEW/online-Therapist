@@ -19,13 +19,12 @@ import { toast } from "react-toastify";
 import { useTranslation } from "next-i18next";
 
 const WaitingAppointments = () => {
-    const { t } = useTranslation("dashboard");
     const [appointments, setAppointments] = useState([]);
     const { user } = UserAuth();
     // Track selected appointment date and time for each therapist
     const [selectedDateTimes, setSelectedDateTimes] = useState({});
     const [selectedTimeZone, setSelectedTimeZone] = useState("UTC");
-    const { t } = useTranslation("booking");
+    const { t } = useTranslation(["booking", "dashboard"]);
 
     const fetchWaitingAppointments = async () => {
         onAuthStateChanged(auth, async (user) => {
@@ -253,7 +252,7 @@ const WaitingAppointments = () => {
                                     <Button
                                         buttonText={
                                             appointment.appointmentStatus ===
-                                            "ready"                                      
+                                            "ready"
                                                 ? t(
                                                       "waitingAppointments.confirmed"
                                                   )

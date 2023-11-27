@@ -20,10 +20,7 @@ import timeZones from "@/util/timeZones";
 import { useTranslation } from "next-i18next";
 import { toast } from "react-toastify";
 
-
 const TherapistsMatches = () => {
-    const { t } = useTranslation("dashboard");
-
     const [therapists, setTherapists] = useState([]);
     const { user } = UserAuth();
     const [bookingStatus, setBookingStatus] = useState({}); // Track booking status
@@ -31,7 +28,7 @@ const TherapistsMatches = () => {
     const [selectedDateTimes, setSelectedDateTimes] = useState({}); // Track selected appointment date and time for each therapist
     const [selectedTimeZone, setSelectedTimeZone] = useState("UTC");
     const [therapistsTimeZones, setTherapistsTimeZones] = useState({}); // Define a state to track the time zone for each therapist
-    const { t } = useTranslation("booking");
+    const { t } = useTranslation(["booking", "dashboard"]);
 
     const fetchTherapistsData = async (uid) => {
         const docRef = doc(db, "appointments", uid);

@@ -6,9 +6,8 @@ import { useTranslation } from "next-i18next";
 import { toast } from "react-toastify";
 
 const TherapistAppointments = ({ therapistId }) => {
-    const { t } = useTranslation("dashboard");
     const [readyAppointments, setReadyAppointments] = useState([]);
-    const { t } = useTranslation("booking");
+    const { t } = useTranslation(["booking", "dashboard"]);
 
     const fetchReadyAppointments = async () => {
         onAuthStateChanged(auth, async (user) => {
