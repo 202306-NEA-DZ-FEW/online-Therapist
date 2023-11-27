@@ -109,14 +109,12 @@ const MultiStepForm = ({ showStepNumber }) => {
                     });
                     setStep("Final");
                 } else {
-                    console.log("User data not found for the user.");
                     toast.warning(t("multiStepForm.warning2"), {
                         position: toast.POSITION.TOP_CENTER,
                     });
                 }
             } catch (error) {
-                console.error("Error adding document: ", error);
-                toast.error(`t("multiStepForm.error"), ${error.message}`, {
+                toast.error(t("multiStepForm.error"), {
                     position: toast.POSITION.TOP_CENTER,
                 });
             }

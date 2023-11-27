@@ -31,13 +31,16 @@ const PatientsList = () => {
                         );
                         setPatientsList(patientsData);
                     } else {
-                        toast.info(t("therapistDashboard.patientsList.info"), {
-                            position: toast.POSITION.TOP_CENTER,
-                        });
+                        toast.info(
+                            t("booking:therapistDashboard.patientsList.info"),
+                            {
+                                position: toast.POSITION.TOP_CENTER,
+                            }
+                        );
                     }
                 } catch (error) {
                     toast.info(
-                        `t("therapistDashboard.patientsList.error"), ${error.message}`,
+                        t("booking:therapistDashboard.patientsList.error"),
                         {
                             position: toast.POSITION.TOP_CENTER,
                         }
@@ -52,7 +55,7 @@ const PatientsList = () => {
     return (
         <div className="font-atkinson p-2'">
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                {t("patients.patient")}
+                {t("dashboard:patients.patient")}
             </h1>
 
             <div className='flex flex-wrap'>
@@ -62,14 +65,13 @@ const PatientsList = () => {
                         className='flex flex-row justify-center items-center space-x-2 bg-white rounded-xl shadow-xl p-4 m-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4'
                     >
                         <img
-                            src={patient.photoURL}
-                            alt={`Photo of ${patient.userFirstName} ${patient.userLastName}`}
+                            src={patient.userPhotoURL}
+                            alt={`${t("dashboard:patientAppointments.photo")} ${patient.userFirstName} ${patient.userLastName}`}
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                         />
-                        <p>{` ${t("patients.name")} ${patient.userFirstName} ${
-                            patient.userLastName
-                        }`}</p>
-                        {/* Add other patient information as needed */}
+                        <p>{`${t("dashboard:patients.name")} ${
+                            patient.userFirstName
+                        } ${patient.userLastName}`}</p>
                     </div>
                 ))}
             </div>

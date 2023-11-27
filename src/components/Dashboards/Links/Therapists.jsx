@@ -144,7 +144,7 @@ const TherapistsMatches = () => {
                 setActiveBooking(true);
             }
         } else {
-            toast.info(t("patientDashboard.therapists.info"), {
+            toast.info(t("booking:patientDashboard.therapists.info"), {
                 position: toast.POSITION.TOP_CENTER,
             });
         }
@@ -176,7 +176,7 @@ const TherapistsMatches = () => {
             // Check if the appointment date and time are set
             if (!selectedDateTime) {
                 toast.warning(
-                    t("therapistDashboard.waitingAppointments.warning"),
+                    t("booking:therapistDashboard.waitingAppointments.warning"),
                     { position: toast.POSITION.TOP_CENTER }
                 );
                 return;
@@ -188,7 +188,7 @@ const TherapistsMatches = () => {
             // Check if formattedDateTime is a valid date
             if (!formattedDateTime.isValid()) {
                 toast.error(
-                    t("therapistDashboard.waitingAppointments.error2"),
+                    t("booking:therapistDashboard.waitingAppointments.error2"),
                     {
                         position: toast.POSITION.TOP_CENTER,
                     }
@@ -208,9 +208,12 @@ const TherapistsMatches = () => {
                     appointmentTime: time, // Update the appointment time
                     appointmentTimeZone: timeZone, // Update the appointment time zone
                 });
-                toast.success(t("patientDashboard.therapists.success1"), {
-                    position: toast.POSITION.TOP_CENTER,
-                });
+                toast.success(
+                    t("booking:patientDashboard.therapists.success1"),
+                    {
+                        position: toast.POSITION.TOP_CENTER,
+                    }
+                );
                 setBookingStatus((prevStatus) => ({
                     ...prevStatus,
                     [therapist.id]: true,
@@ -226,9 +229,12 @@ const TherapistsMatches = () => {
                     appointmentTimeZone: null, // Clear the appointment time zone
                 });
 
-                toast.success(t("patientDashboard.therapists.success2"), {
-                    position: toast.POSITION.TOP_CENTER,
-                });
+                toast.success(
+                    t("booking:patientDashboard.therapists.success2"),
+                    {
+                        position: toast.POSITION.TOP_CENTER,
+                    }
+                );
                 setBookingStatus((prevStatus) => ({
                     ...prevStatus,
                     [therapist.id]: false,
@@ -236,11 +242,9 @@ const TherapistsMatches = () => {
                 setActiveBooking(false);
             }
         } catch (error) {
-            toast.error(
-                `t("patientDashboard.therapists.error1"),
-                ${error.message}`,
-                { position: toast.POSITION.TOP_CENTER }
-            );
+            toast.error(t("booking:patientDashboard.therapists.error1"), {
+                position: toast.POSITION.TOP_CENTER,
+            });
         }
     };
 
@@ -266,7 +270,7 @@ const TherapistsMatches = () => {
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                {t("therapists.heading")}
+                {t("dashboard:therapists.heading")}
             </h1>
 
             <ul className='flex flex-col gap-y-8 lg:m-4'>
@@ -281,11 +285,11 @@ const TherapistsMatches = () => {
                                 src={`${therapist.photoURL}`}
                             />
                             <p>{`${therapist.fullname}`}</p>
-                            <p>{` ${therapist.specialty}`}</p>
+                            <p>{`${therapist.specialty}`}</p>
                         </div>
                         <div className='w-[250px] lg:w-96 pt-4 '>
                             <p className='text-gray-500'>
-                                {t("therapists.details")}
+                                {t("dashboard:therapists.details")}
                             </p>
                             <p>
                                 <span className='text-Gray font-atkinson'></span>
@@ -296,7 +300,7 @@ const TherapistsMatches = () => {
                         <div className='lg:flex lg:flex-col lg:gap-y-8 flex flex-col jutsify-center items-center gap-y-8'>
                             <div className='flex flex-col gap-y-2'>
                                 <label className='text-Gray font-atkinson'>
-                                    {t("therapists.Date")}
+                                    {t("dashboard:therapists.Date")}
                                 </label>
                                 <DatePicker
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -309,11 +313,11 @@ const TherapistsMatches = () => {
                                     timeIntervals={15}
                                     dateFormat='MM-dd-yyyy HH:mm'
                                     placeholderText={t(
-                                        "therapists.placeholder"
+                                        "dashboard:therapists.placeholder"
                                     )}
                                 />
                                 <label className='text-Gray font-atkinson'>
-                                    {t("therapists.Zone")}
+                                    {t("dashboard:therapists.Zone")}
                                 </label>
                                 <select
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -341,8 +345,8 @@ const TherapistsMatches = () => {
                                 <Button
                                     buttonText={
                                         bookingStatus[therapist.id]
-                                            ? t("therapists.Unbook")
-                                            : t("therapists.Book")
+                                            ? t("dashboard:therapists.Unbook")
+                                            : t("dashboard:therapists.Book")
                                     }
                                     buttonSize='lg'
                                     transition={false}

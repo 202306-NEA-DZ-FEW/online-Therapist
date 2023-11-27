@@ -74,9 +74,11 @@
     "therapistDashboard": {
         "waitingAppointments": {
             "info": "No appointments booked with you yet!",
+            "success1": "The appointment has been confirmed successfully!",
             "error1": "Error confirming appointment:",
             "warning": "Please set the appointment date and time.",
             "error2": "Invalid date and time",
+            "success2": "The new session date has beet set successfully!, Please confirm the appointment.",
             "error3": "Error setting new session date:"
         },
         "patientsList": {
@@ -86,7 +88,7 @@
     },
     "patientDashboard": {
         "therapists": {
-            "success": "Appointment booked successfully.",
+            "success1": "Appointment booked successfully.",
             "success2": "Appointment canceled successfully.",
             "info": "No matching therapists fit your requirement found yet!",
             "error1": "Appointment could not be updated!"
