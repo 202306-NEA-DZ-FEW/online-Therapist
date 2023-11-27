@@ -1,35 +1,35 @@
-import { doc, getDoc, updateDoc } from "firebase/firestore";
-import Image from "next/image";
-import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
-import { withTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Spinner from "public/loading.svg";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import {doc, getDoc, updateDoc} from "firebase/firestore"
+import Image from "next/image"
+import {useSearchParams} from "next/navigation"
+import {useRouter} from "next/router"
+import {withTranslation} from "next-i18next"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import Spinner from "public/loading.svg"
+import {useState} from "react"
+import {useEffect} from "react"
+import {useForm} from "react-hook-form"
+import {toast} from "react-toastify"
 
-import Button from "@/components/elements/Button";
-import Input from "@/components/Profile/Input";
-import ProfileImage from "@/components/ProfileImage";
+import Button from "@/components/elements/Button"
+import Input from "@/components/Profile/Input"
+import ProfileImage from "@/components/ProfileImage"
 
-import { useAuth } from "@/context/AuthContext";
-import Layout from "@/layout/Layout";
-import { db } from "@/util/firebase";
-const Profile = ({ t }) => {
-    const router = useRouter();
-    const searchParams = useSearchParams();
+import {useAuth} from "@/context/AuthContext"
+import Layout from "@/layout/Layout"
+import {db} from "@/util/firebase"
+const Profile = ({t}) => {
+    const router = useRouter()
+    const searchParams = useSearchParams()
 
     /** state */
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false
-    );
+    )
 
-    const { user } = useAuth();
+    const {user} = useAuth()
     const [photo] = useState(
-        localStorage?.getItem(`therapist_image_${user?.uid}`)
-    );
+        localStorage?.getItem(`profile_${user?.uid}`)
+    )
     const [formData, setFormData] = useState({
         fullname: "",
         bio: "",
@@ -40,60 +40,60 @@ const Profile = ({ t }) => {
         gender: "",
         specialty: "",
         availability: "",
-    });
+    })
 
     const onChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+        const {name, value} = e.target
+        setFormData({...formData, [name]: value})
+    }
 
-    const { register, handleSubmit, formState } = useForm();
-    const { errors } = formState;
+    const {register, handleSubmit, formState} = useForm()
+    const {errors} = formState
     const enableEdit = (e) => {
-        e.preventDefault();
-        setEdit((edit) => !edit);
-        router.query.edit = true;
-        router.push(router);
-    };
+        e.preventDefault()
+        setEdit((edit) => !edit)
+        router.query.edit = true
+        router.push(router)
+    }
     const disableEdit = () => {
-        setEdit((edit) => !edit);
-        router.query = "";
-        router.push(router);
-    };
+        setEdit((edit) => !edit)
+        router.query = ""
+        router.push(router)
+    }
     const onSubmit = async () => {
         try {
-            const therapistRef = doc(db, "therapists", user.uid);
-            await updateDoc(therapistRef, { ...formData, photoURL: photo });
-            toast.success(t("therapists:profile.notifications.updateSuccess"));
+            const therapistRef = doc(db, "therapists", user.uid)
+            await updateDoc(therapistRef, {...formData, photoURL: photo})
+            toast.success(t("therapists:profile.notifications.updateSuccess"))
         } catch (err) {
             toast.error(`Error ${err} `, {
                 position: toast.POSITION.BOTTOM_LEFT,
-            });
+            })
         }
-    };
+    }
     const redirectUser = () => {
         if (!user) {
-            router.push("/login");
+            router.push("/login")
         } else if (user?.isUser) {
-            router.push("/profile");
+            router.push("/profile")
         }
-    };
+    }
     useEffect(() => {
-        redirectUser();
+        redirectUser()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [user]);
-    async function fetchTherapist() {
-        const docRef = doc(db, "therapists", localStorage.getItem("uid"));
-        const docSnap = await getDoc(docRef);
+    }, [user])
+    async function fetchTherapist () {
+        const docRef = doc(db, "therapists", localStorage.getItem("uid"))
+        const docSnap = await getDoc(docRef)
 
-        setFormData({ ...docSnap.data() });
+        setFormData({...docSnap.data()})
     }
 
     useEffect(() => {
-        fetchTherapist();
+        fetchTherapist()
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [])
 
     return (
         <>
@@ -455,16 +455,16 @@ const Profile = ({ t }) => {
                                 </div>
                             </Layout>
                         )) || (
-                            <div className='grid place-items-center h-screen '>
-                                <Image
-                                    src={Spinner}
-                                    alt='loading'
-                                    height={150}
-                                    width={150}
-                                    className='h-28 w-28'
-                                />
-                            </div>
-                        )}
+                                <div className='grid place-items-center h-screen '>
+                                    <Image
+                                        src={Spinner}
+                                        alt='loading'
+                                        height={150}
+                                        width={150}
+                                        className='h-28 w-28'
+                                    />
+                                </div>
+                            )}
                     </>
                 ) || (
                     <div className='grid place-items-center h-screen '>
@@ -479,16 +479,16 @@ const Profile = ({ t }) => {
                 )
             )}
         </>
-    );
-};
+    )
+}
 
-export default withTranslation("therapists")(Profile);
+export default withTranslation("therapists")(Profile)
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps ({locale}) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common", "therapists"])),
             // Will be passed to the page component as props.
         },
-    };
+    }
 }
