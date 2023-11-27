@@ -109,12 +109,11 @@ const Blogs = ({ posts }) => {
 
 export default Blogs;
 
-export async function getServerSideProps({ locale }) {
-    const query = groq`*[_type == "post" && language == $locale]{
+export async function getStaticProps({ locale }) {
+    const query = groq`*[_type == "post" && language == $locale] | order(_createdAt desc){
     ...,
     author->,
-    categories[]->
-    | order(created_At desc)
+    categories[]-> 
   }`;
     const posts = await client.fetch(query, { locale });
 
