@@ -23,7 +23,7 @@
         "level6": "Other",
         "male": "Male",
         "female": "Female",
-        "save": "SAVE CHANGES",
+        "save": "SAVE",
         "edit": "EDIT",
         "deleteAccount": "DELETE ACCOUNT",
         "security": "Security",
@@ -35,7 +35,7 @@
         "yes": "Yes",
         "no": "No",
         "cards": "Cards Added",
-        "tickets": "Tickets Remaining",
+        "tickets": "Tickets",
         "deleteConfirmation": "Your account will be permanently deleted. Do you confirm this action?",
         "notifications": {
             "updateSuccess": "Profile information updated successfully ",

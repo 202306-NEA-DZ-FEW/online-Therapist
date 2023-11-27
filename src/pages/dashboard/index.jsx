@@ -18,7 +18,7 @@ export default function Dashboard() {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common", "booking"])),
+            ...(await serverSideTranslations(locale, ["common", "booking", "dashboard"])),
             // Will be passed to the page component as props
         },
     };

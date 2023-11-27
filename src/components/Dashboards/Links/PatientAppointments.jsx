@@ -13,6 +13,14 @@ import { useTranslation } from "next-i18next";
 import { toast } from "react-toastify";
 
 const PatientAppointments = () => {
+
+// import { UserAuth } from "@/context/AuthContext";
+import { useTranslation } from "next-i18next";
+
+const PatientAppointments = () => {
+    const { t } = useTranslation("dashboard");
+    // const { user } = UserAuth();
+
     const [readyAppointments, setReadyAppointments] = useState([]);
     const { t } = useTranslation("booking");
 
@@ -66,7 +74,7 @@ const PatientAppointments = () => {
         <div className=''>
             <div className='font-atkinson p-2 '>
                 <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                    Appointments List
+                    {t("patientAppointments.heading")}
                 </h1>
             </div>
             <ul className='flex flex-wrap gap-8 m-4'>
@@ -77,29 +85,36 @@ const PatientAppointments = () => {
                     >
                         <img
                             src={appointment.therapistPhotoURL}
-                            alt={`Photo of ${appointment.therapistFullName}`}
+                            alt={`${t("patientAppointments.photo")} ${
+                                appointment.therapistFullName
+                            }`}
                             className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-4 border-Teal rounded-full'
                         />
                         <div className='font-atkinson flex flex-col gap-y-2'>
                             <p>
-                                <span className='text-Teal'>Therapist :</span>
+                                <span className='text-Teal'>
+                                    {t("patientAppointments.therapist")}
+                                </span>
                                 {` ${appointment.therapistFullName}`}
                             </p>
 
                             <p>
                                 <span className='text-Teal'>
-                                    Counseling Type :
+                                    {t("patientAppointments.counseling")}
                                 </span>
                                 {` ${appointment.counselingType}`}
                             </p>
                             <p>
                                 <span className='text-Teal'>
-                                    Session Date :
+                                    {t("patientAppointments.date")}
                                 </span>
                                 {` ${appointment.appointmentDate}`}
                             </p>
                             <p>
-                                <span className='text-Teal'>Time : </span>
+                                <span className='text-Teal'>
+                                    {" "}
+                                    {t("patientAppointments.time")}
+                                </span>
                                 {` ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}
                             </p>
                         </div>
@@ -107,31 +122,6 @@ const PatientAppointments = () => {
                 ))}
             </ul>
         </div>
-        // <div>
-        //     <h2>Appointments List</h2>
-        //     <ul>
-        //         {readyAppointments.map((appointment) => (
-        //             <li
-        //                 key={appointment.id}
-        //                 className='bg-white rounded-xl shadow-xl p-4 m-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4'
-        //             >
-        //                 <img
-        //                     src={appointment.therapistPhotoURL}
-        //                     alt={`Photo of ${appointment.therapistFullName}`}
-        //                     className='w-full h-auto mb-4 rounded-lg'
-        //                 />
-        //                 <p>{`Therapist: ${appointment.therapistFullName}`}</p>
-
-        //                 {/* <p>{`Name: ${appointment.userFirstName} ${appointment.userLastName}`}</p> */}
-        //                 <p>{`Counseling Type: ${appointment.counselingType}`}</p>
-        //                 <p>
-        //                     {`Session Date: ${appointment.appointmentDate} ${appointment.appointmentTime} ${appointment.appointmentTimeZone}`}{" "}
-        //                 </p>
-        //                 {/* Add other appointment details */}
-        //             </li>
-        //         ))}
-        //     </ul>
-        // </div>
     );
 };
 

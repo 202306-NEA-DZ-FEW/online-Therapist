@@ -20,7 +20,10 @@ import timeZones from "@/util/timeZones";
 import { useTranslation } from "next-i18next";
 import { toast } from "react-toastify";
 
+
 const TherapistsMatches = () => {
+    const { t } = useTranslation("dashboard");
+
     const [therapists, setTherapists] = useState([]);
     const { user } = UserAuth();
     const [bookingStatus, setBookingStatus] = useState({}); // Track booking status
@@ -266,7 +269,7 @@ const TherapistsMatches = () => {
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                Therapists Matches list
+                {t("therapists.heading")}
             </h1>
 
             <ul className='flex flex-col gap-y-8 lg:m-4'>
@@ -284,7 +287,9 @@ const TherapistsMatches = () => {
                             <p>{` ${therapist.specialty}`}</p>
                         </div>
                         <div className='w-[250px] lg:w-96 pt-4 '>
-                            <p className='text-gray-500'>Details</p>
+                            <p className='text-gray-500'>
+                                {t("therapists.details")}
+                            </p>
                             <p>
                                 <span className='text-Gray font-atkinson'></span>
                                 {`${therapist.bio}`}
@@ -294,7 +299,7 @@ const TherapistsMatches = () => {
                         <div className='lg:flex lg:flex-col lg:gap-y-8 flex flex-col jutsify-center items-center gap-y-8'>
                             <div className='flex flex-col gap-y-2'>
                                 <label className='text-Gray font-atkinson'>
-                                    Appointment Date & Time:
+                                    {t("therapists.Date")}
                                 </label>
                                 <DatePicker
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -306,10 +311,12 @@ const TherapistsMatches = () => {
                                     timeFormat='HH:mm'
                                     timeIntervals={15}
                                     dateFormat='MM-dd-yyyy HH:mm'
-                                    placeholderText='Select date and time'
+                                    placeholderText={t(
+                                        "therapists.placeholder"
+                                    )}
                                 />
                                 <label className='text-Gray font-atkinson'>
-                                    Time Zone:
+                                    {t("therapists.Zone")}
                                 </label>
                                 <select
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -337,8 +344,8 @@ const TherapistsMatches = () => {
                                 <Button
                                     buttonText={
                                         bookingStatus[therapist.id]
-                                            ? "Unbook"
-                                            : "Book"
+                                            ? t("therapists.Unbook")
+                                            : t("therapists.Book")
                                     }
                                     buttonSize='lg'
                                     transition={false}

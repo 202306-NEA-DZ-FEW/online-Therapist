@@ -1,0 +1,44 @@
+{
+    "dashboard": "Dashboard",
+    "patientAppointments": {
+        "heading": "Appointments List",
+        "therapist": "Therapist :",
+        "counseling": "Counseling Type :",
+        "date": "Session Date :",
+        "time": "Time :",
+        "photo": "Photo of"
+    },
+    "therapists": {
+        "heading": "Therapists Matches list",
+        "details": "Details",
+        "Date": "Appointment Date & Time:",
+        "placeholder": "Select date and time",
+        "Zone": "Time Zone:",
+        "Book": "Book",
+        "Unbook": "Unbook"
+    },
+    "waitingAppointments": {
+        "heading": "Waiting Appointments",
+        "date": "Date :",
+        "counseling": "Counseling Type :",
+        "first": "First Session:",
+        "qualities": "Counselor Qualities:",
+        "issues": "Issues:",
+        "specification": "Specification:",
+        "newDate": "Set New Session Date:",
+        "selectnew": "Select new date and time",
+        "zone": "Time Zone:",
+        "confirmed": "Confirmed",
+        "confirm": "Confirm",
+        "setNew": "Set New Date"
+    },
+    "therapistAppointments": {
+        "patient": "Patient :",
+        "name": "Name:",
+        "status": "Marital Status:"
+    },
+    "patients": {
+        "patient": "Patients list",
+        "name": "Name:"
+    }
+}
