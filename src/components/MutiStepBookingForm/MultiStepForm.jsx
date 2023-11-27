@@ -11,6 +11,7 @@ import { db } from "@/util/firebase";
 import { UserAuth } from "@/context/AuthContext";
 import BookingStepFinal from "./BookingStepFinal";
 import { useTranslation } from "next-i18next";
+import { toast } from "react-toastify";
 
 const steps = ["1", "2", "3", "4", "5", "6", "7"];
 const initialFormData = {

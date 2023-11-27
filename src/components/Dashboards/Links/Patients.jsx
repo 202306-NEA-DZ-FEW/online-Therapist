@@ -3,6 +3,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { collection, query, where, getDocs, getDoc } from "firebase/firestore";
 import { useTranslation } from "next-i18next";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const PatientsList = () => {
     const [patientsList, setPatientsList] = useState([]);

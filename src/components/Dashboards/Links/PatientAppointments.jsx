@@ -10,6 +10,7 @@ import {
 import { auth, db } from "@/util/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useTranslation } from "next-i18next";
+import { toast } from "react-toastify";
 
 const PatientAppointments = () => {
     const [readyAppointments, setReadyAppointments] = useState([]);

@@ -18,6 +18,7 @@ import { UserAuth } from "@/context/AuthContext";
 import { auth, db } from "@/util/firebase";
 import timeZones from "@/util/timeZones";
 import { useTranslation } from "next-i18next";
+import { toast } from "react-toastify";
 
 const TherapistsMatches = () => {
     const [therapists, setTherapists] = useState([]);

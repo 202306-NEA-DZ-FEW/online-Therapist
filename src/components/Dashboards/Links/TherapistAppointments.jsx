@@ -3,6 +3,7 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { auth, db } from "@/util/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useTranslation } from "next-i18next";
+import { toast } from "react-toastify";
 
 const TherapistAppointments = ({ therapistId }) => {
     const [readyAppointments, setReadyAppointments] = useState([]);
