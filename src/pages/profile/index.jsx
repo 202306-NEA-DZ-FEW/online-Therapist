@@ -1,36 +1,36 @@
 // Importez les modules nécessaires
-import {deleteDoc, doc, getDoc, updateDoc} from "firebase/firestore"
-import Link from "next/link"
-import {useSearchParams} from "next/navigation"
-import {useRouter} from "next/router"
-import {withTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import React, {useEffect, useState} from "react"
-import {useForm} from "react-hook-form"
-import {toast} from "react-toastify"
+import { deleteDoc, doc, getDoc, updateDoc } from "firebase/firestore";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
+import { withTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 // Importez les composants nécessaires
-import Button from "@/components/elements/Button"
-import Input from "@/components/Profile/Input"
-import ProfileImage from "@/components/ProfileImage"
+import Button from "@/components/elements/Button";
+import Input from "@/components/Profile/Input";
+import ProfileImage from "@/components/ProfileImage";
 
 // Importez le contexte Auth
-import {useAuth, UserAuth} from "@/context/AuthContext"
-import Layout from "@/layout/Layout"
-import {db} from "@/util/firebase"
+import { useAuth, UserAuth } from "@/context/AuthContext";
+import Layout from "@/layout/Layout";
+import { db } from "@/util/firebase";
 
-const User = ({t}) => {
-    const router = useRouter()
-    const searchParams = useSearchParams()
-    const {totalTickets, cards} = UserAuth()
+const User = ({ t }) => {
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const { totalTickets, cards } = UserAuth();
 
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false
-    )
-    const {user} = useAuth()
+    );
+    const { user } = useAuth();
     const [photo] = useState(
         localStorage?.getItem(`therapist_image_${user?.uid}`)
-    )
+    );
     const [formData, setFormData] = useState({
         firstname: "",
         lastname: "",
@@ -44,87 +44,87 @@ const User = ({t}) => {
         familySize: "",
         gender: "",
         phoneNumber: "",
-    })
+    });
 
     const onChange = (e) => {
-        const {name, value} = e.target
-        setFormData({...formData, [name]: value})
-    }
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
-    const {register, handleSubmit, formState} = useForm()
-    const {errors} = formState
+    const { register, handleSubmit, formState } = useForm();
+    const { errors } = formState;
     const enableEdit = (e) => {
-        e.preventDefault()
-        setEdit((edit) => !edit)
-        router.query.edit = true
-        router.push(router)
-    }
+        e.preventDefault();
+        setEdit((edit) => !edit);
+        router.query.edit = true;
+        router.push(router);
+    };
     const onSubmit = async () => {
         try {
-            const userRef = doc(db, "users", user.uid)
-            await updateDoc(userRef, {...formData, photoURL: photo})
-            toast.success(t("users:userProfile.notifications.updateSuccess"))
+            const userRef = doc(db, "users", user.uid);
+            await updateDoc(userRef, { ...formData, photoURL: photo });
+            toast.success(t("users:userProfile.notifications.updateSuccess"));
         } catch (err) {
             toast.error(`Error ${err} `, {
                 position: toast.POSITION.BOTTOM_LEFT,
-            })
+            });
         }
-    }
+    };
 
     const onDeleteAccount = async () => {
         if (window.confirm(t("users:userProfile.deleteConfirmation"))) {
             try {
-                const userRef = doc(db, "users", user.uid)
+                const userRef = doc(db, "users", user.uid);
 
                 // Vérifier si le document existe avant de le supprimer
-                const docSnap = await getDoc(userRef)
+                const docSnap = await getDoc(userRef);
 
                 if (docSnap.exists()) {
                     // Document existe, vous pouvez le supprimer en toute sécurité.
-                    await deleteDoc(userRef)
+                    await deleteDoc(userRef);
                     // Rediriger vers la page de connexion
-                    router.push("/login")
+                    router.push("/login");
                 } else {
                     // eslint-disable-next-line no-console
-                    console.error("Document does not exist.")
-                    toast.error(t("users:userProfile.deleteError"))
+                    console.error("Document does not exist.");
+                    toast.error(t("users:userProfile.deleteError"));
                 }
             } catch (error) {
                 // eslint-disable-next-line no-console
-                console.error("Error deleting account", error)
-                toast.error(t("users:userProfile.deleteError"))
+                console.error("Error deleting account", error);
+                toast.error(t("users:userProfile.deleteError"));
             }
         }
-    }
+    };
 
-    async function fetchUsers () {
+    async function fetchUsers() {
         try {
             // eslint-disable-next-line react-hooks/rules-of-hooks
-            const user = useAuth().user
+            const user = useAuth().user;
 
             if (user) {
-                const docRef = doc(db, "users", user.uid)
-                const docSnap = await getDoc(docRef)
+                const docRef = doc(db, "users", user.uid);
+                const docSnap = await getDoc(docRef);
 
                 if (docSnap.exists()) {
-                    setFormData({...docSnap.data()})
+                    setFormData({ ...docSnap.data() });
                 } else {
                     // eslint-disable-next-line no-console
-                    console.error("Document does not exist")
+                    console.error("Document does not exist");
                 }
             } else {
                 // eslint-disable-next-line no-console
-                console.error("User is null")
+                console.error("User is null");
             }
         } catch (error) {
             // eslint-disable-next-line no-console
-            console.error("Error fetching user data", error)
+            console.error("Error fetching user data", error);
         }
     }
 
     useEffect(() => {
-        fetchUsers()
-    }, [])
+        fetchUsers();
+    }, []);
     return (
         <Layout>
             <div className='container mx-auto font-atkinson '>
@@ -148,14 +148,13 @@ const User = ({t}) => {
                                 <Input
                                     label={t("users:userProfile.firstname")}
                                     name='firstname'
-
                                     isDisabled={!edit}
                                     placeholder={t(
                                         "users:userProfile.firstname"
                                     )}
                                     errorMessage={errors.firstname?.message}
                                     è
-                                    register={{...register("firstname")}}
+                                    register={{ ...register("firstname") }}
                                     value={formData.firstname}
                                     onChange={onChange}
                                 />
@@ -164,13 +163,12 @@ const User = ({t}) => {
                                 <Input
                                     label={t("users:userProfile.lastname")}
                                     name='lastname'
-
                                     isDisabled={!edit}
                                     placeholder={t(
                                         "users:userProfile.lastname"
                                     )}
                                     errorMessage={errors.lastname?.message}
-                                    register={{...register("lastname")}}
+                                    register={{ ...register("lastname") }}
                                     value={formData.lastname}
                                     onChange={onChange}
                                 />
@@ -180,13 +178,12 @@ const User = ({t}) => {
                                     label={t("users:userProfile.birthDate")}
                                     name='birthDate'
                                     type='date'
-
                                     isDisabled={!edit}
                                     placeholder={t(
                                         "users:userProfile.birthDate"
                                     )}
                                     errorMessage={errors.birthDate?.message}
-                                    register={{...register("birthDate")}}
+                                    register={{ ...register("birthDate") }}
                                     value={formData.birthDate}
                                     onChange={onChange}
                                 />
@@ -196,11 +193,10 @@ const User = ({t}) => {
                                     label={t("users:userProfile.email")}
                                     type='email'
                                     name='email'
-
                                     isDisabled={!edit}
                                     placeholder={t("users:userProfile.email")}
                                     errorMessage={errors.email?.message}
-                                    register={{...register("email")}}
+                                    register={{ ...register("email") }}
                                     value={formData.email}
                                     onChange={onChange}
                                 />
@@ -225,7 +221,7 @@ const User = ({t}) => {
                             </div>
 
                             <div className=' lg:mx-0 mx-2 p-1 my-5 gap-2 min-w-max '>
-                                <div className="grid w-full grid-cols-1 md:grid-cols-3">
+                                <div className='grid w-full grid-cols-1 md:grid-cols-3'>
                                     <label
                                         htmlFor='gender'
                                         className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
@@ -238,7 +234,7 @@ const User = ({t}) => {
                                             name='gender'
                                             required
                                             className='border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer cursor-pointer'
-                                            register={{...register("gender")}}
+                                            register={{ ...register("gender") }}
                                             value={formData.gender}
                                             onChange={onChange}
                                         >
@@ -266,7 +262,6 @@ const User = ({t}) => {
                                         )}
                                         type='number'
                                         name='familySize'
-
                                         isDisabled={!edit}
                                         placeholder={t(
                                             "users:userProfile.familySize"
@@ -284,8 +279,7 @@ const User = ({t}) => {
                             </div>
 
                             <div className=' lg:mx-0 mx-2 p-1 my-5 gap-2 min-w-max'>
-                                <div className="grid grid-col-1 md:grid-cols-3">
-
+                                <div className='grid grid-col-1 md:grid-cols-3'>
                                     <label className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'>
                                         {t("users:userProfile.educationLevel")}
                                     </label>
@@ -327,7 +321,6 @@ const User = ({t}) => {
                                             {errors.educationLevel?.message}
                                         </p>
                                     </div>
-
                                 </div>
                             </div>
                             <h1 className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5'>
@@ -338,13 +331,12 @@ const User = ({t}) => {
                                     label={t("users:userProfile.password")}
                                     type='password'
                                     name='password'
-
                                     isDisabled={!edit}
                                     placeholder={t(
                                         "users:userProfile.password"
                                     )}
                                     errorMessage={errors.password?.message}
-                                    register={{...register("password")}}
+                                    register={{ ...register("password") }}
                                     value={formData.password}
                                     onChange={onChange}
                                 />
@@ -407,7 +399,7 @@ const User = ({t}) => {
                             </h1>
                             <div className='flex flex-row  gap-5 my-14 lg:ml-3 lg:rtl:mr-4'>
                                 <div>
-                                    <p className="text-lg md:text-xl mb-1">
+                                    <p className='text-lg md:text-xl mb-1'>
                                         {totalTickets}{" "}
                                         {t("users:userProfile.tickets")}
                                     </p>
@@ -423,7 +415,7 @@ const User = ({t}) => {
                                     </Link>
                                 </div>
                                 <div>
-                                    <p className="text-lg md:text-xl mb-1">
+                                    <p className='text-lg md:text-xl mb-1'>
                                         {cards && cards.length}{" "}
                                         {t("users:userProfile.cards")}
                                     </p>
@@ -444,11 +436,11 @@ const User = ({t}) => {
                 )) || <div></div>}
             </div>
         </Layout>
-    )
-}
-export default withTranslation("users")(User)
+    );
+};
+export default withTranslation("users")(User);
 
-export async function getStaticProps ({locale}) {
+export async function getStaticProps({ locale }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, [
@@ -458,5 +450,5 @@ export async function getStaticProps ({locale}) {
             ])),
             // Will be passed to the page component as props.
         },
-    }
+    };
 }

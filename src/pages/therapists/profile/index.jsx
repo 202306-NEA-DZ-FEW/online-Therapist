@@ -1,34 +1,34 @@
-import {doc, getDoc, updateDoc} from "firebase/firestore"
-import {useSearchParams} from "next/navigation"
-import {useRouter} from "next/router"
-import {withTranslation} from "next-i18next"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import {useState} from "react"
-import {useEffect} from "react"
-import {useForm} from "react-hook-form"
-import {toast} from "react-toastify"
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
+import { withTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
-import Button from "@/components/elements/Button"
-import Input from "@/components/Profile/Input"
-import ProfileImage from "@/components/ProfileImage"
+import Button from "@/components/elements/Button";
+import Input from "@/components/Profile/Input";
+import ProfileImage from "@/components/ProfileImage";
 
-import {useAuth} from "@/context/AuthContext"
-import Layout from "@/layout/Layout"
-import {db} from "@/util/firebase"
+import { useAuth } from "@/context/AuthContext";
+import Layout from "@/layout/Layout";
+import { db } from "@/util/firebase";
 
-const Profile = ({t}) => {
-    const router = useRouter()
-    const searchParams = useSearchParams()
+const Profile = ({ t }) => {
+    const router = useRouter();
+    const searchParams = useSearchParams();
 
     /** state */
     const [edit, setEdit] = useState(
         searchParams.get("edit") == "true" ? true : false
-    )
+    );
 
-    const {user} = useAuth()
+    const { user } = useAuth();
     const [photo] = useState(
         localStorage?.getItem(`therapist_image_${user?.uid}`)
-    )
+    );
     const [formData, setFormData] = useState({
         fullname: "",
         bio: "",
@@ -39,50 +39,49 @@ const Profile = ({t}) => {
         gender: "",
         specialty: "",
         availability: "",
-    })
+    });
 
     const onChange = (e) => {
-        const {name, value} = e.target
-        setFormData({...formData, [name]: value})
-    }
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
-    const {register, handleSubmit, formState} = useForm()
-    const {errors} = formState
+    const { register, handleSubmit, formState } = useForm();
+    const { errors } = formState;
     const enableEdit = (e) => {
-        e.preventDefault()
-        setEdit((edit) => !edit)
-        router.query.edit = true
-        router.push(router)
-    }
+        e.preventDefault();
+        setEdit((edit) => !edit);
+        router.query.edit = true;
+        router.push(router);
+    };
     const disableEdit = () => {
-        setEdit((edit) => !edit)
-        router.query = ''
-        router.push(router)
-
-    }
+        setEdit((edit) => !edit);
+        router.query = "";
+        router.push(router);
+    };
     const onSubmit = async () => {
         try {
-            const therapistRef = doc(db, "therapists", user.uid)
-            await updateDoc(therapistRef, {...formData, photoURL: photo})
-            toast.success(t("therapists:profile.notifications.updateSuccess"))
+            const therapistRef = doc(db, "therapists", user.uid);
+            await updateDoc(therapistRef, { ...formData, photoURL: photo });
+            toast.success(t("therapists:profile.notifications.updateSuccess"));
         } catch (err) {
             toast.error(`Error ${err} `, {
                 position: toast.POSITION.BOTTOM_LEFT,
-            })
+            });
         }
-    }
-    async function fetchTherapist () {
-        const docRef = doc(db, "therapists", localStorage.getItem("uid"))
-        const docSnap = await getDoc(docRef)
+    };
+    async function fetchTherapist() {
+        const docRef = doc(db, "therapists", localStorage.getItem("uid"));
+        const docSnap = await getDoc(docRef);
 
-        setFormData({...docSnap.data()})
+        setFormData({ ...docSnap.data() });
     }
 
     useEffect(() => {
-        fetchTherapist()
+        fetchTherapist();
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, []);
 
     return (
         <Layout>
@@ -107,13 +106,12 @@ const Profile = ({t}) => {
                                     isDisabled={!edit}
                                     placeholder=''
                                     errorMessage={errors.fullname?.message}
-                                    register={{...register("fullname")}}
+                                    register={{ ...register("fullname") }}
                                     value={formData.fullname}
                                     onChange={onChange}
                                 />
                             </div>
                             <div className='lg:mx-0 mx-2 p-1 flex items-center my-5 gap-2 min-w-max '>
-
                                 <div className='w-full grid grid-cols-1 md:grid-cols-3  items-start my-5 gap-2'>
                                     <label
                                         htmlFor='bio'
@@ -126,7 +124,7 @@ const Profile = ({t}) => {
                                         placeholder=''
                                         disabled={!edit}
                                         name='bio'
-                                        register={{...register("bio")}}
+                                        register={{ ...register("bio") }}
                                         value={formData.bio}
                                         onChange={onChange}
                                     ></textarea>
@@ -142,7 +140,7 @@ const Profile = ({t}) => {
                                     type='date'
                                     isDisabled={!edit}
                                     errorMessage={errors.birthdate?.message}
-                                    register={{...register("birthdate")}}
+                                    register={{ ...register("birthdate") }}
                                     value={formData.birthdate}
                                     onChange={onChange}
                                 />
@@ -155,7 +153,7 @@ const Profile = ({t}) => {
                                     isDisabled={!edit}
                                     placeholder=''
                                     errorMessage={errors.email?.message}
-                                    register={{...register("email")}}
+                                    register={{ ...register("email") }}
                                     value={formData.email}
                                     onChange={onChange}
                                 />
@@ -168,7 +166,7 @@ const Profile = ({t}) => {
                                     isDisabled={!edit}
                                     placeholder=''
                                     errorMessage={errors.phone?.message}
-                                    register={{...register("phone")}}
+                                    register={{ ...register("phone") }}
                                     value={formData.phone}
                                     onChange={onChange}
                                 />
@@ -181,7 +179,7 @@ const Profile = ({t}) => {
                                         name='age'
                                         isDisabled={!edit}
                                         placeholder=''
-                                        register={{...register("age")}}
+                                        register={{ ...register("age") }}
                                         value={formData.age}
                                         onChange={onChange}
                                     />
@@ -191,17 +189,14 @@ const Profile = ({t}) => {
                                 </div>
                             </div>
                             <div className='lg:mx-0 mx-2 mt-5 -mb-5 p-1 flex justify-between items-center  min-w-max'>
-
                                 <div className=' grid grid-cols-1 md:grid-cols-3 w-full '>
                                     <div className='flex justify-between items-start '>
                                         <label
                                             htmlFor='gender'
                                             className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
                                         >
-
                                             {t("therapists:profile.gender")}
                                         </label>
-
                                     </div>
                                     <div className='w-full flex flex-col md:col-span-2'>
                                         <select
@@ -209,7 +204,7 @@ const Profile = ({t}) => {
                                             name='gender'
                                             required
                                             className='  border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer cursor-pointer'
-                                            register={{...register("gender")}}
+                                            register={{ ...register("gender") }}
                                             value={formData.gender}
                                             onChange={onChange}
                                         >
@@ -227,16 +222,13 @@ const Profile = ({t}) => {
                                             {errors.gender?.message}
                                         </p>
                                     </div>
-                                    <div className="lg:mx-0 mx-2 p-1 flex items-center my-5 gap-2">
-
-                                    </div>
+                                    <div className='lg:mx-0 mx-2 p-1 flex items-center my-5 gap-2'></div>
                                 </div>
                             </div>
 
                             <div className='lg:mx-0 mx-2 p-1  flex items-center my-5 gap-2 min-w-max '>
                                 <div className='w-full grid grid-cols-1 md:grid-cols-3'>
                                     <div className='flex justify-between items-start '>
-
                                         <label
                                             htmlFor='specialty'
                                             className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
@@ -249,7 +241,9 @@ const Profile = ({t}) => {
                                             disabled={!edit}
                                             name='specialty'
                                             className=' border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peer cursor-pointer'
-                                            register={{...register("specialty")}}
+                                            register={{
+                                                ...register("specialty"),
+                                            }}
                                             value={formData.specialty}
                                             onChange={onChange}
                                         >
@@ -258,7 +252,9 @@ const Profile = ({t}) => {
                                                 {t("therapists:profile.choose")}
                                             </option>
                                             <option value='individual counseling'>
-                                                {t("therapists:profile.individual")}
+                                                {t(
+                                                    "therapists:profile.individual"
+                                                )}
                                             </option>
                                             <option value='couple counseling'>
                                                 {t("therapists:profile.couple")}
@@ -273,15 +269,16 @@ const Profile = ({t}) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="lg:mx-0 mx-2 p-1  flex items-center my-5 gap-2 min-w-max ">
+                            <div className='lg:mx-0 mx-2 p-1  flex items-center my-5 gap-2 min-w-max '>
                                 <div className='grid grid-cols-1 md:grid-cols-3 w-full'>
                                     <div className='flex justify-between items-start '>
-
                                         <label
                                             htmlFor='specialty'
                                             className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'
                                         >
-                                            {t("therapists:profile.availability")}
+                                            {t(
+                                                "therapists:profile.availability"
+                                            )}
                                         </label>
                                     </div>
                                     <div className='w-full flex flex-col md:md:col-span-2'>
@@ -289,7 +286,9 @@ const Profile = ({t}) => {
                                             disabled={!edit}
                                             name='availability'
                                             className='border border-gray-300 h-12  pl-4 rounded-md p-2 focus:outline-none focus:border-Teal focus:ring-Teal invalid:border-red-500 invalid:text-red-500 peercursor-pointer'
-                                            register={{...register("availability")}}
+                                            register={{
+                                                ...register("availability"),
+                                            }}
                                             value={formData.availability}
                                             onChange={onChange}
                                         >
@@ -337,16 +336,16 @@ const Profile = ({t}) => {
                 )) || <div></div>}
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default withTranslation("therapists")(Profile)
+export default withTranslation("therapists")(Profile);
 
-export async function getStaticProps ({locale}) {
+export async function getStaticProps({ locale }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common", "therapists"])),
             // Will be passed to the page component as props.
         },
-    }
+    };
 }
