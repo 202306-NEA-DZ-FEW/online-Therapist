@@ -100,7 +100,7 @@ const MultiStepForm = ({ showStepNumber }) => {
                         userPhotoURL: photoURL,
                     });
                     alert(
-                        "Form data saved successfully, look for you matching list!"
+                        "Form data saved successfully, look for your therapists matching list!"
                     );
                     setStep("Final");
                 } else {

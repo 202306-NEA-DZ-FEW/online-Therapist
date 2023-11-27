@@ -2,6 +2,7 @@ import { UserAuth } from "@/context/AuthContext";
 import TherapistDashboard from "@/components/Dashboards/ThearapistDashboard";
 import PatientDashboard from "@/components/Dashboards/PatientDashboard";
 import Layout from "@/layout/Layout";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Dashboard() {
     const { user } = UserAuth();
@@ -12,4 +13,13 @@ export default function Dashboard() {
     };
 
     return <Layout>{renderContent()}</Layout>;
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common", "booking"])),
+            // Will be passed to the page component as props
+        },
+    };
 }

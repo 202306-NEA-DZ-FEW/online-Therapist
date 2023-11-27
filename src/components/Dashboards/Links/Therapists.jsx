@@ -17,6 +17,7 @@ import Button from "@/components/elements/Button";
 import { UserAuth } from "@/context/AuthContext";
 import { auth, db } from "@/util/firebase";
 import timeZones from "@/util/timeZones";
+import { useTranslation } from "next-i18next";
 
 const TherapistsMatches = () => {
     const [therapists, setTherapists] = useState([]);
@@ -26,6 +27,7 @@ const TherapistsMatches = () => {
     const [selectedDateTimes, setSelectedDateTimes] = useState({}); // Track selected appointment date and time for each therapist
     const [selectedTimeZone, setSelectedTimeZone] = useState("UTC");
     const [therapistsTimeZones, setTherapistsTimeZones] = useState({}); // Define a state to track the time zone for each therapist
+    const { t } = useTranslation("booking");
 
     const fetchTherapistsData = async (uid) => {
         const docRef = doc(db, "appointments", uid);
@@ -141,7 +143,9 @@ const TherapistsMatches = () => {
                 setActiveBooking(true);
             }
         } else {
-            console.log("No appointment data found for the user.");
+            toast.info(t("patientDashboard.therapists.info"), {
+                position: toast.POSITION.TOP_CENTER,
+            });
         }
     };
 
@@ -170,7 +174,10 @@ const TherapistsMatches = () => {
 
             // Check if the appointment date and time are set
             if (!selectedDateTime) {
-                alert("Please set the appointment date and time.");
+                toast.warning(
+                    t("therapistDashboard.waitingAppointments.warning"),
+                    { position: toast.POSITION.TOP_CENTER }
+                );
                 return;
             }
 
@@ -179,7 +186,12 @@ const TherapistsMatches = () => {
 
             // Check if formattedDateTime is a valid date
             if (!formattedDateTime.isValid()) {
-                console.error("Invalid date and time");
+                toast.error(
+                    t("therapistDashboard.waitingAppointments.error2"),
+                    {
+                        position: toast.POSITION.TOP_CENTER,
+                    }
+                );
                 return;
             }
 
@@ -195,7 +207,9 @@ const TherapistsMatches = () => {
                     appointmentTime: time, // Update the appointment time
                     appointmentTimeZone: timeZone, // Update the appointment time zone
                 });
-                alert("Appointment booked successfully.");
+                toast.success(t("patientDashboard.therapists.success1"), {
+                    position: toast.POSITION.TOP_CENTER,
+                });
                 setBookingStatus((prevStatus) => ({
                     ...prevStatus,
                     [therapist.id]: true,
@@ -211,7 +225,9 @@ const TherapistsMatches = () => {
                     appointmentTimeZone: null, // Clear the appointment time zone
                 });
 
-                alert("Appointment canceled successfully.");
+                toast.success(t("patientDashboard.therapists.success2"), {
+                    position: toast.POSITION.TOP_CENTER,
+                });
                 setBookingStatus((prevStatus) => ({
                     ...prevStatus,
                     [therapist.id]: false,
@@ -219,10 +235,10 @@ const TherapistsMatches = () => {
                 setActiveBooking(false);
             }
         } catch (error) {
-            console.error("Error updating document: ", error);
-            // alert("Error: Appointment could not be updated!");
-            console.log(
-                `Error: Appointment could not be updated!\n${error.message}`
+            toast.error(
+                `t("patientDashboard.therapists.error1"),
+                ${error.message}`,
+                { position: toast.POSITION.TOP_CENTER }
             );
         }
     };

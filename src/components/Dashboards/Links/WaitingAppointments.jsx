@@ -15,6 +15,8 @@ import DatePicker from "react-datepicker";
 import moment from "moment-timezone";
 import timeZones from "@/util/timeZones";
 import "react-datepicker/dist/react-datepicker.css";
+import { toast } from "react-toastify";
+import { useTranslation } from "next-i18next";
 
 const WaitingAppointments = () => {
     const [appointments, setAppointments] = useState([]);
@@ -22,6 +24,7 @@ const WaitingAppointments = () => {
     // Track selected appointment date and time for each therapist
     const [selectedDateTimes, setSelectedDateTimes] = useState({});
     const [selectedTimeZone, setSelectedTimeZone] = useState("UTC");
+    const { t } = useTranslation("booking");
 
     const fetchWaitingAppointments = async () => {
         onAuthStateChanged(auth, async (user) => {
@@ -39,7 +42,12 @@ const WaitingAppointments = () => {
                     }));
                     setAppointments(appointmentsData);
                 } else {
-                    alert("No appointments booked with you found!");
+                    toast.info(
+                        t("therapistDashboard.waitingAppointments.info"),
+                        {
+                            position: toast.POSITION.TOP_CENTER,
+                        }
+                    );
                 }
             }
         });
@@ -65,7 +73,11 @@ const WaitingAppointments = () => {
             const therapistRef = doc(db, "therapists", therapistId);
             await updateDoc(therapistRef, { approved: true });
         } catch (error) {
-            console.error("Error confirming appointment:", error);
+            toast.error(
+                `t("therapistDashboard.waitingAppointments.error1"),
+                ${error.message}`,
+                { position: toast.POSITION.TOP_CENTER }
+            );
         }
     };
 
@@ -75,7 +87,10 @@ const WaitingAppointments = () => {
 
             // Check if the appointment date and time are set
             if (!selectedDateTime) {
-                alert("Please set the appointment date and time.");
+                toast.warning(
+                    t("therapistDashboard.waitingAppointments.warning"),
+                    { position: toast.POSITION.TOP_CENTER }
+                );
                 return;
             }
 
@@ -84,7 +99,12 @@ const WaitingAppointments = () => {
 
             // Check if formattedDateTime is a valid date
             if (!formattedDateTime.isValid()) {
-                console.error("Invalid date and time");
+                toast.error(
+                    t("therapistDashboard.waitingAppointments.error2"),
+                    {
+                        position: toast.POSITION.TOP_CENTER,
+                    }
+                );
                 return;
             }
 
@@ -97,7 +117,7 @@ const WaitingAppointments = () => {
                 appointmentDate: newDate,
                 appointmentTime: newTime,
                 appointmentTimeZone: newTimeZone,
-                appointmentStatus: "in progress", // Change to the appropriate status
+                appointmentStatus: "in progress",
             });
 
             // Update local state to reflect the change
@@ -115,7 +135,11 @@ const WaitingAppointments = () => {
                 )
             );
         } catch (error) {
-            console.error("Error setting new session date:", error);
+            toast.error(
+                `t("therapistDashboard.waitingAppointments.error3"),
+                ${error.message}`,
+                { position: toast.POSITION.TOP_CENTER }
+            );
         }
     };
 

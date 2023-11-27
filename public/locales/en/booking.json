@@ -64,5 +64,24 @@
         "paragraph1": "Please check the therapists section in your dashboard to select your therapist and book with him.",
         "paragraph2": "Thank You.",
         "btnText": "Back To Home"
+    },
+    "therapistDashboard": {
+        "waitingAppointments": {
+            "info": "No appointments booked with you yet!",
+            "error1": "Error confirming appointment:",
+            "warning": "Please set the appointment date and time.",
+            "error2": "Invalid date and time",
+            "error3": "Error setting new session date:"
+        }
+        
+    },
+    "patientDashboard": {
+        "therapists": {
+            "success": "Appointment booked successfully.",
+            "success2": "Appointment canceled successfully.",
+            "info": "No matching therapists fit your requirement found yet!",
+            "error1": "Appointment could not be updated!"
+        }
+
     }
 }
