@@ -19,6 +19,7 @@ import { useTranslation } from "next-i18next";
 import Input from "@/components/elements/Input";
 import { UserAuth } from "@/context/AuthContext";
 import Button from "@/components/elements/Button";
+import { toast } from 'react-toastify';
 
 export default function SignUp() {
     const { t } = useTranslation("common");
@@ -74,7 +75,9 @@ export default function SignUp() {
             console.log("User signed up:", user);
             setIsSignUpSuccessful(true);
         } catch (error) {
-            console.error("Error signing up:", error);
+            if (error.code === "auth/email-already-in-use") {
+                toast.error(t("signup.error"));
+            } 
         }
     };
 
