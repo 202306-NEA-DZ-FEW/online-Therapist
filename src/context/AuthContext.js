@@ -129,14 +129,22 @@ export function AppWrapper({ children }) {
                 } else {
                     const isUser = true;
                     const isTherapist = false;
+                    const docRef = doc(db, "users", user.uid);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                    const { firstname, lastname } = docSnap.data();
                     setUser({
                         email: user.email,
                         uid: user.uid,
                         photoURL: user.photoURL || Profile.src,
-                        displayName: user.displayName,
+                        displayName: user.displayName || `${fullname} ${lastname}`,
                         isTherapist,
                         isUser,
                     });
+                    
+                    
+                    }
+                    
                     localStorage.setItem(`profile_${user.uid}`, user.photoURL);
                     localStorage.setItem("uid", user.uid);
                     localStorage.setItem("diplayname", user.displayName);
