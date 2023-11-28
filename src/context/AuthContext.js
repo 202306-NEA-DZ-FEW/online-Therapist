@@ -217,8 +217,33 @@ export function AppWrapper({ children }) {
             }
         };
 
+        const fetchConfirmedAppointments = async () => {
+            try {
+                const appointmentsQuery = query(
+                    collection(db, "appointments"),
+                    where("uid", "==", user.uid),
+                    where("appointmentStatus", "==", "ready")
+                );
+                const appointmentsSnapshot = await getDocs(appointmentsQuery);
+
+                // Iterate through the confirmed appointments and decrement tickets
+                appointmentsSnapshot.forEach(async (appointmentDoc) => {
+                    const appointmentData = appointmentDoc.data();
+                    const ticketId = appointmentData.ticketId; // Assuming you have a ticketId field in your appointments
+                    const userDocRef = doc(collection(db, "tickets"), user.uid);
+                    await updateDoc(userDocRef, {
+                        [`tickets.${ticketId}.quantity`]:
+                            FieldValue.increment(-1),
+                    });
+                });
+            } catch (error) {
+                console.error("Error fetching confirmed appointments:", error);
+            }
+        };
+
         if (user) {
             fetchTickets();
+            fetchConfirmedAppointments();
         }
     }, [user]);
 

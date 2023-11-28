@@ -15,9 +15,11 @@ import ProfileImage from "@/components/ProfileImage";
 import { useAuth } from "@/context/AuthContext";
 import Layout from "@/layout/Layout";
 import { db } from "@/util/firebase";
+import Link from "next/link";
 
 const Profile = ({ t }) => {
     const router = useRouter();
+    const language = router.locale;
     const searchParams = useSearchParams();
 
     /** state */
@@ -289,7 +291,7 @@ const Profile = ({ t }) => {
                                     </p>
                                 </div>
                             </div>
-                            <div className='flex flex-row justify-center gap-5 my-14 lg:ml-8 lg:rtl:mr-20'>
+                            <div className='flex flex-row justify-center text-center gap-5 my-14 lg:ml-8 lg:rtl:mr-20'>
                                 <button type='submit'>
                                     <Button
                                         buttonText={t(
@@ -308,6 +310,14 @@ const Profile = ({ t }) => {
                                     color='teal'
                                     clickFunction={enableEdit}
                                 />
+                                <Link href='../edit-password'>
+                                    <Button
+                                        rotate={language == "en" ? false : true}
+                                        buttonText={t(
+                                            "users:userProfile.editPassword"
+                                        )}
+                                    />
+                                </Link>
                             </div>
                         </form>
                     </div>
@@ -322,7 +332,11 @@ export default withTranslation("therapists")(Profile);
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common", "therapists"])),
+            ...(await serverSideTranslations(locale, [
+                "common",
+                "therapists",
+                "users",
+            ])),
             // Will be passed to the page component as props.
         },
     };

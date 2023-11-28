@@ -21,6 +21,7 @@ import { db } from "@/util/firebase";
 
 const User = ({ t }) => {
     const router = useRouter();
+    const language = router.locale;
     const searchParams = useSearchParams();
     const { totalTickets, cards } = UserAuth();
 
@@ -358,7 +359,7 @@ const User = ({ t }) => {
                                     onChange={onChange}
                                 />
                             </div>
-                            <div className='flex flex-row justify-center gap-4 my-14 lg:ml-8 lg:rtl:mr-20 md:mr-4 md:ml-4'>
+                            <div className='flex flex-row justify-center text-center gap-4 my-14 lg:ml-8 lg:rtl:mr-20 md:mr-4 md:ml-4'>
                                 <button type='submit'>
                                     <Button
                                         buttonText={t("users:userProfile.save")}
@@ -368,14 +369,23 @@ const User = ({ t }) => {
                                         type='submit'
                                     />
                                 </button>
-
-                                <Button
-                                    buttonText={t("users:userProfile.edit")}
-                                    disabled={edit}
-                                    transition={false}
-                                    color='teal'
-                                    clickFunction={enableEdit}
-                                />
+                                <button>
+                                    <Button
+                                        buttonText={t("users:userProfile.edit")}
+                                        disabled={edit}
+                                        transition={false}
+                                        color='teal'
+                                        clickFunction={enableEdit}
+                                    />
+                                </button>
+                                <Link href='./edit-password'>
+                                    <Button
+                                        rotate={language == "en" ? false : true}
+                                        buttonText={t(
+                                            "users:userProfile.editPassword"
+                                        )}
+                                    />
+                                </Link>
                                 <button onClick={onDeleteAccount}>
                                     <Button
                                         buttonText={t(

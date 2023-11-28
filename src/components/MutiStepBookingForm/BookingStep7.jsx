@@ -48,9 +48,6 @@ const BookingStep7 = ({
                     value={formData.specification}
                 />
             </div>
-            {/* <p className='lg:text-lg font-atkinson text-gray-900'>
-                {t("step7.paragraph2")}
-            </p> */}
             <div className='my-2 flex items-center'>
                 <input
                     id='agreeToTerms'

@@ -140,6 +140,7 @@
         "input2": "New password",
         "button": "change Password",
         "message": "Password updated successfully",
+        "error": "Error occurs during updating the password",
         "wrongPasswordError": "Incorrect old password entered. Please try again.",
         "Loading": "Loading...",
         "authError": "User is not authenticated.",

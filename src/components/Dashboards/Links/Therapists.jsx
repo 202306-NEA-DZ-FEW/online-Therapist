@@ -296,8 +296,7 @@ const TherapistsMatches = () => {
                                 {`${therapist.bio}`}
                             </p>
                         </div>
-
-                        <div className='lg:flex lg:flex-col lg:gap-y-8 flex flex-col jutsify-center items-center gap-y-8'>
+                        <div className='lg:flex lg:flex-col lg:gap-y-4 flex flex-col jutsify-center items-center gap-y-4'>
                             <div className='flex flex-col gap-y-2'>
                                 <label className='text-Gray font-atkinson'>
                                     {t("dashboard:therapists.Date")}
@@ -336,7 +335,11 @@ const TherapistsMatches = () => {
                                     ))}
                                 </select>
                             </div>
-
+                            <p className='text-center'>
+                                {t("dashboard:therapists.text1")}
+                                <br />
+                                {t("dashboard:therapists.text2")}
+                            </p>
                             <button
                                 onClick={() =>
                                     handleSubmitAppointment(therapist)
