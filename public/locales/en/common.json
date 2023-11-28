@@ -71,7 +71,8 @@
         "birthdate": "Birth Date",
         "login": "Log in",
         "signup": "Sign up",
-        "or": "Or"
+        "or": "Or",
+        "error": "Email already in use"
     },
     "signupthank": {
         "thankyou": "THANK YOU!",

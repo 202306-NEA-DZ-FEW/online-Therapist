@@ -5,8 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Profile from "public/profile.png";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import * as yup from "yup";
 
 import Button from "@/components/elements/Button";
@@ -18,7 +20,7 @@ import { auth } from "@/util/firebase";
 
 const Login = () => {
     const router = useRouter();
-    const { t } = useTranslation("common");
+    const { t } = useTranslation(["common", "login"]);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { user, AuthWithGoogle, AuthWithFacebook } = UserAuth();
@@ -38,13 +40,13 @@ const Login = () => {
                 // Signed in
                 router.push("/");
                 const user = userCredential.user;
-                console.log("User logged in:", user);
+
                 // ...
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log("can't log in", errorMessage, " ", errorCode);
+                if (error.code === "auth/invalid-login-credentials") {
+                    toast.error(t("login:invalid"));
+                }
             });
     };
 
@@ -128,17 +130,24 @@ const Login = () => {
 
     return (
         <Layout>
-            <div className='flex justify-center items-center space-x-20 rtl:space-x-reverse p-10 lg:pb-28 pb-10 '>
+            <div className='flex justify-center items-center space-x-20 rtl:space-x-reverse p-10  '>
                 <div className=''>
-                    <h1 className='md:text-4xl text-3xl text-center font-atkinson font-bold w-fit lg:mb-10 mb-10 uppercase'>
+                    <h1 className='md:text-4xl text-3xl mx-auto font-atkinson font-bold w-fit lg:mb-5 mb-10 uppercase text-black/80 '>
                         {t("login.header")}
                     </h1>
-                    <div className='flex flex-col gap-10 lg:w-96 w-80 h-96 border shadow-xl rounded-lg lg:mb-6 mb-4 justify-center items-center'>
+                    <div className='flex flex-col  lg:w-[25rem] w-80 h-96 lg:h-[26rem] border shadow-xl rounded-lg lg:mb-6 mb-4 justify-center items-center'>
                         <form
                             onSubmit={handleSubmit(handleSignIn)}
                             // onSubmit={handleSubmit(LogIn)}
-                            className='lg:space-y-4 space-y-14 lg:w-80 w-72 lg:h-96 h-80 lg:pt-11 pt:16  flex flex-col justify-center mx-auto hx-auto'
+                            className=' w-full  flex flex-col justify-center px-7 gap-5'
                         >
+                            <Image
+                                src={Profile}
+                                width={70}
+                                height={70}
+                                alt='login'
+                                className='mx-auto my-5'
+                            ></Image>
                             <div className='flex-1'>
                                 <Input
                                     width='full'
@@ -167,7 +176,7 @@ const Login = () => {
                                     }
                                 />
                             </div>
-                            <div className='flex justify-space-between lg:space-x-9 rtl:space-x-reverse space-x-8 pb-10'>
+                            <div className='flex justify-space-between lg:space-x-9 rtl:space-x-reverse space-x-2 pb-10 mt-4'>
                                 <button type='submit'>
                                     <Button
                                         transition={false}
@@ -236,7 +245,7 @@ export default Login;
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common"])),
+            ...(await serverSideTranslations(locale, ["common", "login"])),
             // Will be passed to the page component as props
         },
     };
