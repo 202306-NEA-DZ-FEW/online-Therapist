@@ -426,7 +426,7 @@ const Profile = ({ t }) => {
                                                 </div>
                                             </div>
 
-                                            <div className='flex flex-row justify-center gap-5 my-14 lg:ml-8 lg:rtl:mr-20'>
+                                            <div className='flex flex-row justify-center text-center gap-5 my-14 lg:ml-8 lg:rtl:mr-20'>
                                                 <button type='submit'>
                                                     <Button
                                                         buttonText={t(
@@ -450,6 +450,18 @@ const Profile = ({ t }) => {
                                                     color='teal'
                                                     clickFunction={enableEdit}
                                                 />
+                                                <Link href='../edit-password'>
+                                                    <Button
+                                                        rotate={
+                                                            language == "en"
+                                                                ? false
+                                                                : true
+                                                        }
+                                                        buttonText={t(
+                                                            "users:userProfile.editPassword"
+                                                        )}
+                                                    />
+                                                </Link>
                                             </div>
                                         </form>
                                     </div>

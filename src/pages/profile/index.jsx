@@ -45,6 +45,7 @@ const User = ({ t }) => {
         familySize: "",
         gender: "",
         phoneNumber: "",
+        uid: user.uid,
     });
 
     const onChange = (e) => {

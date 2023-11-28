@@ -92,7 +92,7 @@ function ChangePassword() {
 
     return (
         <Layout>
-            <div className='max-w-md mx-auto p-4'>
+            <div className='max-w-md mx-auto p-4 h-screen'>
                 {error && (
                     <p className='bg-red-500 text-white p-2 mb-4'>{error}</p>
                 )}
