@@ -6,7 +6,7 @@ import {
     signOut,
     updateProfile,
 } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
+import { FieldValue, doc, getDoc, updateDoc } from "firebase/firestore";
 import { collection, getDocs, query, setDoc, where } from "firebase/firestore";
 import Image from "next/image";
 import Spinner from "public/loading.svg";
