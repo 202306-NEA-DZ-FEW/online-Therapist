@@ -354,8 +354,7 @@ const User = ({ t }) => {
                                                     {errors.familySize?.message}
                                                 </p>
                                             </div>
-                                        </div>
-
+                                        </div>              
                                         <div className=' lg:mx-0 mx-2 p-1 my-5 gap-2 min-w-max'>
                                             <div className='grid grid-col-1 md:grid-cols-3'>
                                                 <label className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'>
@@ -524,7 +523,6 @@ const User = ({ t }) => {
                                                 />
                                             </button>
                                         </div>
-
                                         <h1 className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5'>
                                             {t("users:userProfile.payment")}
                                         </h1>
