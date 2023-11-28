@@ -10,6 +10,8 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "@/util/firebase";
 import { UserAuth } from "@/context/AuthContext";
 import BookingStepFinal from "./BookingStepFinal";
+import { useTranslation } from "next-i18next";
+import { toast } from "react-toastify";
 
 const steps = ["1", "2", "3", "4", "5", "6", "7"];
 const initialFormData = {
@@ -26,6 +28,7 @@ const MultiStepForm = ({ showStepNumber }) => {
     const [step, setStep] = useState("1");
     const [formData, setFormData] = useState(initialFormData);
     const { user } = UserAuth();
+    const { t } = useTranslation("booking");
 
     // Handler of next step
     const handleNextStep = () => {
@@ -72,7 +75,9 @@ const MultiStepForm = ({ showStepNumber }) => {
 
     const handleSubmitFormData = async () => {
         if (!formData.agreeToTerms) {
-            alert("Error: You must agree to the Terms of Services!");
+            toast.warning(t("multiStepForm.warning1"), {
+                position: toast.POSITION.TOP_CENTER,
+            });
         } else {
             try {
                 // Fetch user data
@@ -80,7 +85,8 @@ const MultiStepForm = ({ showStepNumber }) => {
                 const userSnapshot = await getDoc(userRef);
 
                 if (userSnapshot.exists()) {
-                    const { firstname, lastname } = userSnapshot.data();
+                    const { firstname, lastname, photoURL } =
+                        userSnapshot.data();
 
                     // Create the "appointments" document with user data
                     await setDoc(doc(db, "appointments", user.uid), {
@@ -96,19 +102,21 @@ const MultiStepForm = ({ showStepNumber }) => {
                         agreeToTerms: false,
                         userFirstName: firstname,
                         userLastName: lastname,
+                        userPhotoURL: photoURL,
                     });
-                    alert(
-                        "Form data saved successfully, look for you matching list!"
-                    );
+                    toast.success(t("multiStepForm.success"), {
+                        position: toast.POSITION.TOP_CENTER,
+                    });
                     setStep("Final");
                 } else {
-                    console.log("User data not found for the user.");
-                    alert("Error: User data not found!");
+                    toast.warning(t("multiStepForm.warning2"), {
+                        position: toast.POSITION.TOP_CENTER,
+                    });
                 }
             } catch (error) {
-                console.error("Error adding document: ", error);
-                // alert("Error: Form data could not be saved!");
-                alert(`Error: Form data could not be saved!\n${error.message}`);
+                toast.error(t("multiStepForm.error"), {
+                    position: toast.POSITION.TOP_CENTER,
+                });
             }
         }
     };

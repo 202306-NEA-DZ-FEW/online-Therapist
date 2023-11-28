@@ -25,6 +25,7 @@
         "female": "Female",
         "save": "SAVE",
         "edit": "EDIT",
+        "editPassword": "EDIT PASSWORD",
         "deleteAccount": "DELETE ACCOUNT",
         "security": "Security",
         "payment": "Payment Methods & Tickets",

@@ -4,10 +4,13 @@ import Link from "next/link";
 import { UserAuth } from "@/context/AuthContext";
 import { useTranslation } from "next-i18next";
 import Reveal from "../utils/Reveal";
+import { useRouter } from "next/router";
 
 function AppointmentSection() {
     const { t } = useTranslation("homepage");
     const { user } = UserAuth();
+    const router = useRouter();
+    const language = router.locale;
     // Define the paths based on the user's authentication status
     const bookingPath = user ? "/bookAnAppointment" : "/login";
 
@@ -55,6 +58,7 @@ function AppointmentSection() {
                     <Link href={bookingPath}>
                         <Button
                             buttonText={t("hero.bookingButton")}
+                            rotate={language == "en" ? false : true}
                             buttonSize='fit'
                         />
                     </Link>

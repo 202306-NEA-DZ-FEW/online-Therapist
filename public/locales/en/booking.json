@@ -49,7 +49,6 @@
     "step7": {
         "header": "Submit Your Appointment",
         "paragraph1": "Click Submit if you are sure of all your choices.",
-        "paragraph2": "Please Be Aware That This Action Will Cost You A Ticket!",
         "label1": "Counseling Type:",
         "label2": "Marital Status:",
         "label3": "First Session:",
@@ -61,8 +60,40 @@
     },
     "stepFinal": {
         "header": "your request has been submitted ",
-        "paragraph1": "You Will Receive A Confirmation Email Guiding You To Book A Date And Time Soon.",
-        "paragraph2": "Please Keep An Eye On Your Mail.",
+        "paragraph1": "Please check the therapists section in your dashboard to select your therapist and book with him.",
+        "paragraph2": "Thank You.",
         "btnText": "Back To Home"
+    },
+    "multiStepForm": {
+        "warning1": "Error: You must agree to the Terms of Services!",
+        "success": "Form data saved successfully, look at your therapists matching list!",
+        "warning2": "Error: User data not found!",
+        "error": "Error: Form data could not be saved!"
+    },
+    "therapistDashboard": {
+        "waitingAppointments": {
+            "info": "No appointments booked with you yet!",
+            "success1": "The appointment has been confirmed successfully!",
+            "error1": "Error confirming appointment:",
+            "warning": "Please set the appointment date and time.",
+            "error2": "Invalid date and time",
+            "success2": "The new session date has beet set successfully!, Please confirm the appointment.",
+            "error3": "Error setting new session date:"
+        },
+        "patientsList": {
+            "info": "You don't have patients in your list yet!",
+            "error": "An error occurred while displaying the patient list:"
+        }
+    },
+    "patientDashboard": {
+        "therapists": {
+            "success1": "Appointment booked successfully.",
+            "success2": "Appointment canceled successfully.",
+            "info": "No matching therapists fit your requirement found yet!",
+            "error1": "Appointment could not be updated!"
+        }
+    },
+    "appointments": {
+        "info": "You don't have confirmed appointments yet!"
     }
 }

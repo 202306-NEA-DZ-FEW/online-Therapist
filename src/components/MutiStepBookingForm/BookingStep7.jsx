@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../elements/Button";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const BookingStep7 = ({
     formData,
@@ -9,6 +10,8 @@ const BookingStep7 = ({
     handleSubmitFormData,
 }) => {
     const { t } = useTranslation("booking");
+    const router = useRouter();
+    const language = router.locale;
 
     return (
         <div>
@@ -45,9 +48,6 @@ const BookingStep7 = ({
                     value={formData.specification}
                 />
             </div>
-            <p className='lg:text-lg font-atkinson text-gray-900'>
-                {t("step7.paragraph2")}
-            </p>
             <div className='my-2 flex items-center'>
                 <input
                     id='agreeToTerms'
@@ -66,10 +66,18 @@ const BookingStep7 = ({
             </div>
             <div className='my-2 flex justify-between items-center lg:pt-5 pt-2'>
                 <button onClick={handlePrevStep}>
-                    <Button buttonText={t("step2.prev")} buttonSize='md' />
+                    <Button
+                        buttonText={t("step2.prev")}
+                        rotate={language == "en" ? true : false}
+                        buttonSize='md'
+                    />
                 </button>
                 <button onClick={handleSubmitFormData}>
-                    <Button buttonText={t("step7.submit")} buttonSize='md' />
+                    <Button
+                        buttonText={t("step7.submit")}
+                        rotate={language == "en" ? false : true}
+                        buttonSize='md'
+                    />
                 </button>
             </div>
         </div>

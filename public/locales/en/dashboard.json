@@ -14,6 +14,8 @@
         "Date": "Appointment Date & Time:",
         "placeholder": "Select date and time",
         "Zone": "Time Zone:",
+        "text1": "This Action Will Cost You A Ticket",
+        "text2": "Once The Appointment Is Confirmed!",
         "Book": "Book",
         "Unbook": "Unbook"
     },

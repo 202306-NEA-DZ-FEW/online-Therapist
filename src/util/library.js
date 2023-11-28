@@ -17,7 +17,6 @@ export const members = [
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
         imgUrl: "/Images/member2.png",
         linkedIn: "www.linkedin.com/in/matassi-mohamed",
-
         github: "M07am3dM",
     },
     {
@@ -28,7 +27,6 @@ export const members = [
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
         imgUrl: "/Images/member3.png",
         linkedIn: " linkedin.com/in/walid-lamraoui/",
-
         github: "dzc0d3r",
     },
     {
@@ -39,7 +37,6 @@ export const members = [
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
         imgUrl: "/Images/member4.png",
         linkedIn: "https://www.linkedin.com/in/meriem-mansouri-1b1643276/",
-
         github: "meryem08",
     },
     {
@@ -50,7 +47,6 @@ export const members = [
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
         imgUrl: "/Images/member5.png",
         linkedIn: "www.linkedin.com/in/dalila-dalila-81a3a3200",
-
         github: "dalilia",
     },
     {
@@ -61,7 +57,6 @@ export const members = [
         role_ar: "مُطَوِّر واجهة المستخدم ومُطَوِّر الوِيب",
         imgUrl: "/Images/member6.png",
         linkedIn: "www.linkedin.com/in/sid-ali-habchi-10216125a/",
-
         github: "HabchiSidAli",
     },
     /*name,id,img,github,linkedin*/
@@ -73,7 +68,6 @@ import { HiUserGroup } from "react-icons/hi";
 import { HiHome } from "react-icons/hi";
 import { IoCalendar } from "react-icons/io5";
 import { IoSettingsSharp } from "react-icons/io5";
-import { LuMessagesSquare } from "react-icons/lu";
 
 export const slideImages = [
     {
@@ -110,14 +104,6 @@ export const slideImages = [
         imgSrc: "14",
         id: "8",
     },
-    // {
-    //     imgSrc: "18",
-    //     id: "9",
-    // },
-    // {
-    //     imgSrc: "20",
-    //     id: "10",
-    // },
 ];
 
 export const images = [
@@ -133,14 +119,9 @@ export const images = [
     },
     {
         id: 3,
-        // type: "image",
+        type: "image",
         imgSrc: "https://c.stocksy.com/a/GEqF00/za/3775692.jpg",
     },
-    // {
-    //     id: 4,
-    //     type: "video",
-    //     imgSrc: "https://c.stocksy.com/a/VZAM00/y2/5283857.mp4",
-    // },
     {
         id: 4,
         type: "image",
@@ -166,27 +147,22 @@ export const images = [
 export const teamMembers = [
     {
         name: "Maria JR",
-        //   linkedin: "",
         image: "https://www.talkspace.com/blog/wp-content/uploads/2020/03/psychologist-psychiatrist-vs-therapist-1-800x500.jpg",
     },
     {
         name: "Marris Adikwu",
-        //   linkedin: "",
         image: "https://www.talkspace.com/blog/wp-content/uploads/2020/06/Marris_Headshot-150x150.jpg",
     },
     {
         name: "Bisma Anwar",
-        //   linkedin: "",
         image: "https://www.talkspace.com/blog/wp-content/uploads/2020/09/Bisma_Circle-min-1-150x150.png",
     },
     {
         name: "Joseph Rauch",
-        //   linkedin: "",
         image: "https://www.talkspace.com/blog/wp-content/uploads/2020/01/Joseph-Rauch.png",
     },
     {
         name: "Jor-El Caraballo",
-        //   linkedin: "",
         image: "https://www.talkspace.com/blog/wp-content/uploads/2020/06/Jor-El-Caraballo-150x150.jpg",
     },
 ];
@@ -210,14 +186,6 @@ export const therapistLinks = [
     },
     {
         id: 3,
-        name: "messages",
-        href: "",
-        icon: <LuMessagesSquare />,
-        text_en: "Messages",
-        text_ar: "رسائل",
-    },
-    {
-        id: 4,
         name: "therapist appointments",
         href: "",
         icon: <FaClipboardList />,
@@ -225,7 +193,7 @@ export const therapistLinks = [
         text_ar: "مواعيد ",
     },
     {
-        id: 5,
+        id: 4,
         name: "patients",
         href: "",
         icon: <HiUserGroup />,
@@ -233,7 +201,7 @@ export const therapistLinks = [
         text_ar: "مرضى",
     },
     {
-        id: 6,
+        id: 5,
         name: "profile",
         href: "/therapists/profile/",
         icon: <CgProfile />,
@@ -241,7 +209,7 @@ export const therapistLinks = [
         text_ar: "حساب الشخصي",
     },
     {
-        id: 7,
+        id: 6,
         name: "settings",
         href: "/therapists/profile/",
         icon: <IoSettingsSharp />,
@@ -269,21 +237,6 @@ export const patientLinks = [
     },
     {
         id: 3,
-        name: "messages",
-        href: "",
-        icon: <LuMessagesSquare />,
-        text_en: "Messages",
-        text_ar: "رسائل",
-    },
-    // {
-    //     id: 4,
-    //     name: "calendar",
-    //     href: "",
-    //     icon: <IoCalendar />,
-    //     text: "Calendar",
-    // },
-    {
-        id: 4,
         name: "therapists",
         href: "",
         icon: <IoCalendar />,
@@ -291,7 +244,7 @@ export const patientLinks = [
         text_ar: "المعالجين",
     },
     {
-        id: 5,
+        id: 4,
         name: "profile",
         href: "/profile/",
         icon: <CgProfile />,
@@ -299,7 +252,7 @@ export const patientLinks = [
         text_ar: "حساب الشخصي",
     },
     {
-        id: 6,
+        id: 5,
         name: "settings",
         href: "/profile/",
         icon: <IoSettingsSharp />,

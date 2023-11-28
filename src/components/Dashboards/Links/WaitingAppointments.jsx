@@ -15,15 +15,16 @@ import DatePicker from "react-datepicker";
 import moment from "moment-timezone";
 import timeZones from "@/util/timeZones";
 import "react-datepicker/dist/react-datepicker.css";
+import { toast } from "react-toastify";
 import { useTranslation } from "next-i18next";
 
 const WaitingAppointments = () => {
-    const { t } = useTranslation("dashboard");
     const [appointments, setAppointments] = useState([]);
-    const { user, loading, setLoading } = UserAuth();
+    const { user } = UserAuth();
     // Track selected appointment date and time for each therapist
     const [selectedDateTimes, setSelectedDateTimes] = useState({});
     const [selectedTimeZone, setSelectedTimeZone] = useState("UTC");
+    const { t } = useTranslation(["booking", "dashboard"]);
 
     const fetchWaitingAppointments = async () => {
         onAuthStateChanged(auth, async (user) => {
@@ -35,13 +36,20 @@ const WaitingAppointments = () => {
                 const querySnapshot = await getDocs(q);
 
                 if (!querySnapshot.empty) {
-                    const appointmentsData = querySnapshot.docs.map(
-                        // (doc) => doc.data()
-                        (doc) => ({ id: doc.id, ...doc.data() })
-                    );
+                    const appointmentsData = querySnapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        ...doc.data(),
+                    }));
                     setAppointments(appointmentsData);
                 } else {
-                    alert("No appointments booked with you found!");
+                    toast.info(
+                        t(
+                            "booking:therapistDashboard.waitingAppointments.info"
+                        ),
+                        {
+                            position: toast.POSITION.TOP_CENTER,
+                        }
+                    );
                 }
             }
         });
@@ -66,8 +74,18 @@ const WaitingAppointments = () => {
             const therapistId = auth.currentUser.uid;
             const therapistRef = doc(db, "therapists", therapistId);
             await updateDoc(therapistRef, { approved: true });
+
+            // Show success confirmation
+            toast.success(
+                t("booking:therapistDashboard.waitingAppointments.success1"),
+                { position: toast.POSITION.TOP_CENTER }
+            );
         } catch (error) {
-            console.error("Error confirming appointment:", error);
+            // Show error toast if something goes wrong
+            toast.error(
+                t("booking:therapistDashboard.waitingAppointments.error1"),
+                { position: toast.POSITION.TOP_CENTER }
+            );
         }
     };
 
@@ -77,7 +95,10 @@ const WaitingAppointments = () => {
 
             // Check if the appointment date and time are set
             if (!selectedDateTime) {
-                alert("Please set the appointment date and time.");
+                toast.warning(
+                    t("booking:therapistDashboard.waitingAppointments.warning"),
+                    { position: toast.POSITION.TOP_CENTER }
+                );
                 return;
             }
 
@@ -86,7 +107,12 @@ const WaitingAppointments = () => {
 
             // Check if formattedDateTime is a valid date
             if (!formattedDateTime.isValid()) {
-                console.error("Invalid date and time");
+                toast.error(
+                    t("booking:therapistDashboard.waitingAppointments.error2"),
+                    {
+                        position: toast.POSITION.TOP_CENTER,
+                    }
+                );
                 return;
             }
 
@@ -99,7 +125,7 @@ const WaitingAppointments = () => {
                 appointmentDate: newDate,
                 appointmentTime: newTime,
                 appointmentTimeZone: newTimeZone,
-                appointmentStatus: "in progress", // Change to the appropriate status
+                appointmentStatus: "in progress",
             });
 
             // Update local state to reflect the change
@@ -116,8 +142,18 @@ const WaitingAppointments = () => {
                         : appointment
                 )
             );
+
+            // Show success toast for setting a new session date
+            toast.success(
+                t("booking:therapistDashboard.waitingAppointments.success2"),
+                { position: toast.POSITION.TOP_CENTER }
+            );
         } catch (error) {
-            console.error("Error setting new session date:", error);
+            // Show error toast if something goes wrong
+            toast.error(
+                t("booking:therapistDashboard.waitingAppointments.error3"),
+                { position: toast.POSITION.TOP_CENTER }
+            );
         }
     };
 
@@ -130,7 +166,7 @@ const WaitingAppointments = () => {
     return (
         <div className='font-atkinson p-2'>
             <h1 className='text-2xl md:text-4xl font-bold bg-Teal p-4 md:p-6  w-full text-white uppercase rounded-lg tracking-wider	'>
-                {t("waitingAppointments.heading")}
+                {t("dashboard:waitingAppointments.heading")}
             </h1>
 
             {/* Display the list of waiting appointments */}
@@ -143,12 +179,16 @@ const WaitingAppointments = () => {
                         <div className='flex flex-col justify-center items-center gap-y-2'>
                             <img
                                 src={appointment.userPhotoURL}
-                                alt={`Photo of ${appointment.userFirstName} ${appointment.userLastName}`}
+                                alt={`${t(
+                                    "dashboard:patientAppointments.photo"
+                                )} ${appointment.userFirstName} ${
+                                    appointment.userLastName
+                                }`}
                                 className='w-24 h-24 lg:w-24 lg:h-24 object-fit border-Teal border-4 rounded-full'
                             />
                             <p>{` ${appointment.userFirstName} ${appointment.userLastName}`}</p>
                             <p>
-                                {`${t("waitingAppointments.date")} ${
+                                {`${t("dashboard:waitingAppointments.date")} ${
                                     appointment.appointmentDate
                                 } `}{" "}
                             </p>
@@ -158,31 +198,31 @@ const WaitingAppointments = () => {
                         </div>
                         <div className='lg:w-1/3 pt-2 space-y-1'>
                             <p className='text-gray-400'>
-                                {t("therapists.details")}
+                                {t("dashboard:therapists.details")}
                             </p>
-                            <p>{`${t("therapistAppointments.status")} ${
-                                appointment.maritalStatus
-                            }`}</p>
-                            <p>{` ${t("waitingAppointments.counseling")} ${
-                                appointment.counselingType
-                            }`}</p>
-                            <p>{`${t("waitingAppointments.first")} ${
+                            <p>{`${t(
+                                "dashboard:therapistAppointments.status"
+                            )} ${appointment.maritalStatus}`}</p>
+                            <p>{` ${t(
+                                "dashboard:waitingAppointments.counseling"
+                            )} ${appointment.counselingType}`}</p>
+                            <p>{`${t("dashboard:waitingAppointments.first")} ${
                                 appointment.firstSession
                             }`}</p>
-                            <p>{`${t("waitingAppointments.qualities")} ${
-                                appointment.counselorQualities
-                            }`}</p>
-                            <p>{`${t("waitingAppointments.issues")} ${
+                            <p>{`${t(
+                                "dashboard:waitingAppointments.qualities"
+                            )} ${appointment.counselorQualities}`}</p>
+                            <p>{`${t("dashboard:waitingAppointments.issues")} ${
                                 appointment.issues
                             }`}</p>
-                            <p>{`${t("waitingAppointments.specification")} ${
-                                appointment.specification
-                            }`}</p>
+                            <p>{`${t(
+                                "dashboard:waitingAppointments.specification"
+                            )} ${appointment.specification}`}</p>
                         </div>
                         <div className='flex flex-col gap-y-8'>
                             <div className='flex flex-col gap-y-2'>
                                 <label className='text-Gray font-atkinson'>
-                                    {t("waitingAppointments.newDate")}
+                                    {t("dashboard:waitingAppointments.newDate")}
                                 </label>
                                 <DatePicker
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -199,12 +239,12 @@ const WaitingAppointments = () => {
                                     timeFormat='HH:mm:ss'
                                     timeCaption='Time'
                                     placeholderText={t(
-                                        "waitingAppointments.selectnew"
+                                        "dashboard:waitingAppointments.selectnew"
                                     )}
                                 />
                                 {/* Inside the map function in WaitingAppointments component */}
                                 <label className='text-Gray font-atkinson'>
-                                    {t("waitingAppointments.zone")}
+                                    {t("dashboard:waitingAppointments.zone")}
                                 </label>
                                 <select
                                     className='p-1 border w-48 rounded-md border-Teal'
@@ -232,10 +272,10 @@ const WaitingAppointments = () => {
                                             appointment.appointmentStatus ===
                                             "ready"
                                                 ? t(
-                                                      "waitingAppointments.confirmed"
+                                                      "dashboard:waitingAppointments.confirmed"
                                                   )
                                                 : t(
-                                                      "waitingAppointments.confirm"
+                                                      "dashboard:waitingAppointments.confirm"
                                                   )
                                         }
                                         buttonSize='fit'
@@ -249,7 +289,7 @@ const WaitingAppointments = () => {
                                 >
                                     <Button
                                         buttonText={t(
-                                            "waitingAppointments.setNew"
+                                            "dashboard:waitingAppointments.setNew"
                                         )}
                                         buttonSize='fit'
                                         transition={false}

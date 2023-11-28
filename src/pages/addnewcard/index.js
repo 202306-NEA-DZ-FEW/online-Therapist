@@ -16,6 +16,7 @@ import Thankyou from "@/components/Thankyou/Thankyou";
 
 import Layout from "@/layout/Layout";
 import { auth, db } from "@/util/firebase";
+import { useRouter } from "next/router";
 
 function AddNewCard() {
     let isValid = false;
@@ -34,6 +35,8 @@ function AddNewCard() {
     const options = useMemo(() => countryList().getData(), []);
 
     const { t } = useTranslation("addnewcard");
+    const router = useRouter();
+    const language = router.locale;
 
     const customStyles = {
         control: (base) => ({
@@ -304,6 +307,7 @@ function AddNewCard() {
                             >
                                 <Button
                                     buttonText={t("addCard")}
+                                    rotate={language == "en" ? false : true}
                                     buttonSize='lg'
                                 />
                             </button>

@@ -1,11 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
 import Button from "../elements/Button";
 import { useTranslation } from "next-i18next";
 import Reveal from "../utils/Reveal";
+import { useRouter } from "next/router";
 
 const AreYouCouncelor = () => {
     const { t } = useTranslation("homepage");
+    const router = useRouter();
+    const language = router.locale;
+
     return (
         <div className='font-atkinson mt-24'>
             <Reveal>
@@ -30,7 +33,7 @@ const AreYouCouncelor = () => {
                                 <Reveal>
                                     <Button
                                         color='teal'
-                                        transition={false}
+                                        rotate={language == "en" ? false : true}
                                         buttonText={t("counselor.learnMore")}
                                         buttonSize='lg'
                                         className='xl'

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-    getAuth,
     updatePassword,
     reauthenticateWithCredential,
     EmailAuthProvider,
@@ -9,8 +8,7 @@ import { auth } from "@/util/firebase";
 import Layout from "@/layout/Layout";
 import Input from "@/components/elements/Input";
 import Button from "@/components/elements/Button";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useRouter } from "next/router";
@@ -49,15 +47,7 @@ function ChangePassword() {
 
         if (!user) {
             toast.error(t("password.authError"), {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: true,
-                newestOnTop: false,
-                closeOnClick: true,
-                rtl: false,
-                pauseOnFocusLoss: true,
-                draggable: true,
-                pauseOnHover: true,
+                position: toast.POSITION.TOP_CENTER,
             });
             setLoading(false);
 
@@ -78,18 +68,10 @@ function ChangePassword() {
 
             // Show success message
             toast.success(t("password.message"), {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: true,
-                newestOnTop: false,
-                closeOnClick: true,
-                rtl: false,
-                pauseOnFocusLoss: true,
-                draggable: true,
-                pauseOnHover: true,
+                position: toast.POSITION.TOP_CENTER,
                 onClose: () => {
                     // Redirect to the home page after the toast is closed
-                    router.push("/");
+                    router.push("/profile");
                 },
             });
         } catch (error) {
@@ -103,22 +85,14 @@ function ChangePassword() {
 
             // Show error toast
             toast.error(message, {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: true,
-                newestOnTop: false,
-                closeOnClick: true,
-                rtl: false,
-                pauseOnFocusLoss: true,
-                draggable: true,
-                pauseOnHover: true,
+                position: toast.POSITION.TOP_CENTER,
             });
         }
     };
 
     return (
         <Layout>
-            <div className='max-w-md mx-auto p-4'>
+            <div className='max-w-md mx-auto p-4 h-screen'>
                 {error && (
                     <p className='bg-red-500 text-white p-2 mb-4'>{error}</p>
                 )}
@@ -163,11 +137,7 @@ function ChangePassword() {
                             </div>
                         )}
 
-                        <button
-                            type='submit'
-                            //disabled={loading}
-                            onClick={handleSubmit}
-                        >
+                        <button type='submit' onClick={handleSubmit}>
                             <Button
                                 transition={false}
                                 buttonText={
@@ -177,17 +147,9 @@ function ChangePassword() {
                                 }
                             />
                         </button>
-
-                        {/*  <button type='submit'>
-                            <Button
-                                transition={false}
-                                buttonText={t("password.button")}
-                            />
-                        </button> */}
                     </div>
                 </form>
             </div>
-            <ToastContainer />
         </Layout>
     );
 }

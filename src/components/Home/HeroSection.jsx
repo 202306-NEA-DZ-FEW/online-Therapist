@@ -1,17 +1,17 @@
-import Image from "next/image";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { slideImages } from "@/util/library";
 import Button from "../elements/Button";
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { UserAuth } from "@/context/AuthContext";
 import { useRouter } from "next/router";
 
 function HeroSection() {
+    const { t } = useTranslation("homepage");
     const router = useRouter();
+    const language = router.locale;
     const { user } = UserAuth();
 
     const handleBooking = () => {
@@ -23,7 +23,6 @@ function HeroSection() {
         }
     };
 
-    const { t } = useTranslation("homepage");
     const settings = {
         fade: false,
         infinite: true,
@@ -66,7 +65,7 @@ function HeroSection() {
                 <div className='px-auto pt-6 mx-auto'>
                     <Button
                         color='teal'
-                        transition={true}
+                        rotate={language == "en" ? false : true}
                         buttonText={t("hero.bookingButton")}
                         buttonSize='fit'
                         clickFunction={handleBooking}

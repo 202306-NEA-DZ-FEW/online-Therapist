@@ -23,6 +23,7 @@ import { db } from "@/util/firebase";
 
 const User = ({ t }) => {
     const router = useRouter();
+    const language = router.locale;
     const searchParams = useSearchParams();
     const { totalTickets, cards } = UserAuth();
 
@@ -44,6 +45,7 @@ const User = ({ t }) => {
         familySize: "",
         gender: "",
         phoneNumber: "",
+        uid: user.uid,
     });
 
     const onChange = (e) => {
@@ -354,7 +356,6 @@ const User = ({ t }) => {
                                                 </p>
                                             </div>
                                         </div>
-
                                         <div className=' lg:mx-0 mx-2 p-1 my-5 gap-2 min-w-max'>
                                             <div className='grid grid-col-1 md:grid-cols-3'>
                                                 <label className='md:mb-2 mb-2 w-max text-xl font-medium leading-7 text-gray-900'>
@@ -475,7 +476,7 @@ const User = ({ t }) => {
                                                 onChange={onChange}
                                             />
                                         </div>
-                                        <div className='flex md:flex-row justify-center items-center flex-col gap-5 my-14 lg:ml-3 lg:rtl:mr-4'>
+                                        <div className='flex md:flex-row justify-center text-center items-center flex-col gap-5 my-14 lg:ml-3 lg:rtl:mr-4'>
                                             <button type='submit'>
                                                 <Button
                                                     buttonSize='lg'
@@ -488,17 +489,30 @@ const User = ({ t }) => {
                                                     type='submit'
                                                 />
                                             </button>
-
-                                            <Button
-                                                buttonSize='lg'
-                                                buttonText={t(
-                                                    "users:userProfile.edit"
-                                                )}
-                                                disabled={edit}
-                                                transition={false}
-                                                color='teal'
-                                                clickFunction={enableEdit}
-                                            />
+                                            <button>
+                                                <Button
+                                                    buttonSize='lg'
+                                                    buttonText={t(
+                                                        "users:userProfile.edit"
+                                                    )}
+                                                    disabled={edit}
+                                                    transition={false}
+                                                    color='teal'
+                                                    clickFunction={enableEdit}
+                                                />
+                                            </button>
+                                            <Link href='./edit-password'>
+                                                <Button
+                                                    rotate={
+                                                        language == "en"
+                                                            ? false
+                                                            : true
+                                                    }
+                                                    buttonText={t(
+                                                        "users:userProfile.editPassword"
+                                                    )}
+                                                />
+                                            </Link>
                                             <button onClick={onDeleteAccount}>
                                                 <Button
                                                     buttonSize='lg'
@@ -510,7 +524,6 @@ const User = ({ t }) => {
                                                 />
                                             </button>
                                         </div>
-
                                         <h1 className='text-3xl md:text-4xl text-center md:text-start font-medium uppercase md:mb-10 mb-5'>
                                             {t("users:userProfile.payment")}
                                         </h1>

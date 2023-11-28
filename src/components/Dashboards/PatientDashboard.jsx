@@ -1,5 +1,3 @@
-import Messages from "@/components/Dashboards/Links/Messages";
-// import Calender from "@/components/Dashboards/Links/Calender";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { UserAuth } from "@/context/AuthContext";
 import Therapists from "./Links/Therapists";
@@ -12,10 +10,6 @@ export default function PatientDashboard() {
         switch (activeLink) {
             case "appointments":
                 return <PatientAppointments />;
-            case "messages":
-                return <Messages />;
-            // case "calendar":
-            //     return <Calender />;
             case "therapists":
                 return <Therapists />;
             default:

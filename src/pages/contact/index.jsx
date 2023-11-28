@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Layout from "@/layout/Layout";
 import Button from "@/components/elements/Button";
-import { auth } from "@/util/firebase";
 import { collection, setDoc, doc } from "firebase/firestore";
 import { db } from "@/util/firebase";
 import Input from "@/components/elements/Input";
@@ -14,12 +12,14 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Thankyou from "@/components/Thankyou/Thankyou";
+import { useRouter } from "next/router";
 
 function Contact() {
-    const { user, isSignUpSuccessful, setIsSignUpSuccessful } = UserAuth();
+    const { isSignUpSuccessful, setIsSignUpSuccessful } = UserAuth();
     const [selectedOption, setSelectedOption] = useState(null);
     const [loading, setLoading] = useState(false);
-
+    const router = useRouter();
+    const language = router.locale;
     const { t } = useTranslation("common");
 
     const handleRadioChange = (event) => {
@@ -57,6 +57,11 @@ function Contact() {
         }
     };
 
+    useEffect(() => {
+        // Reset isSignUpSuccessful when the component mounts
+        setIsSignUpSuccessful(false);
+    }, []);
+
     const validationSchema = yup.object().shape({
         name: yup.string().required(t("formErrors.firstname")),
         email: yup
@@ -72,7 +77,8 @@ function Contact() {
 
     return (
         <Layout>
-            {isSignUpSuccessful ? ( // Conditionally render the thank you page
+            {/* Conditionally render the thank you page */}
+            {isSignUpSuccessful ? (
                 <Thankyou text1={t("contactThankYou.description")} />
             ) : (
                 <main className='mx-8 mt-5 lg:mx-24 lg:mt-10 font-atkinson'>
@@ -254,6 +260,9 @@ function Contact() {
                                     ) : (
                                         <Button
                                             buttonText={t("contact.submit")}
+                                            rotate={
+                                                language == "en" ? false : true
+                                            }
                                             buttonSize='lg'
                                         />
                                     )}

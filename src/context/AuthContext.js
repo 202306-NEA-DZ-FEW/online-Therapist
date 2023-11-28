@@ -6,7 +6,7 @@ import {
     signOut,
     updateProfile,
 } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
+import { FieldValue, doc, getDoc, updateDoc } from "firebase/firestore";
 import { collection, getDocs, query, setDoc, where } from "firebase/firestore";
 import Image from "next/image";
 import Spinner from "public/loading.svg";
@@ -162,11 +162,6 @@ export function AppWrapper({ children }) {
         updateProfile(user, { photoURL });
     };
 
-    // const updateProfilePhoto = async (photoURL) => {
-    //     const user = auth.currentUser;
-    //     updateProfile(user, { photoURL });
-    // };
-
     const fetchUserCards = async (userUid) => {
         try {
             const cardsCollection = collection(db, "cards");
@@ -233,8 +228,33 @@ export function AppWrapper({ children }) {
             }
         };
 
+        const fetchConfirmedAppointments = async () => {
+            try {
+                const appointmentsQuery = query(
+                    collection(db, "appointments"),
+                    where("uid", "==", user.uid),
+                    where("appointmentStatus", "==", "ready")
+                );
+                const appointmentsSnapshot = await getDocs(appointmentsQuery);
+
+                // Iterate through the confirmed appointments and decrement tickets
+                appointmentsSnapshot.forEach(async (appointmentDoc) => {
+                    const appointmentData = appointmentDoc.data();
+                    const ticketId = appointmentData.ticketId; // Assuming you have a ticketId field in your appointments
+                    const userDocRef = doc(collection(db, "tickets"), user.uid);
+                    await updateDoc(userDocRef, {
+                        [`tickets.${ticketId}.quantity`]:
+                            FieldValue.increment(-1),
+                    });
+                });
+            } catch (error) {
+                console.error("Error fetching confirmed appointments:", error);
+            }
+        };
+
         if (user) {
             fetchTickets();
+            fetchConfirmedAppointments();
         }
     }, [user]);
 

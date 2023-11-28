@@ -2,9 +2,12 @@ import React from "react";
 import Button from "../elements/Button";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const BookingStepFinal = () => {
     const { t } = useTranslation("booking");
+    const router = useRouter();
+    const language = router.locale;
 
     return (
         <div>
@@ -21,6 +24,7 @@ const BookingStepFinal = () => {
                     <button href='/'>
                         <Button
                             buttonText={t("stepFinal.btnText")}
+                            rotate={language == "en" ? true : false}
                             buttonSize='m'
                         />
                     </button>
