@@ -132,19 +132,18 @@ export function AppWrapper({ children }) {
                     const docRef = doc(db, "users", user.uid);
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
-                    const { firstname, lastname } = docSnap.data();
-                    setUser({
-                        email: user.email,
-                        uid: user.uid,
-                        photoURL: user.photoURL || Profile.src,
-                        displayName: user.displayName || `${fullname} ${lastname}`,
-                        isTherapist,
-                        isUser,
-                    });
-                    
-                    
+                        const { firstname, lastname } = docSnap.data();
+                        setUser({
+                            email: user.email,
+                            uid: user.uid,
+                            photoURL: user.photoURL || Profile.src,
+                            displayName:
+                                user.displayName || `${fullname} ${lastname}`,
+                            isTherapist,
+                            isUser,
+                        });
                     }
-                    
+
                     localStorage.setItem(`profile_${user.uid}`, user.photoURL);
                     localStorage.setItem("uid", user.uid);
                     localStorage.setItem("diplayname", user.displayName);
