@@ -7,7 +7,7 @@ import {
     updateProfile,
 } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
-import { collection, getDocs, query, where, setDoc } from "firebase/firestore";
+import { collection, getDocs, query, setDoc, where } from "firebase/firestore";
 import Image from "next/image";
 import Spinner from "public/loading.svg";
 import Profile from "public/profile.png";
@@ -118,7 +118,7 @@ export function AppWrapper({ children }) {
                     setUser({
                         email: user.email,
                         uid: user.uid,
-                        photoURL: user.photoURL ?? Profile.src,
+                        photoURL: user.photoURL || Profile.src,
                         displayName: fullname ?? username,
                         isTherapist,
                         isUser,
@@ -129,14 +129,21 @@ export function AppWrapper({ children }) {
                 } else {
                     const isUser = true;
                     const isTherapist = false;
-                    setUser({
-                        email: user.email,
-                        uid: user.uid,
-                        photoURL: user.photoURL ?? Profile.src,
-                        displayName: user.displayName,
-                        isTherapist,
-                        isUser,
-                    });
+                    const docRef = doc(db, "users", user.uid);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        const { firstname, lastname } = docSnap.data();
+                        setUser({
+                            email: user.email,
+                            uid: user.uid,
+                            photoURL: user.photoURL || Profile.src,
+                            displayName:
+                                user.displayName || `${firstname} ${lastname}`,
+                            isTherapist,
+                            isUser,
+                        });
+                    }
+
                     localStorage.setItem(`profile_${user.uid}`, user.photoURL);
                     localStorage.setItem("uid", user.uid);
                     localStorage.setItem("diplayname", user.displayName);
