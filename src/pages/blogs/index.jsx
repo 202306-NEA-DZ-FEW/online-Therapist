@@ -20,6 +20,14 @@ const Blogs = ({ posts }) => {
         <Layout>
             <div className='container mx-auto w-full font-atkinson  mb-10'>
                 <div className='mx-2 mt-5 '>
+                    <div className='mx-3 md:mt-10 mt-7'>
+                        <h1 className='text-2xl font-semibold md:text-4xl lg:text-5xl  leading-snug text-transparent  bg-clip-text bg-gradient-to-r from-emerald-700 via-sky-600 to-teal-800'>
+                            {t("recent")}
+                        </h1>
+                        <p className='mt-3 mb-10 md:text-xl text-sm text-black/80'>
+                            {t("recent_blogs_paragraph")}
+                        </p>
+                    </div>
                     <div className=' mt-5 mx-3 flex flex-wrap justify-center gap-2 lg:gap-5'>
                         {posts.map((post) => (
                             <Link
@@ -110,11 +118,10 @@ const Blogs = ({ posts }) => {
 export default Blogs;
 
 export async function getStaticProps({ locale }) {
-    const query = groq`*[_type == "post" && language == $locale]{
+    const query = groq`*[_type == "post" && language == $locale] | order(_createdAt desc){
     ...,
     author->,
-    categories[]->
-    | order(created_At desc)
+    categories[]-> 
   }`;
     const posts = await client.fetch(query, { locale });
 
@@ -123,6 +130,6 @@ export async function getStaticProps({ locale }) {
             ...(await serverSideTranslations(locale, ["common", "blog"])),
             posts,
         },
-        revalidate: 30,
+        revalidate: 20,
     };
 }

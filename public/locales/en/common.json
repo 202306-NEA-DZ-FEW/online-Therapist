@@ -71,7 +71,8 @@
         "birthdate": "Birth Date",
         "login": "Log in",
         "signup": "Sign up",
-        "or": "Or"
+        "or": "Or",
+        "error": "Email already in use"
     },
     "signupthank": {
         "thankyou": "THANK YOU!",
@@ -133,7 +134,7 @@
         "noCardsMessage": "You have no saved cards, click the button below to add new card"
     },
     "team": {
-        "title": "We are a team of developers, Nice to meet you!!"
+        "title": "Meet the developers team"
     },
     "password": {
         "input1": "Old password ",

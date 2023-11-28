@@ -14,7 +14,7 @@ const TeamCard = ({ name, role, imgUrl, github, linkedIn }) => (
             />
         </div>
 
-        <div className='relative pt-48 text-center mt-8'>
+        <div className='relative pt-48 text-center mt-8 rtl:mt-20'>
             {/* Increased margin-top for even more padding */}
             <h3 className='text-xl font-bold'>{name}</h3>
             <p className='text-gray-600'>{role}</p>
