@@ -12,7 +12,7 @@ import { storage } from "@/util/firebase";
 const ProfileImage = () => {
     const { t } = useTranslation("therapists");
     const [uploading, setUploading] = useState(false);
-    const { user, updateProfilePhoto } = useAuth();
+    const { user, updateProfilePhoto, setUser } = useAuth();
     const [ProfileImage, setProfileImage] = useState("");
     const handleUpload = async (e) => {
         const file = e.target.files[0];
@@ -24,15 +24,16 @@ const ProfileImage = () => {
             const imageRef = ref(storage, `${path}/${imageName}`);
             try {
                 await uploadBytes(imageRef, file);
+                setUploading(true);
+                const profileImageRef = ref(storage, `${path}${imageName}`);
+                const downloadURL = await getDownloadURL(profileImageRef);
+                updateProfilePhoto(downloadURL);
+                setProfileImage(downloadURL);
+                setUser({ ...user, photoURL: downloadURL });
+                localStorage.setItem(`profile_${user.uid}`, downloadURL);
             } catch (error) {
                 console.log(error);
             }
-            setUploading(true);
-            const profileImageRef = ref(storage, `${path}${imageName}`);
-            const downloadURL = await getDownloadURL(profileImageRef);
-            updateProfilePhoto(downloadURL);
-            setProfileImage(downloadURL);
-            localStorage.setItem(`profile_${user.uid}`, downloadURL);
         } catch (error) {
             console.error(error);
         } finally {
@@ -47,10 +48,7 @@ const ProfileImage = () => {
                     src={
                         uploading
                             ? Spinner
-                            : localStorage.getItem(`profile_${user.uid}`) ??
-                              user.photoURL ??
-                              ProfileImage ??
-                              Profile
+                            : user.photoURL ?? ProfileImage ?? Profile
                     }
                     alt='profile preview'
                     width={400}

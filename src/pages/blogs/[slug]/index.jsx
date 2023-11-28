@@ -23,7 +23,7 @@ const RichTextChildren = {
     types: {
         image: (value) => {
             return (
-                <div className='relative w-ful h-96 my-10 mx-auto '>
+                <div className='relative w-full h-96 my-10 mx-auto '>
                     <Image
                         className='object-cover'
                         src={urlForImage(value).url}
@@ -191,7 +191,7 @@ const Post = ({ post, related_posts }) => {
                                                     ? "/ar"
                                                     : ""
                                             }/blogs/${post.slug.current}`}
-                                            className='overflow-clip shadow-lg rounded-md mt-5 w-[25rem]'
+                                            className='overflow-clip shadow-lg rounded-md mt-5 lg:w-[23rem] md:w-[19rem]'
                                         >
                                             <div className='flex flex-col group cursor-pointer '>
                                                 <div className='relative min-w-full will-change-contents  md:h-64 h-56'>

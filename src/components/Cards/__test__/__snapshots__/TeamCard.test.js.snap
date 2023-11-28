@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
     />
   </div>
   <div
-    className="relative pt-48 text-center mt-8"
+    className="relative pt-48 text-center mt-8 rtl:mt-20"
   >
     <h3
       className="text-xl font-bold"
